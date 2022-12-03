@@ -1,0 +1,54 @@
+---
+sidebar_position: 2
+---
+
+# Grafana
+
+<iframe
+  src="https://developers.grafana.com/ui/latest/index.html?path=/story/docs-overview-intro--page"
+  width="100%"
+  height="600px"
+></iframe>
+
+// import { ConfirmModal } from '@site/packages/grafana-ui/src/components/ConfirmModal/ConfirmModal.tsx';
+
+import { Tooltip, Icon, Input, ToolbarButton, Button, Badge, InlineSwitch } from '@grafana/ui';
+
+<div>
+  <Tooltip content={'Joey'} placement="top" interactive>
+    <Button>Hover me for Tooltip </Button>
+  </Tooltip>
+</div>
+
+<div>
+  <Button size="sm" icon="times" variant="destructive">
+    Configure
+  </Button>
+</div>
+
+<Icon name="upload" />
+
+<Input type="text" width={20} />
+
+<Badge text={'badge'} color={'blue'} icon={'times'} tooltip={'tooltip'} />
+
+<ToolbarButton
+  icon="times"
+  variant={'default'}
+  key="remove-button"
+  aria-label="Remove scene"
+  onClick={() => {
+    console.log('1');
+  }}
+/>
+
+_<ConfirmModal
+isOpen={true}
+title="Disable user"
+body="Are you sure you want to disable this user?"
+confirmText="Disable user"
+onConfirm={() => {}}
+onDismiss={() => {}}
+/>_
+
+<InlineSwitch label="Raw data" showLabel={true} value={false} disabled={false} transparent={false} />
