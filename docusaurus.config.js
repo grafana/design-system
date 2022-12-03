@@ -6,9 +6,9 @@
 
 // /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Grafana Labs Design System',
+  tagline: 'Design Systems are cool',
+  url: 'https://design.grafana.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
