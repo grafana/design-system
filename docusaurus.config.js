@@ -53,7 +53,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
         logo: {
           alt: 'My Site Logo',
           src: '/img/logo.svg',
@@ -61,20 +60,19 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'grafana',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Home',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/grafana/design-system',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -116,7 +114,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright ${new Date().getFullYear()} © Grafana Labs.`,
       },
       // prism: {
       //   theme: lightCodeTheme,
