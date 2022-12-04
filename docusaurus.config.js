@@ -60,9 +60,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'grafana',
+            docId: 'template',
             position: 'left',
-            label: 'Home',
+            label: 'Template',
           },
           {
             href: 'https://github.com/grafana/design-system',
@@ -73,6 +73,10 @@ const config = {
       },
       footer: {
         style: 'light',
+        logo: {
+          alt: 'My Site Logo',
+          src: '/img/logo.svg',
+        },
         links: [
           {
             title: 'Docs',
