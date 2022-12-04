@@ -66,6 +66,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'My Site Logo',
+          href: 'docs/intro',
           src: '/img/logo.svg',
         },
         items: [
