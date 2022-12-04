@@ -52,6 +52,17 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'welcome',
+        content:
+          'Welcome to our design system! Learn more <a target="_blank" rel="noopener noreferrer" href="#">here</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
+      colorMode: {
+        defaultMode: 'light',
+      },
       navbar: {
         logo: {
           alt: 'My Site Logo',
