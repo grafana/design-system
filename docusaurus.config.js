@@ -9,7 +9,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  // favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
   staticDirectories: ['static'],
 
   // GitHub pages deployment config.
@@ -85,6 +85,7 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: '/img/logo.svg',
+          width: 200
         },
         links: [
           {
