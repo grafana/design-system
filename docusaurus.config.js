@@ -68,10 +68,17 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'template',
-            position: 'left',
-            label: 'Template',
+            label: 'Figma',
+            position: 'right',
+            items: [
+              {
+                href: 'https://resource1',
+                label: 'Resource 1',
+              },{
+                href: 'https://resource2',
+                label: 'Resource 2',
+              },
+            ]
           },
           {
             href: 'https://github.com/grafana/design-system',
