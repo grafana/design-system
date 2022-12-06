@@ -36,3 +36,11 @@
 #pageTemplate {
   font-size: 20px;
 }
+
+#footer {
+  background: #111217;
+  color: #8e8e8e;
+  font-size: 15px;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
