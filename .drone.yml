@@ -41,6 +41,7 @@ steps:
       - name: docker
         path: /var/run/docker.sock
     commands:
+      - apk add --update --no-cache make git coreutils
       - make push
 
 volumes:
@@ -49,6 +50,4 @@ volumes:
       path: /var/run/docker.sock
 ---
 kind: signature
-hmac: fd3ad95ecd351b1845542b2b48710d941df9054f9210be2813a80452d1c0bad7
-
-...
+hmac: bc506bc893dc793c4e30bbba5ee43114c77f37c00e6a88e611deef64406ca3e2
