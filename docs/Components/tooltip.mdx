@@ -2,6 +2,52 @@
 title: Tooltip
 description: Grafana Labs Tooltip component
 keywords: ['Grafana', 'Labs', 'tooltip', 'component']
+hide_title: true
 ---
 
-This document is a WIP.
+import { Badge, InfoBox } from '@grafana/ui';
+
+# Tooltip <Badge text='draft' color='orange'></Badge>
+
+Tooltips display additional information upon hover or focus. The information included should be contextual, helpful, and non-critical to the user’s task-at-hand. The information should be concise and provide clarity to the user.
+
+## Usage
+
+<b>Do's</b>
+
+* Provide supportive, explanatory text for icons (i.e, “search” as a label for a magnifying glass icon)
+* Concise information around intended use of element
+* Allow tooltips to be triggered by keyboard navigation
+* Use arrows to indicate which element the tooltip is related too
+* Use tooltips consistently (i.e. icon buttons have them, all tooltips are styled the same)
+* Use ARIA tags when building tooltips to ensure they are accessible
+
+<b>Dont's</b>
+
+* Do not house information critical to user’s task completion
+* Do not duplicate information such as calls to action labels creating information pollution
+* **Do not use interactive components within a tooltip**
+* **Do not make the user dismiss the tooltip**
+
+## Variants
+
+| Variants               | Purpose                                                                  |
+| ---------------------- | ------------------------------------------------------------------------ |
+| **Info (aka default)** | Provides contextual supportive information to the user                   |
+| **info-alt**           | Not sure on what this is                                                 |
+| **Error**              | Acts as inline validation                                                |
+
+## Accessibility
+
+* Use ARIA tags when building tooltips to ensure they are accessible
+    * aria-labelledby if the tooltip works as a primary label (i.e. to name an IconButton action)
+    * aria-describedby if the tooltip works as a supporting label (i.e. to give additional information on an input)
+* Tooltips must be visible when their trigger is tabbed to/focused on via keyboard navigation
+
+<InfoBox title="👋 &nbsp; Hi there!" severity="info">If you see areas for improvement here, please contribute your ideas so we can continue expanding our coverage and ensuring our components are accessible.</InfoBox>
+
+## Formating
+
+### Anatomy
+
+### Placement
