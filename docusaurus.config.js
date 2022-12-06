@@ -9,7 +9,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  // favicon: 'img/favicon.ico',
+  favicon: "img/favicon.svg",
   staticDirectories: ["static"],
 
   // GitHub pages deployment config.
@@ -32,14 +32,14 @@ const config = {
       ({
         docs: {
           path: "docs",
-          routeBasePath: "docs",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/grafana/design-system/blob/main/",
         },
         blog: false, // disabled for now but maybe we can have a design system blog later :)
+        pages: {
+          path: "pages",
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -50,29 +50,38 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
-        id: "welcome",
-        content:
-          'Welcome to our design system! Learn more <a target="_blank" rel="noopener noreferrer" href="#">here</a>',
-        backgroundColor: "#fafbfc",
-        textColor: "#091E42",
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'welcome',
+      //   content:
+      //     'Welcome to our design system! Learn more <a target="_blank" rel="noopener noreferrer" href="#">here</a>',
+      //   backgroundColor: '#fafbfc',
+      //   textColor: '#091E42',
+      //   isCloseable: true,
+      // },
       colorMode: {
-        defaultMode: "light",
+        defaultMode: "dark",
+        disableSwitch: true,
       },
       navbar: {
         logo: {
-          alt: "My Site Logo",
-          href: "docs/intro",
+          alt: "Design System logo",
+          href: "home",
           src: "/img/logo.svg",
         },
         items: [
           {
-            type: "doc",
-            docId: "template",
-            position: "left",
-            label: "Template",
+            label: "Figma",
+            position: "right",
+            items: [
+              {
+                href: "https://resource1",
+                label: "Resource 1",
+              },
+              {
+                href: "https://resource2",
+                label: "Resource 2",
+              },
+            ],
           },
           {
             href: "https://github.com/grafana/design-system",
@@ -80,51 +89,6 @@ const config = {
             position: "right",
           },
         ],
-      },
-      footer: {
-        style: "light",
-        logo: {
-          alt: "My Site Logo",
-          src: "/img/logo.svg",
-        },
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright ${new Date().getFullYear()} © Grafana Labs.`,
       },
     }),
 };
