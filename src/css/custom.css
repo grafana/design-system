@@ -3,7 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #fff;
 }
 
@@ -13,6 +13,25 @@
 
 #pageTemplate {
   font-size: 20px;
+}
+
+.menu__link {
+  color: rgba(204, 204, 220, 0.65);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.menu__link.menu__link--active {
+  color: #ccccdc;
+  background-color: transparent;
+}
+
+.menu__link:hover,
+.menu__list-item-collapsible:hover {
+  color: #ccccdc;
+  background: #22252b;
+  text-decoration: underline;
 }
 
 #footer {
