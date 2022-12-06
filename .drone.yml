@@ -40,8 +40,13 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+    environment:
+      GCR_CREDS:
+        from_secret: gcr_admin
     commands:
       - apk add --update --no-cache make git coreutils
+      - mkdir -p $HOME/.docker
+      - printenv GCR_CREDS > $HOME/.docker/config.json
       - make push
 
 volumes:
@@ -49,5 +54,23 @@ volumes:
     host:
       path: /var/run/docker.sock
 ---
+kind: secret
+name: dockerconfigjson
+
+get:
+  path: secret/data/common/gcr
+  name: .dockerconfigjson
+
+---
+kind: secret
+name: gcr_admin
+
+get:
+  name: .dockerconfigjson
+  path: infra/data/ci/gcr-admin
+
+---
 kind: signature
-hmac: bc506bc893dc793c4e30bbba5ee43114c77f37c00e6a88e611deef64406ca3e2
+hmac: d46f9663cd36dedb31f147a798bbe6c15c47ae9131264ced2f34b400ef4c2525
+
+...
