@@ -9,7 +9,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo.svg',
+  favicon: 'img/favicon.svg',
   staticDirectories: ['static'],
 
   // GitHub pages deployment config.
