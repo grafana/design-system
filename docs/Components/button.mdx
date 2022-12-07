@@ -4,4 +4,364 @@ description: Grafana Labs Button component
 keywords: ['Grafana', 'Labs', 'button', 'component']
 ---
 
-This document is a WIP.
+<!-- Output copied to clipboard! -->
+
+<!-----
+
+Yay, no errors, warnings, or alerts!
+
+Conversion time: 1.082 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β33
+* Wed Dec 07 2022 09:59:03 GMT-0800 (PST)
+* Source doc: Button
+* Tables are currently converted to HTML tables.
+----->
+
+
+
+# Button
+
+
+Clickable elements that are used to trigger actions. Buttons communicate what action will occur when users interact with it.
+
+
+### Do’s
+
+
+
+* Apply the same width of the container for all buttons when they are in a group.
+* Use only one primary button and two of the same lower emphasis when in the button group.
+* Maintain the same style about using or not an icon with the label text in the button group.
+
+
+### Don’ts
+
+
+
+* Do not use two primary buttons in a button group.
+* Do not use buttons with icons and buttons without icons in a button group.
+* Do not have more than one primary action.
+* Do not pair a solid primary and solid destructive button - one must take precedence over the other.
+
+
+## Emphasis	
+
+
+
+* **High:** Are used for the most important and common actions on the screen.These are Primary and Destructive buttons
+* **Default:** Used as secondary actions that can be more than one in the same page. This is the most common button usage within Grafana.
+* **Low:** Are complementary actions or links that are optional on the page.
+
+![button emphasis](img/button_emphasis.png 'pyramid illustration representing button emphasis and usage')
+
+
+## Variants
+
+
+<table>
+  <tr>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Component</strong>
+   </td>
+   <td><strong>Emphasis Level</strong>
+   </td>
+   <td><strong>Purpose</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Primary
+   </td>
+   <td>Filled with Label
+<p>
+Filled with Icon + Label
+<p>
+Filled with Label + Icon
+<p>
+Filled with Icon + Label + Icon
+   </td>
+   <td>High
+   </td>
+   <td>Used for<strong> "call to action"</strong>, i.e. triggering the main action. There should never be more than one on a page. If you need multiple buttons for different actions, decide which action is the most important and make that the primary Button. 
+<p>
+ \
+All other Button components should be secondary.
+<p>
+ \
+If there is no primary action, all Button components should be secondary.
+   </td>
+  </tr>
+  <tr>
+   <td>Secondary
+   </td>
+   <td>Filled
+<p>
+Outline
+<p>
+Ghost
+   </td>
+   <td>Default
+   </td>
+   <td>The secondary Button is the<strong> default button style</strong> and can trigger various actions. How it is used depends on its surroundings:
+<ol>
+
+<li>When next to the primary Button, the Secondary style can for example be used for "Cancel" or "Abort" actions.
+
+<li>When there is no main important action on a given page, all Button components should use the secondary style.
+</li>
+</ol>
+   </td>
+  </tr>
+  <tr>
+   <td>Text Link Tertiary
+   </td>
+   <td>Outline
+<p>
+Ghost
+   </td>
+   <td>Low
+   </td>
+   <td>Used for <strong>complementary actions</strong> that will link to another page. Can be used independently or paired with a primary button when there are multiple calls to action on the same screen.
+   </td>
+  </tr>
+  <tr>
+   <td>Destructive
+   </td>
+   <td>Filled
+<p>
+Outline
+   </td>
+   <td>High
+   </td>
+   <td>Used for triggering to “Delete” or “Remove” as an action. Because of its dominant coloring, it should be used sparingly. 
+<p>
+If you need multiple Destructive Button components in one view, we recommend using a <strong>Secondary Button</strong> or <strong>Link variant </strong>instead and only use the Destructive variant to double confirm.
+   </td>
+  </tr>
+</table>
+
+
+
+## Formatting
+
+
+### Anatomy
+
+![button anatomy](img/button_anatomy.png 'visual callout the parts that make up Saga buttons')
+
+<table>
+  <tr>
+   <td><strong>Style</strong>
+   </td>
+   <td><strong>Elements</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Filled
+   </td>
+   <td>Solid Container
+<p>
+Label
+<p>
+Icon + Label
+<p>
+Label + Icon
+   </td>
+  </tr>
+  <tr>
+   <td>Outline
+   </td>
+   <td>Outline Container
+<p>
+Label
+<p>
+Icon + Label
+<p>
+Label + Icon
+   </td>
+  </tr>
+  <tr>
+   <td>Text Link
+   </td>
+   <td>Label
+<p>
+Icon + Label
+<p>
+Label + Icon
+   </td>
+  </tr>
+  <tr>
+   <td>Icon with label
+   </td>
+   <td>Label + Icon
+<p>
+Icon + Label
+<p>
+Icon + Label + Icon(Select Dropdown)
+   </td>
+  </tr>
+  <tr>
+   <td>Icon only
+   </td>
+   <td>Solid Container (optional)
+<p>
+Icon
+   </td>
+  </tr>
+</table>
+
+
+
+### Button Sizes & Label Typography
+
+
+<table>
+  <tr>
+   <td><strong>Size</strong>
+   </td>
+   <td><strong>Width-Height (px - rem)</strong>
+   </td>
+   <td><strong>Font-Size (px) </strong>
+   </td>
+   <td><strong>Font-Weight</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Small
+   </td>
+   <td>Auto - 24px
+   </td>
+   <td>12px
+   </td>
+   <td>500
+   </td>
+  </tr>
+  <tr>
+   <td>Medium
+   </td>
+   <td>Auto - 32px
+   </td>
+   <td>14px
+   </td>
+   <td>500
+   </td>
+  </tr>
+  <tr>
+   <td>Large
+   </td>
+   <td>Auto - 48px
+   </td>
+   <td>18px
+   </td>
+   <td>500
+   </td>
+  </tr>
+</table>
+
+![button sizes](img/button_sizes.png 'Visual representation of Saga's button siszes')
+
+
+### Hierarchy & Button Pairings
+
+
+
+* **Primary/Destructive Button — High Emphasis:**
+
+    A single page should only display one button with the highest importance for the main action. Other buttons should have lower emphasis and be visually different within the UI. This primary button has to attract the user's attention.
+
+* **Secondary/Icon Button — Default Emphasis: \
+**A single screen can show more than one button, the other buttons can be in the same page with a primary button, these buttons have to be less important according to the actions, and do not distract users from the main content page. You should only group calls to action that are related to each other. A higher emphasis button can be paired with multiple buttons which are lower emphasis. \
+
+* **Outline/Text Button — Low Emphasis:**
+
+    These buttons have less impact and are less distracting to the user's attention, on the same screen several of them can be used.  They are actionable to take users to a new page, the main objective being to provide more information about that section. 
+
+
+	
+
+
+### Margin & Padding
+
+
+<table>
+  <tr>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Margin (px)</strong>
+   </td>
+   <td><strong>Padding (px)</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Small
+   </td>
+   <td>0px 8px 0px 0px
+   </td>
+   <td>0px 8px
+   </td>
+  </tr>
+  <tr>
+   <td>Medium
+   </td>
+   <td>0px 0px 0px 16px
+   </td>
+   <td>0px 16px
+   </td>
+  </tr>
+  <tr>
+   <td>Large
+   </td>
+   <td>0px 0px 0px 16px
+   </td>
+   <td>0px 16px
+   </td>
+  </tr>
+</table>
+
+
+
+### Placement
+
+
+
+* Primary
+    * On the page on the top-right
+
+        Inside the content page on the center
+
+* Default
+    * Inside cards on the bottom-right
+    * Inside content page on the bottom-left
+* Text link
+    * Inside cards on the top-right
+    * Inside cards on the bottom-center
+
+
+## Accessibility
+
+
+
+* Use ARIA tags when using buttons to ensure they are accessible.
+    * For example buttons represented by icons, the accessible name may be provided from the aria-label or aria-labelledby attributes.
+    * Using role="button" instead of the semantic &lt;button> or &lt;input type="button"> (iOS "clickable elements" fix for role="button")
+
+
+
+### Further Reading & Sources
+
+
+
+* [Buttons UX best practices](https://uxplanet.org/5-best-practices-for-designing-effective-buttons-71a4a33e6d26)
+* [7 Basic Rules for Button Design](https://uxplanet.org/7-basic-rules-for-button-design-63dcdf5676b4)
+* [A comprehensive to designing UX buttons](https://www.invisionapp.com/inside-design/comprehensive-guide-designing-ux-buttons/)
