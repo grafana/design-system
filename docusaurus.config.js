@@ -70,20 +70,6 @@ const config = {
         },
         items: [
           {
-            label: "Figma",
-            position: "right",
-            items: [
-              {
-                href: "https://resource1",
-                label: "Resource 1",
-              },
-              {
-                href: "https://resource2",
-                label: "Resource 2",
-              },
-            ],
-          },
-          {
             href: "https://github.com/grafana/design-system",
             label: "GitHub",
             position: "right",
