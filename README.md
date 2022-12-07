@@ -1,4 +1,4 @@
-# Grafana Labs Design System (GLDS)
+# Saga; The Grafana Labs Design System
 
 ## Welcome! 
 
