@@ -1,0 +1,76 @@
+---
+kind: pipeline
+name: saga-docs
+
+trigger:
+  event:
+    include:
+      - pull_request
+      - push
+      - tag
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: Install dependencies and build
+    image: node:16-alpine
+    commands:
+      - yarn install
+      - yarn build
+---
+kind: pipeline
+type: docker
+name: Containerize
+platform:
+  os: linux
+  arch: amd64
+trigger:
+  event:
+    - push
+    - tag
+  ref:
+    - refs/heads/main
+    - refs/tags/v*
+
+steps:
+  - name: build and push
+    image: docker
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    environment:
+      GCR_CREDS:
+        from_secret: gcr_admin
+    commands:
+      - apk add --update --no-cache make git coreutils
+      - mkdir -p $HOME/.docker
+      - printenv GCR_CREDS > $HOME/.docker/config.json
+      - make push
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+---
+kind: secret
+name: dockerconfigjson
+
+get:
+  path: secret/data/common/gcr
+  name: .dockerconfigjson
+
+---
+kind: secret
+name: gcr_admin
+
+get:
+  name: .dockerconfigjson
+  path: infra/data/ci/gcr-admin
+
+---
+kind: signature
+hmac: d46f9663cd36dedb31f147a798bbe6c15c47ae9131264ced2f34b400ef4c2525
+
+...
