@@ -9,7 +9,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.png',
   staticDirectories: ['static'],
 
   // GitHub pages deployment config.
@@ -66,7 +66,7 @@ const config = {
         logo: {
           alt: 'Design System logo',
           href: 'home',
-          src: '/img/logo.svg',
+          src: '/img/logo_with_text.png'
         },
         items: [
           {
