@@ -34,6 +34,14 @@
   text-decoration: underline;
 }
 
+.pagination-nav a:hover {
+  text-decoration: none;
+}
+
+button {
+  width: 215px;
+}
+
 #footer {
   background: #111217;
   color: #8e8e8e;
