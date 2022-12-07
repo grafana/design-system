@@ -4,4 +4,124 @@ description: Description for search engines and results
 keywords: ['keywords', 'for', 'search', 'engines']
 ---
 
-This document is a WIP.
+
+# Design System Contribution Guidelines
+
+## Overview
+
+Our design system is never complete, it’s constantly changing and evolving. We need help from Grafanistas like you to innovate and solve problems! Read this page to learn how you can contribute — we would love your help! 
+
+
+## Participation
+
+Having an open line of communication between the design system, designers and developers is important for success and the best way to improve everyone's awareness of the solutions we do and do not have.
+
+
+
+* **[GitHub Discussions](https://github.com/grafana/grafana/discussions/categories/grafana-labs-design-system)**  \
+A great way to establish **shared value** (i.e cross-product use).  \
+ \
+Be sure to tag Staton (@staton-hyse11), Joao (@JoaoSilvaGrafana), and Nat (@natydej) here to ensure your discussion post is seen
+* **[Design system Github project](https://github.com/orgs/grafana/projects/176/views/4)** \
+See what we’re working on now and later. This will be a good place to track the work of any contribution.
+* **[#grafana-design-system](https://raintank-corp.slack.com/archives/CT7S455SP)**  \
+A Slack channel to post your questions, get answers, share your thoughts, even get updates on design system releases
+* **UX feedback sessions** \
+A stage to get peer feedback to improve your work. The [#ux](https://raintank-corp.slack.com/archives/C0F5GDR4P) Slack channel posts reminders and shares agendas for these sessions. If you want to get added to these recurring meetings, ask to be included in that channel. 
+    * [Early session agenda](https://docs.google.com/document/d/1m2yciWfQa-rp-KLUrMLYOge00GAd8bLPzmDtDwDFt0o/edit?usp=sharing)
+    * [Late session agenda](https://docs.google.com/document/d/1oeaCzAyy3W-TguKUTaOqT2wIiAabuAO_Gr3TMOZKxcA/edit)
+
+
+## Guiding Principles
+
+To make the design system a better product, keep these principles in mind: 
+
+
+
+* **Universal**: Not specific to a single product feature in Grafana. Able to be used by other products across Grafana Labs; — e.g. has **shared value**
+* **Accessible:** Able to be used by all types of users. Keyboard-navigation and screen readers are considered and supported
+* **Flexible:** Thoughtfully built and designed to solve for various configurations and situations
+* **Coherent:** Follows existing visual styling and patterns already established by Grafana UI
+* **Defined: **Well documented with clear limitations so it’s easily understood how and when it should be used and why it’s a better solution than other similar
+* **Distinct: **The contribution fills a unique gap in the current component/pattern offerings that cannot be reasonably solved by an existing component/pattern
+
+
+## Contributions and Levels
+
+Contributions are not limited to components or code. We welcome any feedback, documentation, tools, designs, or even tools. Below are the various levels of contributions we’ve identified and some examples.
+
+
+
+1. **Fix \
+**Bugs in code, misalignments in designs, or clarify documentation to improve conciseness
+2. **Small Enhancement \
+**Additions or expansions that don’t create breaking changes such as adding icons to the icon library or introducing a new variant to an existing component. 
+3. **Large Enhancement \
+**These changes usually require system-wide alignment and coordination. Things like how we handle saving or deleting. Usually, these changes require adjustments to code, design, and documentation
+4. **New \
+**A utterly new component or pattern that includes variants, documentation, and coded counterparts to the contribution. This can also include existing UI within Grafana that hasn’t historically been included in the design system and requires proper documentation and product alignment.
+
+
+## Before you contribute
+
+Take a moment to review the areas mentioned above in 
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Participation"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+[Participation](#heading=h.81p5kwm2sw0j) to see if a solution already exists or look in the component libraries (see; 
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Resources"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+[Resources](#heading=h.eylb0t9x1b2x)) if you feel something might already exist. 
+
+
+## Component Contributions
+
+Component contributions usually include the following
+
+
+
+1. **A reason \
+**Explain how your component solves a problem and brings value to the system and Grafana. Be sure to include the various areas across Grafana this supports to show its **shared value.**
+2. **Figma component \
+**Put your component in a Figma **branch** ([Figma Branching Best Practices](https://www.figma.com/best-practices/branching-in-figma/)) of the [Grafana design system - dark theme](https://www.figma.com/file/htVIFrTq8e7sx8Olo7L6kZ/Grafana-design-system---Dark-theme?node-id=8444%3A13469&t=cS6yqqfuFLwhDQR9-1) file to capture your adjustments. and be sure to use the current Figma functions when building out your component — auto layout, component properties, variant properties, states, and variants.
+3. **Design specifications \
+**Provide developers with everything they need to build the component in code properly.. This could include things like spacing, color, and typography. 
+4. **Usage documentation \
+**Included proper usage, and specific configuration requirements, any types of interactions that need to be specified including what accessibility requirements are needed. View our [documentation template](https://docs.google.com/document/d/1wTaSWYif6Kz-2aBuP4R-HUkj9JwFsyYIwZroALQTQOs/edit?usp=share_link) for reference and a guide.
+5. **Code \
+**Grafana uses React as its primary code base. For a component to be a complete contribution, the needed code to build this component in React must be included.
+
+
+## Pattern Contribution
+
+Patterns are recurring solutions that solve common design problems. Documenting patterns is a relatively new concept for Grafana and resulting in there not being a standard established yet. (Interested in helping? If so, reach out to Staton!). Try to provide a general idea of pattern and be sure to include any important details. Below are some ideas:
+
+
+
+1. **Overview \
+**Explain what problem this pattern is addressing, what areas are impacted and how it provides value across the organization.
+2. **Implementation \
+**Specify how this pattern works and what components are incorporated with it. Are there varying tiers of how this be included
+3. **Accessibility \
+**What important details are needed to ensure that this pattern is accessible? Be clear and concise here, as we tak accessibility very seriously.
+4. **Related \
+**Is there an alternative pattern or similar one that designers or developers might be looking for instead or should use depending on use case?  
+5. **References** \
+If there is any content or resources that help support this pattern? Perhaps internal documentation or general best practices — include them here.
+
+
+## Resources
+
+We have several tools available to help developers and designers build better solutions. 
+
+
+
+* [A11y style guide](https://github.com/grafana/grafana/blob/main/contribute/style-guides/accessibility.md)
+* [Figma component library - dark mode](https://www.figma.com/file/htVIFrTq8e7sx8Olo7L6kZ/Grafana-design-system---Dark-theme?node-id=8443%3A13519)
+* [Storybook component library](https://developers.grafana.com/ui/latest/index.html?path=/docs/docs-overview-intro--page)
+
+
+## Feedback?
+
+See something here that can be improved or added? Reach out on [Slack](https://raintank-corp.slack.com/archives/CT7S455SP) or directly message , , or . We’d love to hear from you!
