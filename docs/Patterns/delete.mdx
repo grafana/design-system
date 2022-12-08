@@ -3,6 +3,29 @@ title: Delete
 description: Description for search engines and results
 keywords: ['keywords', 'for', 'search', 'engines']
 draft: true
+hide_title: true
 ---
 
-This document is a WIP.
+import { Badge, InfoBox } from '@grafana/ui';
+
+# Delete <Badge text='draft' color='orange'></Badge>
+
+Deleting within Grafana is a multi-tiered pattern that varies depending on the required amount of friction (see: [Design Principle: Tasteful Friction](https://docs.google.com/document/d/1VlJYFOD-VPbUgzZ5LpspRGwTgW2qIyqiH75QKtRTlGU/edit?usp=sharing)) and importance of the item being deleted.
+
+
+# Tiers
+
+To ensure the appropriate deletion pattern is used, we’ve provided definitions and use cases for each below
+
+### **Inine delete**
+
+This is the quickest and easiest way to delete content within Grafana. This pattern is typically used with IconButton with the **trash-alt, times-circle, **or **times **icon. Used for removing things such as rows or line items, this pattern does not require a confirmation of action.
+
+### **Type to delete (delete dialogue)**
+
+The pattern with the most friction, this pattern requires the entire focus of the user to ensure they are fully aware of the changes they are submitting. The changes made have rippling effects that make it dire for the user to acklodge and accept the resulting consequences of the deletion.** **
+
+
+# Implementation
+
+Depending on the tier of delete pattern, there are varying ways they get implemented. Below outlines how each tier should be implemented for user success and product consistency

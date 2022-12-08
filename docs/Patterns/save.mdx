@@ -3,6 +3,35 @@ title: Save
 description: Description for search engines and results
 keywords: ['keywords', 'for', 'search', 'engines']
 draft: true
+hide_title: true
 ---
 
-This document is a WIP.
+import { Badge, InfoBox } from '@grafana/ui';
+
+# Save <Badge text='draft' color='orange'></Badge>
+
+
+Saving within Grafana is a multi-tiered pattern that varies depending on the required amount of friction (see: [Design Principle: Tasteful Friction](https://docs.google.com/document/d/1VlJYFOD-VPbUgzZ5LpspRGwTgW2qIyqiH75QKtRTlGU/edit?usp=sharing)) and importance of the item being saved.
+
+
+# Tiers
+
+To ensure the appropriate save pattern is used, we’ve provided definitions and use cases for each below
+
+### **Autosave**
+
+This is pattern has the least amount of user friction from all save patterns. The user does not have to explicitly tell the system to save, the system automatically saves fields on user blur or when the user navigates away from the field.
+
+
+### **Inine save**
+
+The inline save pattern is leveraged inside of forms and provides users with a button to trigger the system to save and update various user inputs that have been edited or updated.
+
+### **Dialog save**
+
+The pattern with the most friction, this pattern requires the entire focus of the user to ensure they are fully aware of the changes they are submitting. The changes made have rippling effects that make it dire for the user to acklodge and accept the resulting consequences of the update
+
+
+# Implementation
+
+Depending on the tier of save pattern implemented, there are varying ways they get implemented. Below outlines how each tier should be implemented for user success and product consistency.
