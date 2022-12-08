@@ -27,6 +27,15 @@
 
 /* NAVIGATION */
 
+.menu,
+.navbar {
+  background-color: #181b1f;
+}
+
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1rem 2rem;
+}
+
 .menu__link,
 .table-of-contents__link {
   color: rgba(204, 204, 220, 0.65);
@@ -130,6 +139,13 @@
   width: 100%;
   display: block !important;
 }
+
+main {
+  background: #111217;
+  color: rgba(204, 204, 220, 0.65);
+}
+
+/* ABOUT */
 
 #about {
   background: #111217;
