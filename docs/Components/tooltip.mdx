@@ -7,7 +7,7 @@ hide_title: true
 
 import { Badge, InfoBox } from '@grafana/ui';
 
-# Tooltip <Badge text='draft' color='orange'></Badge>
+# Tooltip <Badge text='ready' color='green'></Badge>
 
 Tooltips display additional information upon hover or focus. The information included should be contextual, helpful, and non-critical to the user’s task-at-hand. The information should be concise and provide clarity to the user.
 
@@ -49,12 +49,11 @@ Tooltips display additional information upon hover or focus. The information inc
 ## Formating
 
 ### Anatomy
+![Image calling out parts of the tooltip](/img/tooltip_anatomy.png 'Image calling out parts of the tooltip')
 
-| Variants      | Purpose                                                                  |
-| ------------- | ------------------------------------------------------------------------ |
-| **Trigger**   | The UI control users interact with to display tooltips                   |
-| **Tip**       | The triangle piece that points to the trigger element                    |
-| **Body**      | The container that houses the content of the tooltip                     |
+1. **Trigger** - the UI control users interact with to display tooltips
+2. **Tip** - the triangle piece that points to the trigger element
+3. **Body** - the container that houses the content of the tooltip
 
 
 ### Placement
