@@ -5,4 +5,16 @@ keywords: ['Grafana', 'Labs', 'filter', 'pill', 'component']
 draft: true
 ---
 
-This document is a WIP.
+import { Badge } from '@grafana/ui';
+
+# FilterPill <Badge text='draft' color='orange'></Badge>
+
+A component used for quick toggling on/off filters. Mostly used in inline form components and transformation/query editors.
+
+## Usage
+
+```jsx
+import { FilterPill } from '@grafana/ui';
+
+<FilterPill label={'Test'} onClick={() => console.log('toggle')} />;
+```

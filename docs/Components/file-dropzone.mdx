@@ -5,4 +5,16 @@ keywords: ['Grafana', 'Labs', 'file', 'dropzone', 'component']
 draft: true
 ---
 
-This document is a WIP.
+import { Badge } from '@grafana/ui';
+
+# FileDropzone <Badge text='draft' color='orange'></Badge>
+
+A dropzone component to use for file uploads.
+
+## Usage
+
+```jsx
+import { FileDropzone } from '@grafana/ui';
+
+<FileDropzone onLoad={(result) => console.log(result)} />;
+```
