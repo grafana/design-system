@@ -22,7 +22,7 @@ export default function DocPaginator(props) {
           </Button>
         </Link>
       )}
-      {next && (
+      {next && next.title !== 'Alert' && (
         <Link to={next.permalink} style={{ textAlign: 'right' }}>
           <Button size='lg' fill='outline' variant='secondary' style={{ justifyContent: 'flex-end' }}>
             {next.title}

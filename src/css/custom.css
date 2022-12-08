@@ -3,6 +3,10 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+:root {
+  --doc-sidebar-width: 220px !important;
+}
+
 [data-theme="dark"] {
   --ifm-color-primary: #fff;
 }
@@ -38,9 +42,112 @@
   text-decoration: none;
 }
 
-button {
+.pagination-nav button {
   width: 215px;
 }
+
+#about {
+  background: #111217;
+  color: #CCCCDCA6;
+  font-weight: 300;
+}
+
+#about #content {
+  padding: 35px;
+  font-size: 14px;
+}
+
+#about #content h1 {
+  font-weight: 400;
+}
+
+#about #content #cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+#about #content #cards .card {
+  background: #22252B;
+  width: 21%;
+  margin: 5px;
+  padding: 14px;
+  border: 1px solid rgba(204, 204, 220, 0.15);
+  border-radius: 2px;
+  display: block;
+}
+
+#about #content #cards .card img {
+  float: left;
+  width: 18px;
+}
+
+#about #content #cards .card .title {
+  float: left;
+  font-size: 16px;
+  margin: -5px 0 0 10px;
+}
+
+#about #content #cards .card .text {
+  float: left;
+  line-height: 20px;
+  margin: 5px 0 0 0;
+}
+
+
+
+#about #content #cards-large {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0 0 0;
+}
+
+#about #content #cards-large .card {
+  background: #22252B;
+  width: 46%;
+  margin: 5px;
+  padding: 25px;
+  border: 1px solid rgba(204, 204, 220, 0.15);
+  border-radius: 2px;
+  display: block;
+}
+
+#about #content #cards-large .card .content {
+  margin: -5px 0 0 70px;
+}
+
+#about #content #cards-large img {
+  float: left;
+  width: 45px;
+}
+
+#about #content #cards-large .card .title {
+  font-size: 19px;
+}
+
+#about #content #cards-large .card .text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 2px 0 30px 0;
+}
+
+#about #content #cards-large .card a {
+  text-decoration: none;
+}
+
+
+
+#about #content #box {
+  background: #22252B;
+  border: 1px solid rgba(204, 204, 220, 0.15);
+  border-radius: 2px;
+  padding: 32px;
+  margin: 0 0 60px 0;
+}
+
+
 
 #footer {
   background: #111217;

@@ -1,0 +1,88 @@
+---
+title: About Saga
+description: Description for search engines and results
+keywords: ['keywords', 'for', 'search', 'engines']
+sidebar_position: 1
+hide_title: true
+hide_table_of_contents: true
+---
+
+import { Button } from '@grafana/ui';
+import Link from '@docusaurus/Link';
+
+<div id='about'>
+  <img src='img/about_header.png' alt='About header' />
+ 
+  <div id='content'> 
+    <h1>Saga Design System</h1>
+    <p>Saga is Grafana Labs’ open source design system and it establishes the shared, visual language for all products within the Grafana Labs umbrella of products and drives user experience and interaction consistency throughout the UI.</p>
+  
+    <div id='cards'>
+      <div class='card'>
+        <img src='img/about_foundations.png' alt='Foundations icon' />
+        <div class='title'>Foundations</div>
+        <div class='text'>The core theories and concepts that keep the shared, visual design language established by the design system consistent.</div>
+      </div>
+      <div class='card'>
+        <img src='img/about_components.png' alt='Components icon' />
+        <div class='title'>Components</div>
+        <div class='text'>The small UI parts that generate the UI within Grafana.</div>
+      </div>
+      <div class='card'>
+        <img src='img/about_patterns.png' alt='Patterns icon' />
+        <div class='title'>Patterns</div>
+        <div class='text'>Repeatable, consistent, and expected interactions product-wide.</div>
+      </div>
+      <div class='card'>
+        <img src='img/about_resources.png' alt='Resources icon' />
+        <div class='title'>Resources</div>
+        <div class='text'>Learn how to design, build, and expand the UI of Grafana without diverging.</div>
+      </div>
+    </div>
+
+  <div id='box'>
+    <h2>Overview</h2>
+    <p>A design system is a connected, package-managed, version-controlled, software product that contains the smallest set of components and guidelines an organization needs to make digital products consistently, efficiently, and happily.Think of these as “a system of systems”.</p>
+    <h2>How Saga works</h2>
+    <p>The Saga team is committed to helping Grafanistas and the community be successful in adoption and their use of Saga assets. To ensure this is the case, the Saga team manages and supports the Figma assets and React components.</p>
+    <h2>Saga guiding principles</h2>
+    <p>As Saga grows and solves more complex problems, these guidingn principles help ensure that the tools and resources offered provide the most value to our users as possible.</p>
+    <ul>
+      <li><b>Saga is universal:</b> Every part or solution within Saga is not specific to a single product feature in Grafana. They are ble to be used by other products across Grafana Labs; — e.g. has shared value</li>
+      <li><b>Saga is accessible:</b> Able to be used by all types of users, regardless of ability. Accessibility is baked into the solutions to ensure that</li>
+      <li><b>Saga is flexible:</b> Thoughtfully built and designed to solve for various configurations and situations</li>
+      <li><b>Saga is coherent:</b> Follows existing visual styling and patterns already established by Grafana UI</li>
+      <li><b>Saga is defined:</b> Well documented with clear limitations so it’s easily understood how and when it should be used and why it’s a better solution than other similar</li>
+      <li><b>Saga is distinct:</b> The contribution fills a unique gap in the current component/pattern offerings that cannot be reasonably solved by an existing component/pattern</li>
+    </ul>
+  </div>
+
+  <h1>Resources</h1>
+  <div id='cards-large'>
+    <div class='card'>
+      <img src='img/figma.png' alt='Figma icon' />
+      <div class='content'>
+        <div class='title'>Figma Assets</div>
+        <div class='text'>Use the Figma component libraries to design and build Grafana UI.</div>
+        <Link to={'Resources/figma-assets'}>
+          <Button size="med" variant='secondary'>
+            Get started
+          </Button>
+        </Link>
+      </div>
+    </div>
+    <div class='card'>
+      <img src='img/storybook.png' alt='Storybook icon' />
+      <div class='content'>
+        <div class='title'>Storybook Components</div>
+        <div class='text'>Reference the Grafana/Ui Storybook React component library to build plugins and use the components.</div>
+        <Link to={'Resources/storybook'}>
+          <Button size="med" variant='secondary'>
+            Get started
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
