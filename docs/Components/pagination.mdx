@@ -5,4 +5,17 @@ keywords: ['Grafana', 'Labs', 'pagination', 'component']
 draft: true
 ---
 
-This document is a WIP.
+import { Badge } from '@grafana/ui';
+
+# Pagination <Badge text='draft' color='orange'></Badge>
+
+Component used for rendering a page selector below paginated content.
+
+## Usage
+
+```jsx
+<div>
+  <div>Page 1 content</div>
+  <Pagination currentPage={1} numberOfPages={5} onNavigate={() => fetchPage(2)} />
+</div>
+```
