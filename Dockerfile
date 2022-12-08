@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:lts as base
 
 COPY . /app/
 
@@ -6,5 +6,8 @@ WORKDIR /app
 
 RUN npm install
 RUN npm run build
-EXPOSE 8000
-CMD [ "npx", "serve", "build" ]
+
+FROM nginx:stable-alpine
+WORKDIR /app
+# Copy what we've installed/built from production
+COPY --from=base /app/build /usr/share/nginx/html/

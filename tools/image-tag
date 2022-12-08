@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+
+if [ ! -z "${RELEASE_TAG}" ]; then
+  echo ${RELEASE_TAG}
+  exit 0
+fi
+
+set -o nounset
+
+WIP=$(git diff --quiet || echo '-WIP')
+
+# When 7 chars are not enough to be unique, git automatically uses more.
+# We are forcing to 7 here, as we are doing for grafana/grafana as well.
+SHA=$(git rev-parse --short=7 HEAD | head -c7)
+
+# If this is a tag, use it, otherwise use <branch>-<hash>
+TAG=$(git describe --exact-match 2> /dev/null || echo "${SHA}")
+echo ${TAG}${WIP}
