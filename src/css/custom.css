@@ -251,3 +251,22 @@ main {
   padding: 20px 0 0 0;
   text-align: center;
 }
+
+.two-column-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.two-column-div p:first-child {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 520px) {
+  .two-column-div {
+    flex-direction: column;
+  }
+
+  .two-column-div p:first-child {
+    margin-right: 0;
+  }
+}
