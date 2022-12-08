@@ -6,40 +6,40 @@ const config = {
   title: 'Grafana Labs Design System',
   tagline: 'Design Systems are cool',
   url: 'https://design.grafana.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
+  baseUrl: '/design-system/',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo.png',
+  favicon: 'design-system/img/logo.png',
   staticDirectories: ['static'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Grafana", // Usually your GitHub org/user name.
-  projectName: "design-system", // Usually your repo name.
+  organizationName: 'Grafana', // Usually your GitHub org/user name.
+  projectName: 'design-system', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "docs",
-          routeBasePath: "/",
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/grafana/design-system/blob/main/",
+          path: 'docs',
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/grafana/design-system/blob/main/',
         },
         blog: false, // disabled for now but maybe we can have a design system blog later :)
         pages: false,
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -57,20 +57,20 @@ const config = {
       //   isCloseable: true,
       // },
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark',
         disableSwitch: true,
       },
       navbar: {
         logo: {
           alt: 'Design System logo',
           href: 'about',
-          src: '/img/logo_with_text.png'
+          src: 'design-system/img/logo_with_text.png',
         },
         items: [
           {
-            href: "https://github.com/grafana/design-system",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/grafana/design-system',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
