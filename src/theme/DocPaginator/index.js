@@ -17,7 +17,7 @@ export default function DocPaginator(props) {
       {previous && (
         <Link to={previous.permalink}>
           <Button size='lg' fill='outline' variant='secondary'>
-            <div><Icon size='lg' name={'arrow-left'} /></div>
+            <Icon size='lg' name={'arrow-left'} />
             {previous.title}
           </Button>
         </Link>
@@ -26,7 +26,7 @@ export default function DocPaginator(props) {
         <Link to={next.permalink} style={{ textAlign: 'right' }}>
           <Button size='lg' fill='outline' variant='secondary' style={{ justifyContent: 'flex-end' }}>
             {next.title}
-            <div><Icon size='lg' name={'arrow-right'} /></div>
+            <Icon size='lg' name={'arrow-right'} />
           </Button>
         </Link>
       )}

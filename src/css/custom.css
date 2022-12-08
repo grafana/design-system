@@ -51,6 +51,12 @@
   width: 215px;
 }
 
+.pagination-nav button span {
+  text-align: center;
+  width: 100%;
+  display: block !important;
+}
+
 #about {
   background: #111217;
   color: #CCCCDCA6;
