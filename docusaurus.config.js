@@ -6,7 +6,7 @@ const config = {
   title: 'Grafana Labs Design System',
   tagline: 'Design Systems are cool',
   url: 'https://design.grafana.com',
-  baseUrl: '/design-system/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
