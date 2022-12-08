@@ -19,6 +19,11 @@
   font-size: 20px;
 }
 
+.theme-doc-markdown a { /* Doc pages main section without edit this page or pagination */
+  color: #3D71D9;
+  text-decoration: underline;
+}
+
 .menu__link {
   color: rgba(204, 204, 220, 0.65);
   font-size: 14px;
