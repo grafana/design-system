@@ -10,4 +10,4 @@ RUN npm run build
 FROM nginx:stable-alpine
 WORKDIR /app
 # Copy what we've installed/built from production
-COPY --from=base /app/build /usr/share/nginx/html/design-system/
+COPY --from=base /app/build /usr/share/nginx/html/
