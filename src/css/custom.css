@@ -25,6 +25,10 @@
   text-decoration: underline;
 }
 
+.theme-doc-markdown a:hover {
+  text-decoration: none;
+}
+
 /* NAVIGATION */
 
 .menu,
