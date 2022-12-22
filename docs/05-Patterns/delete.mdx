@@ -9,20 +9,20 @@ import { Badge, InfoBox } from '@grafana/ui';
 
 # Delete <Badge text='draft' color='orange'></Badge>
 
-Deleting within Grafana is a multi-tiered pattern that varies depending on the required amount of friction (see: [Design Principle: Tasteful Friction](/design-system/Foundations/design-principles#tasteful-friction)) and importance of the item being deleted.
+Deleting within Grafana is a multi-tiered pattern that varies based on the required amount of friction (see: [Design Principle: Tasteful Friction](/design-system/Foundations/design-principles#tasteful-friction)) and importance of the item being deleted.
 
 
 # Tiers
 
-To ensure the appropriate deletion pattern is used, we’ve provided definitions and use cases for each below
+Check definitions and use cases to choose the right pattern.
 
-### **Inine delete**
+### **Inline delete**
 
-This is the quickest and easiest way to delete content within Grafana. This pattern is typically used with IconButton with the **trash-alt, times-circle, **or **times **icon. Used for removing things such as rows or line items, this pattern does not require a confirmation of action.
+The quick and easy way to delete non-risky content that's easy for the user to re-add. Typically used with IconButton with the **trash-alt, times-circle, **or **times **icon, with no confirmation step. Used for removing things such as rows or line items.
 
 ### **Type to delete (delete dialogue)**
 
-The pattern with the most friction, this pattern requires the entire focus of the user to ensure they are fully aware of the changes they are submitting. The changes made have rippling effects that make it dire for the user to acknowledge and accept the resulting consequences of the deletion.** **
+The most friction: when accidental deletion might be disastrous. This pattern demands the entire focus of the user to make sure they're fully aware they are destroying something (and what), and confirm it explicitly with more than just a button click. Useful when changes will have ripple effects.** **
 
 
 # Implementation
