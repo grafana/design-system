@@ -7,6 +7,7 @@
   --doc-sidebar-width: 220px !important;
 
   --grafana-colors-text-primary: rgb(204, 204, 220);
+  --grafana-colors-background-canvas: #111217;
   --grafana-colors-background-primary: #181b1f;
   --grafana-colors-background-secondary: #22252b;
   --grafana-colors-border-weak: rgba(204, 204, 220, 0.07);
@@ -163,16 +164,11 @@
 }
 
 main {
-  background: #111217;
+  background: var(--grafana-colors-background-canvas);
   color: var(--grafana-colors-text-primary);
 }
 
 /* ABOUT */
-
-#about {
-  /* background: #111217; */
-  /* font-weight: 300; */
-}
 
 #about #content {
   padding: 35px;
@@ -280,7 +276,7 @@ main {
 }
 
 #footer {
-  background: #111217;
+  background: var(--grafana-colors-background-canvas);
   font-size: 15px;
   padding: 20px 0;
   display: flex;
