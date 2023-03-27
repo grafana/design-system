@@ -40,9 +40,6 @@ const config = {
         pages: {
           path: 'pages',
         },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
       }),
     ],
   ],
