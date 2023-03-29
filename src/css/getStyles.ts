@@ -289,20 +289,39 @@ export const getStyles = (theme: GrafanaTheme2) => {
       margin: 0 ${theme.spacing(5)} 0 0;
     }
 
+    .two-images-comparison {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .two-images-comparison div:first-child {
+      margin-right: 20px;
+    }
+    
+    @media screen and (max-width: 520px) {
+      .two-images-comparison {
+        flex-direction: column;
+      }
+    
+      .two-images-comparison div:first-child {
+        margin-right: 0;
+      }
+    }
+    
     .two-column-div {
       display: flex;
       flex-direction: row;
     }
-
+    
     .two-column-div p:first-child {
       margin-right: 20px;
     }
-
+    
     @media screen and (max-width: 520px) {
       .two-column-div {
         flex-direction: column;
       }
-
+    
       .two-column-div p:first-child {
         margin-right: 0;
       }
