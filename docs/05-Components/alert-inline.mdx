@@ -6,14 +6,9 @@ keywords: ['Grafana', 'Labs', 'banner', 'component']
 
 import { Badge, Icon } from '@grafana/ui';
 
-# Inline Banner <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Inline Banner <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
-Inline Banners are task-oriented alerts that notify users of the status of an action or system. These alerts are contextual — appearing above or below main content areas — allowing users to address issues or to read messages quickly. See examples below:
-
-![Image description](/img/inline_example.png 'Visual representation of inline notification')
-
-1. Landing page with their content area
-2. Inline Notification related to that content
+Inline Banners are task-oriented alerts that notify users of the status of an action or system. These alerts are contextual — appearing above or below main content areas — allowing users to address issues or to read messages quickly.
 
 ### Do’s
 
@@ -33,13 +28,71 @@ Inline Banners are task-oriented alerts that notify users of the status of an ac
 - To provide some options for users to take action.
 - To explain in detail the reasons why something can’t be done by users.
 
-![Do](/img/do_inline1.png) Use the default button as an action.
+#### Call to action
 
-![Dont](/img/dont_inline1.png) Do not use more than one call to action per notification.
+<div class='two-images-comparison'>
 
-![Do](/img/do_inline2.png) Be concise and clear, with a body content less than two lines, to provide users with detailed information on next steps.
+<div>
 
-![Dont](/img/dont_inline2.png) Do not use a button and the close icon together.
+![Do](/img/inline-banner-do-call-to-action.png) 
+
+Use the default button as an action.
+
+</div>
+
+<div>
+
+![Dont](/img/inline-banner-dont-call-to-action.png)
+
+Do not use more than one call to action.
+
+</div>
+
+</div>
+
+#### Body content
+
+<div class='two-images-comparison'>
+
+<div>
+
+![Do](/img/inline-banner-do-body-content.png) 
+
+Use a body content with less than two lines.
+
+</div>
+
+<div>
+
+![Dont](/img/inline-banner-dont-body-content.png)
+
+Do not exceed a body content of two lines.
+
+</div>
+
+</div>
+
+#### Close action
+
+<div class='two-images-comparison'>
+
+<div>
+
+![Do](/img/inline-banner-do-close.png) 
+
+Use a close action when the message is dismissible.
+
+</div>
+
+<div>
+
+![Dont](/img/inline-banner-dont-close.png)
+
+Do not use two actions together, either a close or a button.
+
+</div>
+
+</div>
 
 ## Content
 
@@ -54,7 +107,12 @@ An Inline Notification persists until the user resolves the issue that triggered
 
 ## Placement
 
-- Should be placed immediately above or below the related element.
+* Should be placed immediately above or below the related element.
+
+![Image description](/img/inline-banner-placement.png 'Visual representation of inline notification')
+
+1. Inline Notification related to that content
+2. Landing page with their content area
 
 ## Related
 

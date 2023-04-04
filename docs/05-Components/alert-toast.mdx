@@ -6,7 +6,7 @@ keywords: ['Grafana', 'Labs', 'alert', 'component']
 
 import { Badge, Icon } from '@grafana/ui';
 
-# Toast <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Toast <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 Toast notifications are short messages that appear in the top-right corner of the page and are automatically hidden after a certain amount of time – they provide live notifications, without interrupting the user experience or requiring an action to be taken.
 
@@ -29,25 +29,50 @@ Toast notifications are short messages that appear in the top-right corner of th
   - **Warning**: It is used to report a current status that users should be aware of or that could have serious consequences.
   - **Error**: Inform users of an error, and sometimes provide more information about how to fix the error.
 
-<div  style={{ display: "flex" }}>
+#### Body content
 
-![Do](/img/do_toast1.png)
+<div class='two-images-comparison'>
+
+<div>
+
+![Do](/img/toast-do-description-details.png) 
+
 Keep the message clear and concise.
 
-![Dont](/img/dont_toast1.png)
+</div>
+
+<div>
+
+![Dont](/img/toast-dont-description-details.png)
+
 Do not exceed more than 3 lines.
 
 </div>
 
-<div  style={{ display: "flex" }}>
+</div>
 
-![Do](/img/do_toast2.png)
+#### Text style
+
+<div class='two-images-comparison'>
+
+<div>
+
+![Do](/img/toast-do-body-style.png) 
+
 Use the body style for the message.
 
-![Dont](/img/dont_toast2.png)
-Do not use a title style for message.
+</div>
+
+<div>
+
+![Dont](/img/toast-dont-body-style.png)
+
+Do not use a title style for the message.
 
 </div>
+
+</div>
+
 
 ## Content
 
@@ -62,7 +87,12 @@ Display brief, temporary messages, without interrupting the user experience and 
 
 ## Placement
 
-- Slide in and out from the top right corner of the page.
+* Slide in and out from the top right corner of the page.
+
+![Image description](/img/toast-placement.png 'Visual representation of toast')
+
+1. Second toast displayed
+2. First toast displayed
 
 ## Related
 

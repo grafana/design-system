@@ -6,7 +6,7 @@ keywords: ['Grafana', 'Labs', 'banner', 'component']
 
 import { Badge, Icon } from '@grafana/ui';
 
-#Banner <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+#Banner <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 Banner notifications show high-importance messages, such as alerts of the product, not a specific task – They persist until dismissed by the user, or if the alert has been resolved.
 
@@ -24,19 +24,55 @@ Banner notifications show high-importance messages, such as alerts of the produc
 
 ## When to use
 
-- To inform users about general notifications for the product.
-- To show a high priority message that needs to be resolved.
-- Need to update/upgrade the product.
-- The trial is about to expire.
-- Use banner notifications when the system state requires a call to action.
+* To inform users about general notifications for the product.
+* To show a high priority message that needs to be resolved.
+* Need to update/upgrade the product.
+* The trial is about to expire.
+* Use banner notifications when the system state requires a call to action.
 
-![Do](/img/do_banner1.png) Use the outline button as an action.
+#### Call to action
 
-![Dont](/img/dont_banner1.png) Do not use more than one line.
+<div class='two-images-comparison'>
 
-![Do](/img/do_banner2.png) For long text, use the max width of the container.
+<div>
 
-![Dont](/img/dont_banner2.png) Do not break the text in several lines.
+![Do](/img/banner-do-button.png) 
+
+Use the outline button as an action.
+
+</div>
+
+<div>
+
+![Dont](/img/banner-dont-button.png)
+
+Do not use the default button style.
+
+</div>
+
+</div>
+
+#### Body content
+
+<div class='two-images-comparison'>
+
+<div>
+
+![Do](/img/banner-do-description-details.png)
+
+Use one line for the body content.
+
+</div>
+
+<div>
+
+![Dont](/img/banner-dont-description-details.png)
+
+Do not use more than one line.
+
+</div>
+
+</div>
 
 ## Content
 
@@ -51,7 +87,12 @@ Banners usually inform the user of a change in system status, not related to a s
 
 ## Placement
 
-- It appears at the top of the interface, as sticky.
+* It appears at the top of the interface, as sticky.
+
+![placement](/img/banner-placement.png)
+
+1. Banner notification 
+2. Landing page with their content area
 
 ## Related
 
