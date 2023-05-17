@@ -7,7 +7,7 @@ hide_title: true
 
 import { Badge, Icon } from '@grafana/ui';
 
-# Button <Badge text='WIP' color='yellow'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# IconButton <Badge text='WIP' color='yellow'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 Clickable elements that are used to trigger actions. IconButtons communicate via icon and tooltip what action will occur when users interact with it.
 
@@ -19,7 +19,8 @@ Clickable elements that are used to trigger actions. IconButtons communicate via
 
 ### Do’s
 
-* Always set a text for tooltip
+* Always add a text for tooltip
+* When using `IconButton` together with text make sure to align them by adding a wrapper with `display: flex`and `align-items: center`
 
 
 ### Don’ts
@@ -31,13 +32,9 @@ Clickable elements that are used to trigger actions. IconButtons communicate via
 
 | Type | Purpose |
 | ---- | ------- |
-| **Primary** | Used for "call to action", i.e. triggering the main action. There should never be more than one on a page. If you need multiple buttons for different actions, decide which action is the most important and make that the primary Button. All other Button components should be secondary. If there is no primary action, all Button components should be secondary. |
-| **Secondary** | The secondary Button is the default button style and can trigger various actions. How it is used depends on its surroundings: 	1. When next to the primary Button, the Secondary style can for example be used for "Cancel" or "Abort" actions. 	2. When there is no main important action on a given page, all Button components should use the secondary style. |
-| **Destructive** | Used for  |
-
+| **Primary** |  If there is no primary action, all Button components should be secondary. |
+| **Secondary** | The secondary Button is the default button style and can trigger various actions. When there is no main important action on a given page, all Button components should use the secondary style. |
 [//]: # (//TODO: Modify purpose )
-
-
 
 ## Formatting
 
@@ -53,76 +50,51 @@ Clickable elements that are used to trigger actions. IconButtons communicate via
 2. Icon
 
 
-### Button Sizes & Label Typography
-| Size | Diameter (icon - container)|
-| ---- | -----------------------|
-| **ExtraSmall - xs** |  |
-| **Small - sm** |  |
-| **Medium - md** |  |
-| **Large - lg** |  |
-| **ExtraLarge - xl** |  |
+### Button Sizes
 
+| size (Figma - code) | icon | padding (Figma - code) | hover size (Figma - code) |
+|---------------------| ---- |------------------------|---------------------------|
+| **small - xs**      | 12px | 4px - 4px              | 20px - 20px               |
+| **N/A - sm**        | 14px | N/A - 4px              | N/A - 22px                |
+| **medium - md**     | 16px | 6px - 4px              | 28px - 24px               |
+| **N/A - lg**        | 18px | N/A - 4px              | N/A - 26px                |
+| **large - xl**      | 24px | 12px - 4px             | 48px - 32px               |
+| **N/A - xxl**       | 24px | N/A - 4px              | N/A - 32px                |
+| **N/A - xxxl**      | 24px | N/A - 4px              | N/A - 32px                |
 
 ![button sizes](/img/button-sizes.png 'Visual representation of button sizes')
-
 [//]: # (TODO: replace image)
 
 ### Hierarchy & Button Pairings
-
 [//]: # (TODO: Modify text)
 
 * **Primary/Destructive Button — High Emphasis:**
 
-    A single page should only display one button with the highest importance for the main action. Other buttons should have lower emphasis and be visually different within the UI. This primary button has to attract the user's attention.
 
-* **Secondary/Icon Button — Default Emphasis: \
-**A single screen can show more than one button, the other buttons can be in the same page with a primary button, these buttons have to be less important according to the actions, and do not distract users from the main content page. You should only group calls to action that are related to each other. A higher emphasis button can be paired with multiple buttons which are lower emphasis. \
-
-* **Outline/Text Button — Low Emphasis:**
-
-    These buttons have less impact and are less distracting to the user's attention, on the same screen several of them can be used.  They are actionable to take users to a new page, the main objective being to provide more information about that section.
-
-
-### Margin & Padding
-| Type | Margin |
-| ---- | ------ |
-| **ExtraSmall - xs** |  |
-| **Small - sm** |  |
-| **Medium - md** |  |
-| **Large - lg** |  |
-| **ExtraLarge - xl** |  |
-
+* **Secondary — Default Emphasis:**
 
 
 ### Placement
-
 [//]: # (TODO: modify text)
 
 * Primary
-    * On the page on the top-right
-
-        Inside the content page on the center
-
+    * ...
 * Default
-    * Inside cards on the bottom-right
-    * Inside content page on the bottom-left
+    * ...
 * Text link
-    * Inside cards on the top-right
-    * Inside cards on the bottom-center
+    * ...
 
 
 ## Accessibility
-
-
+[//]: # (TODO: add something else?)
 
 * Use ARIA tags when using buttons to ensure they are accessible.
-    * For example buttons represented by icons, the accessible name may be provided from the aria-label or aria-labelledby attributes.
-    * Using role="button" instead of the semantic &lt;button> or &lt;input type="button"> (iOS "clickable elements" fix for role="button")
+* Add a text for tooltip
 
 
 
 ### Further Reading & Sources
-
+[//]: # (TODO: add something here)
 
 
 *
