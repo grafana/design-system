@@ -9,7 +9,7 @@ import { Badge, Icon } from '@grafana/ui';
 
 # IconButton <Badge text='WIP' color='yellow'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
-Clickable elements that are used to trigger actions. IconButtons communicate via icon and tooltip what action will occur when users interact with it.
+`IconButton`s are actionable buttons that show only an icon. Since there is no regular label it’s critical to include a tooltip with all IconButtons so the label can be accessible on hover.
 
 <iframe
   src="https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic&full=1&shortcuts=false&singleStory=true"
@@ -19,37 +19,38 @@ Clickable elements that are used to trigger actions. IconButtons communicate via
 
 ### Do’s
 
-* Always add a text for tooltip
+* Always include the button label in a tooltip
 * When using `IconButton` together with text make sure to align them by adding a wrapper with `display: flex`and `align-items: center`
-
+* Use in areas that are limited in space and are low-context
+* Ensure the meaning of the icon is well understood and unambiguous
+* Use `IconButton` instead of Button with only an icon
+* In exceptional cases where the tooltip does not make sense and the icon is unambiguous (e.g <Icon name="angle-down" /> for expanding a folder): add aria-label and the tooltip will be removed.
 
 ### Don’ts
 
-*
+* Do not use in hight-context situations
 
 
 ## Variants
 
-| Type | Purpose |
-| ---- | ------- |
-| **Primary** |  If there is no primary action, all Button components should be secondary. |
-| **Secondary** | The secondary Button is the default button style and can trigger various actions. When there is no main important action on a given page, all Button components should use the secondary style. |
-| **Destructive**| |
-| **Disabled** | If the functionality the IconButton provides is not available but the IconButton is supposed to show that there is this kind of functionality.|
-[//]: # (//TODO: Modify purpose )
+| Type | Style | Purpose |
+| ---- | --- | ------- |
+| **Primary** | Ghost | Used for primary-based actions, only use one per section. If there is no primary action, all Button components should be secondary. |
+| **Secondary** | Ghost | Default-styling of buttons, this style is used the most within Grafana and can trigger various actions. |
+| **Destructive** | Ghost | Used for delete actions |
+| **Disabled** | Ghost | If the functionality the IconButton provides is not available but the IconButton is supposed to show that there is this kind of functionality.|
 
 ## Formatting
 
-
 ### Anatomy
 
+* Icon
+* Container (on hover)
 
-![Dont](/img/button-anatomy-b.png)
 
-[//]: # (TODO: replace image and limit size)
+### Placement
 
-1. Container (on hover)
-2. Icon
+`IconButton`s are best used in areas that are limited in space and are action-heavy. These could be toolbars or in areas that provide inline editing such as tables or cards.
 
 
 ### Button Sizes
@@ -64,39 +65,26 @@ Clickable elements that are used to trigger actions. IconButtons communicate via
 | 24px      |                      | **xxl:** 32px       |
 | 24px      |                      | **xxxl:** 32px      |
 
-![button sizes](/img/button-sizes.png 'Visual representation of button sizes')
-[//]: # (TODO: replace image)
 
-### Hierarchy & Button Pairings
-[//]: # (TODO: Modify text)
+### Accessibility
 
-* **Primary/Destructive Button — High Emphasis:**
+* Add a text for tooltip (it will also be used as the aria-label)
+* In exceptional cases where the tooltip does not make sense add the aria-label.
 
 
-* **Secondary — Default Emphasis:**
+## Content
 
 
-### Placement
-[//]: # (TODO: modify text)
+## Behaviours
 
-* Primary
-    * ...
-* Default
-    * ...
-* Text link
-    * ...
+### Hover
 
-
-## Accessibility
-[//]: # (TODO: add something else?)
-
-* Use ARIA tags when using buttons to ensure they are accessible.
-* Add a text for tooltip
+On hover, the `IconButton` displays a tooltip that includes the IconButton’s label.
 
 
 
-### Further Reading & Sources
-[//]: # (TODO: add something here)
+## Links and Resources
 
-
-*
+* [Figma](https://www.figma.com/file/htVIFrTq8e7sx8Olo7L6kZ/Saga-Components--Dark-theme?type=design&node-id=8444-13444&mode=design&t=HOUJYSYNbbYEZMUl-0)
+* [Story in Storybook](https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic)
+* [Example with `IconButton`s in different sizes e.g. <Icon name="bars" />, <Icon name="share-alt" />, <Icon name="trash-alt" />, <Icon name="eye" />](https://play.grafana.org/explore?orgId=1&left=%7B%22datasource%22:%22aDCxdqe7k%22,%22queries%22:%5B%7B%22metrics%22:%5B%7B%22id%22:%221%22,%22type%22:%22logs%22%7D%5D,%22query%22:%22%22,%22refId%22:%22A%22,%22datasource%22:%7B%22type%22:%22elasticsearch%22,%22uid%22:%22aDCxdqe7k%22%7D,%22alias%22:%22%22,%22bucketAggs%22:%5B%7B%22type%22:%22date_histogram%22,%22id%22:%222%22,%22settings%22:%7B%22interval%22:%22auto%22%7D,%22field%22:%22order_date%22%7D%5D,%22timeField%22:%22order_date%22%7D%5D,%22range%22:%7B%22from%22:%22now-1h%22,%22to%22:%22now%22%7D%7D)
