@@ -20,11 +20,11 @@ import { Badge, Icon } from '@grafana/ui';
 ### Do’s
 
 * Always include the button label in a tooltip
+* In exceptional cases where the tooltip does not make sense and the icon is unambiguous (e.g <Icon name="angle-down" /> for expanding a folder): add aria-label and the tooltip will be removed.
 * When using `IconButton` together with text make sure to align them by adding a wrapper with `display: flex`and `align-items: center`
 * Use in areas that are limited in space and are low-context
 * Ensure the meaning of the icon is well understood and unambiguous
 * Use `IconButton` instead of Button with only an icon
-* In exceptional cases where the tooltip does not make sense and the icon is unambiguous (e.g <Icon name="angle-down" /> for expanding a folder): add aria-label and the tooltip will be removed.
 
 ### Don’ts
 
