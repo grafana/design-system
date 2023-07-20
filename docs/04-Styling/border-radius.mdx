@@ -13,36 +13,29 @@ Rounded corners are mostly a stylistic choice to make the Grafana UI appear more
 
 The measurement of rounded corners is border radius, and it can be defined in pixels or percentages.
 
-### Default Border Radius (2px)
+### Default Border Radius
 
-This is the general border radius used for most UI elements, e.g. Buttons, Popover Panels, Tooltips, Widgets, Dialogs, etc.
+This is the general border radius or `shape.radius.default`, has a definition of 2px and is used for most UI elements, e.g. Buttons, Popover Panels, Tooltips, Widgets, Dialogs, etc.
 
 ![standard border radius](/img/shape.radius.default.png 'Visual depiction of standard border radius in Grafana's UI')
 
-### Full Border Radius (100%)
+### Pill Border Radius 
 
-Elements with 100% border radius occur less often in Grafana's UI. Smaller UI elements, such as switches, get a full 100% border radius for a smooth, clean edge around their rounded elements.
+The pill border radius or `shape.radius.pill`, has a pixel definition of 9999px.  This styling occurs less often in Grafana's UI. Smaller UI elements, such as switches, use the pill radius for a smooth, clean edge around their rounded elements.
 
-![full border radius](/img/shape.radius.circle.png 'Visual depiction of standard border radius in Grafana's UI')
 
-## When to use
+<div style={{ display: "flex" }}>
 
-<div class='two-images-comparison'>
-
-<div>
-
-![Do](/img/shape.radius.pill_do.png) 
-
-Do use 9999px border radius for Pill.
-
-</div>
-
-<div>
+![Do](/img/shape.radius.pill_do.png)
+Smaller elements use the `pill` styling
 
 ![Dont](/img/shape.radius.pill_dont.png)
-
-Do not use 2px border radius for Pill.
-
-</div>
+Do not use the `default` styling
 
 </div>
+
+### Circle Border Radius
+
+The circle border radius or `shape.radius.circle`, has a pixel definition of 100%. This styling also occurs less often in Grafana's UI, providing a full circular shape to elements.
+
+![circle border radius](/img/shape.radius.circle.png 'Visual depiction of the circle border radius in Grafana's UI')

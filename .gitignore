@@ -4,3 +4,4 @@ node_modules
 build
 .image-tag
 .tag-only
+.idea

@@ -35,9 +35,10 @@ Clickable elements that are used to trigger actions. Buttons communicate what ac
 * Do not use buttons with icons and buttons without icons in a button group.
 * Do not have more than one primary action.
 * Do not pair a solid primary and solid destructive button - one must take precedence over the other.
+* Do not use buttons with icons only (in case this is impossible please always add text for a tooltip and an aria label as they are needed to meet accessible requirements)
 
 
-## Emphasis	
+## Emphasis
 
 
 
@@ -81,6 +82,7 @@ Clickable elements that are used to trigger actions. Buttons communicate what ac
 ![Dont](/img/button.anatomy.a.png)
 
 #### Icon Button
+**Note:** Before using buttons without text always consider using IconButton instead.
 1. Solid container (optional)
 2. Icon
 
@@ -106,7 +108,7 @@ Clickable elements that are used to trigger actions. Buttons communicate what ac
 
 
 
-* **Primary/Destructive Button — High Emphasis:**
+* **Primary/Destructive Button — High Emphasis:**
 
     A single page should only display one button with the highest importance for the main action. Other buttons should have lower emphasis and be visually different within the UI. This primary button has to attract the user's attention.
 
@@ -115,15 +117,15 @@ Clickable elements that are used to trigger actions. Buttons communicate what ac
 
 * **Outline/Text Button — Low Emphasis:**
 
-    These buttons have less impact and are less distracting to the user's attention, on the same screen several of them can be used.  They are actionable to take users to a new page, the main objective being to provide more information about that section. 
-	
+    These buttons have less impact and are less distracting to the user's attention, on the same screen several of them can be used.  They are actionable to take users to a new page, the main objective being to provide more information about that section.
+
 
 ### Margin & Padding
 | Type | Margin | Padding |
 | ---- | --------- | ----------- |
 | **Small** | 0px 8px 0px 0px | 0px 8px |
 | **Medium** | 0px 0px 0px 16px | 0px 16px |
-| **Large** | 0px 0px 0px 16px | 0px 16px |     
+| **Large** | 0px 0px 0px 16px | 0px 16px |
 
 
 
