@@ -1,19 +1,19 @@
 {
   "dimension": {
-    "scale": "2px",
+    "scale": "4px",
     "xs": "4px",
-    "sm": "8px",
-    "md": "16px",
-    "lg": "32px",
-    "xl": "64px"
+    "sm": "16px",
+    "md": "64px",
+    "lg": "256px",
+    "xl": "1024px"
   },
   "spacing": {
     "xs": "4px",
-    "sm": "8px",
-    "md": "16px",
-    "lg": "32px",
-    "xl": "64px",
-    "multi-value": "8px 64px"
+    "sm": "16px",
+    "md": "64px",
+    "lg": "256px",
+    "xl": "1024px",
+    "multi-value": "16px 1024px"
   },
   "borderRadius": {
     "sm": "4px",
