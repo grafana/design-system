@@ -9,11 +9,14 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "prepare": "husky install",
+    "buildTokens": "node src/tokens/tokenBuilder.js"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.2.0",
     "@docusaurus/types": "2.2.0",
+    "husky": "^8.0.3",
     "style-dictionary": "^3.8.0"
   },
   "dependencies": {
