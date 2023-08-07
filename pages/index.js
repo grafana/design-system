@@ -1,6 +1,6 @@
 import React from 'react';
-import  { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export default function Home() {
-  return <Redirect to='/design-system/about/' />;
+  return <Redirect to="/design-system/about/" />;
 }
