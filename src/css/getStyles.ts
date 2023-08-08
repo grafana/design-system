@@ -4,10 +4,10 @@ import { GrafanaTheme2 } from '@grafana/data';
 export const getStyles = (theme: GrafanaTheme2) => {
   return css`
     /**
-         * Any CSS included here will be global. The classic template
-         * bundles Infima by default. Infima is a CSS framework designed to
-         * work well for content-centric websites.
-         */
+     * Any CSS included here will be global. The classic template
+     * bundles Infima by default. Infima is a CSS framework designed to
+     * work well for content-centric websites.
+     */
     :root {
       --doc-sidebar-width: 220px !important;
     }
@@ -293,35 +293,35 @@ export const getStyles = (theme: GrafanaTheme2) => {
       display: flex;
       flex-direction: row;
     }
-    
+
     .two-images-comparison div:first-child {
       margin-right: 20px;
     }
-    
+
     @media screen and (max-width: 520px) {
       .two-images-comparison {
         flex-direction: column;
       }
-    
+
       .two-images-comparison div:first-child {
         margin-right: 0;
       }
     }
-    
+
     .two-column-div {
       display: flex;
       flex-direction: row;
     }
-    
+
     .two-column-div p:first-child {
       margin-right: 20px;
     }
-    
+
     @media screen and (max-width: 520px) {
       .two-column-div {
         flex-direction: column;
       }
-    
+
       .two-column-div p:first-child {
         margin-right: 0;
       }
