@@ -155,5 +155,57 @@
       "type": "borderRadius",
       "description": "Standard Corner Radius used throughout Grafana."
     }
+  },
+  "color": {
+    "blue": {
+      "100": {
+        "value": "rgba(56,113,220,0.08)",
+        "type": "color"
+      },
+      "200": {
+        "value": "rgba(61,113,217,0.15)",
+        "type": "color"
+      },
+      "300": {
+        "value": "#B5CBF6",
+        "type": "color",
+        "description": "this is a newly added color"
+      },
+      "400": {
+        "value": "#6E9FFF",
+        "type": "color",
+        "description": "Dark theme;\n- text/link\n- primary/text\n- info/text\n- primary/border\n- visualization/blue"
+      },
+      "500": {
+        "value": "#3D71D9",
+        "type": "color",
+        "description": "primary/primary/main\ninfo/main\ntag/1"
+      },
+      "600": {
+        "value": "#3D71D9",
+        "type": "color",
+        "description": "primary/primary/main\ninfo/main\ntag/1"
+      },
+      "700": {
+        "value": "#1F62E0",
+        "type": "color",
+        "description": "Light theme;\n- text/link\n- primary/text\n- info/text\n- primary/border\n- visualization/blue"
+      },
+      "800": {
+        "value": "#2C5AB0",
+        "type": "color",
+        "description": "light theme:\n- primary/shade"
+      },
+      "900": {
+        "value": "#15397A",
+        "type": "color",
+        "description": "new color"
+      },
+      "1000": {
+        "value": "#00102F",
+        "type": "color",
+        "description": "new color"
+      }
+    }
   }
 }
