@@ -1,4 +1,4 @@
-name: CI
+name: Create Tokens
 on: [push]
 
 jobs:
