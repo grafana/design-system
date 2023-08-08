@@ -1,5 +1,8 @@
 name: Create Tokens
-on: [push]
+on:
+  push:
+    paths:
+    - 'tokens/**'
 
 jobs:
   build:
