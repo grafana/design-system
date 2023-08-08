@@ -97,6 +97,58 @@
       }
     }
   },
+  "font": {
+    "font-family": {
+      "primary": {
+        "value": "Inter",
+        "type": "fontFamilies"
+      },
+      "monospace": {
+        "value": "Roboto Mono",
+        "type": "fontFamilies"
+      }
+    },
+    "font-weight": {
+      "light": {
+        "value": "300",
+        "type": "fontWeights"
+      },
+      "regular": {
+        "value": "400",
+        "type": "fontWeights"
+      },
+      "medium": {
+        "value": "500",
+        "type": "fontWeights"
+      },
+      "bold": {
+        "value": "700",
+        "type": "fontWeights"
+      }
+    },
+    "font-size": {
+      "base": {
+        "value": "{font.font-size.md}",
+        "type": "fontSizes"
+      },
+      "xs": {
+        "value": "{dimension.scale} * 1.25",
+        "type": "fontSizes"
+      },
+      "sm": {
+        "value": "{dimension.scale} * 1.5",
+        "type": "fontSizes"
+      },
+      "md": {
+        "value": "{dimension.scale} * 1.75",
+        "type": "fontSizes"
+      },
+      "lg": {
+        "value": "{dimension.scale} * 2.25",
+        "type": "fontSizes"
+      }
+    }
+  },
   "border": {
     "boder-radius": {
       "value": "2px",
