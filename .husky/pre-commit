@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run buildTokens
-git add src/tokens/variables.json
+npm run build:tokens
+git add src/tokens/tokens.json
