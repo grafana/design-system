@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "32288a55d245a83c27d6624279b3f7943f326446",
+    "name": "Saga Global",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "core": "enabled",
+      "semantic": "enabled",
+      "component/card": "enabled"
+    }
+  }
+]

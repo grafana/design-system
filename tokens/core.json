@@ -127,24 +127,92 @@
       }
     },
     "font-size": {
+      "0": {
+        "value": "{font.font-size.base} * 0.625",
+        "type": "fontSizes"
+      },
+      "1": {
+        "value": "{font.font-size.base} * 0.75",
+        "type": "fontSizes"
+      },
+      "2": {
+        "value": "{font.font-size.base} * 0.875",
+        "type": "fontSizes"
+      },
+      "3": {
+        "value": "{font.font-size.base} * 1",
+        "type": "fontSizes"
+      },
+      "4": {
+        "value": "{font.font-size.base} * 1.125",
+        "type": "fontSizes"
+      },
+      "5": {
+        "value": "{font.font-size.base} * 1.25",
+        "type": "fontSizes"
+      },
+      "6": {
+        "value": "{font.font-size.base} * 1.375",
+        "type": "fontSizes"
+      },
+      "7": {
+        "value": "{font.font-size.base} * 1.5",
+        "type": "fontSizes"
+      },
+      "8": {
+        "value": "{font.font-size.base} *1.75",
+        "type": "fontSizes"
+      },
+      "9": {
+        "value": "{font.font-size.base} *2",
+        "type": "fontSizes"
+      },
+      "10": {
+        "value": "{font.font-size.base} *2.5",
+        "type": "fontSizes"
+      },
+      "11": {
+        "value": "{font.font-size.base} *3",
+        "type": "fontSizes"
+      },
+      "12": {
+        "value": "{font.font-size.base} *3.5",
+        "type": "fontSizes"
+      },
+      "13": {
+        "value": "{font.font-size.base} *4",
+        "type": "fontSizes"
+      },
+      "14": {
+        "value": "{font.font-size.base} *5",
+        "type": "fontSizes"
+      },
+      "15": {
+        "value": "{font.font-size.base} *6",
+        "type": "fontSizes"
+      },
+      "16": {
+        "value": "{font.font-size.base} *7.5",
+        "type": "fontSizes"
+      },
+      "17": {
+        "value": "{font.font-size.base} *9",
+        "type": "fontSizes"
+      },
+      "18": {
+        "value": "{font.font-size.base} *10.5",
+        "type": "fontSizes"
+      },
+      "19": {
+        "value": "{font.font-size.base} *12",
+        "type": "fontSizes"
+      },
+      "20": {
+        "value": "{font.font-size.base} *14",
+        "type": "fontSizes"
+      },
       "base": {
-        "value": "{font.font-size.md}",
-        "type": "fontSizes"
-      },
-      "xs": {
-        "value": "{dimension.scale} * 1.25",
-        "type": "fontSizes"
-      },
-      "sm": {
-        "value": "{dimension.scale} * 1.5",
-        "type": "fontSizes"
-      },
-      "md": {
-        "value": "{dimension.scale} * 1.75",
-        "type": "fontSizes"
-      },
-      "lg": {
-        "value": "{dimension.scale} * 2.25",
+        "value": "{dimension.scale} * 2",
         "type": "fontSizes"
       }
     }
