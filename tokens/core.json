@@ -491,5 +491,42 @@
       "value": "100%",
       "type": "opacity"
     }
+  },
+  "z-index": {
+    "1": {
+      "value": "1000",
+      "type": "other",
+      "description": "Used usualy in the navbarFixed."
+    },
+    "2": {
+      "value": "1020",
+      "type": "other",
+      "description": "Used usualy in the sidemenu."
+    },
+    "3": {
+      "value": "1030",
+      "type": "other",
+      "description": "Used usualy in dropdown and typeahead."
+    },
+    "4": {
+      "value": "1040",
+      "type": "other",
+      "description": "Used usualy in tooltip."
+    },
+    "5": {
+      "value": "1050",
+      "type": "other",
+      "description": "Used usualy in modalBackdrop."
+    },
+    "6": {
+      "value": "1060",
+      "type": "other",
+      "description": "Used usualy in modal."
+    },
+    "7": {
+      "value": "1061",
+      "type": "other",
+      "description": "Used usualy in portal."
+    }
   }
 }
