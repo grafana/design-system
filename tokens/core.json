@@ -215,6 +215,76 @@
         "value": "{dimension.scale} * 2",
         "type": "fontSizes"
       }
+    },
+    "line-height": {
+      "0": {
+        "value": "{dimension.scale} * 2",
+        "type": "lineHeights"
+      },
+      "1": {
+        "value": "{dimension.scale} * 3",
+        "type": "lineHeights"
+      },
+      "2": {
+        "value": "{dimension.scale} * 4",
+        "type": "lineHeights"
+      },
+      "3": {
+        "value": "{dimension.scale} * 5",
+        "type": "lineHeights"
+      },
+      "4": {
+        "value": "{dimension.scale} * 6",
+        "type": "lineHeights"
+      },
+      "5": {
+        "value": "{dimension.scale} * 7",
+        "type": "lineHeights"
+      },
+      "6": {
+        "value": "{dimension.scale} * 8",
+        "type": "lineHeights"
+      },
+      "7": {
+        "value": "{dimension.scale} * 9",
+        "type": "lineHeights"
+      },
+      "8": {
+        "value": "{dimension.scale} * 10",
+        "type": "lineHeights"
+      },
+      "9": {
+        "value": "{dimension.scale} * 11",
+        "type": "lineHeights"
+      },
+      "10": {
+        "value": "{dimension.scale} * 13",
+        "type": "lineHeights"
+      },
+      "11": {
+        "value": "{dimension.scale} * 16",
+        "type": "lineHeights"
+      },
+      "12": {
+        "value": "{dimension.scale} * 20",
+        "type": "lineHeights"
+      },
+      "13": {
+        "value": "{dimension.scale} * 24",
+        "type": "lineHeights"
+      },
+      "14": {
+        "value": "{dimension.scale} * 28",
+        "type": "lineHeights"
+      },
+      "15": {
+        "value": "{dimension.scale} * 32",
+        "type": "lineHeights"
+      },
+      "16": {
+        "value": "{dimension.scale} * 37",
+        "type": "lineHeights"
+      }
     }
   },
   "border": {
