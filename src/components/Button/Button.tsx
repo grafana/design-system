@@ -7,8 +7,8 @@ export const Button = ({ children }) => {
       style={{
         backgroundColor: tokens.color.blue[200],
         border: 'none',
-        padding: `${tokens.spacing[50]} ${tokens.spacing[100]}`,
-        borderRadius: tokens.border.boderRadius,
+        padding: `${tokens.spacing.x0_5} ${tokens.spacing.x1}`,
+        borderRadius: tokens.border.boderRadius.default,
         ...tokens.font.body,
         cursor: 'pointer',
       }}
