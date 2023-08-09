@@ -344,7 +344,7 @@
     }
   },
   "border": {
-    "border": {
+    "border-radius": {
       "default": {
         "value": "2px",
         "type": "borderRadius",
