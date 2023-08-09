@@ -285,6 +285,24 @@
         "value": "{dimension.scale} * 37",
         "type": "lineHeights"
       }
+    },
+    "letter-spacing": {
+      "tight": {
+        "value": "-0.25%",
+        "type": "letterSpacing"
+      },
+      "normal": {
+        "value": "0%",
+        "type": "letterSpacing"
+      },
+      "wide": {
+        "value": "0.15%",
+        "type": "letterSpacing"
+      },
+      "wider": {
+        "value": "0.25%",
+        "type": "letterSpacing"
+      }
     }
   },
   "border": {
