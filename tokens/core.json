@@ -344,10 +344,22 @@
     }
   },
   "border": {
-    "boder-radius": {
-      "value": "2px",
-      "type": "borderRadius",
-      "description": "Standard Corner Radius used throughout Grafana."
+    "border": {
+      "default": {
+        "value": "2px",
+        "type": "borderRadius",
+        "description": "Standard Corner Radius used throughout Grafana."
+      },
+      "circle": {
+        "value": "100%",
+        "type": "borderRadius",
+        "description": "used to generate full circle elements"
+      },
+      "pill": {
+        "value": "9999px",
+        "type": "borderRadius",
+        "description": "used to generate pill-shaped elements"
+      }
     }
   },
   "color": {
