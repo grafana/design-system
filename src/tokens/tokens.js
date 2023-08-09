@@ -242,6 +242,133 @@ export default {
       ]
     }
   },
+  "color": {
+    "background": {
+      "button": {
+        "primary": {
+          "default": "#3d71d9",
+          "hover": "#7a99e3"
+        }
+      },
+      "error": {
+        "default": "#d83a61",
+        "hover": "#ff5286"
+      },
+      "success": {
+        "default": "#3f931b",
+        "hover": "#63ae3e"
+      },
+      "warning": {
+        "default": "#ff9830",
+        "hover": "#ffad5a"
+      },
+      "info": {
+        "default": "#3d71d9",
+        "hover": "#7a99e3"
+      }
+    },
+    "blue": {
+      "blue0": "#f7f7f7",
+      "blue100": "#d8def1",
+      "blue200": "#afbfea",
+      "blue300": "#7a99e3",
+      "blue400": "#3d71d9",
+      "blue500": "#1f4ed5",
+      "blue600": "#082cca",
+      "blue700": "#0014a8",
+      "blue800": "#000663",
+      "blue900": "#000026"
+    },
+    "purple": {
+      "purple0": "#eeeff2",
+      "purple100": "#cccdf0",
+      "purple200": "#afa9ee",
+      "purple300": "#9a88eb",
+      "purple400": "#8c67e9",
+      "purple500": "#8547e6",
+      "purple600": "#8527e4",
+      "purple700": "#7532a2",
+      "purple800": "#502b60",
+      "purple900": "#1c121f"
+    },
+    "red": {
+      "red0": "#fff7fc",
+      "red100": "#fcc5e0",
+      "red200": "#f995b9",
+      "red300": "#f56b8c",
+      "red400": "#f2495c",
+      "red500": "#c63138",
+      "red600": "#992422",
+      "red700": "#6d1e17",
+      "red800": "#41150d",
+      "red900": "#140804"
+    },
+    "magenta": {
+      "magenta0": "#fffafd",
+      "magenta100": "#ffbfe1",
+      "magenta200": "#ff86b8",
+      "magenta300": "#ff5286",
+      "magenta400": "#d83a61",
+      "magenta500": "#b12b44",
+      "magenta600": "#8a202e",
+      "magenta700": "#63181e",
+      "magenta800": "#3c0f10",
+      "magenta900": "#140606"
+    },
+    "green": {
+      "green0": "#f8fff2",
+      "green100": "#c1e4aa",
+      "green200": "#8fc96d",
+      "green300": "#63ae3e",
+      "green400": "#3f931b",
+      "green500": "#237804",
+      "green600": "#24630c",
+      "green700": "#234e11",
+      "green800": "#1e3913",
+      "green900": "#162410"
+    },
+    "yellow": {
+      "yellow0": "#f5f5eb",
+      "yellow100": "#f8f7b0",
+      "yellow200": "#fcf574",
+      "yellow300": "#ffec3d",
+      "yellow400": "#d9dd25",
+      "yellow500": "#a6ba16",
+      "yellow600": "#7b980f",
+      "yellow700": "#56750b",
+      "yellow800": "#385309",
+      "yellow900": "#1e3006"
+    },
+    "orange": {
+      "orange0": "#fffbf7",
+      "orange100": "#ffdfc0",
+      "orange200": "#ffc58a",
+      "orange300": "#ffad5a",
+      "orange400": "#ff9830",
+      "orange500": "#d87d21",
+      "orange600": "#b16619",
+      "orange700": "#8b5015",
+      "orange800": "#643a11",
+      "orange900": "#3d250c"
+    },
+    "gray": {
+      "gray0": "#ffffff",
+      "gray100": "#e9ebed",
+      "gray200": "#d4d7dc",
+      "gray300": "#bfc4ca",
+      "gray400": "#abb1b8",
+      "gray500": "#989ea7",
+      "gray600": "#858c95",
+      "gray700": "#737a83",
+      "gray800": "#626872",
+      "gray900": "#515660",
+      "gray1000": "#41464e",
+      "gray1100": "#31353d",
+      "gray1200": "#22252b",
+      "gray1300": "#131415",
+      "gray1400": "#000000"
+    }
+  },
   "dimension": {
     "scale": "8px"
   },
@@ -307,128 +434,6 @@ export default {
     "5": 1050,
     "6": 1060,
     "7": 1061
-  },
-  "color": {
-    "blue": {
-      "blue": "#f7f7f7",
-      "blue100": "#d8def1",
-      "blue200": "#afbfea",
-      "blue300": "#7a99e3",
-      "blue400": "#3d71d9",
-      "blue500": "#1f4ed5",
-      "blue600": "#082cca",
-      "blue700": "#0014a8",
-      "blue800": "#000663",
-      "blue900": "#000026"
-    },
-    "purple": {
-      "purple": "#eeeff2",
-      "purple100": "#cccdf0",
-      "purple200": "#afa9ee",
-      "purple300": "#9a88eb",
-      "purple400": "#8c67e9",
-      "purple500": "#8547e6",
-      "purple600": "#8527e4",
-      "purple700": "#7532a2",
-      "purple800": "#502b60",
-      "purple900": "#1c121f"
-    },
-    "red": {
-      "red": "#fff7fc",
-      "red100": "#fcc5e0",
-      "red200": "#f995b9",
-      "red300": "#f56b8c",
-      "red400": "#f2495c",
-      "red500": "#c63138",
-      "red600": "#992422",
-      "red700": "#6d1e17",
-      "red800": "#41150d",
-      "red900": "#140804"
-    },
-    "magenta": {
-      "magenta": "#fffafd",
-      "magenta100": "#ffbfe1",
-      "magenta200": "#ff86b8",
-      "magenta300": "#ff5286",
-      "magenta400": "#d83a61",
-      "magenta500": "#b12b44",
-      "magenta600": "#8a202e",
-      "magenta700": "#63181e",
-      "magenta800": "#3c0f10",
-      "magenta900": "#140606"
-    },
-    "green": {
-      "green": "#f8fff2",
-      "green100": "#c1e4aa",
-      "green200": "#8fc96d",
-      "green300": "#63ae3e",
-      "green400": "#3f931b",
-      "green500": "#237804",
-      "green600": "#24630c",
-      "green700": "#234e11",
-      "green800": "#1e3913",
-      "green900": "#162410"
-    },
-    "yellow": {
-      "yellow": "#f5f5eb",
-      "yellow100": "#f8f7b0",
-      "yellow200": "#fcf574",
-      "yellow300": "#ffec3d",
-      "yellow400": "#d9dd25",
-      "yellow500": "#a6ba16",
-      "yellow600": "#7b980f",
-      "yellow700": "#56750b",
-      "yellow800": "#385309",
-      "yellow900": "#1e3006"
-    },
-    "orange": {
-      "orange": "#fffbf7",
-      "orange100": "#ffdfc0",
-      "orange200": "#ffc58a",
-      "orange300": "#ffad5a",
-      "orange400": "#ff9830",
-      "orange500": "#d87d21",
-      "orange600": "#b16619",
-      "orange700": "#8b5015",
-      "orange800": "#643a11",
-      "orange900": "#3d250c"
-    },
-    "nuetral": {
-      "light": {
-        "nuetrals": "#ffffff",
-        "nuetrals100": "#e9ebed",
-        "nuetrals200": "#d4d7dc",
-        "nuetrals300": "#bfc4ca",
-        "nuetrals400": "#abb1b8",
-        "nuetrals500": "#989ea7",
-        "nuetrals600": "#858c95",
-        "nuetrals700": "#737a83",
-        "nuetrals800": "#626872",
-        "nuetrals900": "#515660",
-        "nuetrals1000": "#41464e",
-        "nuetrals1100": "#31353d",
-        "nuetrals1200": "#22252b",
-        "nuetrals1300": "#131415",
-        "nuetrals1400": "#000000"
-      },
-      "dark": {
-        "nuetrals": "#000000",
-        "nuetrals100": "#121212",
-        "nuetrals200": "#242424",
-        "nuetrals300": "#373737",
-        "nuetrals400": "#494949",
-        "nuetrals500": "#5b5b5b",
-        "nuetrals600": "#6d6d6d",
-        "nuetrals700": "#808080",
-        "nuetrals800": "#929292",
-        "nuetrals900": "#a4a4a4",
-        "nuetrals1000": "#b6b6b6",
-        "nuetrals1100": "#c8c8c8",
-        "nuetrals1200": "#dbdbdb",
-        "nuetrals1300": "#ededed",
-        "nuetrals1400": "#ffffff"
-      }
-    }
   },
   "tokenSetOrder": {
     "1": "semantic",
