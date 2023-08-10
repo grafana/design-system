@@ -5,7 +5,7 @@ export default {
       "x": "0px",
       "y": "1px",
       "blur": "2px",
-      "spread": 0,
+      "spread": "0px",
       "color": "#000000bf",
       "type": "dropShadow"
     },
@@ -14,7 +14,7 @@ export default {
       "x": "0px",
       "y": "4px",
       "blur": "8px",
-      "spread": 0,
+      "spread": "0px",
       "color": "#000000bf",
       "type": "dropShadow"
     },
@@ -23,7 +23,7 @@ export default {
       "x": "0px",
       "y": "8px",
       "blur": "24px",
-      "spread": 0,
+      "spread": "0px",
       "color": "#000000",
       "type": "dropShadow"
     }
