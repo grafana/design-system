@@ -31,7 +31,8 @@ export default {
   "button": {
     "primary": {
       "fill": "#082cca",
-      "borderRadius": "2px"
+      "borderRadius": "2px",
+      "fontWeights": 500
     },
     "color": {
       "background": {
@@ -42,6 +43,10 @@ export default {
         "primary": {
           "default": "#3d71d9",
           "hover": "#7a99e3"
+        },
+        "secondary": {
+          "default": "#31353d",
+          "hover": "#41464e"
         }
       },
       "text": {
@@ -57,7 +62,8 @@ export default {
         "medium": "32px",
         "small": "24px"
       }
-    }
+    },
+    "fontWeight": 500
   },
   "font": {
     "h1": {
@@ -261,6 +267,11 @@ export default {
         "default": "#3d71d9",
         "hover": "#7a99e3",
         "text": "#f7f7f7"
+      },
+      "level": {
+        "canvas": "#131415",
+        "primary": "#22252b",
+        "secondary": "#31353d"
       }
     },
     "text": {
