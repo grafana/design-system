@@ -163,6 +163,10 @@
         "hover": {
           "value": "{color.magenta.300}",
           "type": "color"
+        },
+        "text": {
+          "value": "{color.magenta.0}",
+          "type": "color"
         }
       },
       "success": {
@@ -172,6 +176,10 @@
         },
         "hover": {
           "value": "{color.green.300}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{color.green.0}",
           "type": "color"
         }
       },
@@ -183,6 +191,10 @@
         "hover": {
           "value": "{color.orange.300}",
           "type": "color"
+        },
+        "text": {
+          "value": "{color.orange.0}",
+          "type": "color"
         }
       },
       "info": {
@@ -193,7 +205,47 @@
         "hover": {
           "value": "{color.blue.300}",
           "type": "color"
+        },
+        "text": {
+          "value": "{color.blue.0}",
+          "type": "color"
         }
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{color.gray.200}",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "{color.gray.500}",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{color.gray.800}",
+        "type": "color"
+      },
+      "max-contrast": {
+        "value": "{color.gray.0}",
+        "type": "color"
+      },
+      "link": {
+        "value": "{color.blue.300}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "weak": {
+        "value": "{color.gray.1100}",
+        "type": "color"
+      },
+      "medium": {
+        "value": "{color.gray.1000}",
+        "type": "color"
+      },
+      "strong": {
+        "value": "{color.gray.900}",
+        "type": "color"
       }
     }
   }
