@@ -6,26 +6,42 @@ keywords: ['keywords', 'for', 'search', 'engines']
 
 import tokens from '../src/tokens/tokens';
 import { Box } from '../src/components/Box/Box';
+import { hex, score } from 'wcag-contrast';
 
 <div id="about">
   <h2>Colors</h2>
-  {Object.keys(tokens.color).map((name) => {
-    if (name === 'background') return;
-    return (
-      <div key={name}>
-        <h4>{name}</h4>
-        {Object.keys(tokens.color[name]).map((token) => {
-          return (
-            <div key={token} style={{ display: 'flex' }}>
-              <Box background={tokens.color[name][token]} margin="0 8px 0 0" />
-              <div>
-                <div>{token}</div>
-                <div>{tokens.color[name][token]}</div>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    {Object.keys(tokens.color).map((name) => {
+      if (name === 'background') return;
+      return (
+        <div key={name} style={{ margin: '16px' }}>
+          <h4>{name}</h4>
+          {Object.keys(tokens.color[name]).map((token) => {
+            const fontColor =
+              score(hex(tokens.color[name][token], tokens.color.gray.gray100)) === 'Fail'
+                ? tokens.color.gray.gray1300
+                : tokens.color.gray.gray100;
+            return (
+              <div key={token} style={{ display: 'flex' }}>
+                <Box width="300px" padding="8px" background={tokens.color[name][token]}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      color: fontColor,
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      height: '100%',
+                    }}
+                  >
+                    <div>{token}</div>
+                    <div>{tokens.color[name][token]}</div>
+                  </div>
+                </Box>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    );
-  })}
+            );
+          })}
+        </div>
+      );
+    })}
+  </div>
 </div>

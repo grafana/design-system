@@ -19,7 +19,8 @@
     "@docusaurus/module-type-aliases": "2.2.0",
     "@docusaurus/types": "2.2.0",
     "style-dictionary": "^3.8.0",
-    "token-transformer": "^0.0.33"
+    "token-transformer": "^0.0.33",
+    "wcag-contrast": "^3.0.0"
   },
   "dependencies": {
     "@docusaurus/core": "2.2.0",

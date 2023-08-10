@@ -1,16 +1,15 @@
 import React from 'react';
 import tokens from '../../tokens/tokens';
 
-export const Box = ({ children, background, padding, margin }) => {
+export const Box = ({ children, background, padding, margin, height = '50px', width = '50px' }) => {
   return (
     <div
       style={{
         backgroundColor: background,
         padding: padding,
         margin: margin,
-        height: '50px',
-        width: '50px',
-        borderRadius: tokens.border.borderRadius.default,
+        height: height,
+        width: width,
         ...tokens.font.body,
       }}
     >
