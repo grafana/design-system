@@ -210,6 +210,20 @@
           "value": "{color.blue.0}",
           "type": "color"
         }
+      },
+      "level": {
+        "canvas": {
+          "value": "{color.gray.1300}",
+          "type": "color"
+        },
+        "primary": {
+          "value": "{color.gray.1200}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{color.gray.1100}",
+          "type": "color"
+        }
       }
     },
     "text": {

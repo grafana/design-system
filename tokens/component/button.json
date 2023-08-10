@@ -3,7 +3,8 @@
     "primary": {
       "value": {
         "fill": "{color.blue.600}",
-        "borderRadius": "{border.border-radius.default}"
+        "borderRadius": "{button.border-radius}",
+        "fontWeights": "{font.font-weight.medium}"
       },
       "type": "composition"
     },
@@ -26,6 +27,16 @@
           },
           "hover": {
             "value": "{color.blue.300}",
+            "type": "color"
+          }
+        },
+        "secondary": {
+          "default": {
+            "value": "{color.gray.1100}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{color.gray.1000}",
             "type": "color"
           }
         }
@@ -64,6 +75,10 @@
           "type": "sizing"
         }
       }
+    },
+    "font-weight": {
+      "value": "{font.font-weight.medium}",
+      "type": "fontWeights"
     }
   }
 }
