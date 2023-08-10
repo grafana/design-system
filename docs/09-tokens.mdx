@@ -1,0 +1,31 @@
+---
+title: Tokens
+description: Description for search engines and results
+keywords: ['keywords', 'for', 'search', 'engines']
+---
+
+import tokens from '../src/tokens/tokens';
+import { Box } from '../src/components/Box/Box';
+
+<div id="about">
+  <h2>Colors</h2>
+  {Object.keys(tokens.color).map((name) => {
+    if (name === 'background') return;
+    return (
+      <div key={name}>
+        <h4>{name}</h4>
+        {Object.keys(tokens.color[name]).map((token) => {
+          return (
+            <div key={token} style={{ display: 'flex' }}>
+              <Box background={tokens.color[name][token]} margin="0 8px 0 0" />
+              <div>
+                <div>{token}</div>
+                <div>{tokens.color[name][token]}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  })}
+</div>

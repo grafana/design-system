@@ -5,10 +5,10 @@ export const Button = ({ children }) => {
   return (
     <button
       style={{
-        backgroundColor: tokens.color.blue[200],
+        backgroundColor: tokens.color.blue.blue400,
         border: 'none',
         padding: `${tokens.spacing.x0_5} ${tokens.spacing.x1}`,
-        borderRadius: tokens.border.boderRadius.default,
+        borderRadius: tokens.border.borderRadius.default,
         ...tokens.font.body,
         cursor: 'pointer',
       }}
