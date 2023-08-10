@@ -833,7 +833,7 @@
       }
     }
   },
-  "shadows": {
+  "shadow": {
     "z1": {
       "value": [
         {
