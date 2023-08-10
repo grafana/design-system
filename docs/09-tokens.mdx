@@ -8,40 +8,121 @@ import tokens from '../src/tokens/tokens';
 import { Box } from '../src/components/Box/Box';
 import { hex, score } from 'wcag-contrast';
 
-<div id="about">
-  <h2>Colors</h2>
-  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-    {Object.keys(tokens.color).map((name) => {
-      if (name === 'background') return;
-      return (
-        <div key={name} style={{ margin: '16px' }}>
-          <h4>{name}</h4>
-          {Object.keys(tokens.color[name]).map((token) => {
-            const fontColor =
-              score(hex(tokens.color[name][token], tokens.color.gray.gray100)) === 'Fail'
-                ? tokens.color.gray.gray1300
-                : tokens.color.gray.gray100;
-            return (
-              <div key={token} style={{ display: 'flex' }}>
-                <Box width="300px" padding="8px" background={tokens.color[name][token]}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      color: fontColor,
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      height: '100%',
-                    }}
-                  >
-                    <div>{token}</div>
-                    <div>{tokens.color[name][token]}</div>
-                  </div>
-                </Box>
-              </div>
-            );
-          })}
-        </div>
-      );
-    })}
+### Colors
+
+<div style={{ display: 'flex', flexWrap: 'wrap' }}>
+  {Object.keys(tokens.color).map((name) => {
+    if (name === 'background') return;
+    return (
+      <div key={name} style={{ margin: '16px' }}>
+        <h4>{name}</h4>
+        {Object.keys(tokens.color[name]).map((token) => {
+          const fontColor =
+            score(hex(tokens.color[name][token], tokens.color.gray[100])) === 'Fail'
+              ? tokens.color.gray[1300]
+              : tokens.color.gray[100];
+          return (
+            <div key={token} style={{ display: 'flex' }}>
+              <Box width="240px" padding="8px" background={tokens.color[name][token]}>
+                <div
+                  style={{
+                    display: 'flex',
+                    color: fontColor,
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    height: '100%',
+                  }}
+                >
+                  <div>{token}</div>
+                  <div>{tokens.color[name][token]}</div>
+                </div>
+              </Box>
+            </div>
+          );
+        })}
+      </div>
+    );
+  })}
+</div>
+
+### Spacing
+
+<div>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '240px',
+      color: tokens.color.gray[100],
+      margin: '4px',
+      padding: '4px',
+    }}
+  >
+    <div>Token</div>
+    <div>Value</div>
+    <div>Example</div>
   </div>
+  {Object.keys(tokens.spacing).map((name) => {
+    return (
+      <div
+        key={name}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          background: tokens.color.gray[1100],
+          alignItems: 'center',
+          width: '240px',
+          color: tokens.color.gray[100],
+          margin: '4px',
+          padding: '8px',
+        }}
+      >
+        <div style={{ width: '33%' }}>{name}</div>
+        <div style={{ width: '33%' }}>{tokens.spacing[name]}</div>
+        <div style={{ width: '34%' }}>
+          <Box width={tokens.spacing[name]} height={tokens.spacing[name]} background={tokens.color.red[400]}></Box>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+### Opacity
+
+<div>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '240px',
+      color: tokens.color.gray[100],
+      margin: '4px',
+      padding: '4px',
+    }}
+  >
+    <div>Token</div>
+    <div>Value</div>
+    <div>Example</div>
+  </div>
+  {Object.keys(tokens.opacity).map((name) => {
+    return (
+      <div
+        key={name}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          background: tokens.color.gray[1100],
+          alignItems: 'center',
+          width: '240px',
+          color: tokens.color.gray[100],
+          margin: '4px',
+          padding: '4px',
+        }}
+      >
+        <div>{name}</div>
+        <div>{tokens.opacity[name]}</div>
+        <Box height="20px" background={tokens.color.red[400]} opacity={tokens.opacity[name]}></Box>
+      </div>
+    );
+  })}
 </div>

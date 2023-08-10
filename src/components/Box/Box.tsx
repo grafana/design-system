@@ -1,7 +1,7 @@
 import React from 'react';
 import tokens from '../../tokens/tokens';
 
-export const Box = ({ children, background, padding, margin, height = '50px', width = '50px' }) => {
+export const Box = ({ children, background, padding, margin, opacity, height = '50px', width = '50px' }) => {
   return (
     <div
       style={{
@@ -10,6 +10,7 @@ export const Box = ({ children, background, padding, margin, height = '50px', wi
         margin: margin,
         height: height,
         width: width,
+        opacity: opacity,
         ...tokens.font.body,
       }}
     >
