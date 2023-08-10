@@ -1,4 +1,33 @@
 export default {
+  "shadow": {
+    "z1": {
+      "0": "[object Object]",
+      "x": "0px",
+      "y": "1px",
+      "blur": "2px",
+      "spread": 0,
+      "color": "#000000bf",
+      "type": "dropShadow"
+    },
+    "z2": {
+      "0": "[object Object]",
+      "x": "0px",
+      "y": "4px",
+      "blur": "8px",
+      "spread": 0,
+      "color": "#000000bf",
+      "type": "dropShadow"
+    },
+    "z3": {
+      "0": "[object Object]",
+      "x": "0px",
+      "y": "8px",
+      "blur": "24px",
+      "spread": 0,
+      "color": "#000000",
+      "type": "dropShadow"
+    }
+  },
   "button": {
     "primary": {
       "fill": "#082cca",
@@ -378,38 +407,6 @@ export default {
     "5": 1050,
     "6": 1060,
     "7": 1061
-  },
-  "shadows": {
-    "z1": [
-      {
-        "x": "0px",
-        "y": "1px",
-        "blur": "2px",
-        "spread": 0,
-        "color": "#000000",
-        "type": "dropShadow"
-      }
-    ],
-    "z2": [
-      {
-        "x": "0px",
-        "y": "4px",
-        "blur": "8px",
-        "spread": 0,
-        "color": "#000000",
-        "type": "dropShadow"
-      }
-    ],
-    "z3": [
-      {
-        "x": "0px",
-        "y": "8px",
-        "blur": "24px",
-        "spread": 0,
-        "color": "#000000",
-        "type": "dropShadow"
-      }
-    ]
   },
   "tokenSetOrder": {
     "0": "core",
