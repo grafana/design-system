@@ -232,52 +232,52 @@
       "button": {
         "primary": {
           "default": {
-            "value": "{color.blue.blue400}",
+            "value": "{color.blue.400}",
             "type": "color"
           },
           "hover": {
-            "value": "{color.blue.blue300}",
+            "value": "{color.blue.300}",
             "type": "color"
           }
         }
       },
       "error": {
         "default": {
-          "value": "{color.magenta.magenta400}",
+          "value": "{color.magenta.400}",
           "type": "color"
         },
         "hover": {
-          "value": "{color.magenta.magenta 300}",
+          "value": "{color.magenta.300}",
           "type": "color"
         }
       },
       "success": {
         "default": {
-          "value": "{color.green.green400}",
+          "value": "{color.green.400}",
           "type": "color"
         },
         "hover": {
-          "value": "{color.green.green300}",
+          "value": "{color.green.300}",
           "type": "color"
         }
       },
       "warning": {
         "default": {
-          "value": "{color.orange.orange400}",
+          "value": "{color.orange.400}",
           "type": "color"
         },
         "hover": {
-          "value": "{color.orange.orange300}",
+          "value": "{color.orange.300}",
           "type": "color"
         }
       },
       "info": {
         "default": {
-          "value": "{color.blue.blue400}",
+          "value": "{color.blue.400}",
           "type": "color"
         },
         "hover": {
-          "value": "{color.blue.blue300}",
+          "value": "{color.blue.300}",
           "type": "color"
         }
       }

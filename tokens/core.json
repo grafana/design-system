@@ -63,38 +63,36 @@
       "type": "spacing"
     }
   },
-  "sizing": {
-    "breakpoint": {
-      "xs": {
-        "value": "0px",
-        "type": "sizing",
-        "description": "XS breakpoint min-width value."
-      },
-      "sm": {
-        "value": "544px",
-        "type": "sizing",
-        "description": "SM breakpoint min-width value."
-      },
-      "md": {
-        "value": "769px",
-        "type": "sizing",
-        "description": "MD breakpoint min-width value."
-      },
-      "lg": {
-        "value": "992px",
-        "type": "sizing",
-        "description": "LG breakpoint min-width value."
-      },
-      "xl": {
-        "value": "1200px",
-        "type": "sizing",
-        "description": "XL breakpoint min-width value."
-      },
-      "xxl": {
-        "value": "1440px",
-        "type": "sizing",
-        "description": "XXL breakpoint min-width value."
-      }
+  "breakpoint": {
+    "xs": {
+      "value": "0px",
+      "type": "sizing",
+      "description": "XS breakpoint min-width value."
+    },
+    "sm": {
+      "value": "544px",
+      "type": "sizing",
+      "description": "SM breakpoint min-width value."
+    },
+    "md": {
+      "value": "769px",
+      "type": "sizing",
+      "description": "MD breakpoint min-width value."
+    },
+    "lg": {
+      "value": "992px",
+      "type": "sizing",
+      "description": "LG breakpoint min-width value."
+    },
+    "xl": {
+      "value": "1200px",
+      "type": "sizing",
+      "description": "XL breakpoint min-width value."
+    },
+    "xxl": {
+      "value": "1440px",
+      "type": "sizing",
+      "description": "XXL breakpoint min-width value."
     }
   },
   "font": {

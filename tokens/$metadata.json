@@ -2,6 +2,10 @@
   "tokenSetOrder": [
     "core",
     "semantic",
-    "component/card"
+    "component/button",
+    "product/light",
+    "product/dark",
+    "clientA/light",
+    "clientA/dark"
   ]
 }

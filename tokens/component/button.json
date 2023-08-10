@@ -1,0 +1,25 @@
+{
+  "button": {
+    "primary": {
+      "value": {
+        "fill": "{color.blue.600}",
+        "borderRadius": "{border.border-radius.default}"
+      },
+      "type": "composition"
+    },
+    "color": {
+      "background": {
+        "error": {
+          "default": {
+            "value": "{color.background.error.default}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{color.background.error.hover}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  }
+}

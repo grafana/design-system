@@ -6,7 +6,51 @@
     "selectedTokenSets": {
       "core": "enabled",
       "semantic": "enabled",
-      "component/card": "enabled"
+      "component/button": "enabled"
+    }
+  },
+  {
+    "id": "fbe099152beb8adb76d992721d447104f9aea052",
+    "name": "Product-Light",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "core": "source",
+      "semantic": "source",
+      "product/light": "enabled",
+      "component/button": "source"
+    }
+  },
+  {
+    "id": "6fff78a46dacef84af2fc9fbe742b29dbef489bf",
+    "name": "Product-Dark",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "core": "source",
+      "semantic": "source",
+      "product/dark": "enabled",
+      "component/button": "source"
+    }
+  },
+  {
+    "id": "88373232bdecfbde4b31eeba53d527f680c522e0",
+    "name": "ClientA-Light",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "core": "source",
+      "semantic": "source",
+      "clientA/light": "enabled",
+      "component/button": "source"
+    }
+  },
+  {
+    "id": "21083836928d3364c7e962ed231401f6ef8960cc",
+    "name": "ClientA-Dark",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "core": "source",
+      "semantic": "source",
+      "clientA/dark": "enabled",
+      "component/button": "source"
     }
   }
 ]
