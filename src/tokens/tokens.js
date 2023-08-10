@@ -188,74 +188,6 @@ export default {
       "capitalize": "capitalize"
     }
   },
-  "shadows": {
-    "z1": {
-      "onDark": [
-        {
-          "x": "0px",
-          "y": "1px",
-          "blur": "2px",
-          "spread": 0,
-          "color": "#181a1bbf",
-          "type": "dropShadow"
-        }
-      ],
-      "onLight": [
-        {
-          "x": "0px",
-          "y": "1px",
-          "blur": "2px",
-          "spread": 0,
-          "color": "#181a1b33",
-          "type": "dropShadow"
-        }
-      ]
-    },
-    "z2": {
-      "onDark": [
-        {
-          "x": "0px",
-          "y": "4px",
-          "blur": "8px",
-          "spread": 0,
-          "color": "#181a1bbf",
-          "type": "dropShadow"
-        }
-      ],
-      "onLight": [
-        {
-          "x": "0px",
-          "y": "4px",
-          "blur": "8px",
-          "spread": 0,
-          "color": "#181a1b33",
-          "type": "dropShadow"
-        }
-      ]
-    },
-    "z3": {
-      "onDark": [
-        {
-          "x": "0px",
-          "y": "8px",
-          "blur": "24px",
-          "spread": 0,
-          "color": "#010409",
-          "type": "dropShadow"
-        }
-      ],
-      "onLight": [
-        {
-          "x": "0px",
-          "y": "13px",
-          "blur": "20px",
-          "spread": "1px",
-          "color": "#181a1b2e",
-          "type": "dropShadow"
-        }
-      ]
-    }
-  },
   "color": {
     "background": {
       "button": {
@@ -446,6 +378,38 @@ export default {
     "5": 1050,
     "6": 1060,
     "7": 1061
+  },
+  "shadows": {
+    "z1": [
+      {
+        "x": "0px",
+        "y": "1px",
+        "blur": "2px",
+        "spread": 0,
+        "color": "#000000",
+        "type": "dropShadow"
+      }
+    ],
+    "z2": [
+      {
+        "x": "0px",
+        "y": "4px",
+        "blur": "8px",
+        "spread": 0,
+        "color": "#000000",
+        "type": "dropShadow"
+      }
+    ],
+    "z3": [
+      {
+        "x": "0px",
+        "y": "8px",
+        "blur": "24px",
+        "spread": 0,
+        "color": "#000000",
+        "type": "dropShadow"
+      }
+    ]
   },
   "tokenSetOrder": {
     "0": "core",
