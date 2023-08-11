@@ -482,6 +482,16 @@ export default {
     "6": 1060,
     "7": 1061
   },
+  "boder": {
+    "borderWidth": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    }
+  },
   "tokenSetOrder": {
     "0": "core",
     "1": "semantic",
