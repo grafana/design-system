@@ -68,7 +68,7 @@
         "paragraphSpacing": "{font.paragraph-spacing.normal}"
       },
       "type": "typography",
-      "description": "H4 on the typography hierarchy."
+      "description": "H4 Bold on the typography hierarchy."
     },
     "h5": {
       "value": {
@@ -96,7 +96,7 @@
         "paragraphSpacing": "{font.paragraph-spacing.normal}"
       },
       "type": "typography",
-      "description": "H5 on the typography hierarchy."
+      "description": "H5 Bold on the typography hierarchy."
     },
     "h6": {
       "value": {
@@ -138,7 +138,7 @@
         "paragraphSpacing": "{font.paragraph-spacing.normal}"
       },
       "type": "typography",
-      "description": "Body on the typography hierarchy."
+      "description": "Body Bold on the typography hierarchy."
     },
     "body-small": {
       "value": {
