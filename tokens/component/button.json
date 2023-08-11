@@ -22,7 +22,7 @@
         },
         "primary": {
           "default": {
-            "value": "{color.background.primary.default}",
+            "value": "{color.background.error.default}",
             "type": "color"
           },
           "hover": {
