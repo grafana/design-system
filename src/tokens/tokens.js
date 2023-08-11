@@ -31,7 +31,7 @@ export default {
   "button": {
     "primary": {
       "fill": "#082cca",
-      "borderRadius": "2px",
+      "borderRadius": "9999px",
       "fontWeights": 500
     },
     "color": {
@@ -41,7 +41,7 @@ export default {
           "hover": "#ff5286"
         },
         "primary": {
-          "default": "#3d71d9",
+          "default": "#3f931b",
           "hover": "#7a99e3"
         },
         "secondary": {
@@ -55,7 +55,7 @@ export default {
         "destructive": "#ffffff"
       }
     },
-    "borderRadius": "2px",
+    "borderRadius": "9999px",
     "size": {
       "height": {
         "large": "48px",
