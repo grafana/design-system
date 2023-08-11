@@ -106,12 +106,32 @@ export default {
       "textCase": "none",
       "paragraphSpacing": 0
     },
+    "h4Bold": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "lineHeight": "24px",
+      "fontSize": "18px",
+      "letterSpacing": "0%",
+      "textDecoration": "none",
+      "textCase": "none",
+      "paragraphSpacing": 0
+    },
     "h5": {
       "fontFamily": "Inter",
       "fontWeight": 400,
       "lineHeight": "24px",
       "fontSize": "16px",
       "letterSpacing": "0%",
+      "textDecoration": "none",
+      "textCase": "none",
+      "paragraphSpacing": 0
+    },
+    "h5Bold": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "lineHeight": "24px",
+      "fontSize": "16px",
+      "letterSpacing": "0.15%",
       "textDecoration": "none",
       "textCase": "none",
       "paragraphSpacing": 0
@@ -129,6 +149,16 @@ export default {
     "body": {
       "fontFamily": "Inter",
       "fontWeight": 400,
+      "lineHeight": "16px",
+      "fontSize": "14px",
+      "letterSpacing": "0.15%",
+      "textDecoration": "none",
+      "textCase": "none",
+      "paragraphSpacing": 0
+    },
+    "bodyBold": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
       "lineHeight": "16px",
       "fontSize": "14px",
       "letterSpacing": "0.15%",
