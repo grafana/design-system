@@ -63,7 +63,19 @@ export default {
         "small": "24px"
       }
     },
-    "fontWeight": 500
+    "fontWeight": 500,
+    "font": {
+      "label": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "lineHeight": "16px",
+        "fontSize": "14px",
+        "letterSpacing": "0.15%",
+        "textDecoration": "none",
+        "textCase": "none",
+        "paragraphSpacing": 0
+      }
+    }
   },
   "font": {
     "h1": {
@@ -272,11 +284,9 @@ export default {
   },
   "color": {
     "background": {
-      "button": {
-        "primary": {
-          "default": "#3d71d9",
-          "hover": "#7a99e3"
-        }
+      "primary": {
+        "default": "#3d71d9",
+        "hover": "#7a99e3"
       },
       "error": {
         "default": "#d83a61",
@@ -297,8 +307,10 @@ export default {
         "default": "#3d71d9",
         "hover": "#7a99e3",
         "text": "#f7f7f7"
-      },
-      "level": {
+      }
+    },
+    "level": {
+      "background": {
         "canvas": "#131415",
         "primary": "#22252b",
         "secondary": "#31353d"
