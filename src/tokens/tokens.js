@@ -41,7 +41,7 @@ export default {
           "hover": "#ff5286"
         },
         "primary": {
-          "default": "#3d71d9",
+          "default": "#d83a61",
           "hover": "#7a99e3"
         },
         "secondary": {
