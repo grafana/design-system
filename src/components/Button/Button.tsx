@@ -5,10 +5,11 @@ export const Button = ({ children }) => {
   return (
     <button
       style={{
-        backgroundColor: tokens.button.primary.fill,
+        backgroundColor: tokens.button.color.background.primary.default,
+        color: tokens.button.color.text.primary,
         border: 'none',
         padding: `${tokens.spacing.x1} ${tokens.spacing.x2}`,
-        borderRadius: tokens.button.primary.borderRadius,
+        borderRadius: tokens.button.borderRadius,
         ...tokens.font.body,
         cursor: 'pointer',
       }}

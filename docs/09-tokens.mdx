@@ -8,11 +8,13 @@ import tokens from '../src/tokens/tokens';
 import { Box } from '../src/components/Box/Box';
 import { hex, score } from 'wcag-contrast';
 
-### Colors
+## Colors
+
+### Palette
 
 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
   {Object.keys(tokens.color).map((name) => {
-    if (name === 'background') return;
+    if (['background', 'text', 'border'].includes(name)) return;
     return (
       <div key={name} style={{ margin: '16px' }}>
         <h4>{name}</h4>
@@ -45,7 +47,60 @@ import { hex, score } from 'wcag-contrast';
   })}
 </div>
 
-### Spacing
+### Text
+
+<div>
+  {Object.keys(tokens.color.text).map((name) => {
+    const fontColor =
+      score(hex(tokens.color.text[name], tokens.color.gray[100])) === 'Fail'
+        ? tokens.color.gray[1300]
+        : tokens.color.gray[100];
+    return (
+      <div
+        key={name}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          background: tokens.color.gray[1100],
+          alignItems: 'center',
+          width: '240px',
+          color: tokens.color.text[name],
+          margin: '4px',
+          padding: '8px',
+        }}
+      >
+        <div>{name}</div>
+        <div>{tokens.color.text[name]}</div>
+      </div>
+    );
+  })}
+</div>
+
+### Border
+
+<div>
+  {Object.keys(tokens.color.border).map((name) => {
+    return (
+      <div
+        key={name}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '240px',
+          border: `1px solid ${tokens.color.border[name]}`,
+          margin: '4px',
+          padding: '8px',
+        }}
+      >
+        <div>{name}</div>
+        <div>{tokens.color.border[name]}</div>
+      </div>
+    );
+  })}
+</div>
+
+## Spacing
 
 <div>
   <div
@@ -87,7 +142,7 @@ import { hex, score } from 'wcag-contrast';
   })}
 </div>
 
-### Opacity
+## Opacity
 
 <div>
   <div
