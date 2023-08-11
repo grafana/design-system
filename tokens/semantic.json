@@ -56,6 +56,20 @@
       "type": "typography",
       "description": "H4 on the typography hierarchy."
     },
+    "h4-bold": {
+      "value": {
+        "fontFamily": "{font.font-family.primary}",
+        "fontWeight": "{font.font-weight.medium}",
+        "lineHeight": "{font.line-height.1}",
+        "fontSize": "{font.font-size.4}",
+        "letterSpacing": "{font.letter-spacing.normal}",
+        "textDecoration": "{font.text-decoration.none}",
+        "textCase": "{font.text-transform.none}",
+        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+      },
+      "type": "typography",
+      "description": "H4 on the typography hierarchy."
+    },
     "h5": {
       "value": {
         "fontFamily": "{font.font-family.primary}",
@@ -63,6 +77,20 @@
         "lineHeight": "{font.line-height.1}",
         "fontSize": "{font.font-size.3}",
         "letterSpacing": "{font.letter-spacing.normal}",
+        "textDecoration": "{font.text-decoration.none}",
+        "textCase": "{font.text-transform.none}",
+        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+      },
+      "type": "typography",
+      "description": "H5 on the typography hierarchy."
+    },
+    "h5-bold": {
+      "value": {
+        "fontFamily": "{font.font-family.primary}",
+        "fontWeight": "{font.font-weight.medium}",
+        "lineHeight": "{font.line-height.1}",
+        "fontSize": "{font.font-size.3}",
+        "letterSpacing": "{font.letter-spacing.wide}",
         "textDecoration": "{font.text-decoration.none}",
         "textCase": "{font.text-transform.none}",
         "paragraphSpacing": "{font.paragraph-spacing.normal}"
@@ -88,6 +116,20 @@
       "value": {
         "fontFamily": "{font.font-family.primary}",
         "fontWeight": "{font.font-weight.regular}",
+        "lineHeight": "{font.line-height.0}",
+        "fontSize": "{font.font-size.2}",
+        "letterSpacing": "{font.letter-spacing.wide}",
+        "textDecoration": "{font.text-decoration.none}",
+        "textCase": "{font.text-transform.none}",
+        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+      },
+      "type": "typography",
+      "description": "Body on the typography hierarchy."
+    },
+    "body-bold": {
+      "value": {
+        "fontFamily": "{font.font-family.primary}",
+        "fontWeight": "{font.font-weight.medium}",
         "lineHeight": "{font.line-height.0}",
         "fontSize": "{font.font-size.2}",
         "letterSpacing": "{font.letter-spacing.wide}",
