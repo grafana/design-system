@@ -31,7 +31,7 @@ export default {
   "button": {
     "primary": {
       "fill": "#082cca",
-      "borderRadius": "9999px",
+      "borderRadius": "2px",
       "fontWeights": 500
     },
     "color": {
@@ -55,7 +55,7 @@ export default {
         "destructive": "#ffffff"
       }
     },
-    "borderRadius": "9999px",
+    "borderRadius": "2px",
     "size": {
       "height": {
         "large": "48px",
