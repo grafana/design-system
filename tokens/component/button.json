@@ -22,11 +22,11 @@
         },
         "primary": {
           "default": {
-            "value": "{color.blue.400}",
+            "value": "{color.background.primary.default}",
             "type": "color"
           },
           "hover": {
-            "value": "{color.blue.300}",
+            "value": "{color.background.primary.hover}",
             "type": "color"
           }
         },
@@ -79,6 +79,12 @@
     "font-weight": {
       "value": "{font.font-weight.medium}",
       "type": "fontWeights"
+    },
+    "font": {
+      "label": {
+        "value": "{font.body}",
+        "type": "typography"
+      }
     }
   }
 }

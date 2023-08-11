@@ -185,16 +185,14 @@
   },
   "color": {
     "background": {
-      "button": {
-        "primary": {
-          "default": {
-            "value": "{color.blue.400}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{color.blue.300}",
-            "type": "color"
-          }
+      "primary": {
+        "default": {
+          "value": "{color.blue.400}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.blue.300}",
+          "type": "color"
         }
       },
       "error": {
@@ -252,8 +250,10 @@
           "value": "{color.blue.0}",
           "type": "color"
         }
-      },
-      "level": {
+      }
+    },
+    "level": {
+      "background": {
         "canvas": {
           "value": "{color.gray.1300}",
           "type": "color"
