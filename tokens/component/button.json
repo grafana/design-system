@@ -57,7 +57,7 @@
       }
     },
     "border-radius": {
-      "value": "{border.border-radius.pill}",
+      "value": "{border.border-radius.default}",
       "type": "borderRadius"
     },
     "size": {
