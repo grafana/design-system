@@ -22,7 +22,7 @@
         },
         "primary": {
           "default": {
-            "value": "{color.background.success.default}",
+            "value": "{color.background.primary.default}",
             "type": "color"
           },
           "hover": {
@@ -57,7 +57,7 @@
       }
     },
     "border-radius": {
-      "value": "{border.border-radius.pill}",
+      "value": "{border.border-radius.default}",
       "type": "borderRadius"
     },
     "size": {
