@@ -19,16 +19,6 @@ The table is used to display and select data efficiently. The table component al
 
 ## Usage
 
-### When to use
-- To redirect the user to another page, external or internal.<br/>
-- When redirecting the user through a link in a word or phrase within a paragraph. <br/>
-- When redirecting the user through a link in a word or phrase, not within a paragraph but surrounded by other blocks of text.<br/>
-
-### When not to use
-- When its purpose is to trigger an action, please use a Button or IconButton component.<br/>
-- When it still redirects the user but it should have the same appearance as a button, please use the LinkButton component.<br/>
-- When the link is just comprised by an icon use IconButton component.<br/>
-
 ### Do’s
 - Use the table for Admin User Persona(TBD) centric workflows <br/>
 - Use the table for batch selection AND manipulation/editing of multiple rows of data<br/>
@@ -51,74 +41,28 @@ The table will typically be complimented by a section above to support either re
 
 Individual rows can be expanded to display additional details or reconfigure properties previously defined when the row was created.  In the case of editing a row, the UI presented should be a duplicate of the header section above the table used to create the row.  In the case where a property can no longer be edited it should still be displayed but disabled/greyed out.  The expanded row area should be used to declutter the primary presentation of data, carefully consider what the user needs to know at first glance and what can be hidden behind the Row Expander button.  In general, data-types that are consistent across all dataset are in the primary table, variances are pushed to the expanded section for each individual row.
 
-It is important to understand and define these as requirements for the feature under design as the Admin Table is not responsive and will not provide good UX on small or touch screens.
+It is important to understand and define these as requirements for the feature under design as the Admin Table **is not responsive and will not provide good UX on small or touch screens.**
 
-## Types
 
-Within Grafana, there are two different types of _text links_, inline or standalone, whether they are wrapped by text or being a standalone element. 
+## Content
 
-| Types               | Purpose                                                |
+| Element              | Details                                                |
 | ------------------- | ------------------------------------------------------ |
-| **Inline**          | It is part of a broader text. It will be surrounded by text, before, after or in both directions. Although it can show an icon at its end, we advise not to do that |
-| **Standalone**      | It is a block not surrounded immediately by more text |
+| **Tri-state batch selector**          | The tri-state checkbox **can be checked, not checked, or partially checked.** The condition of being partially checked is based on the selection of child elements. If all child elements are selected, the parent checkbox is checked. If some child elements are selected, the parent checkbox is partially checked. |
+| **Row selector**      | Select, deselect row |
+| **Row expand/collapse**      | The expander control is used to show and hide additional details and potentially controls/modifiers.   and therefore declutter your app |
+| **Row details**      | This section is utilised to either show additional details or to provide the user with row specific controls or modifiers. Typically batch editing controls found outside the table should not be duplicated here. |
+| **Column Label**      | Descriptive identifier or header assigned to a column |
+| **Column Sort**      | Sort alphabetically, numerically etc. |
+| **Row level Read-Only actionsr**      | Duplicate |
+| **Row level Editing action**      | Duplicate, Delete |
 
 
-### Subtypes
-Both inline or standalone _text links_ will redirect the user to a specific page, therefore, depending on this they can be internal or external.
-
-| Subtypes            | Purpose                                                |
-| ------------------- | ------------------------------------------------------ |
-| **Internal**        | Redirect the user to a page inside Grafana |
-| **External**        | Redirect the user to a page outside Grafana. The page will open a new window as we use `target="_blank"` and `rel="noreferrer"` to ensure that it is a safe [cross-origin destination](https://developer.chrome.com/docs/lighthouse/best-practices/external-anchors-use-rel-noopener/) link. By default, an external _text link_ will show the `external-link-alt` icon |
-
-
-
-## Formatting
-### Anatomy
-- Text: its content gives info about where the user is going to be directed
-- Icon: it gives context about what the destination is. For example, by default, an external link will show the ‘external-link-alt’ icon. If the link leads to another part of the same page, the icon could be ‘anchor’.
-
-## Placement
-- Inline: (default) The inline text link will follow the alignment of the text wrapping it up.
-- Standalone: This type of text link requires a parent element / container in which to set the appropriate display value.
-
-
-## Behaviour
-The following is the default behaviour and so, it will be applied according to its type.
-1. Inline: 
-Blue and underlined at first. Through the color prop the user will be able to change this value, but the rest will be kept. 
-On hover: blue and not underlined
-	
-2. Standalone:
-Blue and not underlined at first
-On hover: blue and underlined
-
-Example: 
-<iframe
-  src="https://developers.grafana.com/ui/canary/index.html?path=/story/general-textlink--basic&args=weight:!undefined;color:primary&full=1&shortcuts=false&singleStory=true"
-  width="100%"
-  height="300px"
-></iframe>
-
-In this example, the user has set the color value to 'primary', so in dark theme will be 'white' and not underlined at first while blue and underlined when onhover, as it inherits from the standalone default behaviour.
-
-## Spacing
-- Between text and icon: the gap is set to 0.5em, so it will adapt itself to the change of the font size
-- The text itself: there is no margin or padding applied
-- Between the block text and the text link the space is not modified, so will be the same as the existing between the words of the paragraph.
-
-
-## Accessibility
-- The text that contains the link should be informative 
-- The aria-describedby attribute can be used to provide extra text for a screen reader besides the link text. 
-- Assistive technology may consider an ARIA label to replace the link text, so if there is a need for more context please use aria-describedby.
+## Typical Workflows
+### Mixed Read-only & Editing
+Where a table has a mix of read-only and editable elements, when the user selects read-only elements the editing batch operations above the table become disabled. Consider adding a column to indicate which rows are editable and which are read-only.
 
 
 ## Related
-- [Button](https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-button--basic)
-- [LinkButton](https://developers.grafana.com/ui/latest/index.html?path=/docs/buttons-button--basic)
-- [IconButton](https://developers.grafana.com/ui/latest/index.html?path=/story/buttons-iconbutton--basic)
-
-## Further Reading & Sources
-- [Writers Toolkit: Write useful link text](https://grafana.com/docs/writers-toolkit/writing-guide/useful-link-text/)
-- [Accessibility: WCAG | Link purpose in content](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+- [Visualizations Table Storybook](https://developers.grafana.com/ui/canary/index.html?path=/story/visualizations-table--bar-gauge-cell)
+- [Catalog of other table implementation at Grafana](https://docs.google.com/document/d/11dpltzvNmBzL00CU4yp4S9ofmpJC4bl0MREFRlsCOcw/edit)
