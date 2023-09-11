@@ -54,7 +54,7 @@ It is important to understand and define these as requirements for the feature u
 | **Row details**      | This section is utilised to either show additional details or to provide the user with row specific controls or modifiers. Typically batch editing controls found outside the table should not be duplicated here. |
 | **Column Label**      | Descriptive identifier or header assigned to a column |
 | **Column Sort**      | Sort alphabetically, numerically etc. |
-| **Row level Read-Only actionsr**      | Duplicate |
+| **Row level Read-Only actions**      | Duplicate |
 | **Row level Editing action**      | Duplicate, Delete |
 
 
