@@ -12,7 +12,7 @@ import { TextLink, Badge, Icon } from '@grafana/ui';
 The table is used to display and select data efficiently. The table component allows for the display and modification of detailed information.   With additional functionality it allows for batch editing, as needed by your feature’s users.
 
 <iframe
-  src="https://developers.grafana.com/ui/latest/index.html?path=/story/experimental-interactivetable--basic"
+  src="https://developers.grafana.com/ui/latest/index.html?path=/story/experimental-interactivetable--basic&full=1&shortcuts=false&singleStory=true"
   width="100%"
   height="300px"
 ></iframe>
