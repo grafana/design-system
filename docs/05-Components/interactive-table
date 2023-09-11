@@ -7,7 +7,7 @@ hide_title: true
 
 import { TextLink, Badge, Icon } from '@grafana/ui';
 
-# Interactive Table <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/docs/general-textlink--docs' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Interactive Table <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/docs/experimental-interactivetable--docs' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 The table is used to display and select data efficiently. The table component allows for the display and modification of detailed information.   With additional functionality it allows for batch editing, as needed by your feature’s users.
 
