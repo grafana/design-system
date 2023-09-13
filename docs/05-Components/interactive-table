@@ -65,4 +65,4 @@ Where a table has a mix of read-only and editable elements, when the user select
 
 ## Related
 - [Visualizations Table Storybook](https://developers.grafana.com/ui/canary/index.html?path=/story/visualizations-table--bar-gauge-cell)
-- [Catalog of other table implementation at Grafana](https://docs.google.com/document/d/11dpltzvNmBzL00CU4yp4S9ofmpJC4bl0MREFRlsCOcw/edit)
+- [Catalog of other table implementation at Grafana](https://docs.google.com/document/d/11dpltzvNmBzL00CU4yp4S9ofmpJC4bl0MREFRlsCOcw/edit) (internal only)
