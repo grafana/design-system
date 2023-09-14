@@ -72,7 +72,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://grafana.github.io/plugin-tools/',
+            href: 'https://grafana.com/developers',
             label: 'Dev Portal',
             position: 'right',
           },
