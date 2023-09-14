@@ -1,0 +1,68 @@
+---
+title: Interactive Table
+description: Grafana Labs Interactive Table component
+keywords: ['Grafana', 'Labs', 'table', 'component']
+hide_title: true
+---
+
+import { TextLink, Badge, Icon } from '@grafana/ui';
+
+# Interactive Table <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/docs/experimental-interactivetable--docs' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+The table is used to display and select data efficiently. The table component allows for the display and modification of detailed information.   With additional functionality it allows for batch editing, as needed by your feature’s users.
+
+<iframe
+  src="https://developers.grafana.com/ui/latest/index.html?path=/story/experimental-interactivetable--basic&full=1&shortcuts=false&singleStory=true"
+  width="100%"
+  height="300px"
+></iframe>
+
+## Usage
+
+### Do’s
+- Use the table for Admin User Persona(TBD) centric workflows <br/>
+- Use the table for batch selection AND manipulation/editing of multiple rows of data<br/>
+- Pagination works best where users are looking for specific pieces of content. Infinite scroll is better suited for the exploration of content.<br/>
+- Use Infinite Scroll when the primary workflow is exploration.<br/>
+- Perform use case analysis on what information needs to be in the primary table and what information can be pushed to the Expanded section to declutter the overall UI<br/>
+
+
+### Don’ts
+- Do not use the Admin Table in Dashboards or Panels<br/>
+- Avoid using the table where mobile or responsiveness may be a requirement.  Consider an alternative pattern where the user is presented with a summary list and can click/tap to an individual page for each row in that list.<br/>
+- Duplicate batch editing controls in the Expanded Row section.<br/>
+
+
+
+## Considerations
+The Interactive Table component supports workflows where the user needs to manipulate potentially large datasets.  In its simplest form it allows for batch selection of existing data for further processing within a larger workflow.  Its capabilities can be expanded to enable dataset creation as well as batch editing.
+
+The table will typically be complimented by a section above to support either read-only & editing workflows.  Read-only tables will usually have a summary of specific properties or calculated attributes of the dataset.  Depending on the feature under design there may be import/export options. For editing workflows the user will add new rows to the table below. There will also be batch edit options for existing rows in the header section.
+
+Individual rows can be expanded to display additional details or reconfigure properties previously defined when the row was created.  In the case of editing a row, the UI presented should be a duplicate of the header section above the table used to create the row.  In the case where a property can no longer be edited it should still be displayed but disabled/greyed out.  The expanded row area should be used to declutter the primary presentation of data, carefully consider what the user needs to know at first glance and what can be hidden behind the Row Expander button.  In general, data-types that are consistent across all dataset are in the primary table, variances are pushed to the expanded section for each individual row.
+
+It is important to understand and define these as requirements for the feature under design as the Admin Table **is not responsive and will not provide good UX on small or touch screens.**
+
+
+## Content
+
+| Element              | Details                                                |
+| ------------------- | ------------------------------------------------------ |
+| **Tri-state batch selector**          | The tri-state checkbox **can be checked, not checked, or partially checked.** The condition of being partially checked is based on the selection of child elements. If all child elements are selected, the parent checkbox is checked. If some child elements are selected, the parent checkbox is partially checked. |
+| **Row selector**      | Select, deselect row |
+| **Row expand/collapse**      | The expander control is used to show and hide additional details and potentially controls/modifiers.   and therefore declutter your app |
+| **Row details**      | This section is utilised to either show additional details or to provide the user with row specific controls or modifiers. Typically batch editing controls found outside the table should not be duplicated here. |
+| **Column Label**      | Descriptive identifier or header assigned to a column |
+| **Column Sort**      | Sort alphabetically, numerically etc. |
+| **Row level Read-Only actions**      | Duplicate |
+| **Row level Editing action**      | Duplicate, Delete |
+
+
+## Typical Workflows
+### Mixed Read-only & Editing
+Where a table has a mix of read-only and editable elements, when the user selects read-only elements the editing batch operations above the table become disabled. Consider adding a column to indicate which rows are editable and which are read-only.
+
+
+## Related
+- [Visualizations Table Storybook](https://developers.grafana.com/ui/canary/index.html?path=/story/visualizations-table--bar-gauge-cell)
+- [Catalog of other table implementation at Grafana](https://docs.google.com/document/d/11dpltzvNmBzL00CU4yp4S9ofmpJC4bl0MREFRlsCOcw/edit) (internal only)
