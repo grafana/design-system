@@ -1,6 +1,7 @@
 {
   "author": "Grafana Labs",
   "license": "AGPL-3.0-only",
+  "name": "saga",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --config docusaurus.config.js",
