@@ -1,0 +1,66 @@
+---
+title: Alert
+description: Grafana Labs Alert component
+keywords: ['Grafana', 'Labs', 'banner', 'component']
+---
+
+import { Badge, Icon } from '@grafana/ui';
+
+# Alert <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+Alert is a fundamental element used for displaying important messages or notifications to users.
+
+## When to use
+
+Use Alerts to inform users of updates, changes, or issues. Providing users feedback, keeping them informed, and keeping disruptions to a minimum is important. There are two different use-cases for Alerts: task-generated and system-generated Alerts.
+
+### Task-Generated
+Task-generated Alerts are triggered based on the behaviours of the user and provide quick, direct feedback. This type of Alert should be placed closely to the area the user is actively working in.
+
+### System-Generated
+System-generated Alerts are triggered by the system, unconnected to the actions of a user. Use these Alerts to provide explanation of system status or other events that have occurred elsewhere.
+
+## Implementation / Options
+
+### Content
+
+#### Title
+Titles in Alerts are required, always. They should be concise, human-focused and jargon free so users can easily understand them.
+
+#### Description
+Description copy is optional and should be used sparingly. Keep the description copy short and focused on the reason for the Alert and include possible solutions or paths forward to prevent users from being blocked.
+
+#### Content guidelines (how to write)
+It is important to always use simple and concise language when crafting messaging for Alerts. Avoid using jargon or system errors in the content of the Alerts. Provide users with a path forward or possible solution. For more recommendations on writing, view the [UX writing guidlines](https://grafana.com/docs/writers-toolkit/write/style-guide/ux-writing/).
+
+#### Severity
+There are four (4) different message types Alerts can have:
+- *Info* - Provide information to users, and don’t interrupt any current actions
+- *Success* - When any action is successful, it is confirmed when a task is completed as expected
+- *Warning* - Informing users that an action is undesirable
+- *Error* - When an action doesn't happen as expected, usually something has failed and the user is expected to take action
+
+#### Calls to Action
+Alerts (Inline Alerts specifically) can contain calls to action (CTAs), especially if there is an action a user can take remedy or correct the reason the Alert is being shown. When providing a CTA within an Alert besure to keep the label concise and ensure the action the user can take is clear, and try to keep the labels short (a few words at most). See Grafana's [UX Writing guidelines](https://grafana.com/docs/writers-toolkit/write/style-guide/ux-writing/).
+
+## Types and Behaviors
+Grafana uses Alert in two ways: Inline, and Toast. These two different types of Alerts have different purposes and behaviours and it’s important to understand the differences to make sure you use the right one.
+
+### Inline
+Inline Alerts notify users of both system and user triggered events. They appear at the top or bottom of the main content area near where the user is actively working. This maintains context and supports understanding. These messages are task-generated and provide direct, contextual feedback. 
+
+### Toast
+Toasts are temporary window elements used to display short messages; they appear at the top-right corner of the screen and can be dismissed by clicking the [x] or it will disappear after a few seconds
+
+#### Behavior
+- Toasts display for a short period of time
+- Contain a close (X) action so users can dismiss the Alert
+- If more than one displays at the same time, the most recent Alert is always displayed at the top. Older toasts stack in order under the most recent Alert.
+
+
+## Further Reading & Sources
+
+- [NNG — Indicators, Validations, and Notifications: Pick the Correct Communication Option](https://www.nngroup.com/articles/indicators-validations-notifications/)
+- [NNG — How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
+- [NNG - 10 Usability Heuristics for Users](https://www.nngroup.com/articles/ten-usability-heuristics/)
+- [NNG - Plain Language is for Everyone](https://www.nngroup.com/articles/plain-language-experts/)
