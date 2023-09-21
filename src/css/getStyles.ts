@@ -41,7 +41,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
       text-align: right;
     }
 
-    .markdown h1:first-child {
+    .markdown h1:first-of-type {
       display: flex;
       align-items: center;
       gap: ${theme.spacing(2)};
@@ -114,7 +114,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
       margin: 0;
     }
 
-    .table-of-contents li:first-child {
+    .table-of-contents li:first-of-type {
       margin-top: 2px;
     }
 
@@ -294,7 +294,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
       flex-direction: row;
     }
     
-    .two-images-comparison div:first-child {
+    .two-images-comparison div:first-of-type {
       margin-right: 20px;
     }
     
@@ -303,7 +303,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
         flex-direction: column;
       }
     
-      .two-images-comparison div:first-child {
+      .two-images-comparison div:first-of-type {
         margin-right: 0;
       }
     }
@@ -313,7 +313,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
       flex-direction: row;
     }
     
-    .two-column-div p:first-child {
+    .two-column-div p:first-of-type {
       margin-right: 20px;
     }
     
@@ -322,7 +322,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
         flex-direction: column;
       }
     
-      .two-column-div p:first-child {
+      .two-column-div p:first-of-type {
         margin-right: 0;
       }
     }
