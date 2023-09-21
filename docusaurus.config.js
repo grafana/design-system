@@ -44,6 +44,8 @@ const config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -55,6 +57,13 @@ const config = {
       //   textColor: '#091E42',
       //   isCloseable: true,
       // },
+      liveCodeBlock: {
+        /**
+         * The position of the live playground, above or under the editor
+         * Possible values: "top" | "bottom"
+         */
+        playgroundPosition: 'top',
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,

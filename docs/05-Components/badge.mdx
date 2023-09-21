@@ -11,6 +11,38 @@ import { Badge, Icon } from '@grafana/ui';
 
 The badge component adds meta information to other content, for example about release status or new elements. You can add any `Icon` component or use the badge without an icon.
 
+## Options
+
+### Color
+
+You can customize the color of the Badge.
+
+```jsx live
+<Stack direction="horizontal">
+  <Badge color="blue" text="Blue" />
+  <Badge color="red" text="Red" />
+  <Badge color="green" text="Green" />
+  <Badge color="orange" text="Orange" />
+  <Badge color="purple" text="Purple" />
+</Stack>
+```
+
+### Icon
+
+You can specify an icon name to show at the beginning of the badge.
+
+```jsx live
+<Badge icon="rocket" color="blue" text="New!" />
+```
+
+### Tooltip
+
+Specify a tooltip to show additional information on hover. Avoid putting lengthy content in the tooltip.
+
+```jsx live
+<Badge icon="rocket" color="blue" text="New!" tooltip="Check out this new feature!" />
+```
+
 <iframe
   src="https://developers.grafana.com/ui/latest/index.html?path=/story/data-display-badge--basic&full=1&shortcuts=false&singleStory=true"
   width="100%"
