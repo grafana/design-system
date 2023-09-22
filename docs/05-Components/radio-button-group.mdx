@@ -1,0 +1,74 @@
+---
+title: RadioButtonGroup
+description: Grafana Labs Radio Button component
+keywords: ['Grafana', 'Labs', 'radio', 'button', 'group', 'component']
+hide_title: true
+---
+
+import { Badge, Icon } from '@grafana/ui';
+
+# RadioButtonGroup <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-radiobuttonlist--controlled-component' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+RadioButtonGroup is used to select a single value from multiple mutually exclusive options.
+
+## When to use
+
+Use RadioButtonGroup for mutually exclusive selections if there are up to four options available. This is because the RadioButtonGroup cannot have more than one row and should still accommodate small resolutions. For a mutually exclusive selection of more than four options, use Select component or the RadioButtonList component.
+
+Radio buttons can only exist in this type of group. If you want one single option, it's better to use Switch instead. To offer multiple choices within the same group or context which are not mutually exclusive, use Checkbox instead.
+
+
+
+## Usage
+
+### Basic radio group
+
+```jsx
+import { RadioButtonList } from '@grafana/ui';
+
+<RadioButtonGroup options={...} value={...} onChange={...} />
+```
+
+### Disabled options
+
+You can disable some options by passing them to the `disabledOptions` prop.
+Keep in mind the `disabledOptions` are compared with options' values by the `===` operator.
+
+```jsx
+import { RadioButtonList } from '@grafana/ui';
+
+const options = [
+  { label: 'Prometheus', value: 'prometheus' },
+  { label: 'Graphite', value: 'graphite' },
+  { label: 'Elastic', value: 'elastic' },
+  { label: 'InfluxDB', value: 'influx' },
+];
+
+const disabledOptions = ['prometheus', 'elastic'];
+
+
+<RadioButtonGroup
+  options={options}
+  disabledOptions={disabledOptions}
+  value={...}
+  onChange={...}
+/>
+```
+
+### Changing layout
+
+The `RadioButtonList` layout uses CSS Grid, so it is effortless to split the list into multiple columns
+
+```jsx
+import { RadioButtonList } from '@grafana/ui';
+
+<RadioButtonGroup
+  options={...}
+  value={...}
+  onChange={...}
+  className={css`
+    grid-template-columns: 1fr 1fr 1fr;
+  `}
+/>
+
+```
