@@ -31,6 +31,11 @@ import {  Field, TextArea } from '@grafana/ui';
 
 Use a TextArea when you need users to input longer, free-form text. This could be for capturing descriptions, feedback, or any other information that can't be reasonably contained in a single line input field.
 
+### Placeholder text usage
+
+The TextArea component supports the `placeholder` prop, which can be used to provide a hint to the user about what kind of input is expected. This should be used sparingly, as it can be confusing to users if the placeholder text disappears when they start typing. If you do use placeholder text, make sure it is very clear what kind of input is expected. For example, "Enter your feedback here" is better than "Enter your message here".
+
+
 ## Implementation / Options
 The TextArea component includes an optional `invalid` prop which can be set to `true` to highlight the TextArea as having an error. This can be used to visually indicate problems, like validation errors or incorrect input.
 
