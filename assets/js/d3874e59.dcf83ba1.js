@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksaga=self.webpackChunksaga||[]).push([[374],{4583:(e,a,s)=>{s.r(a),s.d(a,{default:()=>n});var t=s(7294),u=s(6550);function n(){return t.createElement(u.l_,{to:"/design-system/about/"})}}}]);
