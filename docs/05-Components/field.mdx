@@ -24,6 +24,15 @@ The Field component is suitable for various scenarios where you need to incorpor
 - Indicating loading or disabled states for input fields.
 
 ## Implementation / Options
+Note that the Field component will pass the `invalid`, `disabled` and `loading` props, unless they are `undefined`, to the child component, which will override those props if they are set on the child component.
+
+### Do's
+- Provide a meaningful label for the field to enhance accessibility.
+- Provide a description for the field to help users understand the purpose of the input.
+
+### Don'ts
+- Use the `description` prop without also providing a label.
+- Use the `invalid` prop without also providing an error message.
 
 ### Validation
 Use the `invalid` prop to indicate that the input is invalid. This will add a red border to the input and display the error message provided in the `error` prop. For this to work, both the `invalid` and `error` props must be set.
