@@ -26,4 +26,7 @@ The Field component is suitable for various scenarios where you need to incorpor
 ## Implementation / Options
 
 ### Validation
-Use the validation to inform users o errors within the input.
+Use the `invalid` prop to indicate that the input is invalid. This will add a red border to the input and display the error message provided in the `error` prop. For this to work, both the `invalid` and `error` props must be set.
+
+### Loading
+Use the `loading` prop to indicate that the input is loading. This will add a spinner to the input.
