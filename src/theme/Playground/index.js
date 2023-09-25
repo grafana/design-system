@@ -60,17 +60,6 @@ function EditorWithHeader() {
 }
 
 export default function Playground({ children, transformCode, ...props }) {
-  const {
-    siteConfig: { themeConfig },
-  } = useDocusaurusContext();
-  const {
-    liveCodeBlock: { playgroundPosition },
-  } = themeConfig;
-
-  if (playgroundPosition !== 'top') {
-    throw new Error("Custom live playground only supports playgroundPosition: 'top'");
-  }
-
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
 
