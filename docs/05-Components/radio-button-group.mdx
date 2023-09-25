@@ -54,21 +54,3 @@ const disabledOptions = ['prometheus', 'elastic'];
   onChange={...}
 />
 ```
-
-### Changing layout
-
-The `RadioButtonList` layout uses CSS Grid, so it is effortless to split the list into multiple columns
-
-```jsx
-import { RadioButtonList } from '@grafana/ui';
-
-<RadioButtonGroup
-  options={...}
-  value={...}
-  onChange={...}
-  className={css`
-    grid-template-columns: 1fr 1fr 1fr;
-  `}
-/>
-
-```
