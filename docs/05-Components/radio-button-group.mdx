@@ -17,16 +17,20 @@ Use RadioButtonGroup for mutually exclusive selections if there are up to four o
 
 Radio buttons can only exist in this type of group. If you want one single option, it's better to use Switch instead. To offer multiple choices within the same group or context which are not mutually exclusive, use Checkbox instead.
 
-
-
 ## Usage
 
 ### Basic radio group
 
 ```jsx
-import { RadioButtonList } from '@grafana/ui';
-
-<RadioButtonGroup options={...} value={...} onChange={...} />
+<RadioButtonGroup
+  options={[
+    { label: 'Prometheus', value: 'prometheus' },
+    { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+    { label: 'Elastic', value: 'elastic' },
+  ]}
+  value="prometheus"
+  onChange={() => {}}
+/>
 ```
 
 ### Disabled options
@@ -35,22 +39,63 @@ You can disable some options by passing them to the `disabledOptions` prop.
 Keep in mind the `disabledOptions` are compared with options' values by the `===` operator.
 
 ```jsx
-import { RadioButtonList } from '@grafana/ui';
-
-const options = [
-  { label: 'Prometheus', value: 'prometheus' },
-  { label: 'Graphite', value: 'graphite' },
-  { label: 'Elastic', value: 'elastic' },
-  { label: 'InfluxDB', value: 'influx' },
-];
-
-const disabledOptions = ['prometheus', 'elastic'];
-
-
 <RadioButtonGroup
-  options={options}
-  disabledOptions={disabledOptions}
-  value={...}
-  onChange={...}
+  options={[
+    { label: 'Prometheus', value: 'prometheus' },
+    { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+    { label: 'Elastic', value: 'elastic' },
+  ]}
+  value="Graphite"
+  disabledOptions={['prometheus', 'elastic']}
+  onChange={() => {}}
+/>
+```
+
+The whole control can be disabled with the `disabled` prop.
+
+```jsx
+<RadioButtonGroup
+  disabled
+  options={[
+    { label: 'Prometheus', value: 'prometheus' },
+    { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+    { label: 'Elastic', value: 'elastic' },
+  ]}
+  value="prometheus"
+  onChange={() => {}}
+/>
+```
+
+### Size
+
+Specify the size `sm` for a smaller, more compact control. The small variant is commonly used inline in other elements, such as headers. Avoid using `sm` in forms.
+
+```jsx
+<RadioButtonGroup
+  size="sm"
+  options={[
+    { label: 'Prometheus', value: 'prometheus' },
+    { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+    { label: 'Elastic', value: 'elastic' },
+  ]}
+  value="prometheus"
+  onChange={() => {}}
+/>
+```
+
+### Width
+
+By default RadioButtonGroup will fit its width to it's contents. Specify the `fullWidth` prop to make the control span the entire width of the container.
+
+```jsx
+<RadioButtonGroup
+  fullWidth
+  options={[
+    { label: 'Prometheus', value: 'prometheus' },
+    { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+    { label: 'Elastic', value: 'elastic' },
+  ]}
+  value="prometheus"
+  onChange={() => {}}
 />
 ```
