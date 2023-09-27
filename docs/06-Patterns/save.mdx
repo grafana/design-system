@@ -22,7 +22,7 @@ This pattern has the least amount of user friction from all save patterns. The u
 #### Implementation
 Autosave fields are only to be implemented in areas that are considered low impact. With this being such a friction-free pattern, it’s important to only enable this in areas where users will do no harm. Things like changing team or display names are great candidates for this component. Because currently Grafana does not have a concept of “undo,” only uses autosave for items that a user can easily undo manually.
 
-Each autosave field is required to come with inline validation and a loading-state to ensure that users are aware of the system updating their adjustments. Each field will also check for changes before saving to minimize the number of saves being pushed. Note that this is the newest save pattern for Grafana, and so adding loading and invalid states is a work in progress for some input types. 
+Each autosave field is required to come with inline validation and a loading state to ensure that users are aware of the system updating their adjustments. Each field will also check for changes before saving to minimize the number of saves being pushed. Note that this is the newest save pattern for Grafana, and so adding loading and invalid states is a work in progress for some input types. 
 
 Problems that come up with autosave (will probably turn this into a do/don’t section):
 - Changes being automatically saved/applied unexpectedly
