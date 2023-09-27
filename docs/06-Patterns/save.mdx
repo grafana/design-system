@@ -40,7 +40,7 @@ Each autosave field is required to come with inline validation and a loading sta
 The inline save pattern is leveraged inside of forms and provides users with a button to trigger the system to save and update various user inputs that have been edited or updated.
 
 #### Implementation
-Inline save should be used in areas that are **medium impact**. In particular, this pattern is helpful for cases where entities are displayed in rows and users are editing one or more rows. 
+Inline save should be used in areas that require an explicit save action for an object. In particular, this pattern is helpful for cases where entities are displayed in rows and users are editing one or more rows. 
 
 #### Usage
 **Do**
@@ -54,7 +54,7 @@ Inline save should be used in areas that are **medium impact**. In particular, t
 - Hide the save button behind additional clicks or until something changes. 
 - Show additional unneeded save buttons that don’t act on the entire page.
 
-### Apply + save
+### Apply and save
 ‘Apply’ lets the user test the result of the changes made but does not save that value, which allows users to preview their changes/updates. An unsaved warning should be shown when the user wants to move to another page without saving.
 
 ‘Save’ changes the values permanently. The success or the error while saving should be shown to the user through a toast. 
