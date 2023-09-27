@@ -24,10 +24,6 @@ Autosave fields are only to be implemented in areas that are considered low impa
 
 Each autosave field is required to come with inline validation and a loading state to ensure that users are aware of the system updating their adjustments. Each field will also check for changes before saving to minimize the number of saves being pushed. Note that this is the newest save pattern for Grafana, and so adding loading and invalid states is a work in progress for some input types. 
 
-Problems that come up with autosave (will probably turn this into a do/don’t section):
-- Changes being automatically saved/applied unexpectedly
-- Toast message being too far away from changes being made
-- Lack of toast confirmation
 
 #### Usage
 **Do**
