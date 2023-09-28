@@ -62,7 +62,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Design System logo',
-          href: 'about',
+          href: 'About/overview',
           src: '/img/logo_with_text.png',
         },
         items: [
