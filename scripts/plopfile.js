@@ -7,6 +7,11 @@ module.exports = function (plop) {
         name: 'componentName',
         message: 'Component name (uppercase):',
       },
+      {
+        type: 'input',
+        name: 'path',
+        message: 'Storybook path to the component (the part after "path=" in URL):',
+      },
     ],
     actions: [
       {
