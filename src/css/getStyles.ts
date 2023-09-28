@@ -325,9 +325,6 @@ export const getStyles = (theme: GrafanaTheme2) => {
       .two-column-div p:first-of-type {
         margin-right: 0;
       }
-    },
-    li.task-done {
-      text-decoration: line-through;
     }
   `;
 };
