@@ -5,17 +5,13 @@ keywords: ['Grafana', 'Labs', 'text', 'component']
 hide_title: true
 ---
 
-import { Text, Badge, Tooltip } from '@grafana/ui';
+import { Text } from '@grafana/ui';
 
 # Text <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/docs/general-text--docs' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 The Text component can be used to apply typography styles in a simple way, without the need of extra css.
 
-<iframe
-  src="https://developers.grafana.com/ui/canary/index.html?path=/story/general-text--basic&full=1&shortcuts=false&singleStory=true"
-  width="100%"
-  height="300px"
-></iframe>
+<ComponentEmbed path={'/story/general-text--basic'} />
 
 ## Usage
 
@@ -88,3 +84,6 @@ The Text component can be truncated. However, the Text component element rendere
 - There should be just a `h1` heading per page.
 - The headings should be organized regarding its importance: `h1` has the _rank 1_ while `h6` heading has the _rank 6_. For example, `h1` can be used in the page heading, `h2` for the titles of the sections and `h3` for the subsections.
 - The ranking of headings should be continuous. An `h2` should not be followed by an `h5` but an `h2` can follow an `h5` if this is closing the previous section. Skipping heading ranks should be avoided where possible as it can be confusing.
+
+## API
+<ComponentEmbed path={'/docs/general-text--docs'} propFragment={'props-table'} height={'850px'}/>
