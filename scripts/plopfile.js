@@ -16,7 +16,7 @@ module.exports = function (plop) {
     actions: [
       {
         type: 'add',
-        path: `${__dirname}../../docs/05-Components/{{lowerCase componentName}}.mdx`,
+        path: `${__dirname}../../docs/05-Components/{{dashCase componentName}}.mdx`,
         templateFile: 'templates/component.mdx.hbs',
       },
     ],
