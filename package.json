@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "plop": "plop --plopfile scripts/generator/plopfile.js"
+    "generate": "plop --plopfile scripts/plopfile.js"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.2.0",

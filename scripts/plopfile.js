@@ -5,14 +5,14 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'componentName',
-        message: 'Component name:',
+        message: 'Component name (uppercase):',
       },
     ],
     actions: [
       {
         type: 'add',
-        path: 'docs/05-Components/{{properCase name}}.js',
-        templateFile: 'scripts/generator/templates/component.mdx.hbs',
+        path: `${__dirname}../../docs/05-Components/{{lowerCase componentName}}.mdx`,
+        templateFile: 'templates/component.mdx.hbs',
       },
     ],
   });
