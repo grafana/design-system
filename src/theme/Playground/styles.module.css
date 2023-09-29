@@ -2,9 +2,6 @@
   margin-bottom: var(--ifm-leading);
   box-shadow: var(--ifm-global-shadow-lw);
   overflow: hidden;
-  /* display: flex;
-  flex-direction: column;
-  gap: 16px; */
 }
 
 .playgroundContainer > *:first-child {
