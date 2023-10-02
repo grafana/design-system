@@ -44,6 +44,8 @@ const config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -62,7 +64,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Design System logo',
-          href: 'about',
+          href: 'About/overview',
           src: '/img/logo_with_text.png',
         },
         items: [
