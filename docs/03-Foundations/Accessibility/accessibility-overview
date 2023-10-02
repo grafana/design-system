@@ -1,8 +1,10 @@
 ---
-title: Overview
+title: Accessibility overview
 description: Description for search engines and results
 keywords: ['keywords', 'for', 'search', 'engines']
-draft: true
+hide_title: true
 ---
 
-This document is a WIP.
+import { Badge } from '@grafana/ui';
+
+# Accessibility overview <Badge text='ready' color='green'></Badge>
