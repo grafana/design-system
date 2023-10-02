@@ -326,26 +326,5 @@ export const getStyles = (theme: GrafanaTheme2) => {
         margin-right: 0;
       }
     },
-
-    .components-table thead, .components-table tbody tr {
-      display: flex;
-    }
-    
-    .components-table tbody {
-      display: block;
-    }
-
-    .components-table thead, .components-table thead tr, .components-table thead tr th,
-    .components-table tbody, .components-table tbody tr, .components-table tbody tr td {
-      width: 100%;
-    }
-    .components-table thead tr,
-    .components-table tbody tr {
-      justify-content: stretch;
-      display: flex;
-    }
-    .components-table table > tbody > tr > td:not(:first-of-type) {
-      text-align: center;
-    }
   `;
 };
