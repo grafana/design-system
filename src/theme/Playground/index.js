@@ -69,8 +69,15 @@ export default function Playground({ children, transformCode, ...props }) {
       <LiveProvider
         code={children.replace(/\n$/, '')}
         noInline={noInline}
-        transformCode={transformCode ?? ((code) => `${code};`)}
         theme={prismTheme}
+        language="typescript"
+        transformCode={(snippet) =>
+          window.ts.transpile(snippet, {
+            noImplicitUseStrict: true,
+            target: 'es6',
+            jsx: 'react',
+          })
+        }
         {...props}
       >
         <ResultWithHeader />
