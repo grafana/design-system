@@ -27,7 +27,7 @@ Radio buttons can only exist in this type of group. If you want one single optio
 
 ```tsx live
 function Basic() {
-  const [value, setValue] = useState<string>('prometheus');
+  const [value, setValue] = useState<string>();
   return (
     <RadioButtonGroup
       options={[
@@ -49,7 +49,7 @@ Keep in mind the `disabledOptions` are compared with options' values by the `===
 
 ```tsx live
 function WithDisabledOptions() {
-  const [value, setValue] = useState<string>('graphite');
+  const [value, setValue] = useState('graphite');
   return (
     <RadioButtonGroup
       options={[
@@ -69,7 +69,7 @@ The whole control can be disabled with the `disabled` prop.
 
 ```tsx live
 function Disabled() {
-  const [value, setValue] = useState<string>('prometheus');
+  const [value, setValue] = useState('prometheus');
   return (
     <RadioButtonGroup
       disabled
@@ -91,7 +91,7 @@ Specify the size `sm` for a smaller, more compact control. The small variant is 
 
 ```tsx live
 function WithSize() {
-  const [value, setValue] = useState<string>('prometheus');
+  const [value, setValue] = useState('prometheus');
   return (
     <RadioButtonGroup
       size="sm"
@@ -113,7 +113,7 @@ By default `RadioButtonGroup` will fit its width to its contents. Specify the `f
 
 ```tsx live
 function FullWidth() {
-  const [value, setValue] = useState<string>('prometheus');
+  const [value, setValue] = useState('prometheus');
   return (
     <RadioButtonGroup
       fullWidth
