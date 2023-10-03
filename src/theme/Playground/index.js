@@ -70,13 +70,15 @@ export default function Playground({ children, transformCode, ...props }) {
         noInline={noInline}
         theme={prismTheme}
         language="typescript"
-        transformCode={(snippet) =>
-          global.ts.transpile(snippet, {
-            noImplicitUseStrict: true,
-            target: 'es6',
-            jsx: 'react',
-          })
-        }
+        transformCode={(snippet) => {
+          if (typeof window !== 'undefined') {
+            return window.ts.transpile(snippet, {
+              noImplicitUseStrict: true,
+              target: 'es6',
+              jsx: 'react',
+            });
+          }
+        }}
         {...props}
       >
         <ResultWithHeader />
