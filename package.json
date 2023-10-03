@@ -11,18 +11,21 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "generate": "plop --plopfile scripts/plopfile.js"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.2.0",
-    "@docusaurus/types": "2.2.0"
+    "@docusaurus/module-type-aliases": "^2.4.3",
+    "@docusaurus/types": "^2.4.3",
+    "plop": "^4.0.0",
+    "prettier": "^3.0.3"
   },
   "dependencies": {
-    "@docusaurus/core": "2.2.0",
-    "@docusaurus/preset-classic": "2.2.0",
+    "@docusaurus/core": "^2.4.3",
+    "@docusaurus/preset-classic": "^2.4.3",
+    "@docusaurus/theme-live-codeblock": "^2.4.3",
     "@emotion/react": "^11.10.6",
     "@grafana/data": "^9.4.3",
-    "@grafana/toolkit": "^9.4.3",
     "@grafana/ui": "^9.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",

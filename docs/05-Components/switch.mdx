@@ -1,0 +1,53 @@
+---
+title: Switch
+description: Grafana Labs Switch component
+keywords: ['Grafana', 'Labs', 'switch', 'component']
+---
+
+import { Badge, Icon } from '@grafana/ui';
+
+# Switch <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-switch--controlled' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+The `Switch` component is used to toggle between two states, typically representing an on/off or enabled/disabled state.
+
+<iframe
+    src="https://developers.grafana.com/ui/latest/index.html?path=/story/forms-switch--controlled&full=1&shortcuts=false&singleStory=true"
+    width="100%"
+    height="300px"
+></iframe>
+
+## When to Use
+
+Use the `Switch` component when you need to provide users with the ability to toggle between two states, such as enabling or disabling a feature, setting preferences, or making binary choices.
+
+Switches trigger changes immediately. If your component should trigger a change only after sending a form, it's better to use either `RadioButtonGroup` or `Checkbox` instead.
+
+Furthermore, switches cannot be grouped – each `Switch` triggers an independent state update. If you want multiple mutually exclusive choices, the `RadioButtonGroup` is the better option. To offer multiple choices within the same group or context which are not mutually exclusive, use `Checkbox` instead.
+
+
+## Implementation / Options
+
+### Props
+
+The `Switch` component accepts the following props:
+
+- `value` (boolean, optional): Sets the initial value of the switch. When true, the switch is in the "on" state; when false, it is in the "off" state.
+- `transparent` (boolean, optional): Makes the switch's background and border transparent for inline use.
+- `invalid` (boolean, optional): Shows an invalid state around the input, typically for indicating errors.
+
+#### Example Usage
+
+```jsx
+import { Switch } from '@grafana/ui';
+
+<Switch
+  value={true}
+  transparent={false}
+  invalid={false}
+  onChange={(event) => handleSwitchChange(event)}
+  label="Toggle feature"
+  disabled={false}
+/>
+```
+
+

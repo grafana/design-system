@@ -1,0 +1,68 @@
+.playgroundContainer {
+  margin-bottom: var(--ifm-leading);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+}
+
+.playgroundContainer > *:first-child {
+  border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
+}
+
+.playgroundContainer > *:last-child {
+  border-radius: 0 0 var(--ifm-global-radius) var(--ifm-global-radius);
+}
+
+.playgroundHeader {
+  letter-spacing: 0.08rem;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--prism-background-color);
+  font-size: 0.8em;
+  display: none;
+}
+
+.playgroundEditor {
+  --header-font-size: 12px;
+  --header-padding-top: 16px;
+  --header-padding-bottom: 8px;
+
+  --editor-padding-base: 16px;
+  --editor-padding-top: calc(var(--header-padding-top) + var(--header-font-size) + var(--header-padding-bottom));
+
+  font: var(--ifm-code-font-size) / var(--ifm-pre-line-height) var(--ifm-font-family-monospace) !important;
+}
+
+.playgroundEditor,
+.playgroundEditor > textarea {
+  /* TODO: Figure out the correct way to specify padding on the code editor.
+  Here, padding on .playgroundEditor and the textarea inside it must match */
+  padding: var(--editor-padding-base) !important;
+  padding-top: var(--editor-padding-top) !important;
+}
+
+.playgroundEditor::before {
+  content: 'Live example';
+  font-family: var(--ifm-font-family-base);
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--prism-background-color);
+  line-height: 1;
+  opacity: 0.75;
+
+  font-size: var(--header-font-size);
+
+  position: absolute;
+  top: var(--header-padding-top);
+  left: var(--editor-padding-base);
+}
+
+.playgroundEditor > pre {
+  padding: 0 !important;
+}
+
+.playgroundPreview {
+  padding: 1rem;
+  border: 1px solid var(--ifm-pre-background);
+}
