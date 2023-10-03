@@ -325,6 +325,32 @@ export const getStyles = (theme: GrafanaTheme2) => {
       .two-column-div p:first-of-type {
         margin-right: 0;
       }
+    },
+
+    /* COMPONENTS STATUS */
+    .status-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: ${theme.spacing(1)};
+
+    },
+    .status-table p:not(.status-table-header) {
+      font-size: ${theme.typography.bodySmall.fontSize};
+    }
+    .status-table > p {
+      border: 1px solid ${theme.colors.border.medium}; 
+      padding: ${theme.spacing(2)}; 
+      text-align: 'center';
+      margin-bottom: 0;
+    },
+    .status-table > div.status-cell {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      gap: ${theme.spacing(0.5)};
+      border: 1px solid ${theme.colors.border.medium}; 
+      padding: ${theme.spacing(2)}; 
     }
   `;
 };

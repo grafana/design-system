@@ -1,16 +1,16 @@
 import { Icon, useTheme2 } from '@grafana/ui';
 import React from 'react';
-import { Text } from '@grafana/ui';
+// import { Text } from '@grafana/ui';
 
 interface StatusTableProps {
   children: StatusChildren[];
 }
 type StatusChildren = {
   name: string;
-  generalStatus: StatusCellProps;
-  figmaStatus: StatusCellProps;
-  storybookStatus: StatusCellProps;
-  sagaStatus: StatusCellProps;
+  generalStatus: StatusCellProps['status'];
+  figmaStatus: StatusCellProps['status'];
+  storybookStatus: StatusCellProps['status'];
+  sagaStatus: StatusCellProps['status'];
 };
 
 export const StatusTable = (props: StatusTableProps) => {
@@ -19,23 +19,25 @@ export const StatusTable = (props: StatusTableProps) => {
 
   return (
     <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(5, 1fr)',
-        gap: theme.spacing(1),
-      }}
+      className='status-table'
     >
-      <Text element='p'>Component</Text>
+      {/* <Text element='p'>Component</Text>
       <Text element='p'>General</Text>
       <Text element='p'>Figma</Text>
       <Text element='p'>Storybook</Text>
-      <Text element='p'>Saga</Text>
+      <Text element='p'>Saga</Text> */}
+      <p className='status-table-header'>Component</p>
+      <p className='status-table-header'>General</p>
+      <p className='status-table-header'>Figma</p>
+      <p className='status-table-header'>Storybook</p>
+      <p className='status-table-header'>Saga</p>
       {children.map(
         (child) => (
           console.log(child),
           (
-            <>
-              <Text element='p'>{child.name}</Text>
+            < >
+              {/* <Text element='p'>{child.name}</Text> */}
+              <p className='status-cell'>{child.name}</p>
               <StatusCell status={child.generalStatus} />
               <StatusCell status={child.figmaStatus} />
               <StatusCell status={child.storybookStatus} />
@@ -50,10 +52,13 @@ export const StatusTable = (props: StatusTableProps) => {
 
 interface StatusCellProps {
   status: 'Done' | 'Planned' | 'In Progress' | 'To Do' | 'Not Doing' | 'Deprecated' | 'N/A';
-}
+} 
+
 
 const StatusCell = (props: StatusCellProps) => {
-  const { status } = props;
+  const {status} = props;
+  const theme = useTheme2();
+
   const getIcon = () => {
     switch (status) {
       case 'Planned':
@@ -73,9 +78,10 @@ const StatusCell = (props: StatusCellProps) => {
     }
   };
   return (
-    <div>
+    <div className='status-cell'>
       {getIcon()} 
-      <Text element='p' variant='bodySmall'>{status}</Text>
+      {/* <Text element='p' variant='bodySmall'>{props}</Text> */}
+      <span style={{fontSize: '12px'}}>{status}</span>
     </div>
   );
 };
