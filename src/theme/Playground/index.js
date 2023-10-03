@@ -71,7 +71,7 @@ export default function Playground({ children, transformCode, ...props }) {
         theme={prismTheme}
         language="typescript"
         transformCode={(snippet) =>
-          window.ts.transpile(snippet, {
+          global.ts.transpile(snippet, {
             noImplicitUseStrict: true,
             target: 'es6',
             jsx: 'react',
