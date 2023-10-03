@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from '@grafana/ui';
+import { Badge, Input, Icon, Button, RadioButtonGroup } from '@grafana/ui';
 
 function Stack({ direction, gap, children }) {
   return (
@@ -22,6 +22,10 @@ const ReactLiveScope = {
   React,
   Badge,
   Stack,
+  Input,
+  Icon,
+  Button,
+  RadioButtonGroup,
   ...React,
 };
 

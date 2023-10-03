@@ -81,6 +81,7 @@ const config = {
         ],
       },
     }),
+  scripts: ['https://klesun-misc.github.io/TypeScript/lib/typescriptServices.js'],
 };
 
 module.exports = config;

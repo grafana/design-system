@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Translate from '@docusaurus/Translate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
@@ -69,8 +68,17 @@ export default function Playground({ children, transformCode, ...props }) {
       <LiveProvider
         code={children.replace(/\n$/, '')}
         noInline={noInline}
-        transformCode={transformCode ?? ((code) => `${code};`)}
         theme={prismTheme}
+        language="typescript"
+        transformCode={(snippet) => {
+          if (typeof window !== 'undefined') {
+            return window.ts.transpile(snippet, {
+              noImplicitUseStrict: true,
+              target: 'es6',
+              jsx: 'react',
+            });
+          }
+        }}
         {...props}
       >
         <ResultWithHeader />
