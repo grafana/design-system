@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Translate from '@docusaurus/Translate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
