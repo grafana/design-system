@@ -7,36 +7,9 @@ hide_title: true
 ---
 
 import { Badge, Icon } from '@grafana/ui';
+import { StatusTable } from '../../src/theme/StatusTable/index.tsx';
+import { ComponentsStatusInfo } from '../../src/theme/StatusTable/utils.js';
 
 # Component Status <Badge text="draft" color="orange"></Badge> 
 
-<div className='components-table'>
-
-| Name | Status | Figma | Storybook | Saga |
-| ---- | ------ | ----- | --------- | ---- |
-| Alert | <Icon name='question-circle'/> N/A | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Badge | <Icon name='sync'/> In progress | <Icon name='sync'/> In progress | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Banner | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Button | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Card | <Icon name='sync'/> In progress | <Icon name='sync'/> In progress | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Checkbox | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Field | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| FileDropzone | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| FilterPill | <Icon name='sync'/> In progress | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| IconButton | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| InlineField | <Icon name='calendar-alt'/> Planned | <Icon name='calendar-alt'/> Planned | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Input | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| InteractiveTable | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Modal | <Icon name='list-ul'/> To do | <Icon name='list-ul'/> To do | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready |
-| Pagination | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| PluginSignature | <Icon name='list-ul'/> To do | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| RadioButtonGroup | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle' /> Ready | <Icon name='check-circle'/> Ready |
-| RadioButtonList | <Icon name='list-ul'/> To do | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Switch | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Text | <Icon name='question-circle'/> N/A | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| TextArea | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| TextLink | <Icon name='question-circle'/> N/A | <Icon name='list-ul'/> To do | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| ToggleTip | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-| Tooltip | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready | <Icon name='check-circle'/> Ready |
-
-</div>
+<StatusTable>{ComponentsStatusInfo}</StatusTable>
