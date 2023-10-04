@@ -1,4 +1,4 @@
-import { Icon, useTheme2 } from '@grafana/ui';
+import { Icon } from '@grafana/ui';
 import React from 'react';
 
 interface StatusTableProps {
@@ -14,7 +14,6 @@ type StatusChildren = {
 
 export const StatusTable = (props: StatusTableProps) => {
   const { children } = props;
-  const theme = useTheme2();
 
   return (
     <div className="status-table">
