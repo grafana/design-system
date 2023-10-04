@@ -12,7 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "generate": "plop --plopfile scripts/plopfile.js"
+    "generate": "plop --plopfile scripts/plopfile.js",
+    "theme": "npx -y tsx ./scripts/generate-theme.ts"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.4.3",
