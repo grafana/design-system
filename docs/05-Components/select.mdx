@@ -20,7 +20,7 @@ This component is particularly useful when you have a large number of options to
 ## Types and Behaviors
 
 ### Basic Select
-The Select component can be used to create a basic select input that allows users to select one option from a dropdown list.
+The Select component can be used to create a basic select input that allows users to select one option from a dropdown list. The `isClearable` prop can be used to allow the selected value(s) to be cleared. The `isLoading` prop can be used to indicate that the select input is in a loading state.
 
 ```tsx live noInline
 const Basic = () => {
@@ -47,9 +47,8 @@ const Basic = () => {
 render(<Basic />);
 ```
 
-
 ### Multi Select
-The Select component can be configured to allow users to select multiple options from a dropdown list. The `isMulti` prop must be set to true to enable this behavior. The `maxVisibleValues` prop can be used to limit the number of selected values to display. The `showAllSelectedWhenOpen` prop can be used to display all selected values when the dropdown list is open. The `isClearable` prop can be used to allow the selected value(s) to be cleared. The `isLoading` prop can be used to indicate that the select input is in a loading state.
+The Select component can be configured to allow users to select multiple options from a dropdown list. The `isMulti` prop must be set to true to enable this behavior. The `maxVisibleValues` prop can be used to limit the number of selected values to display. The `showAllSelectedWhenOpen` prop can be used to display all selected values when the dropdown list is open.
 
 
 ### Async Select
