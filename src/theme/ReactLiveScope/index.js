@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Input, Icon, Button, RadioButtonGroup } from '@grafana/ui';
+import { Badge, Input, Icon, Button, RadioButtonGroup, Select, AsyncSelect } from '@grafana/ui';
 
 function Stack({ direction, gap, children }) {
   return (
@@ -17,6 +17,14 @@ function Stack({ direction, gap, children }) {
   );
 }
 
+function Container({ children, ...props }) {
+  return (
+    <div style={{ width: '300px' }} {...props}>
+      {children}
+    </div>
+  );
+}
+
 // Components must be added to this object in order for them to be "in scope" inside the live code previews
 const ReactLiveScope = {
   React,
@@ -26,6 +34,9 @@ const ReactLiveScope = {
   Icon,
   Button,
   RadioButtonGroup,
+  Select,
+  Container,
+  AsyncSelect,
   ...React,
 };
 
