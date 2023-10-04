@@ -2,7 +2,7 @@ import { Icon } from '@grafana/ui';
 import React from 'react';
 
 interface StatusTableProps {
-  children: StatusChildren[];
+  componentsData: StatusChildren[];
 }
 type StatusChildren = {
   name: string;
@@ -12,8 +12,7 @@ type StatusChildren = {
   sagaStatus: StatusCellProps['status'];
 };
 
-export const StatusTable = (props: StatusTableProps) => {
-  const { children } = props;
+export const StatusTable = ({componentsData}: StatusTableProps) => {
 
   return (
     <div className="status-table">
@@ -22,13 +21,13 @@ export const StatusTable = (props: StatusTableProps) => {
       <p className="status-table-header">Figma</p>
       <p className="status-table-header">Storybook</p>
       <p className="status-table-header">Saga</p>
-      {children.map((child) => (
+      {componentsData.map((componentData) => (
         <>
-          <p className="status-cell">{child.name}</p>
-          <StatusCell status={child.generalStatus} />
-          <StatusCell status={child.figmaStatus} />
-          <StatusCell status={child.storybookStatus} />
-          <StatusCell status={child.sagaStatus} />
+          <p className="status-cell">{componentData.name}</p>
+          <StatusCell status={componentData.generalStatus} />
+          <StatusCell status={componentData.figmaStatus} />
+          <StatusCell status={componentData.storybookStatus} />
+          <StatusCell status={componentData.sagaStatus} />
         </>
       ))}
     </div>
