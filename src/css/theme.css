@@ -1,5 +1,8 @@
 :root {
   --spacing: 8;
+  --borderRadius: 2px;
+  --brandHorizontal: linear-gradient(270deg, #F55F3E 0%, #FF8833 100%);
+  --brandVertical: linear-gradient(0.01deg, #F55F3E 0.01%, #FF8833 99.99%);
   --htmlFontSize: 14;
   --fontFamily: "Inter", "Helvetica", "Arial", sans-serif;
   --fontFamilyMonospace: 'Roboto Mono', monospace;
@@ -115,8 +118,6 @@
   --action-disabledText: rgba(204, 204, 220, 0.6);
   --action-disabledBackground: rgba(204, 204, 220, 0.04);
   --action-disabledOpacity: 0.38;
-  --gradients-brandHorizontal: linear-gradient(270deg, #F55F3E 0%, #FF8833 100%);
-  --gradients-brandVertical: linear-gradient(0.01deg, #F55F3E 0.01%, #FF8833 99.99%);
   --contrastThreshold: 3;
   --hoverFactor: 0.03;
   --tonalOffset: 0.15;
