@@ -1,0 +1,60 @@
+---
+title: Accessibility overview
+description: Description for search engines and results
+keywords: ['keywords', 'for', 'search', 'engines']
+hide_title: true
+---
+
+import { Badge } from '@grafana/ui';
+
+# Accessibility overview <Badge text='ready' color='green'></Badge>
+
+## Commitment
+Grafana Labs is dedicated to improving our graphical user interfaces and overall experience so that our product becomes usable and accessible for people with disabilities as well as anyone else. 
+
+## Conformance status
+The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. 
+
+Grafana is partially conformant with WCAG 2.1 level AA and aims to meet this status in the future. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
+
+## Steps taken to support accessibility
+Grafana Labs takes the following measures to ensure the accessibility of Grafana:
+- Ensure developers have accessibility knowledge and skills, as championed by a group of Accessibility Ambassadors
+- Provide best practices and recommendations when it comes to writing accessible components 
+- Drive continued improvements and ensure accountability via an internal Accessibility Working Group
+- Provide accessibility training for our staff
+- Use automated tools to perform accessibility tests on the features being developed
+- Usability test with participants with disabilities
+
+## Technical specifications
+Accessibility of Grafana relies on the following technologies to work with the particular combination of web browsers and any assistive technologies or plugins installed on your computer:
+- HTML
+- WAI-ARIA
+- CSS
+- JavaScript
+
+These technologies are relied upon for conformance with the accessibility standards used.
+
+## Limitations and alternatives
+While Grafana Labs works to improve accessibility across Grafana, we know we have some current limitations. Please [open an issue on GitHub](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3Atype%2Faccessibility) if you want to raise an issue that is not in the list below. Please add a 'type:accessibility' label to new issues. 
+
+As of this writing, the main limitations are in the following areas:
+- Charts: We plan to offer alternative color-blind friendly palettes and patterns to the charts that we create and an easy way to switch to the data table behind charts
+- Color contrast: Modern Grafana interfaces generally do not have color contrast issues. However, older code might fall below the recommended contrast levels. As we continue to update our code, this issue will phase out naturally.
+- Keyboard support: Some parts of Grafana are not fully accessible via keyboard. We plan to improve keyboard support, offering the possibility of skipping to content, avoiding keyboard traps, and always showing the focus indicator. 
+
+To see individual tickets, view our [GitHub issues with the label "type/accessibility".](https://github.com/grafana/grafana/issues?q=is%3Aissue+is%3Aopen+label%3Atype%2Faccessibility)
+
+## Assessment and testing environment
+Grafana Labs assessed the accessibility of Grafana via the following approaches:
+- Self-evaluation: the content was evaluated by our own organization or the developer of the content. Manual testing is being performed regularly for all major browsers and operating systems, plus the following screen readers: 
+  - VoiceOver on MacOS with Safari, Chrome, and Edge
+  - NVDA on Windows with Chrome and Firefox
+  - Orca on Linux
+-Automated evaluation: We are using [pa11y](https://pa11y.org/) to test our main workflows and use cases.
+- Accessibility linting: We are working on incorporating a11y linting during development to ensure accessibility is considered at the earliest stages. We have an ongoing issue tracking the progress of this initiative on [Github](https://github.com/grafana/grafana/issues/37782).
+
+## Feedback
+We welcome your feedback on the accessibility of Grafana. Please let us know if you encounter accessibility barriers on Grafana by opening [an issue on GitHub](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%3A+accessibility&template=2-accessibility.md) or emailing us at [info@grafana.com](mailto:info@grafana.com).
+
+

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveProviderProps } from 'react-live';
 import Translate from '@docusaurus/Translate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
+import type { Props as BaseProps } from '@theme/CodeBlock';
 import styles from './styles.module.css';
 
-function Header({ children }) {
+function Header({ children }: PropsWithChildren) {
   return <div className={clsx(styles.playgroundHeader)}>{children}</div>;
 }
 
@@ -59,7 +59,14 @@ function EditorWithHeader() {
   );
 }
 
-export default function Playground({ children, transformCode, ...props }) {
+// The import of Props from @theme/Playground is not resolved properly, so the types are copied here
+type CodeBlockProps = Omit<BaseProps, 'className' | 'language' | 'title'>;
+
+export interface Props extends CodeBlockProps, LiveProviderProps {
+  children: string;
+}
+
+export default function Playground({ children, transformCode, ...props }: Props) {
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
 
@@ -69,8 +76,18 @@ export default function Playground({ children, transformCode, ...props }) {
       <LiveProvider
         code={children.replace(/\n$/, '')}
         noInline={noInline}
-        transformCode={transformCode ?? ((code) => `${code};`)}
         theme={prismTheme}
+        language="typescript"
+        transformCode={(snippet) => {
+          if (typeof window !== 'undefined') {
+            // @ts-expect-error
+            return window.ts.transpile(snippet, {
+              noImplicitUseStrict: true,
+              target: 'es6',
+              jsx: 'react',
+            });
+          }
+        }}
         {...props}
       >
         <ResultWithHeader />

@@ -1,7 +1,12 @@
-import React from 'react';
-import { Badge } from '@grafana/ui';
+import React, { PropsWithChildren } from 'react';
+import { Badge, Input, Icon, Button, RadioButtonGroup } from '@grafana/ui';
 
-function Stack({ direction, gap, children }) {
+interface StackProps extends PropsWithChildren {
+  direction?: 'horizontal' | 'vertical';
+  gap?: number;
+}
+
+function Stack({ direction, gap, children }: StackProps) {
   return (
     <div
       style={{
@@ -22,6 +27,10 @@ const ReactLiveScope = {
   React,
   Badge,
   Stack,
+  Input,
+  Icon,
+  Button,
+  RadioButtonGroup,
   ...React,
 };
 
