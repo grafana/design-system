@@ -1,6 +1,5 @@
 import { Icon, useTheme2 } from '@grafana/ui';
 import React from 'react';
-// import { Text } from '@grafana/ui';
 
 interface StatusTableProps {
   children: StatusChildren[];
@@ -21,11 +20,6 @@ export const StatusTable = (props: StatusTableProps) => {
     <div
       className='status-table'
     >
-      {/* <Text element='p'>Component</Text>
-      <Text element='p'>General</Text>
-      <Text element='p'>Figma</Text>
-      <Text element='p'>Storybook</Text>
-      <Text element='p'>Saga</Text> */}
       <p className='status-table-header'>Component</p>
       <p className='status-table-header'>General</p>
       <p className='status-table-header'>Figma</p>
@@ -33,17 +27,15 @@ export const StatusTable = (props: StatusTableProps) => {
       <p className='status-table-header'>Saga</p>
       {children.map(
         (child) => (
-          console.log(child),
-          (
+          
             < >
-              {/* <Text element='p'>{child.name}</Text> */}
               <p className='status-cell'>{child.name}</p>
               <StatusCell status={child.generalStatus} />
               <StatusCell status={child.figmaStatus} />
               <StatusCell status={child.storybookStatus} />
               <StatusCell status={child.sagaStatus} />
             </>
-          )
+          
         )
       )}
     </div>
@@ -57,7 +49,6 @@ interface StatusCellProps {
 
 const StatusCell = (props: StatusCellProps) => {
   const {status} = props;
-  const theme = useTheme2();
 
   const getIcon = () => {
     switch (status) {
@@ -80,8 +71,7 @@ const StatusCell = (props: StatusCellProps) => {
   return (
     <div className='status-cell'>
       {getIcon()} 
-      {/* <Text element='p' variant='bodySmall'>{props}</Text> */}
-      <span style={{fontSize: '12px'}}>{status}</span>
+      <span>{status}</span>
     </div>
   );
 };
