@@ -111,7 +111,7 @@ html[data-theme="dark"] {
 }
 
 .header-links {
-  font-size: var(--fontSize)px;
+  font-size: calc(var(--fontSize) * 1px);
   cursor: pointer;
   flex-grow: 1;
   text-align: right;
