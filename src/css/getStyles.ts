@@ -334,23 +334,36 @@ export const getStyles = (theme: GrafanaTheme2) => {
       gap: ${theme.spacing(1)};
 
     },
-    .status-table p:not(.status-table-header) {
+    .status-table :not(.status-table-header) {
       font-size: ${theme.typography.bodySmall.fontSize};
     }
     .status-table > p {
-      border: 1px solid ${theme.colors.border.medium}; 
-      padding: ${theme.spacing(2)}; 
-      text-align: 'center';
       margin-bottom: 0;
     },
-    .status-table > div.status-cell {
+    .status-table > div.status-cell,
+    .status-table > p { 
       display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      gap: ${theme.spacing(0.5)};
+      align-items: center;
+      flex-wrap: wrap;
+      gap: ${theme.spacing(1)};
       border: 1px solid ${theme.colors.border.medium}; 
       padding: ${theme.spacing(2)}; 
+    },
+    .status-table > div.status-cell.done > div {
+      color: ${theme.colors.success.main};
+    },
+    .status-table > div.status-cell.na > div {
+      color: ${theme.colors.warning.main};
+    },
+    .status-table > div.status-cell.in-progress > div {
+      color: ${theme.colors.info.main};
+    },
+    .status-table > div.status-cell.not-doing > div,
+    .status-table > div.status-cell.deprecated > div {
+      color: ${theme.colors.error.main};
+    },
+    .status-table > div.status-cell.planned > div {
+      color: ${theme.colors.text.secondary};
     }
   `;
 };
