@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
@@ -7,7 +7,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 
-function Header({ children }) {
+function Header({ children }: PropsWithChildren) {
   return <div className={clsx(styles.playgroundHeader)}>{children}</div>;
 }
 
@@ -58,20 +58,24 @@ function EditorWithHeader() {
   );
 }
 
-export default function Playground({ children, transformCode, ...props }) {
+interface PlaygroundProps extends PropsWithChildren {
+  transformCode?: (code: string) => string;
+  metastring?: string;
+}
+export default function Playground({ children, transformCode, ...props }: PlaygroundProps) {
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
 
   return (
     <div className={styles.playgroundContainer}>
-      {/* @ts-expect-error: type incompatibility with refs */}
       <LiveProvider
-        code={children.replace(/\n$/, '')}
+        code={typeof children === 'string' ? children.replace(/\n$/, '') : ''}
         noInline={noInline}
         theme={prismTheme}
         language="typescript"
         transformCode={(snippet) => {
           if (typeof window !== 'undefined') {
+            // @ts-expect-error
             return window.ts.transpile(snippet, {
               noImplicitUseStrict: true,
               target: 'es6',
