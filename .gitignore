@@ -5,3 +5,4 @@ build
 .image-tag
 .tag-only
 .idea
+tsconfig.tsbuildinfo

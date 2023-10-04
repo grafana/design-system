@@ -1,0 +1,15 @@
+{
+  "extends": ["@grafana/tsconfig/base.json", "@tsconfig/docusaurus/tsconfig.json"],
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "allowJs": false,
+    "strict": true,
+    "resolveJsonModule": true,
+    "useUnknownInCatchVariables": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+    "preserveSymlinks": true
+  },
+  "exclude": ["node_modules", "build", ".docusaurus"]
+}
