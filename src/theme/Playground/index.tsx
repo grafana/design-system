@@ -1,10 +1,11 @@
 import React, { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveProviderProps } from 'react-live';
 import Translate from '@docusaurus/Translate';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
+import type { Props as BaseProps } from '@theme/CodeBlock';
 import styles from './styles.module.css';
 
 function Header({ children }: PropsWithChildren) {
@@ -58,18 +59,22 @@ function EditorWithHeader() {
   );
 }
 
-interface PlaygroundProps extends PropsWithChildren {
-  transformCode?: (code: string) => string;
-  metastring?: string;
+// The import of Props from @theme/Playground is not resolved properly, so the types are copied here
+type CodeBlockProps = Omit<BaseProps, 'className' | 'language' | 'title'>;
+
+export interface Props extends CodeBlockProps, LiveProviderProps {
+  children: string;
 }
-export default function Playground({ children, transformCode, ...props }: PlaygroundProps) {
+
+export default function Playground({ children, transformCode, ...props }: Props) {
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
 
   return (
     <div className={styles.playgroundContainer}>
+      {/* @ts-expect-error: type incompatibility with refs */}
       <LiveProvider
-        code={typeof children === 'string' ? children.replace(/\n$/, '') : ''}
+        code={children.replace(/\n$/, '')}
         noInline={noInline}
         theme={prismTheme}
         language="typescript"
