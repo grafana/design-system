@@ -77,7 +77,7 @@ export default function Playground({ children, transformCode, ...props }: Props)
         code={children.replace(/\n$/, '')}
         noInline={noInline}
         theme={prismTheme}
-        language="typescript"
+        language="tsx"
         transformCode={(snippet) => {
           if (typeof window !== 'undefined') {
             // @ts-expect-error
