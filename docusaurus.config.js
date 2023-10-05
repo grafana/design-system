@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const { grafanaPrismTheme } = require('./src/theme/prism.ts');
+
 // /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Grafana Labs Design System',
@@ -60,6 +62,9 @@ const config = {
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
+      },
+      prism: {
+        theme: grafanaPrismTheme,
       },
       navbar: {
         logo: {
