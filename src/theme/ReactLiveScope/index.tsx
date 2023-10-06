@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Badge, Input, Icon, Button, RadioButtonGroup, Select, AsyncSelect } from '@grafana/ui';
 
-function Stack({ direction, gap, children }) {
+interface StackProps extends PropsWithChildren {
+  direction?: 'horizontal' | 'vertical';
+  gap?: number;
+}
+
+function Stack({ direction, gap, children }: StackProps) {
   return (
     <div
       style={{
