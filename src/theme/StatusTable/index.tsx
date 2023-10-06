@@ -1,69 +1,91 @@
-import { Icon } from '@grafana/ui';
-import React from 'react';
+import { IconName, InteractiveTable } from '@grafana/ui';
+import React, { useMemo } from 'react';
 
 interface StatusTableProps {
   componentsData: StatusChildren[];
 }
 type StatusChildren = {
-  name: string;
-  generalStatus: StatusCellProps['status'];
-  figmaStatus: StatusCellProps['status'];
-  storybookStatus: StatusCellProps['status'];
-  sagaStatus: StatusCellProps['status'];
+  componentName: string;
+  generalStatus: Status['status'];
+  figmaStatus: Status['status'];
+  storybookStatus: Status['status'];
+  sagaStatus: Status['status'];
 };
-
-export const StatusTable = ({ componentsData }: StatusTableProps) => {
-  return (
-    <table className="status-table">
-      <tr>
-        <th>Component</th>
-        <th>General</th>
-        <th>Figma</th>
-        <th>Storybook</th>
-        <th>Saga</th>
-      </tr>
-      {componentsData.map((componentData) => (
-        <tr>
-          <td>{componentData.name}</td>
-          <StatusCell status={componentData.generalStatus} />
-          <StatusCell status={componentData.figmaStatus} />
-          <StatusCell status={componentData.storybookStatus} />
-          <StatusCell status={componentData.sagaStatus} />
-        </tr>
-      ))}
-    </table>
-  );
-};
-
-interface StatusCellProps {
+interface Status {
+  id: string;
   status: 'Done' | 'Planned' | 'In Progress' | 'To Do' | 'Not Doing' | 'Deprecated' | 'N/A';
+  icon: IconName;
+  className: string;
 }
 
-const StatusCell = (props: StatusCellProps) => {
-  const { status } = props;
+// const STATUSES: Status[] = [
+//   {
+//     id: 'done',
+//     status: 'Done',
+//     icon: 'check-circle',
+//     className: 'done',
+//   },
+//   {
+//     id: 'planned',
+//     status: 'Planned',
+//     icon: 'calendar-alt',
+//     className: 'planned',
+//   },
+//   {
+//     id: 'in-progress',
+//     status: 'In Progress',
+//     icon: 'sync',
+//     className: 'in-progress',
+//   },
+//   {
+//     id: 'to-do',
+//     status: 'To Do',
+//     icon: 'list-ul',
+//     className: 'to-do',
+//   },
+//   {
+//     id: 'not-doing',
+//     status: 'Not Doing',
+//     icon: 'times',
+//     className: 'not-doing',
+//   },
+//   {
+//     id: 'deprecated',
+//     status: 'Deprecated',
+//     icon: 'minus-circle',
+//     className: 'deprecated',
+//   },
+//   {
+//     id: 'n-a',
+//     status: 'N/A',
+//     icon: 'question-circle',
+//     className: 'n-a',
+//   },
+// ];
 
-  const getIcon = () => {
-    switch (status) {
-      case 'Planned':
-        return <Icon name="calendar-alt" size="md" />;
-      case 'In Progress':
-        return <Icon name="sync" size="md" />;
-      case 'To Do':
-        return <Icon name="list-ul" size="md" />;
-      case 'Not Doing':
-        return <Icon name="times" size="md" />;
-      case 'Deprecated':
-        return <Icon name="minus-circle" size="md" />;
-      case 'N/A':
-        return <Icon name="question-circle" size="md" />;
-      default:
-        return <Icon name="check-circle" size="md" />;
-    }
-  };
-  return (
-    <td className={status.replace(' ', '-').replace('/', '').toLocaleLowerCase()}>
-      {getIcon()}
-      <span>{status}</span>
-    </td>
-  );
+export const StatusTable = ({ componentsData }: StatusTableProps) => {
+  const columns = [
+    {
+      id: 'componentName',
+      title: 'Component',
+    },
+    {
+      id: 'generalStatus',
+      title: 'General',
+    },
+    {
+      id: 'figmaStatus',
+      title: 'Figma',
+    },
+    {
+      id: 'storybookStatus',
+      title: 'Storybook',
+    },
+    {
+      id: 'sagaStatus',
+      title: 'Saga',
+    },
+  ];
+  const rowsData = useMemo(() => componentsData, [componentsData]);
+  return <InteractiveTable getRowId={(row: StatusChildren) => row.componentName} columns={columns} data={rowsData} />;
 };

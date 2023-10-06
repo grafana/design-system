@@ -329,8 +329,6 @@ export const getStyles = (theme: GrafanaTheme2) => {
 
     /* COMPONENTS STATUS */
     .status-table tr {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
       font-size: ${theme.typography.bodySmall.fontSize};
       text-align: left;
     }
