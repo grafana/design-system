@@ -12,25 +12,26 @@ type StatusChildren = {
   sagaStatus: StatusCellProps['status'];
 };
 
-export const StatusTable = ({componentsData}: StatusTableProps) => {
-
+export const StatusTable = ({ componentsData }: StatusTableProps) => {
   return (
-    <div className="status-table">
-      <p className="status-table-header">Component</p>
-      <p className="status-table-header">General</p>
-      <p className="status-table-header">Figma</p>
-      <p className="status-table-header">Storybook</p>
-      <p className="status-table-header">Saga</p>
+    <table className="status-table">
+      <tr>
+        <th>Component</th>
+        <th>General</th>
+        <th>Figma</th>
+        <th>Storybook</th>
+        <th>Saga</th>
+      </tr>
       {componentsData.map((componentData) => (
-        <>
-          <p className="status-cell">{componentData.name}</p>
+        <tr>
+          <td>{componentData.name}</td>
           <StatusCell status={componentData.generalStatus} />
           <StatusCell status={componentData.figmaStatus} />
           <StatusCell status={componentData.storybookStatus} />
           <StatusCell status={componentData.sagaStatus} />
-        </>
+        </tr>
       ))}
-    </div>
+    </table>
   );
 };
 
@@ -60,9 +61,9 @@ const StatusCell = (props: StatusCellProps) => {
     }
   };
   return (
-    <div className={`status-cell ${status.replace(' ', '-').replace('/', '').toLocaleLowerCase()}`}>
+    <td className={status.replace(' ', '-').replace('/', '').toLocaleLowerCase()}>
       {getIcon()}
       <span>{status}</span>
-    </div>
+    </td>
   );
 };

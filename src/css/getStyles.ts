@@ -328,41 +328,37 @@ export const getStyles = (theme: GrafanaTheme2) => {
     },
 
     /* COMPONENTS STATUS */
-    .status-table {
+    .status-table tr {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      gap: ${theme.spacing(1)};
-
-    },
-    .status-table :not(.status-table-header) {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
       font-size: ${theme.typography.bodySmall.fontSize};
-    }
-    .status-table > p {
-      margin-bottom: 0;
     },
-    .status-table > div.status-cell,
-    .status-table > p { 
+    .status-table th {
+      font-weight: ${theme.typography.fontWeightMedium};
+    },
+    .status-table tr td { 
       display: flex;
+      direction: row;
       align-items: center;
       flex-wrap: wrap;
       gap: ${theme.spacing(1)};
       border: 1px solid ${theme.colors.border.medium}; 
-      padding: ${theme.spacing(2)}; 
+      padding: ${theme.spacing(2)};
     },
-    .status-table > div.status-cell.done > div {
+    .status-table td.done > div {
       color: ${theme.colors.success.main};
     },
-    .status-table > div.status-cell.na > div {
+    .status-table td.na > div {
       color: ${theme.colors.warning.main};
     },
-    .status-table > div.status-cell.in-progress > div {
+    .status-table td.in-progress > div {
       color: ${theme.colors.info.main};
     },
-    .status-table > div.status-cell.not-doing > div,
-    .status-table > div.status-cell.deprecated > div {
+    .status-table td.not-doing > div,
+    .status-table td.deprecated > div {
       color: ${theme.colors.error.main};
     },
-    .status-table > div.status-cell.planned > div {
+    .status-table td.planned > div {
       color: ${theme.colors.text.secondary};
     }
   `;
