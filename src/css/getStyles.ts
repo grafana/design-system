@@ -332,6 +332,7 @@ export const getStyles = (theme: GrafanaTheme2) => {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
       font-size: ${theme.typography.bodySmall.fontSize};
+      text-align: left;
     }
     .status-table th {
       font-weight: ${theme.typography.fontWeightMedium};
