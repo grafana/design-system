@@ -22,7 +22,7 @@ function Stack({ direction, gap, children }: StackProps) {
   );
 }
 
-function Container({ children, ...props }) {
+function Container({ children, ...props }: PropsWithChildren) {
   return (
     <div style={{ width: '300px' }} {...props}>
       {children}
