@@ -20,11 +20,11 @@ Alerts display important messages in a way that attracts the user's attention wi
 
 Within Grafana, we have three different types of alerts and they can be used depending on the context and content.
 
-| Type       | Purpose                                                                                                                                                                                                        | Behavior                       |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| **Inline** | <p>To notify users of the status of an action. They appear at the top or bottom of the main content area</p>                                                                                                   | <p> Passive or Persistent </p> |
-| **Toast**  | <p>These temporary window elements are used to display short messages; they appear at the top-right corner of the screen and can be dismissed by clicking the [x] or it will disappear after a few seconds</p> | <p>Passive</p>                 |
-| **Banner** | <p>It will remain until the user rejects it or until the status that triggered the banner is resolved</p>                                                                                                      | <p> Persistent </p>            |
+| Type                                                 | Purpose                                                                                                                                                                                                        | Behavior                       |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| **[Inline](/design-system/Components/alert-inline)** | <p>To notify users of the status of an action. They appear at the top or bottom of the main content area</p>                                                                                                   | <p> Passive or Persistent </p> |
+| **[Toast](/design-system/Components/alert-toast)**   | <p>These temporary window elements are used to display short messages; they appear at the top-right corner of the screen and can be dismissed by clicking the [x] or it will disappear after a few seconds</p> | <p>Passive</p>                 |
+| **[Banner](/design-system/Components/alert-banner)** | <p>It will remain until the user rejects it or until the status that triggered the banner is resolved</p>                                                                                                      | <p> Persistent </p>            |
 
 ## Message Type
 
@@ -33,7 +33,7 @@ Within Grafana, we have three different types of alerts and they can be used dep
 | **Informational** | <p>Provide information to users, and don’t interrupt any current actions</p>                                           | <p>Do not require immediate action and can be dismissed by a user clicking the [X] or passively display until the display timer expires</p> | <p>Blue background</p>   | <p>Info-circle</p>          |
 | **Success**       | <p>When any action is successful, it is confirmed when a task is completed as expected</p>                             | <p>Typically do not require further action and can be dismissed automatically or persist in a nonintrusive manner</p>                       | <p>Green background</p>  | <p>Check</p>                |
 | **Warning**       | <p>Informing users that an action is undesirable</p>                                                                   | <p>Often persists until users have taken action to dismiss the notification or taken steps to resolve the issue</p>                         | <p>Yellow background</p> | <p>Exclamation-triangle</p> |
-| **Error**         | <p>When an action doesn't happen as expected, usually something has failed and the user is expected to take action</p> | <p>Always persists until the user has taken steps to remedy the issue that triggered the notification</p>                                   | <p>Red background</p>    | <p>Exclamation-circle</p>   |
+| **Error**         | <p>When an action doesn't happen as expected, usually something has failed and the user is expected to take action</p> | <p>Always persists until the user has taken steps to remedy the issue that triggered the notification</p>                                   | <p>Red background</p>    | <p>Exclamation-circle</p> |
 
 ## Content
 
@@ -73,7 +73,9 @@ An Alert can contain a single action, dismiss or close actions are optional.
 
 ## Related
 
-- **[Banner Notification](/design/Components/alert-banner)**
+- **[Banner Notification](/design-system/Components/alert-banner)**
+- **[Inline Notification](/design-system/Components/alert-inline)**
+- **[Toast Notification](/design-system/Components/alert-toast)**
 
 ### Further Reading & Sources
 
