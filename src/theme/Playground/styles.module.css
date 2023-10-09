@@ -66,3 +66,32 @@
   padding: 1rem;
   border: 1px solid var(--ifm-pre-background);
 }
+
+.codeContainer {
+  position: relative;
+
+  &:hover {
+    .copyButton {
+      opacity: 0.4;
+    }
+  }
+}
+
+button.copyButton {
+  position: absolute;
+  right: calc(var(--ifm-pre-padding) / 2);
+  top: calc(var(--ifm-pre-padding) / 2);
+  z-index: 1;
+  opacity: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 4px;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+
+  & > span {
+    display: inline-block;
+  }
+}
