@@ -326,5 +326,39 @@ export const getStyles = (theme: GrafanaTheme2) => {
         margin-right: 0;
       }
     }
+
+    /* COMPONENTS STATUS */
+    .status-table tr {
+      font-size: ${theme.typography.bodySmall.fontSize};
+      text-align: left;
+    }
+    .status-table th {
+      font-weight: ${theme.typography.fontWeightMedium};
+    }
+    .status-table tr td { 
+      display: flex;
+      direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: ${theme.spacing(1)};
+      border: 1px solid ${theme.colors.border.medium}; 
+      padding: ${theme.spacing(2)};
+    }
+    .status-table td.done > div {
+      color: ${theme.colors.success.main};
+    }
+    .status-table td.na > div {
+      color: ${theme.colors.warning.main};
+    }
+    .status-table td.in-progress > div {
+      color: ${theme.colors.info.main};
+    }
+    .status-table td.not-doing > div,
+    .status-table td.deprecated > div {
+      color: ${theme.colors.error.main};
+    }
+    .status-table td.planned > div {
+      color: ${theme.colors.text.secondary};
+    }
   `;
 };
