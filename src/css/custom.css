@@ -206,7 +206,7 @@ html[data-theme="dark"] {
   content: '';
   height: 29px;
   width: calc(var(--spacing) / 2)px;
-  background: calc(var(--brandVertical));
+  background: var(--brandVertical);
   position: absolute;
   border-radius: var(--borderRadius);
   left: calc(var(--spacing) * 3px);
