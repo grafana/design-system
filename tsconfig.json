@@ -10,6 +10,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "preserveSymlinks": true,
+    "lib": ["es2021", "dom"],
     "types": ["@docusaurus/theme-live-codeblock"]
   },
   "exclude": ["node_modules", "build", ".docusaurus"]

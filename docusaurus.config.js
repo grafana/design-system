@@ -38,6 +38,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/grafana/design-system/blob/main/',
         },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
         blog: false, // disabled for now but maybe we can have a design system blog later :)
         pages: {
           path: 'pages',
