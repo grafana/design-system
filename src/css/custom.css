@@ -205,8 +205,8 @@ html[data-theme="dark"] {
 .table-of-contents__link--active::before {
   content: '';
   height: 29px;
-  width: calc(var(--spacing) / 2)px;
-  background: calc(var(--brandVertical));
+  width: calc(var(--spacing) / 2 * 1px);
+  background: var(--brandVertical);
   position: absolute;
   border-radius: var(--borderRadius);
   left: calc(var(--spacing) * 3px);
