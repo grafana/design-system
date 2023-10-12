@@ -1,11 +1,13 @@
 import React, { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveProviderProps } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Translate from '@docusaurus/Translate';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
-import type { Props as BaseProps } from '@theme/CodeBlock';
+import type { Props as PlaygroundProps } from '@theme/Playground';
+import CopyButton from '@theme/CodeBlock/CopyButton';
+
 import styles from './styles.module.css';
 
 function Header({ children }: PropsWithChildren) {
@@ -45,36 +47,33 @@ function ThemedLiveEditor() {
   );
 }
 
-function EditorWithHeader() {
+interface EditorWithHeaderProps {
+  code: string;
+}
+
+function EditorWithHeader({ code }: EditorWithHeaderProps) {
   return (
-    <>
+    <div className={styles.codeContainer}>
       <Header>
         <Translate id="theme.Playground.liveEditor" description="The live editor label of the live codeblocks">
           Live Editor
         </Translate>
       </Header>
-
+      <CopyButton code={code} className={styles.copyButton} />
       <ThemedLiveEditor />
-    </>
+    </div>
   );
 }
 
-// The import of Props from @theme/Playground is not resolved properly, so the types are copied here
-type CodeBlockProps = Omit<BaseProps, 'className' | 'language' | 'title'>;
-
-export interface Props extends CodeBlockProps, LiveProviderProps {
-  children: string;
-}
-
-export default function Playground({ children, transformCode, ...props }: Props) {
+export default function Playground({ children, transformCode, ...props }: PlaygroundProps) {
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
-
+  const code = children.replace(/\n$/, '');
   return (
     <div className={styles.playgroundContainer}>
       {/* @ts-expect-error: type incompatibility with refs */}
       <LiveProvider
-        code={children.replace(/\n$/, '')}
+        code={code}
         noInline={noInline}
         theme={prismTheme}
         language="tsx"
@@ -91,7 +90,7 @@ export default function Playground({ children, transformCode, ...props }: Props)
         {...props}
       >
         <ResultWithHeader />
-        <EditorWithHeader />
+        <EditorWithHeader code={code} />
       </LiveProvider>
     </div>
   );
