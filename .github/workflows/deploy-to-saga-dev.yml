@@ -29,15 +29,15 @@ jobs:
       - name: Build documentation website
         env:
           GTAG_CONTAINER_ID: ${{ secrets.GTAG_CONTAINER_ID }}
-        run: yarn build --config docusaurus.config.js
+        run: yarn build --config docusaurus.config.dev.js
 
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY_DEV }}
-      - name: Deploy to Saga Bucket
+      - name: Deploy to Developer Portal Bucket
         uses: google-github-actions/upload-cloud-storage@v1
         with:
           path: './build/'
-          destination: 'staging-saga'
+          destination: 'staging-developer-portal/saga'
           parent: false

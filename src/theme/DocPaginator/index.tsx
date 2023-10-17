@@ -2,12 +2,10 @@ import React from 'react';
 import { translate } from '@docusaurus/Translate';
 import { Button, Icon } from '@grafana/ui';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import type { Props } from '@theme/DocPaginator';
 
 export default function DocPaginator(props: Props) {
   const { previous, next } = props;
-  console.info(useBaseUrl('a'));
 
   return (
     <nav
