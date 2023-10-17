@@ -1,11 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const { grafanaPrismTheme } = require('./src/theme/prism.ts');
+
 // /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Grafana Labs Design System',
   tagline: 'Design Systems are cool',
-  url: 'https://design.grafana.com',
+  url: 'https://grafana-dev.com',
   baseUrl: '/design-system/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -36,6 +38,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/grafana/design-system/blob/main/',
         },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
         blog: false, // disabled for now but maybe we can have a design system blog later :)
         pages: {
           path: 'pages',
@@ -43,6 +48,8 @@ const config = {
       }),
     ],
   ],
+
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -59,10 +66,13 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: true,
       },
+      prism: {
+        theme: grafanaPrismTheme,
+      },
       navbar: {
         logo: {
           alt: 'Design System logo',
-          href: 'about',
+          href: 'About/overview',
           src: '/img/logo_with_text.png',
         },
         items: [
@@ -79,6 +89,7 @@ const config = {
         ],
       },
     }),
+  scripts: ['https://klesun-misc.github.io/TypeScript/lib/typescriptServices.js'],
 };
 
 module.exports = config;

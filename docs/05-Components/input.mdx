@@ -4,8 +4,6 @@ description: Grafana Labs Input component
 keywords: ['Grafana', 'Labs', 'inline', 'field', 'component']
 ---
 
-import { Badge, Icon } from '@grafana/ui';
-
 # Input <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-input--simple' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 A basic component that allows a user to write or edit text.
@@ -28,8 +26,11 @@ Input has the ability to have placeholder text. Use placeholder text sparingly, 
 
 Input is able to have an element, such as an icon, placed inside the input at the beginning or end. This allows for the creation of inputs like search fields with a magnifying glass icon.
 
-```jsx
+```tsx live
 <Input prefix={<Icon name="search" />} placeholder="Search dashboards" />
+```
+
+```tsx live
 <Input suffix={<Icon name="plus-circle" />} />
 ```
 
@@ -37,7 +38,7 @@ Input is able to have an element, such as an icon, placed inside the input at th
 
 An accessory, commonly a button, that can occur before or after the input.
 
-```jsx
+```tsx live
 <Input addonAfter={<Button variant="secondary">Load</Button>} />
 ```
 

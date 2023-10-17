@@ -1,0 +1,152 @@
+---
+title: Select
+description: Grafana Labs Select component
+keywords: ['Grafana', 'Labs', 'select', 'component']
+---
+
+# Select <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/story/forms-select--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+The Select component is a customizable select input component that allows users to select one or more options from a dropdown list. It is built on top of the [react-select](https://react-select.com/) library.
+
+<iframe
+    src="https://developers.grafana.com/ui/canary/index.html?path=/story/forms-select--basic"
+    width="100%"
+    height="300px"
+></iframe>
+
+## When to use
+This component is particularly useful when you have a large number of options to choose from. Additionally, consider using Select in favor of radio button components when you have more than 4 options to choose from.
+
+## Types and Behaviors
+
+### Basic Select
+The Select component can be used to create a basic select input that allows users to select one option from a dropdown list. The `isClearable` prop can be used to allow the selected value(s) to be cleared. The `isLoading` prop can be used to indicate that the select input is in a loading state.
+
+```tsx live noInline
+const Basic = () => {
+  const [value, setValue] = useState<SelectableValue<string>>();
+  const options = [
+    { label: 'Option 1', value: '1' },
+    { label: 'Option 2', value: '2' },
+    { label: 'Option 3', value: '3' },
+  ];
+
+  return (
+    <Container>
+      <Select
+        options={options}
+        value={value}
+        onChange={(v) => {
+          setValue(v);
+        }}
+      />
+    </Container>
+  );
+};
+
+render(<Basic />);
+```
+
+### Multi Select
+The Select component can be configured to allow users to select multiple options from a dropdown list. The `isMulti` prop must be set to true to enable this behavior. The `maxVisibleValues` prop can be used to limit the number of selected values to display. The `showAllSelectedWhenOpen` prop can be used to display all selected values when the dropdown list is open.
+
+
+### Async Select
+The Select component can be configured to allow users to select one or more options from a dropdown list that is populated asynchronously. The `loadOptions` prop must be set to a function that returns a promise that resolves to an array of options. The `defaultOptions` prop can be used to provide options that are displayed before the user starts typing. In this case the options will be loaded on component mount. The `cacheOptions` prop can be used to cache the options that are loaded asynchronously.
+
+```tsx live noInline
+const loadAsyncOptions = (inputValue: string) => {
+  return new Promise<Array<SelectableValue<string>>>((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { label: 'Option 1', value: '1' },
+        { label: 'Option 2', value: '2' },
+        { label: 'Option 3', value: '3' },
+      ]);
+    }, 1000);
+  });
+};
+
+const BasicSelectAsync = () => {
+  const [value, setValue] = useState<SelectableValue<string>>();
+
+  return (
+    <Container>
+      <AsyncSelect
+        loadOptions={loadAsyncOptions}
+        defaultOptions
+        value={value}
+        onChange={setValue}
+      />
+    </Container>
+  );
+};
+
+render(<BasicSelectAsync />);
+```
+
+### Creating custom values
+
+The Select component can be configured to allow users to create new options. The `allowCustomValue` prop must be set to true to enable this behavior. Additionally, the `onCreateOption` prop must be set to a function that is called when the user creates a new option.
+
+```tsx live noInline
+const CustomValueCreation = () => {
+  const [value, setValue] = useState<SelectableValue<string>>();
+  const [customOptions, setCustomOptions] = useState<Array<SelectableValue<string>>>([]);
+  const options = [
+    { label: 'Option 1', value: '1' },
+    { label: 'Option 2', value: '2' },
+    { label: 'Option 3', value: '3' },
+  ];
+  return (
+    <Container>
+      <Select
+        options={[...options, ...customOptions]}
+        value={value}
+        onChange={(v) => {
+          setValue(v);
+        }}
+        allowCustomValue
+        onCreateOption={(v) => {
+          const customValue: SelectableValue<string> = { value: v, label: v };
+          setCustomOptions([...customOptions, customValue]);
+          setValue(customValue);
+        }}
+      />
+    </Container>
+  );
+};
+
+render(<CustomValueCreation />);
+```
+
+### Virtualized option list
+
+The Select component can be configured to use virtualized option list. The `virtualized` prop must be set to true to enable this behavior. The `maxVisibleValues` prop can be used to limit the number of selected values to display. The `showAllSelectedWhenOpen` prop can be used to display all selected values when the dropdown list is open. The `isClearable` prop can be used to allow the selected value(s) to be cleared. The `isLoading` prop can be used to indicate that the select input is in a loading state.
+
+### Adding icons to Select
+
+A custom icon can be added to Select, which will be displayed before the selected value, by using a `prefix` prop.
+
+```tsx live noInline
+const SelectWithIcon = () => {
+  const [value, setValue] = useState<SelectableValue<string>>();
+  return (
+    <Container>
+      <Select
+        options={[
+          { label: 'Option 1', value: '1' },
+          { label: 'Option 2', value: '2' },
+          { label: 'Option 3', value: '3' },
+        ]}
+        value={value}
+        onChange={setValue}
+        prefix={<Icon name={'arrow-down'} />}
+      />
+    </Container>
+  );
+};
+
+render(<SelectWithIcon />);
+```
+
