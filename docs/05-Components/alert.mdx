@@ -47,10 +47,22 @@ Alerts (Inline Alerts specifically) can contain calls to action (CTAs), especial
 Grafana uses Alert in two ways: Inline, and Toast. These two different types of Alerts have different purposes and behaviours. It’s important to understand the differences to make sure you use the right one.
 
 ### Inline
-Inline Alerts notify users of both system and user triggered events. They appear at the top or bottom of the main content area near where the user is actively working. This maintains context and supports understanding. These messages are task-generated and provide direct, contextual feedback. 
+Inline Alerts notify users of both system and user triggered events. They appear at the top or bottom of the main content area near where the user is actively working. This maintains context and supports understanding. These messages are task-generated and provide direct, contextual feedback.
+
+```tsx live
+<Alert title='Inline alert'>
+  <div>Child content that includes some alert details, like maybe what actually happened.</div>
+</Alert>
+```
 
 ### Toast
 Toasts are temporary window elements used to display short messages; they appear in the top-right corner of the screen and can be dismissed by clicking the `X` or it will disappear after a few seconds
+
+```tsx live
+<Alert title='Toast' elevated>
+  <div>Child content that includes some alert details, like maybe what actually happened.</div>
+</Alert>
+```
 
 #### Behavior
 - Toasts display for a short period of time
