@@ -1,16 +1,18 @@
 ---
 title: Alert
 description: Grafana Labs Alert component
-keywords: ['Grafana', 'Labs', 'banner', 'component']
+keywords: ['Grafana', 'Labs', 'alert', 'component']
 ---
 
-# Alert <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-alert--examples' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Alert <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/overlays-alert-toast--basic'/>
 
 Alert is a fundamental element used for displaying important messages or notifications to users.
 
 ## When to use
 
 Use Alerts to inform users of updates, changes, or issues. Providing users feedback, keeping them informed, and keeping disruptions to a minimum is important. There are two different use-cases for Alerts: task-generated and system-generated Alerts.
+
+## Usage
 
 ### Task-Generated
 Task-generated Alerts are triggered based on the behaviours of the user and provide quick, direct feedback. This type of Alert should be placed closely to the area the user is actively working in.
@@ -62,3 +64,7 @@ Toasts are temporary window elements used to display short messages; they appear
 - [NNG — How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 - [NNG - 10 Usability Heuristics for Users](https://www.nngroup.com/articles/ten-usability-heuristics/)
 - [NNG - Plain Language is for Everyone](https://www.nngroup.com/articles/plain-language-experts/)
+
+## Playground
+
+<ComponentEmbed path='/story/overlays-alert-toast--basic' />
