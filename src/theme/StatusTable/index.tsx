@@ -68,22 +68,27 @@ export const StatusTable = ({ componentsData }: StatusTableProps) => {
     {
       id: 'componentName',
       title: 'Component',
+      header: 'Component name',
     },
     {
       id: 'generalStatus',
       title: 'General',
+      header: 'General status',
     },
     {
       id: 'figmaStatus',
       title: 'Figma',
+      header: 'Figma status',
     },
     {
       id: 'storybookStatus',
       title: 'Storybook',
+      header: 'Storybook status',
     },
     {
       id: 'sagaStatus',
       title: 'Saga',
+      header: 'Saga status',
     },
   ];
   const rowsData = useMemo(() => componentsData, [componentsData]);
