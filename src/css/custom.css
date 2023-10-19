@@ -393,3 +393,38 @@ main {
     margin-right: 0;
   }
 }
+
+/* Revert Docusaurus' custom styles */
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none !important;
+}
+
+table tr {
+  background-color: var(--background-primary);
+}
+
+table tr:nth-child(2n) {
+  background-color: var(--background-primary);
+}
+
+table tr td,
+table tr th {
+  border-bottom: 1px solid var(--border-weak);
+}
+
+table tr:last-of-type td {
+  border-bottom: none;
+}
+
+table th {
+  text-align: left;
+  font-weight: 500;
+  border: none;
+}
+
+table thead tr {
+  border: none;
+}
