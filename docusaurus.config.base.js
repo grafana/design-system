@@ -8,7 +8,7 @@ const baseConfig = {
   title: 'Grafana Labs Design System',
   tagline: 'Design Systems are cool',
   url: 'https://grafana.com/',
-  baseUrl: '/design-system/',
+  baseUrl: 'developers/saga/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
