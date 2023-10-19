@@ -4,7 +4,7 @@ description: Grafana Labs Input component
 keywords: ['Grafana', 'Labs', 'inline', 'field', 'component']
 ---
 
-# Input <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-input--simple' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Input <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/forms-input--simple' />
 
 A basic component that allows a user to write or edit text.
 
@@ -15,6 +15,12 @@ Use inputs in forms to help people enter, select, and search for text. Inputs ar
 ### Form usage
 
 Inputs should be used with the **Field** component to provide labels and descriptions for the input.
+
+```tsx live
+<Field label="Username">
+  <Input placeholder="Enter username" />
+</Field>
+```
 
 ## Implementation / Options
 
@@ -69,3 +75,7 @@ For some situations, the input is able to indicate that it is loading.
 #### Disabled
 
 Depending on user permissions or if an input is synced with a datasource, an input can have a disabled state.
+
+## Playground
+
+<ComponentEmbed path="/story/forms-input--simple" />
