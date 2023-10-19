@@ -13,6 +13,7 @@ import {
   InteractiveTable,
   Switch,
   InlineSwitch,
+  TextLink,
 } from '@grafana/ui';
 
 interface StackProps extends PropsWithChildren {
@@ -62,6 +63,7 @@ const ReactLiveScope = {
   InteractiveTable,
   Switch,
   InlineSwitch,
+  TextLink,
   ...React,
 };
 
