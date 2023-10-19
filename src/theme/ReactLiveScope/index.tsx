@@ -10,6 +10,7 @@ import {
   RadioButtonGroup,
   Select,
   AsyncSelect,
+  InteractiveTable,
 } from '@grafana/ui';
 
 interface StackProps extends PropsWithChildren {
@@ -56,6 +57,7 @@ const ReactLiveScope = {
   AsyncSelect,
   IconButton,
   Field,
+  InteractiveTable,
   ...React,
 };
 
