@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Badge, Input, Icon, Button, RadioButtonGroup, Select, AsyncSelect } from '@grafana/ui';
+import { Alert, Badge, Input, Icon, Button, RadioButtonGroup, Select, AsyncSelect } from '@grafana/ui';
 
 interface StackProps extends PropsWithChildren {
   direction?: 'horizontal' | 'vertical';
@@ -38,6 +38,7 @@ const ReactLiveScope = {
   Input,
   Icon,
   Button,
+  Alert,
   RadioButtonGroup,
   Select,
   Container,
