@@ -11,6 +11,8 @@ import {
   Select,
   AsyncSelect,
   InteractiveTable,
+  Switch,
+  InlineSwitch,
 } from '@grafana/ui';
 
 interface StackProps extends PropsWithChildren {
@@ -58,6 +60,8 @@ const ReactLiveScope = {
   IconButton,
   Field,
   InteractiveTable,
+  Switch,
+  InlineSwitch,
   ...React,
 };
 

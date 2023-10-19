@@ -428,3 +428,7 @@ table th {
 table thead tr {
   border: none;
 }
+
+input[type='checkbox'] + label {
+  display: inline-block;
+}
