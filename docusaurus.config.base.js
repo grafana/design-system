@@ -7,7 +7,7 @@ const { grafanaPrismTheme } = require('./src/theme/prism.ts');
 const baseConfig = {
   title: 'Grafana Labs Design System',
   tagline: 'Design Systems are cool',
-  url: 'https://grafana.com',
+  url: 'https://grafana.com/',
   baseUrl: '/design-system/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
