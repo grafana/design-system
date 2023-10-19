@@ -4,7 +4,7 @@ const baseConfig = require('./docusaurus.config.base');
 const config = {
   ...baseConfig,
   url: 'https://grafana-dev.com',
-  baseUrl: '/developers/saga/',
+  baseUrl: 'developers/saga/',
 };
 
 module.exports = config;
