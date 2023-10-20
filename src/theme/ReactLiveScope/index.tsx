@@ -16,6 +16,7 @@ import {
   Text,
   TextLink,
   Tooltip,
+  TextArea,
 } from '@grafana/ui';
 
 interface StackProps extends PropsWithChildren {
@@ -68,6 +69,7 @@ const ReactLiveScope = {
   Text,
   TextLink,
   Tooltip,
+  TextArea,
   ...React,
 };
 
