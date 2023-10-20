@@ -49,6 +49,10 @@ const baseConfig = {
     ],
   ],
 
+  plugins: [
+    customPostCssPlugin, // PostCSS plugin function registration
+  ],
+
   themes: ['@docusaurus/theme-live-codeblock'],
 
   themeConfig:
@@ -91,5 +95,17 @@ const baseConfig = {
     }),
   scripts: ['https://klesun-misc.github.io/TypeScript/lib/typescriptServices.js'],
 };
+
+/** @return {import('@docusaurus/types').Plugin} */
+function customPostCssPlugin() {
+  return {
+    name: 'custom-postcss',
+    configurePostCss(options) {
+      // Append new PostCSS plugins here.
+      options.plugins.push(require('postcss-preset-env')); // allow newest CSS syntax
+      return options;
+    },
+  };
+}
 
 module.exports = baseConfig;
