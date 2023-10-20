@@ -69,12 +69,9 @@
 
 .codeContainer {
   position: relative;
-
-  &:hover {
-    .copyButton {
-      opacity: 0.4;
-    }
-  }
+}
+.codeContainer:hover .copyButton {
+  opacity: 0.4;
 }
 
 button.copyButton {
@@ -86,12 +83,12 @@ button.copyButton {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-global-radius);
   padding: 4px;
+}
 
-  &:hover {
-    opacity: 1 !important;
-  }
+button.copyButton > span {
+  display: inline-block;
+}
 
-  & > span {
-    display: inline-block;
-  }
+button.copyButton:hover {
+  opacity: 1 !important;
 }
