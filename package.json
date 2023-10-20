@@ -5,6 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "tsc --watch --noEmit & docusaurus start --config docusaurus.config.js",
+    "start-dev": "tsc --watch --noEmit & docusaurus start --config docusaurus.config.dev.js",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

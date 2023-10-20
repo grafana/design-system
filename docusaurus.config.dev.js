@@ -6,6 +6,21 @@ const config = {
   url: 'https://grafana-dev.com/',
   baseUrl: 'developers/saga/',
 
+  themeConfig: {
+    ...baseConfig.themeConfig,
+    navbar: {
+      ...baseConfig.themeConfig.navbar,
+      items: [
+        ...baseConfig.themeConfig.navbar.items,
+        {
+          href: 'https://grafana-dev.com/developers',
+          label: 'Dev Portal Home',
+          position: 'right',
+        },
+      ],
+    },
+  },
+
   customFields: {
     rudderStackTracking: {
       url: 'https://rs.grafana-dev.com',
