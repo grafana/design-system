@@ -5,35 +5,33 @@ keywords: ['Grafana', 'Labs', 'tooltip', 'component']
 hide_title: true
 ---
 
-import { Badge, InfoBox, Icon } from '@grafana/ui';
-
-# Tooltip <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-tooltip--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Tooltip <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/overlays-tooltip--basic' />
 
 Tooltips display additional information upon hover or focus. The information included should be contextual, helpful, and non-critical to the user’s task-at-hand. The information should be concise and provide clarity to the user.
 
-<iframe
-  src="https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-tooltip--basic&full=1&shortcuts=false&singleStory=true"
-  width="100%"
-  height="500px"
-></iframe>
+```tsx live
+<Tooltip content="This is a tooltip">
+  <Button>Hover me for Tooltip</Button>
+</Tooltip>
+```
 
 ## Usage
 
-<b>Do's</b>
+### Do's
 
-- Provide supportive, explanatory text for icons (i.e, “search” as a label for a magnifying glass icon)
-- Concise information around intended use of element
-- Allow tooltips to be triggered by keyboard navigation
-- Use arrows to indicate which element the tooltip is related too
-- Use tooltips consistently (i.e. icon buttons have them, all tooltips are styled the same)
-- Use ARIA tags when building tooltips to ensure they are accessible
+- Provide supportive, explanatory text for icons (i.e. "search" as a label for a magnifying glass icon).
+- Offer concise information about the intended use of an element.
+- Allow tooltips to be triggered by keyboard navigation.
+- Use arrows to indicate which element the tooltip relates to.
+- Use tooltips consistently (i.e., all icon buttons have them, all tooltips are styled the same).
+- Use ARIA tags when building tooltips to ensure they are accessible.
 
-<b>Don'ts</b>
+### Don'ts
 
-- Do not house information critical to user’s task completion
-- Do not duplicate information such as calls to action labels creating information pollution
-- **Do not use interactive components within a tooltip**
-- **Do not make the user dismiss the tooltip**
+- Do not house information critical to a user’s task completion in the tooltip.
+- Do not duplicate information such as labels for calls to action, as this creates information pollution.
+- Do not use interactive components within a tooltip.
+- Do not force the user to dismiss the tooltip.
 
 ## Variants
 
@@ -45,15 +43,10 @@ Tooltips display additional information upon hover or focus. The information inc
 
 ## Accessibility
 
-- Use ARIA tags when building tooltips to ensure they are accessible
-  - aria-labelledby if the tooltip works as a primary label (i.e. to name an IconButton action)
-  - aria-describedby if the tooltip works as a supporting label (i.e. to give additional information on an input)
-- Tooltips must be visible when their trigger is tabbed to/focused on via keyboard navigation
-
-<InfoBox title="👋 &nbsp; Hi there!" severity="info">
-  If you see areas for improvement here, please contribute your ideas so we can continue expanding our coverage and
-  ensuring our components are accessible.
-</InfoBox>
+- Use ARIA tags when building tooltips to ensure they are accessible:
+- Use `aria-labelledby` if the tooltip acts as a primary label (i.e., to name an IconButton action).
+- Use `aria-describedby` if the tooltip acts as a supporting label (i.e., to provide additional information on an input).
+- Tooltips must be visible when their trigger is tabbed to or focused on via keyboard navigation.
 
 ## Formatting
 
@@ -61,29 +54,29 @@ Tooltips display additional information upon hover or focus. The information inc
 
 ![Image calling out parts of the tooltip](/img/tooltip.anatomy.png 'Image calling out parts of the tooltip')
 
-1. **Trigger** - the UI control users interact with to display tooltips
-2. **Tip** - the triangle piece that points to the trigger element
-3. **Body** - the container that houses the content of the tooltip
+1. **Trigger** - The UI control users interact with to display tooltips.
+2. **Tip** - The triangle piece that points to the trigger element.
+3. **Body** - The container that houses the content of the tooltip.
 
 ### Placement
 
-- Auto: displays tooltip on side with most space available available
-  - Auto-start: aligns to the top of the trigger
-  - Auto: aligns to the center of the trigger
-  - Auto-end: aligns to the bottom of the trigger
-- Top
+- Auto: Displays tooltip on the side with most space available.
+  - Auto-start: Aligns to the top of the trigger.
+  - Auto: Aligns to the center of the trigger.
+  - Auto-end: Aligns to the bottom of the trigger.
+- Top:
   - Top-Left
   - Top-Center
   - Top-Right
-- Bottom
+- Bottom:
   - Bottom-Left
   - Bottom-Center
   - Bottom-Right
-- Left
+- Left:
   - Left-Top
   - Left-Center
   - Left-Bottom
-- Right
+- Right:
   - Right-Top
   - Right-Center
   - Right-Bottom
@@ -92,27 +85,27 @@ Tooltips display additional information upon hover or focus. The information inc
 
 ### Main Elements
 
-**Trigger** - the UI control users interact with to display tooltips - standard **info-circle icon**
+**Trigger** - The UI control users interact with to display tooltips - standard **info-circle icon**
 
-**Tip** - the triangle piece that points to the trigger element
+**Tip** - The triangle piece that points to the trigger element.
 
-**Body** - the container that houses the content of the tooltip
+**Body** - The container that houses the content of the tooltip.
 
 ## Behaviors
 
 ### Triggers
 
-- icons (commonly information icon
-- buttons
-- links
+- Icons (commonly information icon)
+- Buttons
+- Links
 
 ### User Interactions
 
-Tooltips are triggered when the **mouse hovers** over or **focuses **on the UI trigger. The tooltip persists as long as the mouse remains over the active container or the UI trigger or there is focus on the active container or UI trigger. The tooltip is dismissed by **hovering away** or **moving focus to another element**.
+Tooltips are triggered when the mouse hovers over or focuses on the UI trigger. The tooltip persists as long as the mouse remains over the active container or the UI trigger, or there is focus on the active container or UI trigger. The tooltip is dismissed by hovering away or moving focus to another element.
 
 ## Related
 
-If interactive elements are needed, consider using a **[ToggleTip](/design-system/Components/toggletip)**
+If interactive elements are needed, consider using a **[ToggleTip](/design-system/Components/toggletip)**.
 
 ### Further Reading & Sources
 
@@ -120,3 +113,5 @@ If interactive elements are needed, consider using a **[ToggleTip](/design-syste
 - [NNG; Tooltip Guidelines](https://www.nngroup.com/articles/tooltip-guidelines/)
 - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1)
 - [Providing Accessible Names and Descriptions](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/)
+
+<ComponentEmbed path="/story/overlays-tooltip--basic" />
