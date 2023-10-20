@@ -9,9 +9,10 @@ hide_table_of_contents: true
 
 import { Button, Alert } from '@grafana/ui';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <div id='about'>
-  <img src='/design-system/img/about_header.png' alt='About header' />
+  <img src={useBaseUrl('/img/about_header.png')} alt='About header' />
  
   <div id='content'> 
     <h1>Saga Design System</h1>
@@ -19,22 +20,22 @@ import Link from '@docusaurus/Link';
   
     <div id='cards'>
       <div className='card'>
-        <img src='/design-system/img/about_foundations.png' alt='Foundations icon' />
+        <img src={useBaseUrl('/img/about_foundations.png')} alt='Foundations icon' />
         <div className='title'>Foundations</div>
         <div className='text'>The core theories and concepts that keep the shared, visual design language established by the design system consistent.</div>
       </div>
       <div className='card'>
-        <img src='/design-system/img/about_components.png' alt='Components icon' />
+        <img src={useBaseUrl('/img/about_components.png')} alt='Components icon' />
         <div className='title'>Components</div>
         <div className='text'>The small UI parts that generate the UI within Grafana.</div>
       </div>
       <div className='card'>
-        <img src='/design-system/img/about_patterns.png' alt='Patterns icon' />
+        <img src={useBaseUrl('/img/about_patterns.png')} alt='Patterns icon' />
         <div className='title'>Patterns</div>
         <div className='text'>Repeatable, consistent, and expected interactions product-wide.</div>
       </div>
       <div className='card'>
-        <img src='/design-system/img/about_resources.png' alt='Resources icon' />
+        <img src={useBaseUrl('/img/about_resources.png')} alt='Resources icon' />
         <div className='title'>Resources</div>
         <div className='text'>Learn how to design, build, and expand the UI of Grafana without diverging.</div>
       </div>
@@ -80,7 +81,7 @@ import Link from '@docusaurus/Link';
     <h1>Resources</h1>
     <div id='cards-large'>
       <div className='card'>
-        <img src='/design-system/img/figma.png' alt='Figma icon' />
+        <img src={useBaseUrl('/img/figma.png')} alt='Figma icon' />
         <div className='content'>
           <div className='title'>Figma Assets</div>
           <div className='text'>Use the Figma component libraries to design and build Grafana UI.</div>
@@ -92,7 +93,7 @@ import Link from '@docusaurus/Link';
         </div>
       </div>
       <div className='card'>
-        <img src='/design-system/img/storybook.png' alt='Storybook icon' />
+        <img src={useBaseUrl('img/storybook.png')} alt='Storybook icon' />
         <div className='content'>
           <div className='title'>Storybook Components</div>
           <div className='text'>Reference the Grafana/Ui Storybook React component library to build plugins and use the components.</div>
