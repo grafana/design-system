@@ -85,11 +85,6 @@ const baseConfig = {
             label: 'GitHub',
             position: 'right',
           },
-          {
-            href: 'https://grafana.com/developers',
-            label: 'Dev Portal',
-            position: 'right',
-          },
         ],
       },
     }),
