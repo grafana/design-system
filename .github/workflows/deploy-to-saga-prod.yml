@@ -1,11 +1,9 @@
-name: Deploy to Developer Portal DEV Bucket
+name: Deploy to Developer Portal PROD Bucket
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Which branch to use?'
-        default: 'main'
+  push:
+    branches:
+      - main
 jobs:
   deploy:
     name: Deploy docs to Developer Portal Bucket
@@ -13,9 +11,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.inputs.branch }}
-          fetch-depth: 0
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -27,15 +23,15 @@ jobs:
         run: yarn install --immutable --prefer-offline
 
       - name: Build documentation website
-        run: yarn build --config docusaurus.config.dev.js
+        run: yarn build --config docusaurus.config.js
 
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY_DEV }}
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
       - name: Deploy to Developer Portal Bucket
         uses: google-github-actions/upload-cloud-storage@v1
         with:
           path: './build/'
-          destination: 'staging-developer-portal/saga'
+          destination: 'grafana-developer-portal/saga'
           parent: false
