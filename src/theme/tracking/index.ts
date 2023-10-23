@@ -45,7 +45,7 @@ export function startTracking(config: RudderStackTrackingConfig) {
         for (const [method, ...args] of rudderQueue) {
           rudderstack[method](...args);
         }
-        // clean up afterwards so trackPage
+        // clean up afterwards
         rudderQueue = undefined;
       }
     };
