@@ -73,61 +73,39 @@ const columns = [
     id: 'generalStatus',
     title: 'General',
     header: 'General status',
-    cell: ({ cell: { value } }: CellProps<Status>) => {
-      const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
-      return (
-        <span className={className}>
-          <Icon name={icon}/>
-          {status}
-        </span>
-      );
-    },
+    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
   },
   {
     id: 'figmaStatus',
     title: 'Figma',
     header: 'Figma status',
-    cell: ({ cell: { value } }: CellProps<Status>) => {
-      const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
-      return (
-        <span className={className}>
-          <Icon name={icon}/>
-          {status}
-        </span>
-      );
-    },
+    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
   },
   {
     id: 'storybookStatus',
     title: 'Storybook',
     header: 'Storybook status',
-    cell: ({ cell: { value } }: CellProps<Status>) => {
-      const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
-      return (
-        <span className={className}>
-          <Icon name={icon}/>
-          {status}
-        </span>
-      );
-    },
+    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
   },
   {
     id: 'sagaStatus',
     title: 'Saga',
     header: 'Saga status',
-    cell: ({ cell: { value } }: CellProps<Status>) => {
-      const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
-      return (
-        <span className={className}>
-          <Icon name={icon}/>
-          {status}
-        </span>
-      );
-    },
+    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
   },
 ];
 
 export const StatusTable = ({ componentsData }: StatusTableProps) => {
   const rowsData = useMemo(() => componentsData, [componentsData]);
   return <InteractiveTable getRowId={(row: StatusChildren) => row.componentName} columns={columns} data={rowsData} />;
+};
+
+const getStatusCell = (value: CellProps<Status>) => {
+  const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
+  return (
+    <span className={className}>
+      <Icon name={icon} />
+      {status}
+    </span>
+  );
 };
