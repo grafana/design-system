@@ -68,6 +68,8 @@ html[data-theme='dark'] {
   --ifm-color-warning: var(--warning-main);
   --ifm-color-danger: var(--error-main);
 
+  --ifm-link-color: var(--text-link);
+  --ifm-link-focus-color: var(--text-link);
   --ifm-link-hover-color: var(--text-maxContrast);
 
   --ifm-background-color: var(--background-canvas);
