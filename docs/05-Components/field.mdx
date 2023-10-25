@@ -4,15 +4,9 @@ description: Grafana Labs Field component
 keywords: ['Grafana', 'Labs', 'field', 'component']
 ---
 
-# Field <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-field--horizontal-layout' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Field <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/forms-field--horizontal-layout' />
 
-The Field component is a wrapper for handling form input elements, such as text inputs, switches, or other custom input components, within a form. It provides features like labelling, descriptions, validation states, and layout options. 
-
-<iframe
-  src="https://developers.grafana.com/ui/latest/index.html?path=/story/forms-field--horizontal-layout&full=1&shortcuts=false&singleStory=true"
-  width="100%"
-  height="500px"
-></iframe>
+The Field component is a wrapper for handling form input elements, such as text inputs, switches, or other custom input components, within a form. It provides features like labelling, descriptions, validation states, and layout options.
 
 ## When to use
 The Field component is suitable for various scenarios where you need to incorporate form inputs into your React application. Some common use cases include:
@@ -23,6 +17,12 @@ The Field component is suitable for various scenarios where you need to incorpor
 
 ## Implementation / Options
 Note that the Field component will pass the `invalid`, `disabled` and `loading` props, unless they are `undefined`, to the child component, which will override those props if they are set on the child component.
+
+```tsx live
+<Field label="API key" description="Your instance API key">
+  <Input id="api-key" />
+</Field>
+```
 
 ### Do's
 - Provide a meaningful label for the field to enhance accessibility.
@@ -37,3 +37,7 @@ Use the `invalid` prop to indicate that the input is invalid. This will add a re
 
 ### Loading
 Use the `loading` prop to indicate that the input is loading. This will add a spinner to the input.
+
+## Playground
+
+<ComponentEmbed path='/story/forms-field--horizontal-layout' />

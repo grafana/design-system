@@ -4,24 +4,15 @@ description: Grafana Labs TextArea Component
 keywords: ['Grafana', 'Labs', 'textarea', 'component']
 ---
 
-import { Badge, Icon, Field, TextArea } from '@grafana/ui';
-
-# TextArea <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-textarea--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# TextArea <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/forms-textarea--basic' />
 
 TextArea is a fundamental component used for capturing larger inputs from users, such as descriptions or detailed information.
-
-<iframe
-    src="https://developers.grafana.com/ui/latest/index.html?path=/story/forms-textarea--basic&full=1&shortcuts=false&singleStory=true"
-    width="100%"
-    height="300px"
-></iframe>
 
 ## Usage
 
 TextArea should be used with the Field component to get labels and descriptions. The default HTML validation can be enabled by using the `required` prop.
-```tsx
-import {  Field, TextArea } from '@grafana/ui';
 
+```tsx live
 <Field label="Message" description="Write your message here">
   <TextArea name="importantTextarea" required />
 </Field>
@@ -35,8 +26,12 @@ Use a TextArea when you need users to input longer, free-form text. This could b
 
 The TextArea component supports the `placeholder` prop, which can be used to provide a hint to the user about what kind of input is expected. This should be used sparingly, as it can be confusing to users if the placeholder text disappears when they start typing. If you do use placeholder text, make sure it is very clear what kind of input is expected. For example, "Enter your feedback here" is better than "Enter your message here".
 
-
 ## Implementation / Options
+
 The TextArea component includes an optional `invalid` prop which can be set to `true` to highlight the TextArea as having an error. This can be used to visually indicate problems, like validation errors or incorrect input.
 
 In addition to the `invalid` prop, the TextArea component by default accepts all the [standard attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes) of the `HTMLTextAreaElement` as props. This makes sure that TextArea can be used as a drop-in replacement for the standard HTML `textarea` element.
+
+## Playground
+
+<ComponentEmbed path="/story/forms-textarea--basic" />

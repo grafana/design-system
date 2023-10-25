@@ -5,82 +5,84 @@ keywords: ['Grafana', 'Labs', 'text', 'component']
 hide_title: true
 ---
 
-import { Text } from '@grafana/ui';
+# Text <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/general-text--basic'/>
 
-# Text <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/canary/index.html?path=/docs/general-text--docs' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
-
-The Text component can be used to apply typography styles in a simple way, without the need of extra css.
-
-<ComponentEmbed path={'/story/general-text--basic'} />
+The Text component can be used to apply typography styles in a simple way, without the need for extra CSS.
 
 ## Usage
 
 ### When to use
-- To display text, with styles applied consistently across the product, and to provide structure to each page.
+
+- To display text with styles applied consistently across the product, and to provide structure to each page.
 
 ### When not to use
-- If there is any straightforward interaction between the text and the user there should be a better component to use: Button, TextLink, Menu…
+
+- If there is any direct interaction between the text and the user, a more suitable component should be used such as Button, TextLink, Menu, etc.
 
 ### Do's
-- Heading should be organized in hierarchy.
-- When a heading needs to have the appearance of another heading rank but it will affect the page heading hierarchy, use `variant` prop to modify its style instead.
-- Use weight or italic for emphasis.
+
+- Headings should be organized hierarchically.
+- When a heading needs to have the appearance of another heading rank but it will affect the page heading hierarchy, use the `variant` prop to modify its style instead.
+- Use weight or italics for emphasis.
 
 ### Don’ts
-- Do not use the `element` prop because of its appearance, use it to organize the structure of the page.
-- Do not use color for emphasis as colors are related to states such as `error`, `success`, `disabled` and so on.
+
+- Do not use the `element` prop simply for its appearance, use it to organize the structure of the page.
+- Do not use color for emphasis as colors are linked to states such as `error`, `success`, `disabled`, etc.
+- Avoid using `p` as the `element` prop if the Text has nested components as it may break the DOM nesting rules.
 
 ## Content
+
 The content of the text should be written according to the [Grafana writing style guide](https://grafana.com/docs/writers-toolkit/write/style-guide/).
 
 ## Formatting
-The following is the default behaviour and so, it will be applied according to its type.
+
+The following is the default behavior and as such, it will be applied according to its type.
 
 ### Anatomy
-The Text component is mainly comprised by itself. In occasions, the Text component can have another Text or TextLink component as a child.
 
-```jsx
-<Text color="primary" element="p">
-  If you need more help of how to write in Grafana you can go to our
+The Text component mainly comprises itself. On occasion, the Text component can have another Text or TextLink component as a child.
+
+```jsx live
+<Text color="primary">
+  If you need more help of how to write in Grafana you can go to our{' '}
   <TextLink href="https://grafana.com/docs/writers-toolkit/" external>
     Writer’s Toolkit
   </TextLink>
-</Text>
-```
-
-```jsx
-<Text color="primary" element="p">
-  And Forrest Gump said:
-  <Text italic>Life is like a box of chocolates. You never know what you're gonna get.</Text>
+  .
 </Text>
 ```
 
 ### Behaviour
-The Text component can be truncated. However, the Text component element rendered by default (no value set in element prop) is a `<span>`. As this is an inline container that must have a parent, which can be another Text component or not, the truncation must be applied to this parent element.
 
-1. The parent element is a Text component: the user just has to set the element prop to another value and the truncate prop to true.
-   As a result, the Text will be truncated but when the user hovers over it the full text will be seen on a tooltip.
+The Text component can be truncated. However, the default rendered element for the Text component (when no value is set in the element prop) is `<span>`. This is an inline container that must have a parent, which may or may not be another Text component. Therefore, truncation must be applied to the parent element.
 
-```jsx
+1. If the parent element is a Text component: the user simply needs to set the element prop to a different value and set the truncate prop to true. As a result, the Text will be truncated, but the full text will be visible in a tooltip when a user hovers over it.
+
+```jsx live
 <Text color="primary" element="p" truncate>
-  And Forrest Gump said:
-  <Text italic>Life is like a box of chocolates. You never know what you're gonna get.</Text>
+  And Forrest Gump said: <Text italic>Life is like a box of chocolates. You never know what you're gonna get.</Text>
 </Text>
 ```
 
-2. The parent element is not a Text component: the user has to add `overflow: hidden`, `text-overflow: ellipsis` and `whiteSpace: 'nowrap'` to it. In this case, the user should wrap up this container with a Tooltip, so when the text is truncated its content can still be seen hovering on the text.
+2. If the parent element is not a Text component: the user needs to add `overflow: hidden`, `text-overflow: ellipsis`, and `whiteSpace: 'nowrap'` to it. In this scenario, the user should wrap this container with a Tooltip so that when the text is truncated, its content can still be viewed by hovering over the text.
 
-```jsx
-<Tooltip content="This is a example of a span element truncated by its parent container">
+```jsx live
+<Tooltip content="This is an example of a span element truncated by its parent container">
   <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
     <Text color="primary" variant="body">
-      {'This is a example of a span element truncated by its parent container.'}
+      {'This is an example of a span element truncated by its parent container.'}
     </Text>
   </div>
 </Tooltip>
 ```
 
 ## Accessibility
-- There should be just a `h1` heading per page.
-- The headings should be organized regarding its importance: `h1` has the _rank 1_ while `h6` heading has the _rank 6_. For example, `h1` can be used in the page heading, `h2` for the titles of the sections and `h3` for the subsections.
-- The ranking of headings should be continuous. An `h2` should not be followed by an `h5` but an `h2` can follow an `h5` if this is closing the previous section. Skipping heading ranks should be avoided where possible as it can be confusing.
+
+- There should be only one `h1` heading per page.
+- Headings should be organized according to their significance: `h1` has the _rank 1_ while `h6` heading has the _rank 6_. For instance, `h1` can be used for the page heading, `h2` for the titles of sections, and `h3` for subsections.
+- The ranking of headings should be continuous. An `h2` should not be immediately followed by an `h5`, but an `h2` can follow an `h5` if this is closing the previous section. Skipping heading ranks should be avoided as much as possible because it can be confusing.
+
+## Playground
+
+<ComponentEmbed path="/story/general-text--basic" />

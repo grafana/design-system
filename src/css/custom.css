@@ -456,3 +456,9 @@ table thead tr {
 .planned > div {
   color: var(--ifm-color-secondary);
 }
+
+/* */
+
+input[type='checkbox'] + label {
+  display: inline-block;
+}
