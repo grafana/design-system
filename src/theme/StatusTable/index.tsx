@@ -73,25 +73,25 @@ const columns = [
     id: 'generalStatus',
     title: 'General',
     header: 'General status',
-    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
+    cell: StatusCell
   },
   {
     id: 'figmaStatus',
     title: 'Figma',
     header: 'Figma status',
-    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
+    cell: StatusCell
   },
   {
     id: 'storybookStatus',
     title: 'Storybook',
     header: 'Storybook status',
-    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
+    cell: StatusCell
   },
   {
     id: 'sagaStatus',
     title: 'Saga',
     header: 'Saga status',
-    cell: ({ cell: { value } }: CellProps<Status>) => getStatusCell(value),
+    cell: StatusCell,
   },
 ];
 
