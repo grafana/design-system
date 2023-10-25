@@ -100,7 +100,7 @@ export const StatusTable = ({ componentsData }: StatusTableProps) => {
   return <InteractiveTable getRowId={(row: StatusChildren) => row.componentName} columns={columns} data={rowsData} />;
 };
 
-const getStatusCell = (value: CellProps<Status>) => {
+function StatusCell({ cell: { value } }: CellProps<Status>) {
   const { icon, status, className } = STATUSES.find((status) => status.id === value) || STATUSES[STATUSES.length - 1];
   return (
     <span className={className}>
