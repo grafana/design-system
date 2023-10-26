@@ -73,6 +73,7 @@
 
 .codeContainer {
   position: relative;
+  background-color: var(--background-secondary);
 
   &:hover {
     .copyButton {
