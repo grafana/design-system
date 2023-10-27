@@ -33,7 +33,7 @@
     "@docusaurus/theme-live-codeblock": "^2.4.3",
     "@emotion/react": "^11.10.6",
     "@grafana/data": "^10.3.0-142521",
-    "@grafana/ui": "^10.3.0-142521",
+    "@grafana/ui": "^10.3.0-143447",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "4.4.5",

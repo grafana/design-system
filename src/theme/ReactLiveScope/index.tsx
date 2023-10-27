@@ -19,6 +19,8 @@ import {
   TextArea,
   Toggletip,
 } from '@grafana/ui';
+import { Box } from '@site/src/components/Box';
+import { users } from '@site/src/data';
 
 interface StackProps extends PropsWithChildren {
   direction?: 'horizontal' | 'vertical';
@@ -55,6 +57,7 @@ const ReactLiveScope = {
   Alert,
   AsyncSelect,
   Badge,
+  Box,
   Button,
   Container,
   Field,
@@ -72,6 +75,7 @@ const ReactLiveScope = {
   Tooltip,
   TextArea,
   Toggletip,
+  users,
   ...React,
 };
 

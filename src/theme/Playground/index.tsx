@@ -7,7 +7,6 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import type { Props as PlaygroundProps } from '@theme/Playground';
 import CopyButton from '@theme/CodeBlock/CopyButton';
-
 import styles from './styles.module.css';
 
 function Header({ children }: PropsWithChildren) {

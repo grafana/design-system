@@ -2116,7 +2116,38 @@
   dependencies:
     tslib "^2.4.0"
 
-"@grafana/data@10.3.0-142521", "@grafana/data@^10.3.0-142521":
+"@grafana/data@10.3.0-143447":
+  version "10.3.0-143447"
+  resolved "https://registry.yarnpkg.com/@grafana/data/-/data-10.3.0-143447.tgz#81f4861ae6d8dc2d22db26f83fbb8ebe854b327a"
+  integrity sha512-xiU4eBUjYec5ZpFHF4r/8fqbgoiqEmhRcQY2ALpxBD17Uyg/IrSC4oYt00bwHh2bjk/Ezw4Bv2PHQ4hbwuK81g==
+  dependencies:
+    "@braintree/sanitize-url" "6.0.2"
+    "@grafana/schema" "10.3.0-143447"
+    "@types/d3-interpolate" "^3.0.0"
+    "@types/string-hash" "1.1.1"
+    d3-interpolate "3.0.1"
+    date-fns "2.30.0"
+    dompurify "^2.4.3"
+    eventemitter3 "5.0.1"
+    fast_array_intersect "1.1.0"
+    history "4.10.1"
+    lodash "4.17.21"
+    marked "5.1.1"
+    marked-mangle "1.1.0"
+    moment "2.29.4"
+    moment-timezone "0.5.43"
+    ol "7.4.0"
+    papaparse "5.4.1"
+    react-use "17.4.0"
+    regenerator-runtime "0.14.0"
+    rxjs "7.8.1"
+    string-hash "^1.1.3"
+    tinycolor2 "1.6.0"
+    tslib "2.6.0"
+    uplot "1.6.26"
+    xss "^1.0.14"
+
+"@grafana/data@^10.3.0-142521":
   version "10.3.0-142521"
   resolved "https://registry.yarnpkg.com/@grafana/data/-/data-10.3.0-142521.tgz#0ee9cdd8ae9a432e61ec108491bf1775519a3ca9"
   integrity sha512-5J8HnYVRjIxaSvX0chMpwT5djjv+LCfw2JTelPcjkuOcdHYR8m92gFn5Og4V6lYUdWW6V64RYMVO+xM22RGYRg==
@@ -2147,10 +2178,10 @@
     uplot "1.6.26"
     xss "^1.0.14"
 
-"@grafana/e2e-selectors@10.3.0-142521":
-  version "10.3.0-142521"
-  resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-10.3.0-142521.tgz#f8ad779bfae9b7100ad077550383a5f1940bf66c"
-  integrity sha512-ISyaibLYVGUkPFF0EcP9VGmNpit2FXlORiKHLrLLIVK3QtN2wFGzalagbLnVK7VDCF3pitzlEnoKPRK2XsCSYA==
+"@grafana/e2e-selectors@10.3.0-143447":
+  version "10.3.0-143447"
+  resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-10.3.0-143447.tgz#0a81186ff57ae00b781fbcdb3029f671582d8c32"
+  integrity sha512-AY/Ul2LU1D8yxHteomWkJr1DOv5ceYcqk2N75hyc8aagRKdau7W5iY69btv/o0HIjA5p3s+tYRtLd3fUkpXBGA==
   dependencies:
     "@grafana/tsconfig" "^1.2.0-rc1"
     tslib "2.6.0"
@@ -2182,6 +2213,13 @@
   dependencies:
     tslib "2.6.0"
 
+"@grafana/schema@10.3.0-143447":
+  version "10.3.0-143447"
+  resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-10.3.0-143447.tgz#325d39e068bad0fc9e1740bfb5f8450ce625b637"
+  integrity sha512-kSsRTdYxcUao2heyfJLkXpBKLfbSX/IPXYkBq6P06bPEv2lUGXDNRzksA+IHOPekkqQKLhHnEgR/PuhtuY3caw==
+  dependencies:
+    tslib "2.6.0"
+
 "@grafana/tsconfig@^1.2.0-rc1":
   version "1.2.0-rc1"
   resolved "https://registry.yarnpkg.com/@grafana/tsconfig/-/tsconfig-1.2.0-rc1.tgz#10973c978ec95b0ea637511254b5f478bce04de7"
@@ -2192,17 +2230,17 @@
   resolved "https://registry.yarnpkg.com/@grafana/tsconfig/-/tsconfig-1.3.0-rc1.tgz#ca5ffa03edb3cb59bd503a7e6b3a3e15ac528d77"
   integrity sha512-bi+qFOptejg/a2/WmCDVxQLQtobhKd3y+B6mxFBOMmzElqgr30MPnN60THTou6dGwtfw+ExX1H5FGm9DM35Qrw==
 
-"@grafana/ui@^10.3.0-142521":
-  version "10.3.0-142521"
-  resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-10.3.0-142521.tgz#21400dcae8da286aae6cbf54759e87e4f7d53c3d"
-  integrity sha512-xWfRsmNmjoQyXkPwLHJwDwwCWvYrA45GAbynITj9Mgw94VdfXcgBJIOqH97Aj1RhPGoeykxLAdFU1PHVNt9nOg==
+"@grafana/ui@^10.3.0-143447":
+  version "10.3.0-143447"
+  resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-10.3.0-143447.tgz#5832b3ba120e95cc2d6cd114fc725e2e0421606b"
+  integrity sha512-tc34BlEf99K14/Z6tEfNiAgEfiorPhVB2V4D5DzjirbbUKZu5sfPkR1DJSGEz30E1FHXugNDNYFrbY5zoLTRug==
   dependencies:
     "@emotion/css" "11.11.2"
     "@emotion/react" "11.11.1"
-    "@grafana/data" "10.3.0-142521"
-    "@grafana/e2e-selectors" "10.3.0-142521"
+    "@grafana/data" "10.3.0-143447"
+    "@grafana/e2e-selectors" "10.3.0-143447"
     "@grafana/faro-web-sdk" "1.2.1"
-    "@grafana/schema" "10.3.0-142521"
+    "@grafana/schema" "10.3.0-143447"
     "@leeoniya/ufuzzy" "1.0.8"
     "@monaco-editor/react" "4.6.0"
     "@popperjs/core" "2.11.8"
@@ -2231,7 +2269,7 @@
     monaco-editor "0.34.0"
     ol "7.4.0"
     prismjs "1.29.0"
-    rc-cascader "3.19.0"
+    rc-cascader "3.20.0"
     rc-drawer "6.5.2"
     rc-slider "10.3.1"
     rc-time-picker "^3.7.3"
@@ -9414,16 +9452,16 @@ rc-animate@2.x:
     rc-util "^4.15.3"
     react-lifecycles-compat "^3.0.4"
 
-rc-cascader@3.19.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/rc-cascader/-/rc-cascader-3.19.0.tgz#431f3a58c1c85cc685abced0a74a2450024c2785"
-  integrity sha512-jReilWKzCWoEDHEOWus0vi/WwyBxCxAkK8qkVeGIMNU/MFkmpEiGI5+wXoyWVVWuJYSPILJKrQOxWr31J775iw==
+rc-cascader@3.20.0:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/rc-cascader/-/rc-cascader-3.20.0.tgz#b270f9d84ed83417ee7309ef5e56e415f1586076"
+  integrity sha512-lkT9EEwOcYdjZ/jvhLoXGzprK1sijT3/Tp4BLxQQcHDZkkOzzwYQC9HgmKoJz0K7CukMfgvO9KqHeBdgE+pELw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     array-tree-filter "^2.1.0"
     classnames "^2.3.1"
-    rc-select "~14.9.0"
-    rc-tree "~5.8.0"
+    rc-select "~14.10.0"
+    rc-tree "~5.8.1"
     rc-util "^5.37.0"
 
 rc-drawer@6.5.2:
@@ -9466,10 +9504,10 @@ rc-resize-observer@^1.0.0, rc-resize-observer@^1.3.1:
     rc-util "^5.38.0"
     resize-observer-polyfill "^1.5.1"
 
-rc-select@~14.9.0:
-  version "14.9.2"
-  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-14.9.2.tgz#24c4673e21b1d5a4a126b9a934609cce5c39d1a5"
-  integrity sha512-VQ15sRFgPURHb8ZcZNSDtb2rAw3+C9xlL0nDziwNHTEW1KvEpZ8y+0v5w24X/Bpl9b3cW1BOyW1F5UqSAq+7Dg==
+rc-select@~14.10.0:
+  version "14.10.0"
+  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-14.10.0.tgz#5f60e61ed7c9a83c8591616b1174a1c4ab2de0cd"
+  integrity sha512-TsIJTYafTTapCA32LLNpx/AD6ntepR1TG8jEVx35NiAAWCPymhUfuca8kRcUNd3WIGVMDcMKn9kkphoxEz+6Ag==
   dependencies:
     "@babel/runtime" "^7.10.1"
     "@rc-component/trigger" "^1.5.0"
@@ -9509,10 +9547,10 @@ rc-tooltip@6.1.1:
     "@rc-component/trigger" "^1.17.0"
     classnames "^2.3.1"
 
-rc-tree@~5.8.0:
-  version "5.8.1"
-  resolved "https://registry.yarnpkg.com/rc-tree/-/rc-tree-5.8.1.tgz#8005b8252ee5a95b8d308a5c975ca66b45633a13"
-  integrity sha512-r7Ys43TzCsWRWufGERjfp3520MsPuJ9xsA0r2UtQCVjOddhPSN47yE7HoypZZNhVtTGtvoQMkfgaYimoy14kcA==
+rc-tree@~5.8.1:
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/rc-tree/-/rc-tree-5.8.2.tgz#ed3a3f7c56597bbeab3303407a9e1739bbf15621"
+  integrity sha512-xH/fcgLHWTLmrSuNphU8XAqV7CdaOQgm4KywlLGNoTMhDAcNR3GVNP6cZzb0GrKmIZ9yae+QLot/cAgUdPRMzg==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"

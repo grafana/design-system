@@ -425,12 +425,23 @@ table th {
   text-align: left;
   font-weight: 500;
   border: none;
+  font-size: 14px;
 }
 
 table thead tr {
   border: none;
 }
 
+table th, table td {
+  padding: calc(var(--spacing) * 1px);
+}
+
 input[type='checkbox'] + label {
   display: inline-block;
+}
+
+
+.theme-doc-markdown a {
+  text-decoration: none;
+  color: var(--text-primary);
 }
