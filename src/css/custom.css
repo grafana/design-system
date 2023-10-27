@@ -430,3 +430,35 @@ table th {
 table thead tr {
   border: none;
 }
+
+/* Component Status Page */
+
+.done, .planned, .in-progress, .to-do, .not-doing, .deprecated, .n-a   { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing) * 1px);
+}
+.done > div {
+  color: var(--ifm-color-success);
+}
+.n-a > div {
+  color: var(--ifm-color-warning);
+}
+.in-progress > div {
+  color: var(--ifm-color-info);
+}
+.not-doing > div,
+.deprecated > div {
+  color: var(--ifm-color-danger);
+}
+.planned > div {
+  color: var(--ifm-color-secondary);
+}
+
+/* */
+
+input[type='checkbox'] + label {
+  display: inline-block;
+}
