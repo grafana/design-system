@@ -433,14 +433,14 @@ table thead tr {
 
 /* Component Status Page */
 
-.done, .planned, .in-progress, .to-do, .not-doing, .deprecated, .n-a   { 
+.ready-to-use, .planned, .in-progress, .to-do, .not-doing, .deprecated, .n-a   { 
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   gap: calc(var(--spacing) * 1px);
 }
-.done > div {
+.ready-to-use > div {
   color: var(--ifm-color-success);
 }
 .n-a > div {
