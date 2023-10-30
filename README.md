@@ -1,11 +1,15 @@
 # Saga; The Grafana Labs Design System
 
-## Welcome! 
+Saga is Grafana Labs’ open source design system and it establishes the shared, visual language for all products within the Grafana Labs umbrella of products and drives user experience and interaction consistency throughout the UI.
 
-This repo was created to host our design system. 
+This repository includes all the documentation for a variety of resources, including UI Components, design patterns, design principles, etc.
 
-This readme is a stub for now until either myself or the absolute magicians on my hackathon team write a better description.
+## How to run locally
 
-## How to run
+To run the docusaurus instance locally run:
 
-yarn docusaurus start --config docusaurus.config.js --port 3001 --no-open
+```
+yarn start
+```
+
+And 'http://localhost:3000/developers/saga/' will open in your browser.
