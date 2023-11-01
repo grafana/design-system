@@ -1,26 +1,9 @@
 import React, { PropsWithChildren } from 'react';
-import {
-  Alert,
-  AsyncSelect,
-  Badge,
-  Button,
-  Field,
-  Icon,
-  IconButton,
-  InlineSwitch,
-  Input,
-  InteractiveTable,
-  RadioButtonGroup,
-  Select,
-  Switch,
-  Text,
-  TextLink,
-  Tooltip,
-  TextArea,
-  Toggletip,
-} from '@grafana/ui';
-import { Box } from '@site/src/components/Box';
+import * as ui from '@grafana/ui';
+import { Flex } from '@site/src/components/templates/Flex';
 import { users } from '@site/src/data';
+import { useColumns } from '@site/src/components/templates/TablePage/useColumns';
+import { Page } from '@site/src/components/templates/Page/Page';
 
 interface StackProps extends PropsWithChildren {
   direction?: 'horizontal' | 'vertical';
@@ -54,28 +37,11 @@ function Container({ children, ...props }: PropsWithChildren) {
 // Components must be added to this object in order for them to be "in scope" inside the live code previews
 const ReactLiveScope = {
   React,
-  Alert,
-  AsyncSelect,
-  Badge,
-  Box,
-  Button,
-  Container,
-  Field,
-  Icon,
-  IconButton,
-  InlineSwitch,
-  Input,
-  InteractiveTable,
-  RadioButtonGroup,
-  Select,
-  Stack,
-  Switch,
-  Text,
-  TextLink,
-  Tooltip,
-  TextArea,
-  Toggletip,
+  ...ui,
+  Flex,
   users,
+  useColumns,
+  Page,
   ...React,
 };
 

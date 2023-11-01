@@ -1,5 +1,10 @@
-import React, { PropsWithChildren } from 'react';
+import React, { CSSProperties, PropsWithChildren } from 'react';
 
-export const Flex = ({ children }: PropsWithChildren) => {
-  return <div style={{ display: 'flex', flexDirection: 'column' }}>{children}</div>;
+interface Props extends PropsWithChildren, CSSProperties {
+  gap?: number;
+}
+export const Flex = ({ children, flexDirection = 'column', gap }: Props) => {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: gap ? `${gap * 8}px` : undefined }}>{children}</div>
+  );
 };
