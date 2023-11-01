@@ -12,4 +12,4 @@ To run the docusaurus instance locally run:
 yarn start
 ```
 
-And 'http://localhost:3000/developers/saga/' will open in your browser.
+And 'http://localhost:3000/developers/saga/' will open in your browser. 
