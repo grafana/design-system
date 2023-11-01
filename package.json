@@ -28,12 +28,12 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.0.0-rc.0",
-    "@docusaurus/preset-classic": "^3.0.0-rc.0",
-    "@docusaurus/theme-live-codeblock": "^3.0.0-rc.0",
+    "@docusaurus/core": "^3.0.0",
+    "@docusaurus/preset-classic": "^3.0.0",
+    "@docusaurus/theme-live-codeblock": "^3.0.0",
     "@emotion/react": "^11.10.6",
-    "@grafana/data": "^10.3.0-142521",
-    "@grafana/ui": "^10.3.0-142521",
+    "@grafana/data": "^10.3.0-144170",
+    "@grafana/ui": "^10.3.0-144170",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "4.4.5",
