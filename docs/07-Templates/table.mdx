@@ -1,5 +1,5 @@
 ---
-title: Table
+title: Table Page
 description: Patterns for displaying tabular data
 keywords: ['table', 'template']
 hide_table_of_contents: true
@@ -14,14 +14,14 @@ interface Props {
   filters: any[];
 }
 
-const Table = ({ changeQuery, query, changeFilter, filters }: Props) => {
+const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) => {
   const columns = useColumns();
 
   return (
     <Page navId="global-users">
       <Page.Contents>
         <Flex gap={2}>
-          <Box display={'flex'}>
+          <Box display={'flex'} gap={2}>
             <FilterInput
               placeholder="Search user by login, email, or name."
               autoFocus={true}
@@ -47,5 +47,5 @@ const Table = ({ changeQuery, query, changeFilter, filters }: Props) => {
   );
 };
 
-render(<Table query={''} changeQuery={() => {}} changeFilter={() => {}} filters={[]} />);
+render(<TablePage query={''} changeQuery={() => {}} changeFilter={() => {}} filters={[]} />);
 ```

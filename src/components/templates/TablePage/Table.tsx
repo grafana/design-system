@@ -11,11 +11,11 @@ interface Props {
   changeFilter: (filter: { name: string; value: any }) => void;
   filters: any[];
 }
-export const Table = ({ changeQuery, query, changeFilter, filters }: Props) => {
+export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) => {
   const columns = useColumns();
 
   return (
-    <Page navModel={}>
+    <Page navId="global-users">
       <Page.Contents>
         <Flex>
           <Box display={'flex'}>
