@@ -43,3 +43,5 @@ export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) 
     </Page>
   );
 };
+
+export default TablePage;
