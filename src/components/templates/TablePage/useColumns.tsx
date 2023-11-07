@@ -2,12 +2,13 @@ import React, { useMemo } from 'react';
 
 import { CellProps, Column, Icon } from '@grafana/ui';
 
+type Org = { name: string };
 export interface UserDTO {
   id: number;
   login: string;
   email: string;
   name: string;
-  orgs?: Array<{ name: string }>;
+  orgs?: Org[];
 }
 
 type Cell<T extends keyof UserDTO = keyof UserDTO> = CellProps<UserDTO, UserDTO[T]>;
@@ -36,8 +37,7 @@ export const useColumns = () => {
       {
         id: 'orgs',
         header: 'Belongs to',
-        cell: ({ cell: { value } }: Cell<'orgs'>) => <div>{value?.map((org) => org?.name).join(',')}</div>,
-        sortType: (a, b) => (a.original.orgs?.length || 0) - (b.original.orgs?.length || 0),
+        cell: ({ cell: { value } }: Cell<'orgs'>) => <div>{value?.map((org: Org) => org?.name).join(',')}</div>,
       },
       {
         id: 'edit',

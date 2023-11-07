@@ -1,9 +1,7 @@
-import { useColumns } from '@site/src/components/templates/TablePage/useColumns';
-import { Box, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
-import { Flex } from '@site/src/components/templates/Flex';
+import { useColumns, UserDTO } from '@site/src/components/templates/TablePage/useColumns';
+import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
 import React from 'react';
 import { users } from '@site/src/data';
-import { Page } from '@site/src/components/templates/Page/Page';
 
 interface Props {
   query: string;
@@ -15,32 +13,28 @@ export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) 
   const columns = useColumns();
 
   return (
-    <Page navId="global-users">
-      <Page.Contents>
-        <Flex>
-          <Box display={'flex'}>
-            <FilterInput
-              placeholder="Search user by login, email, or name."
-              autoFocus={true}
-              value={query}
-              onChange={changeQuery}
-            />
-            <RadioButtonGroup
-              options={[
-                { label: 'All users', value: false },
-                { label: 'Active last 30 days', value: true },
-              ]}
-              onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
-              value={filters.find((f) => f.name === 'activeLast30Days')?.value}
-            />
-            <LinkButton href="admin/users/create" variant="primary">
-              New user
-            </LinkButton>
-          </Box>
-          <InteractiveTable columns={columns} data={users} getRowId={(user) => String(user.id)} />
-        </Flex>
-      </Page.Contents>
-    </Page>
+    <Stack flexGrow={1} direction={'column'}>
+      <Stack gap={2}>
+        <FilterInput
+          placeholder="Search user by login, email, or name."
+          autoFocus={true}
+          value={query}
+          onChange={changeQuery}
+        />
+        <RadioButtonGroup
+          options={[
+            { label: 'All users', value: false },
+            { label: 'Active last 30 days', value: true },
+          ]}
+          onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
+          value={filters.find((f) => f.name === 'activeLast30Days')?.value}
+        />
+        <LinkButton href="admin/users/create" variant="primary">
+          New user
+        </LinkButton>
+      </Stack>
+      <InteractiveTable columns={columns} data={users} getRowId={(user: UserDTO) => String(user.id)} />
+    </Stack>
   );
 };
 

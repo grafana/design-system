@@ -6,10 +6,13 @@ hide_table_of_contents: true
 draft: true
 ---
 
+import { Page } from '../../src/components/templates/Page/Page';
 import CodeBlock from '@theme/CodeBlock';
 import TablePageRaw from '!!raw-loader!../../src/components/templates/TablePage/Table';
+import TablePage from '@site/src/components/templates/TablePage/Table';
 
-import TablePage from '../../src/components/templates/TablePage/Table';
+<Page title={'Users'} subTitle={'Manage users in Grafana'}>
+  <TablePage query={''} changeQuery={() => {}} changeFilter={() => {}} filters={[]} />
+</Page>
 
-<TablePage query={''} changeQuery={() => {}} changeFilter={() => {}} filters={[]} />
-<CodeBlock language="tsx">{TablePageRaw}</CodeBlock>;
+<CodeBlock language="tsx">{TablePageRaw}</CodeBlock>

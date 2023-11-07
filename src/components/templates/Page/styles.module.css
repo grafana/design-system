@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: calc(var(--spacing) * 2px);
+}
+
+.pageInner {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--border-weak);
+  border-bottom: none;
+  padding: calc(var(--spacing) * 2px);
+  background: var(--background-primary);
+  gap: calc(var(--spacing) * 2px);
+}
