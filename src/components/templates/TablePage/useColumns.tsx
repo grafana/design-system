@@ -1,20 +1,12 @@
 import React, { useMemo } from 'react';
 
 import { CellProps, Column, Icon } from '@grafana/ui';
+import { User, Org } from '@site/src/components/templates/TablePage/types';
 
-type Org = { name: string };
-export interface UserDTO {
-  id: number;
-  login: string;
-  email: string;
-  name: string;
-  orgs?: Org[];
-}
-
-type Cell<T extends keyof UserDTO = keyof UserDTO> = CellProps<UserDTO, UserDTO[T]>;
+type Cell<T extends keyof User = keyof User> = CellProps<User, User[T]>;
 
 export const useColumns = () => {
-  const columns: Array<Column<UserDTO>> = useMemo(
+  const columns: Array<Column<User>> = useMemo(
     () => [
       {
         id: 'login',

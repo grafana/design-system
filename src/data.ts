@@ -1,186 +1,264 @@
-export const users = [
+import { User } from '@site/src/components/templates/TablePage/types';
+
+export const users: User[] = [
   {
     id: 5,
-    name: 'non-org',
-    login: 'Admin2',
-    email: 'Admin2',
-    avatarUrl: '/avatar/c84258e9c39059a89ab77d846ddab909',
-    isAdmin: true,
-    isDisabled: false,
-    lastSeenAt: '2021-10-01T11:21:48+03:00',
-    lastSeenAtAge: '2 years',
-    authLabels: [],
-    licensedRole: 'Admin/editor',
-    licensedUpdatedAt: '2021-10-01T14:21:47.970285+03:00',
-    licensedUpdateAtAge: '2 years',
+    login: 'john_doe',
+    email: 'john_doe@example.com',
+    name: 'John Doe',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
     ],
+    lastActive: '2023-10-15T14:30:00Z',
   },
   {
     id: 8,
-    name: 'new user',
-    login: 'New',
-    email: 'new@test.com',
-    avatarUrl: '/avatar/0367d388004b3e117531783fd3fc55c0',
-    isAdmin: false,
-    isDisabled: false,
-    lastSeenAt: '2023-04-20T18:46:45+03:00',
-    lastSeenAtAge: '5 months',
-    authLabels: [],
-    licensedRole: 'Admin/editor',
-    licensedUpdatedAt: '2023-04-19T16:33:48.619253+03:00',
-    licensedUpdateAtAge: '5 months',
+    login: 'alice_smith',
+    email: 'alice_smith@test.com',
+    name: 'Alice Smith',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
       {
         name: 'Test',
-        url: 'http://localhost:3000/admin/orgs/edit/10',
       },
     ],
+    lastActive: '2023-10-14T16:45:00Z',
   },
   {
     id: 1,
-    name: 'Main Admin',
-    login: 'admin',
-    email: 'admin@localhost',
-    avatarUrl: '/avatar/46d229b033af06a191ff2267bca9ae56',
-    isAdmin: true,
-    isDisabled: false,
-    lastSeenAt: '2023-10-12T10:45:41+03:00',
-    lastSeenAtAge: '3 minutes',
-    authLabels: [],
-    licensedRole: 'Admin/editor',
-    licensedUpdatedAt: '2023-10-10T16:07:59.647208+03:00',
-    licensedUpdateAtAge: '1 day',
+    login: 'bob_jones',
+    email: 'bob_jones@localhost',
+    name: 'Bob Jones',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
       {
         name: 'Test',
-        url: 'http://localhost:3000/admin/orgs/edit/10',
       },
     ],
+    lastActive: '2023-10-14T12:00:00Z',
   },
   {
     id: 21,
-    name: 'insights',
-    login: 'in@example.com',
-    email: 'in@example.com',
-    avatarUrl: '/avatar/6deddde2a5cdddb8dc70ec404d2cccd5',
-    isAdmin: false,
-    isDisabled: false,
-    lastSeenAt: '2023-04-22T08:52:58+03:00',
-    lastSeenAtAge: '5 months',
-    authLabels: [],
-    licensedRole: 'Viewer',
-    licensedUpdatedAt: '2023-04-18T21:17:49.536274+03:00',
-    licensedUpdateAtAge: '5 months',
+    login: 'emma_watson',
+    email: 'emma_watson@example.com',
+    name: 'Emma Watson',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
     ],
+    lastActive: '2023-10-15T08:15:00Z',
   },
   {
     id: 6,
-    name: '',
-    login: 'me@test.com',
-    email: 'me@test.com',
-    avatarUrl: '/avatar/6783037f2df30eab99f9fc256157d875',
-    isAdmin: false,
-    isDisabled: false,
-    lastSeenAt: '2022-07-20T08:54:28+03:00',
-    lastSeenAtAge: '1 year',
-    authLabels: [],
-    licensedRole: 'Admin/editor',
-    licensedUpdatedAt: '2022-07-20T11:32:14.452447+03:00',
-    licensedUpdateAtAge: '1 year',
+    login: 'michael_jackson',
+    email: 'michael_jackson@test.com',
+    name: 'Michael Jackson',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
     ],
+    lastActive: '2023-10-14T22:30:00Z',
   },
   {
     id: 3,
-    name: 'searchTestUser1',
-    login: 'searchTestUser1',
-    email: 'searchTestUser@team.com',
-    avatarUrl: '/avatar/54da2ca16b3ef1ae2d40ff69c11569f8',
-    isAdmin: false,
-    isDisabled: false,
-    lastSeenAt: '2021-10-01T11:21:22+03:00',
-    lastSeenAtAge: '2 years',
-    authLabels: [],
-    licensedRole: 'Admin/editor',
-    licensedUpdatedAt: '2021-10-01T14:22:12.370527+03:00',
-    licensedUpdateAtAge: '2 years',
+    login: 'lisa_simpson',
+    email: 'lisa_simpson@team.com',
+    name: 'Lisa Simpson',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
     ],
+    lastActive: '2023-10-15T10:00:00Z',
   },
   {
     id: 4,
-    name: 'Test User',
-    login: 'test2',
-    email: 'sometest@me.coms',
-    avatarUrl: '/avatar/eed5572d5e63d5eb797da7f85782cfdb',
-    isAdmin: false,
-    isDisabled: true,
-    lastSeenAt: '2020-10-02T12:48:16+03:00',
-    lastSeenAtAge: '3 years',
-    authLabels: [],
-    licensedRole: 'None',
-    licensedUpdatedAt: '0001-01-01T00:00:00Z',
-    licensedUpdateAtAge: '?',
+    login: 'peter_parker',
+    email: 'peter_parker@me.com',
+    name: 'Peter Parker',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
       {
         name: 'Test',
-        url: 'http://localhost:3000/admin/orgs/edit/10',
       },
     ],
+    lastActive: '2023-10-15T18:30:00Z',
   },
   {
     id: 7,
-    name: 'Test Age',
-    login: 'testAge',
-    email: 'tt@test.com',
-    avatarUrl: '/avatar/253b5e0d859b5b7571e3eb6276a8a6ad',
-    isAdmin: false,
-    isDisabled: false,
-    lastSeenAt: '2011-09-29T16:34:54+03:00',
-    lastSeenAtAge: '12 years',
-    authLabels: [],
-    licensedRole: 'None',
-    licensedUpdatedAt: '0001-01-01T00:00:00Z',
-    licensedUpdateAtAge: '?',
+    login: 'tony_stark',
+    email: 'tony_stark@test.com',
+    name: 'Tony Stark',
     orgs: [
       {
         name: 'Main Org.',
-        url: 'http://localhost:3000/admin/orgs/edit/1',
       },
       {
         name: 'Test',
-        url: 'http://localhost:3000/admin/orgs/edit/10',
       },
     ],
+    lastActive: '2023-10-14T14:45:00Z',
+  },
+  // Additional Dummy Entries
+  {
+    id: 9,
+    login: 'olivia_smith',
+    email: 'olivia_smith@test.com',
+    name: 'Olivia Smith',
+    orgs: [
+      {
+        name: 'Org A',
+      },
+      {
+        name: 'Org B',
+      },
+    ],
+    lastActive: '2023-10-15T12:30:00Z',
+  },
+  {
+    id: 10,
+    login: 'charlie_brown',
+    email: 'charlie_brown@test.com',
+    name: 'Charlie Brown',
+    orgs: [
+      {
+        name: 'Org C',
+      },
+      {
+        name: 'Org D',
+      },
+    ],
+    lastActive: '2023-10-14T19:15:00Z',
+  },
+  {
+    id: 11,
+    login: 'grace_kelly',
+    email: 'grace_kelly@test.com',
+    name: 'Grace Kelly',
+    orgs: [
+      {
+        name: 'Org E',
+      },
+      {
+        name: 'Org F',
+      },
+    ],
+    lastActive: '2023-10-15T16:00:00Z',
+  },
+  {
+    id: 12,
+    login: 'david_jones',
+    email: 'david_jones@test.com',
+    name: 'David Jones',
+    orgs: [
+      {
+        name: 'Org G',
+      },
+      {
+        name: 'Org H',
+      },
+    ],
+    lastActive: '2023-10-15T20:45:00Z',
+  },
+  {
+    id: 13,
+    login: 'natalie_portman',
+    email: 'natalie_portman@test.com',
+    name: 'Natalie Portman',
+    orgs: [
+      {
+        name: 'Org I',
+      },
+      {
+        name: 'Org J',
+      },
+    ],
+    lastActive: '2023-10-14T17:30:00Z',
+  },
+  // More Dummy Entries
+  {
+    id: 14,
+    login: 'robert_de_niro',
+    email: 'robert_de_niro@test.com',
+    name: 'Robert De Niro',
+    orgs: [
+      {
+        name: 'Org K',
+      },
+      {
+        name: 'Org L',
+      },
+    ],
+    lastActive: '2023-10-15T15:15:00Z',
+  },
+  {
+    id: 15,
+    login: 'emily_watson',
+    email: 'emily_watson@test.com',
+    name: 'Emily Watson',
+    orgs: [
+      {
+        name: 'Org M',
+      },
+      {
+        name: 'Org N',
+      },
+    ],
+    lastActive: '2023-10-14T13:00:00Z',
+  },
+  {
+    id: 16,
+    login: 'jason_statham',
+    email: 'jason_statham@test.com',
+    name: 'Jason Statham',
+    orgs: [
+      {
+        name: 'Org O',
+      },
+      {
+        name: 'Org P',
+      },
+    ],
+    lastActive: '2023-10-15T11:45:00Z',
+  },
+  {
+    id: 17,
+    login: 'kate_winslet',
+    email: 'kate_winslet@test.com',
+    name: 'Kate Winslet',
+    orgs: [
+      {
+        name: 'Org Q',
+      },
+      {
+        name: 'Org R',
+      },
+    ],
+    lastActive: '2023-10-14T21:30:00Z',
+  },
+  {
+    id: 18,
+    login: 'leonardo_dicaprio',
+    email: 'leonardo_dicaprio@test.com',
+    name: 'Leonardo DiCaprio',
+    orgs: [
+      {
+        name: 'Org S',
+      },
+      {
+        name: 'Org T',
+      },
+    ],
+    lastActive: '2023-10-15T09:15:00Z',
   },
 ];

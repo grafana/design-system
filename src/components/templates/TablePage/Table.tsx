@@ -1,15 +1,16 @@
 import React from 'react';
 import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
-import { useColumns, UserDTO } from '@site/src/components/templates/TablePage/useColumns';
-import { users } from '@site/src/data';
+import { useColumns } from '@site/src/components/templates/TablePage/useColumns';
+import { Filter, User } from '@site/src/components/templates/TablePage/types';
 
-interface Props {
+interface TablePageProps {
   query: string;
+  filter: Filter;
+  data: User[];
   changeQuery: (query: string) => void;
-  changeFilter: (filter: { name: string; value: any }) => void;
-  filters: any[];
+  changeFilter: (value: string) => void;
 }
-export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) => {
+export const TablePage = ({ changeQuery, query, changeFilter, filter, data }: TablePageProps) => {
   const columns = useColumns();
 
   return (
@@ -23,17 +24,17 @@ export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) 
         />
         <RadioButtonGroup
           options={[
-            { label: 'All users', value: false },
-            { label: 'Active last 30 days', value: true },
+            { label: 'All users', value: 'all' },
+            { label: 'Active last 30 days', value: 'lastActive' },
           ]}
-          onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
-          value={filters.find((f) => f.name === 'activeLast30Days')?.value}
+          onChange={(value) => changeFilter(value)}
+          value={filter}
         />
         <LinkButton href="#" variant="primary">
           New user
         </LinkButton>
       </Stack>
-      <InteractiveTable columns={columns} data={users} getRowId={(user: UserDTO) => String(user.id)} />
+      <InteractiveTable columns={columns} data={data} getRowId={(user: User) => String(user.id)} />
     </Stack>
   );
 };
