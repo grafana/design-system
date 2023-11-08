@@ -5,7 +5,8 @@ import { Filter, User } from '@site/src/components/templates/TablePage/types';
 interface DataProviderProps {
   children: React.ReactElement;
 }
-/** A wrapper component to provide data and action props to the table page.
+/**
+ * A wrapper component to provide data and action props to the table page.
  *  Not part of the template.
  */
 export const DataProvider = ({ children }: DataProviderProps) => {
