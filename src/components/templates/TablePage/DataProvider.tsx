@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { users } from '@site/src/data';
+import { users } from '@site/src/components/templates/TablePage/data';
 import { Filter, User } from '@site/src/components/templates/TablePage/types';
 
 interface DataProviderProps {
