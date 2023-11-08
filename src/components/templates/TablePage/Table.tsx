@@ -29,7 +29,7 @@ export const TablePage = ({ changeQuery, query, changeFilter, filters }: Props) 
           onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
           value={filters.find((f) => f.name === 'activeLast30Days')?.value}
         />
-        <LinkButton href="admin/users/create" variant="primary">
+        <LinkButton href="#" variant="primary">
           New user
         </LinkButton>
       </Stack>
