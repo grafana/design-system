@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
-import { useColumns } from '@site/src/components/templates/TablePage/useColumns';
+import useColumns from '@site/src/components/templates/TablePage/useColumns';
 import { Filter, User } from '@site/src/components/templates/TablePage/types';
 
 interface TablePageProps {

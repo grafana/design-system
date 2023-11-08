@@ -6,7 +6,7 @@ import { User, Org } from '@site/src/components/templates/TablePage/types';
 type Cell<T extends keyof User = keyof User> = CellProps<User, User[T]>;
 type Row = { original: User };
 
-export const useColumns = () => {
+const useColumns = () => {
   const columns: Array<Column<User>> = useMemo(
     () => [
       {
@@ -58,3 +58,5 @@ export const useColumns = () => {
   );
   return columns;
 };
+
+export default useColumns;
