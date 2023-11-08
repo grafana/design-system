@@ -10,6 +10,7 @@ interface TablePageProps {
   changeQuery: (query: string) => void;
   changeFilter: (value: string) => void;
 }
+
 export const TablePage = ({ changeQuery, query, changeFilter, filter, data }: TablePageProps) => {
   const columns = useColumns();
 

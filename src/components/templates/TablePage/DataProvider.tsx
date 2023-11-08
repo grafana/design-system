@@ -12,12 +12,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
 
-  const filteredData = users.filter((user) => {
-    if (filter === 'lastActive') {
-      return filterRecentActiveUsers(users);
-    }
-    return true;
-  });
+  const filteredData = filter === 'lastActive' ? filterRecentActiveUsers(users) : users;
 
   const filteredDataByQuery = filteredData.filter((user) => {
     return query === '' || user.login.includes(query) || user.email.includes(query) || user.name.includes(query);
