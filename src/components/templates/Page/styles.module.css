@@ -7,12 +7,17 @@
 .pageInner {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
   border-radius: var(--borderRadius);
   border: 1px solid var(--border-weak);
   border-bottom: none;
   padding: calc(var(--spacing) * 2px);
   background: var(--background-primary);
   gap: calc(var(--spacing) * 2px);
+  min-height: 100%;
+  width: 100%;
 }
 
 .titleInfoContainer {
@@ -35,4 +40,10 @@
 .subTitle {
   position: relative;
   color: var(--text-secondary);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex: 1;
 }

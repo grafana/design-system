@@ -10,7 +10,7 @@ export interface Props {
 
 export function PageHeader({ title, subTitle, actions }: Props) {
   return (
-    <Stack direction={'column'} gap={1} flexGrow={1}>
+    <Stack direction={'column'} gap={1}>
       <Stack alignItems={'flex-start'} wrap={'wrap'}>
         <div className={styles.titleInfoContainer}>
           <h2>{title}</h2>
