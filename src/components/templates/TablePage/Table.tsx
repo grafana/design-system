@@ -1,6 +1,6 @@
-import { useColumns, UserDTO } from '@site/src/components/templates/TablePage/useColumns';
-import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
 import React from 'react';
+import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
+import { useColumns, UserDTO } from '@site/src/components/templates/TablePage/useColumns';
 import { users } from '@site/src/data';
 
 interface Props {

@@ -14,3 +14,25 @@
   background: var(--background-primary);
   gap: calc(var(--spacing) * 2px);
 }
+
+.titleInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: calc(var(--spacing) * 1px) calc(var(--spacing) * 4px);
+  max-width: 100%;
+  min-width: 200px;
+}
+
+.titleInfoContainer h2 {
+  display: flex;
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+.subTitle {
+  position: relative;
+  color: var(--text-secondary);
+}
