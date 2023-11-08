@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Stack } from '@grafana/ui';
 import styles from './styles.module.css';
+
 export interface Props {
   title: string;
   subTitle?: React.ReactNode;

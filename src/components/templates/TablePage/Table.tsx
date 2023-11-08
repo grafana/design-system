@@ -34,7 +34,7 @@ export const TablePage = ({ changeQuery, query, changeFilter, filter, data }: Ta
           New user
         </LinkButton>
       </Stack>
-      <InteractiveTable columns={columns} data={data} getRowId={(user: User) => String(user.id)} />
+      <InteractiveTable columns={columns} data={data} pageSize={10} getRowId={(user: User) => String(user.id)} />
     </Stack>
   );
 };
