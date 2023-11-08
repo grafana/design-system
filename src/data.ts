@@ -25,7 +25,7 @@ const names = [
 
 const organizations = ['Main Org.', 'Alpha', 'Beta Corporation', 'Gamma Limited', 'Delta Group'];
 
-function generateLastActiveDate(olderThan30Days: boolean): string {
+function generateLastActiveDate(olderThan30Days: boolean) {
   const date = new Date();
   date.setDate(
     date.getDate() - (olderThan30Days ? Math.floor(Math.random() * 165) + 30 : Math.floor(Math.random() * 5) + 1)
@@ -33,18 +33,16 @@ function generateLastActiveDate(olderThan30Days: boolean): string {
   return date.toISOString().split('.')[0] + 'Z';
 }
 
-function generateLoginFromName(name: string): string {
+function generateLoginFromName(name: string) {
   return name.toLowerCase().replace(/\s/g, '_');
 }
 
-function generateOrgs(unique: boolean): Array<{ name: string }> {
+function generateOrgs() {
   let orgNames = [...organizations];
-  return unique
-    ? [orgNames.splice(Math.floor(Math.random() * orgNames.length), 1)[0]].map((name) => ({ name }))
-    : [{ name: orgNames[0] }];
+  return [orgNames.splice(Math.floor(Math.random() * orgNames.length), 1)[0]].map((name) => ({ name }));
 }
 
-function generateUsersData(): User[] {
+function generateUsersData() {
   return names.map((name, index) => {
     const olderThan30Days = index < 15;
     return {
@@ -52,7 +50,7 @@ function generateUsersData(): User[] {
       login: generateLoginFromName(name),
       email: `${generateLoginFromName(name)}@example.com`,
       name: name,
-      orgs: generateOrgs(!olderThan30Days),
+      orgs: generateOrgs(),
       lastActive: generateLastActiveDate(olderThan30Days),
     };
   });
