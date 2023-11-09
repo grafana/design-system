@@ -47,3 +47,10 @@
   width: 100%;
   flex: 1;
 }
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 1px);
+  width: 100%;
+}

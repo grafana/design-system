@@ -15,7 +15,7 @@ export const TablePage = ({ changeQuery, query, changeFilter, filter, data }: Ta
   const columns = useColumns();
 
   return (
-    <Stack flexGrow={1} direction={'column'}>
+    <Stack grow={1} direction={'column'}>
       <Stack gap={2}>
         <FilterInput
           placeholder="Search user by login, email, or name."

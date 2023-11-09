@@ -11,7 +11,7 @@ export interface Props {
 
 export function PageHeader({ title, subTitle, actions }: Props) {
   return (
-    <Stack direction={'column'} gap={1}>
+    <div className={styles.pageHeader}>
       <Stack alignItems={'flex-start'} wrap={'wrap'}>
         <div className={styles.titleInfoContainer}>
           <h2>{title}</h2>
@@ -19,6 +19,6 @@ export function PageHeader({ title, subTitle, actions }: Props) {
         <Stack gap={1}>{actions}</Stack>
       </Stack>
       {subTitle && <div className={styles.subTitle}>{subTitle}</div>}
-    </Stack>
+    </div>
   );
 }
