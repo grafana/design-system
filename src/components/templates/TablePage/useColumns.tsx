@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 
-import { CellProps, Column, Icon, Tooltip } from '@grafana/ui';
+import { CellProps, Column, ConfirmModal, Icon, IconButton, Tooltip } from '@grafana/ui';
 import { User, Org } from '@site/src/components/templates/TablePage/types';
 
 type Cell<T extends keyof User = keyof User> = CellProps<User, User[T]>;
@@ -50,6 +50,33 @@ const useColumns = () => {
                 <Icon name={'pen'} />
               </a>
             </Tooltip>
+          );
+        },
+      },
+      {
+        id: 'delete',
+        header: '',
+        cell: ({ row: { original } }: Cell) => {
+          const [showModal, setShowModal] = useState(false);
+          const closeModal = () => setShowModal(false);
+
+          return (
+            <>
+              <IconButton
+                name={'trash-alt'}
+                aria-label={`Delete user ${original.name}`}
+                onClick={() => setShowModal(true)}
+              />
+
+              <ConfirmModal
+                isOpen={showModal}
+                body={`Are you sure you want to delete user ${original.name}?`}
+                confirmText="Delete"
+                title="Delete user"
+                onConfirm={closeModal}
+                onDismiss={closeModal}
+              />
+            </>
           );
         },
       },
