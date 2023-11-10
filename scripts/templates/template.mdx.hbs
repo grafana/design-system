@@ -6,11 +6,11 @@ hide_table_of_contents: true
 draft: true
 ---
 
-import { Page } from '@site/src/components/templates/Page/Page';
 import CodeBlock from '@theme/CodeBlock';
-import {{templateName}} from '@site/src/components/templates/TablePage/TablePage';
-import { DataProvider } from '@site/src/components/templates/TablePage/DataProvider';
+import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import {{templateName}} from '@site/src/components/templates/{{properCase templateName}}/{{properCase templateName}}';
+import { DataProvider } from '@site/src/components/templates/{{properCase templateName}}/DataProvider';
 
 import {{templateName}}Raw from '!!raw-loader!@site/src/components/templates/TablePage/TablePage';
 
