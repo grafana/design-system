@@ -31,12 +31,16 @@ const baseConfig = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/grafana/design-system/blob/main/',
+          sidebarItemsGenerator: async ({defaultSidebarItemsGenerator, ...args}) => {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            return convertSidebarLinks(sidebarItems);
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -45,7 +49,7 @@ const baseConfig = {
         pages: {
           path: 'pages',
         },
-      }),
+      },
     ],
   ],
 
@@ -90,6 +94,21 @@ const baseConfig = {
     }),
   scripts: ['https://klesun-misc.github.io/TypeScript/lib/typescriptServices.js'],
 };
+
+function convertSidebarLinks(items) {
+  return items.map((item) => {
+    if (item.items) {
+      item.items = convertSidebarLinks(item.items);
+    }
+    
+    if (item.customProps && 'href' in item.customProps) {
+      // we only care about label and customProps
+      const { label, customProps } = item;
+      return { label, type: 'link', href: customProps.href };
+    }
+    return item;
+  });
+}
 
 /** @return {import('@docusaurus/types').Plugin} */
 function customPostCssPlugin() {
