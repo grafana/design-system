@@ -254,7 +254,6 @@ main {
   margin: calc(var(--spacing) * 7.5px) 0;
 }
 
-#about .card,
 #about #content #box {
   background: var(--background-primary);
   border: 1px solid var(--border-weak);
@@ -266,6 +265,9 @@ main {
   border-radius: var(--borderRadius);
   display: block;
 }
+
+
+#about .card,
 
 #about #content #cards .card img {
   float: left;
@@ -369,6 +371,17 @@ main {
 
 .two-images-comparison div:first-of-type {
   margin-right: calc(var(--spacing) * 2.5px);
+}
+
+@media screen and (max-width: 520px) {
+  #about #content #cards, #about #content #cards-large {
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2.5px);
+
+    & > .card {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 520px) {
