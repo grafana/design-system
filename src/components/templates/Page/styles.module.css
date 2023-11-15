@@ -7,7 +7,6 @@
 .pageInner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
   flex: 1;
   border-radius: var(--borderRadius);
@@ -43,8 +42,6 @@
 }
 
 .content {
-  display: flex;
-  width: 100%;
   flex: 1;
 }
 

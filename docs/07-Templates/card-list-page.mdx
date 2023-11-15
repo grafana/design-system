@@ -1,0 +1,39 @@
+---
+title: Card List Page
+description: Template for CardListPage
+keywords: ['CardListPage', 'template']
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import CardListPage from '@site/src/components/templates/CardListPage/CardListPage';
+import { DataProvider } from '@site/src/components/templates/CardListPage/DataProvider';
+
+import CardListPageRaw from '!!raw-loader!@site/src/components/templates/CardListPage/CardListPage';
+
+## Overview
+
+[//]: # 'High-level description of the template'
+
+<Page title={'Authentication'} subTitle={'Manage your auth settings and configure single sign-on.'} height={700}>
+  <DataProvider>
+    <CardListPage />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{CardListPageRaw}</CodeBlock>
+
+[//]: # '[//]: # <CodeCollapse label="types.ts"></CodeCollapse>'
+
+## Usage
+
+[//]: # "Template's usage guidelines"
+
+## Figma designs
+
+[//]: # 'Links to the applicable designs in Figma'
