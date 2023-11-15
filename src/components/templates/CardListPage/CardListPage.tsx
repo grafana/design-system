@@ -10,15 +10,15 @@ interface CardListPageProps {
 export const CardListPage = ({ data }: CardListPageProps) => {
   return (
     <Grid gap={3} minColumnWidth={34}>
-      {data.map(({ provider, name, settings }) => (
-        <Card href={'#'} key={provider}>
-          <Card.Heading>{name}</Card.Heading>
+      {data.map(({ displayName, name, enabled, icon }) => (
+        <Card href={'#'} key={name}>
+          <Card.Heading>{displayName}</Card.Heading>
           <Card.Meta>OAuth</Card.Meta>
           <Card.Figure>
-            <Icon name={['generic_oauth', 'azuread'].includes(provider) ? 'apps' : provider} size={'xxxl'} />
+            <Icon name={icon} size={'xxxl'} />
           </Card.Figure>
           <Card.Actions>
-            <Badge text={settings.enabled ? 'Enabled' : 'Not enabled'} color={'blue'} />
+            <Badge text={enabled ? 'Enabled' : 'Not enabled'} color={enabled ? 'green' : 'blue'} />
           </Card.Actions>
         </Card>
       ))}

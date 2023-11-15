@@ -1,9 +1,11 @@
+import { IconName } from '@grafana/ui';
+
 export type Item = {
-  provider: string;
   name: string;
-  settings: {
-    enabled: boolean;
-  };
+  displayName: string;
+  icon: IconName;
+  enabled: boolean;
+  source: string;
 };
 
 export type Data = Item[];

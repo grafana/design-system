@@ -1,5 +1,5 @@
 import React from 'react';
-import { formattedData } from './data';
+import { data } from '@site/src/components/templates/CardListPage/data';
 
 interface DataProviderProps {
   children: React.ReactElement;
@@ -10,5 +10,5 @@ interface DataProviderProps {
  *  Not part of the template.
  */
 export const DataProvider = ({ children }: DataProviderProps) => {
-  return React.cloneElement(children, { data: formattedData });
+  return React.cloneElement(children, { data });
 };
