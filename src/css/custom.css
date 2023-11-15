@@ -254,6 +254,7 @@ main {
   margin: calc(var(--spacing) * 7.5px) 0;
 }
 
+#about .card,
 #about #content #box {
   background: var(--background-primary);
   border: 1px solid var(--border-weak);
@@ -265,9 +266,6 @@ main {
   border-radius: var(--borderRadius);
   display: block;
 }
-
-
-#about .card,
 
 #about #content #cards .card img {
   float: left;
@@ -496,3 +494,4 @@ input[type='checkbox'] + label {
   text-decoration: none;
   color: var(--text-primary);
 }
+
