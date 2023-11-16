@@ -372,6 +372,17 @@ main {
 }
 
 @media screen and (max-width: 520px) {
+  #about #content #cards, #about #content #cards-large {
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2.5px);
+
+    & > .card {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
   .two-images-comparison {
     flex-direction: column;
   }
@@ -483,3 +494,4 @@ input[type='checkbox'] + label {
   text-decoration: none;
   color: var(--text-primary);
 }
+
