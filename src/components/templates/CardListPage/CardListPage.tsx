@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, Badge, Icon } from '@grafana/ui';
+import { Card, Badge, Icon, Grid } from '@grafana/ui';
 import { Data } from '@site/src/components/templates/CardListPage/types';
-import { Grid } from '@site/src/components/templates/Grid';
 
 interface CardListPageProps {
   data: Data;
