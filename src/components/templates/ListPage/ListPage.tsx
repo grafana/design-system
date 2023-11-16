@@ -14,7 +14,7 @@ export const ListPage = ({ data, query, changeQuery }: ListPageProps) => {
       <Stack gap={2}>
         <FilterInput placeholder="Search by name" autoFocus={true} value={query} onChange={changeQuery} />
         <LinkButton href="#" variant="primary">
-          New user
+          Create item
         </LinkButton>
       </Stack>
       {data.map((item) => {
