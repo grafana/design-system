@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { data } from '@site/src/components/templates/CardListPage/data';
 
 interface DataProviderProps {
@@ -10,5 +10,10 @@ interface DataProviderProps {
  *  Not part of the template.
  */
 export const DataProvider = ({ children }: DataProviderProps) => {
-  return React.cloneElement(children, { data });
+  const [query, setQuery] = useState('');
+
+  const filteredDataByQuery = data.filter((item) => {
+    return query === '' || item.name.includes(query);
+  });
+  return React.cloneElement(children, { data: filteredDataByQuery, query, changeQuery: setQuery });
 };
