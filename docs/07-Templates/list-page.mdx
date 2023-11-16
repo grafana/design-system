@@ -1,0 +1,40 @@
+---
+title: List Page
+description: Template for List Page
+keywords: ['ListPage', 'template']
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import ListPage from '@site/src/components/templates/ListPage/ListPage';
+import { DataProvider } from '@site/src/components/templates/ListPage/DataProvider';
+
+import ListPageRaw from '!!raw-loader!@site/src/components/templates/ListPage/ListPage';
+import types from '!!raw-loader!@site/src/components/templates/CardListPage/types';
+
+## Overview
+
+A page that displays a list of items.
+
+<Page title={'Authentication'} subTitle={'Manage your auth settings and configure single sign-on.'} height={700}>
+  <DataProvider>
+    <ListPage />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{ListPageRaw}</CodeBlock>
+
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+
+## Usage
+
+[//]: # Template's usage guidelines
+
+## Figma designs
+
+[//]: # Links to the applicable designs in Figma
