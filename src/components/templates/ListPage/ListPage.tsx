@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, EmptySearchResult, FilterInput, Icon, LinkButton, Stack } from '@grafana/ui';
-import { Data } from '@site/src/components/templates/CardListPage/types';
+import { Data } from '@site/src/components/templates/GridPage/types';
 
 interface ListPageProps {
   data: Data;

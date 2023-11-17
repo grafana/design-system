@@ -1,4 +1,4 @@
-import { Data } from '@site/src/components/templates/CardListPage/types';
+import { Data } from '@site/src/components/templates/GridPage/types';
 
 export const data: Data = [
   {

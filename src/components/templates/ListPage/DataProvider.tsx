@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '@site/src/components/templates/CardListPage/data';
+import { data } from '@site/src/components/templates/GridPage/data';
 
 interface DataProviderProps {
   children: React.ReactElement;

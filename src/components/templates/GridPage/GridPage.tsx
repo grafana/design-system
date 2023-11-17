@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, Badge, Icon, Grid } from '@grafana/ui';
-import { Data } from '@site/src/components/templates/CardListPage/types';
+import { Data } from '@site/src/components/templates/GridPage/types';
 
 interface CardListPageProps {
   data: Data;
 }
 
-export const CardListPage = ({ data }: CardListPageProps) => {
+export const GridPage = ({ data }: CardListPageProps) => {
   return (
     <Grid gap={3} minColumnWidth={34}>
       {data.map(({ displayName, name, enabled, icon }) => (
@@ -25,4 +25,4 @@ export const CardListPage = ({ data }: CardListPageProps) => {
   );
 };
 
-export default CardListPage;
+export default GridPage;

@@ -1,7 +1,7 @@
 ---
 title: Grid Page
 description: Template for Grid Page
-keywords: ['CardListPage', 'template']
+keywords: ['GridPage', 'template']
 hide_table_of_contents: true
 draft: true
 ---
@@ -9,11 +9,11 @@ draft: true
 import CodeBlock from '@theme/CodeBlock';
 import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
-import CardListPage from '@site/src/components/templates/CardListPage/CardListPage';
-import { DataProvider } from '@site/src/components/templates/CardListPage/DataProvider';
+import GridPage from '@site/src/components/templates/GridPage/GridPage';
+import { DataProvider } from '@site/src/components/templates/GridPage/DataProvider';
 
-import CardListPageRaw from '!!raw-loader!@site/src/components/templates/CardListPage/CardListPage';
-import types from '!!raw-loader!@site/src/components/templates/CardListPage/types';
+import GridPageRaw from '!!raw-loader!@site/src/components/templates/GridPage/GridPage';
+import types from '!!raw-loader!@site/src/components/templates/GridPage/types';
 
 ## Overview
 
@@ -21,13 +21,13 @@ A page with a list of card items in a grid layout. Each card is a link to a new 
 
 <Page title={'Authentication'} subTitle={'Manage your auth settings and configure single sign-on.'} height={700}>
   <DataProvider>
-    <CardListPage />
+    <GridPage />
   </DataProvider>
 </Page>
 
 ## Source code
 
-<CodeBlock language="tsx">{CardListPageRaw}</CodeBlock>
+<CodeBlock language="tsx">{GridPageRaw}</CodeBlock>
 
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
 
