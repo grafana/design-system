@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, FilterInput, Icon, LinkButton, Stack } from '@grafana/ui';
+import { Card, EmptySearchResult, FilterInput, Icon, LinkButton, Stack } from '@grafana/ui';
 import { Data } from '@site/src/components/templates/CardListPage/types';
 
 interface ListPageProps {
@@ -17,17 +17,21 @@ export const ListPage = ({ data, query, changeQuery }: ListPageProps) => {
           Create item
         </LinkButton>
       </Stack>
-      {data.map((item) => {
-        return (
-          <Card key={item.name} href={'#'}>
-            <Card.Heading>{item.displayName}</Card.Heading>
-            <Card.Meta>OAuth</Card.Meta>
-            <Card.Figure>
-              <Icon name={item.icon} size={'xxxl'} />
-            </Card.Figure>
-          </Card>
-        );
-      })}
+      {data.length ? (
+        data.map((item) => {
+          return (
+            <Card key={item.name} href={'#'}>
+              <Card.Heading>{item.displayName}</Card.Heading>
+              <Card.Meta>OAuth</Card.Meta>
+              <Card.Figure>
+                <Icon name={item.icon} size={'xxxl'} />
+              </Card.Figure>
+            </Card>
+          );
+        })
+      ) : (
+        <EmptySearchResult>No results matching your query</EmptySearchResult>
+      )}
     </Stack>
   );
 };
