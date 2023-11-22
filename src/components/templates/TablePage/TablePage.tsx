@@ -15,10 +15,10 @@ export const TablePage = ({ changeQuery, query, changeFilter, filter, data }: Ta
   const columns = useColumns();
 
   return (
-    <Stack grow={1} direction={'column'}>
+    <Stack grow={1} direction={'column'} gap={2}>
       <Stack gap={2}>
         <FilterInput
-          placeholder="Search user by login, email, or name."
+          placeholder="Search by login, email, or name"
           autoFocus={true}
           value={query}
           onChange={changeQuery}

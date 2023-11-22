@@ -1,0 +1,43 @@
+---
+title: Grid Page
+description: Template for Grid Page
+keywords: ['GridPage', 'template']
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import GridPage from '@site/src/components/templates/GridPage/GridPage';
+import { DataProvider } from '@site/src/components/templates/GridPage/DataProvider';
+
+import GridPageRaw from '!!raw-loader!@site/src/components/templates/GridPage/GridPage';
+import types from '!!raw-loader!@site/src/components/templates/GridPage/types';
+
+## Overview
+
+A page with a list of card items in a grid layout. Each card is a link to a new page where either detail or create view can be displayed.
+
+<Page title={'Authentication'} subTitle={'Manage your auth settings and configure single sign-on.'} height={700}>
+  <DataProvider>
+    <GridPage />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{GridPageRaw}</CodeBlock>
+
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+
+## Usage
+
+- Use a combination of `Grid` and `Card` components to create a grid layout of cards.
+- Use the `Card` component to create a grid item.
+- To make the layout responsive, use the `Grid` component with the `minColumnWidth` prop.
+- For a fixed number of columns, use the `Grid` component with the `columns` prop.
+
+## Figma designs
+
+- [Anatomy of the List View](https://www.figma.com/file/Jk9PWNElaPZh2oSBWOxoWm/Joseph-Breitreiter-%7C-List-View---In-Progress?type=design&node-id=454-6362&mode=design&t=INSTd153rtu6sbBU-0)
