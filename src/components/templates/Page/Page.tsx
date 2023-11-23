@@ -12,7 +12,7 @@ interface PageProps extends PropsWithChildren {
 }
 export const Page = ({ title, subTitle, children, actions, height = '100%' }: PageProps) => {
   return (
-    <div className={styles.container} style={{ minHeight: height }}>
+    <div className={`page ${styles.container}`} style={{ minHeight: height }}>
       <CustomScrollbar autoHeightMin={'100%'}>
         <div className={styles.pageInner}>
           <PageHeader title={title} subTitle={subTitle} actions={actions} />
