@@ -490,7 +490,7 @@ input[type='checkbox'] + label {
   display: inline-block;
 }
 
-.theme-doc-markdown a {
+.page a {
   text-decoration: none;
   color: var(--text-primary);
 }
