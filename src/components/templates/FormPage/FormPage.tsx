@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, Field, Form, Input, InputControl, Select, Stack } from '@grafana/ui';
+import { Button, Checkbox, Field, Form, Input, InputControl, Select, Stack } from '@grafana/ui';
 import { Data } from '@site/src/components/templates/FormPage/types';
 
 interface FormPageProps {}
@@ -53,6 +53,14 @@ export const FormPage = (props: FormPageProps) => {
                   }}
                 />
               </Field>
+              <Stack gap={2}>
+                <Field>
+                  <Button type={'submit'}>Submit</Button>
+                </Field>
+                <Field>
+                  <Button variant={'secondary'}>Cancel</Button>
+                </Field>
+              </Stack>
             </>
           );
         }}
