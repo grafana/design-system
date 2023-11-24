@@ -8,5 +8,4 @@ export type Data = {
   radio: string;
   select: SelectableValue<string>;
   switch: boolean;
-  slider: number;
 };
