@@ -13,6 +13,7 @@ import {{templateName}} from '@site/src/components/templates/{{properCase templa
 import { DataProvider } from '@site/src/components/templates/{{properCase templateName}}/DataProvider';
 
 import {{templateName}}Raw from '!!raw-loader!@site/src/components/templates/{{properCase templateName}}/{{properCase templateName}}';
+import types from '!!raw-loader!@site/src/components/templates/{{properCase templateName}}/types';
 
 ## Overview
 [//]: # 'High-level description of the template'
@@ -27,7 +28,7 @@ import {{templateName}}Raw from '!!raw-loader!@site/src/components/templates/{{p
 
 <CodeBlock language="tsx">{{append '{'}}{{templateName}}Raw{{append '}'}}</CodeBlock>
 
-[//]: # <CodeCollapse label="types.ts"></CodeCollapse>
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
 
 
 ## Usage
