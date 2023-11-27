@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Checkbox,
@@ -18,8 +18,22 @@ import { Data } from '@site/src/components/templates/FormPage/types';
 interface FormPageProps {}
 
 export const FormPage = (props: FormPageProps) => {
-  const handleSubmit = (data: Data) => {
-    console.log(data);
+  const [isSaving, setIsSaving] = useState(false);
+  const handleSubmit = async (data: Data) => {
+    setIsSaving(true);
+    try {
+      // Simulating an asynchronous operation with a setTimeout
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Show a success banner using AppEvents,
+      // https://developers.grafana.com/ui/canary/index.html?path=/docs/overlays-alert-toast--docs#dos-1
+    } catch (error) {
+      // Show an error banner using AppEvents,
+      // https://developers.grafana.com/ui/canary/index.html?path=/docs/overlays-alert-toast--docs#dos-1
+      console.error('Error during async operation:', error);
+    } finally {
+      // This block will be executed regardless of success or failure
+      setIsSaving(false);
+    }
   };
 
   const defaultValues: Data = {
@@ -45,10 +59,25 @@ export const FormPage = (props: FormPageProps) => {
                 invalid={!!errors.text}
                 error="This field is required"
               >
-                <Input {...register('text')} type="text" id="text" placeholder="A regular text input" />
+                <Input
+                  {...register('text', { required: true })}
+                  type="text"
+                  id="text"
+                  placeholder="A regular text input"
+                />
               </Field>
-              <Field label="Number input">
-                <Input {...register('number')} type="number" id="number" placeholder="A regular number input" />
+              <Field
+                label="Number input"
+                description={'Used for numeric input'}
+                invalid={!!errors.number}
+                error="Enter a number greater than 0"
+              >
+                <Input
+                  {...register('number', { min: 0 })}
+                  type="number"
+                  id="number"
+                  placeholder="A regular number input"
+                />
               </Field>
               <Field label="Checkbox input">
                 <Checkbox {...register('checkbox')} id="checkbox" />
@@ -99,7 +128,7 @@ export const FormPage = (props: FormPageProps) => {
                 </div>
                 <Stack gap={2}>
                   <Field>
-                    <Button type={'submit'}>Submit</Button>
+                    <Button type={'submit'}>{isSaving ? 'Saving...' : 'Submit'}</Button>
                   </Field>
                   <Field>
                     <Button variant={'secondary'}>Cancel</Button>
