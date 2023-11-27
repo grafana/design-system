@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+html {
+  font-size: var(--htmlFontSize);
+  height: 100%;
+}
+
+body {
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  line-height: var(--body-lineHeight);
+  color: var(--primary-text);
+  background-color: var(--primary-main);
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 1px);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 2px);
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 2px);
+}
+
+figure {
+  margin: 0 0 calc(var(--spacing) * 2px);
+}
+
+img {
+  vertical-align: middle;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+table {
+  background-color: transparent;
+}
+
+th {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: calc(var(--spacing) * 1px);
+  font-size: calc(var(--spacing) * 3px);
+  line-height: inherit;
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+output {
+  display: inline-block;
+}
+
+[hidden] {
+  display: none !important;
+}
