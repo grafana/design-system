@@ -17,7 +17,7 @@ import types from '!!raw-loader!@site/src/components/templates/FormPage/types';
 
 ## Overview
 
-[//]: # 'High-level description of the template'
+A page with a simple form, used to collect data from users. The form is built using [React Hook Form](https://react-hook-form.com/). The form can have an optional expandable section when the user needs to provide more information. The fields in the expandable section should be optional.
 
 <Page title={'Feature name'} subTitle={'Further description of the feature and links to docs.'} height={700}>
   <DataProvider>
@@ -32,7 +32,10 @@ import types from '!!raw-loader!@site/src/components/templates/FormPage/types';
 
 ## Usage
 
-[//]: # "Template's usage guidelines"
+- Use a form page for short forms. Consider using multistep forms for complex cases with many fields.
+- Use the expandable section sparingly. It should only be used when the user needs to provide additional information. The fields in the expandable section should be optional.
+- Mark only the field as required by providing a `required` prop to the `Field` component. Do not use the `required` prop on the `Form` component.
+- Show a success or error banner after form submit using [AppEvents](https://developers.grafana.com/ui/canary/index.html?path=/docs/overlays-alert-toast--docs#dos-1).
 
 ## Figma designs
 
