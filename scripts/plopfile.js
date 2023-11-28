@@ -58,6 +58,11 @@ module.exports = function (plop) {
               path: `${__dirname}../../src/components/templates/{{properCase templateName}}/DataProvider.tsx`,
               templateFile: 'templates/DataProvider.tsx.hbs',
             },
+            {
+              type: 'add',
+              path: `${__dirname}../../src/components/templates/{{properCase templateName}}/types.ts`,
+              templateFile: 'templates/types.ts.hbs',
+            },
           ],
   });
 };
