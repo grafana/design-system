@@ -31,7 +31,7 @@ export function Stepper<T extends string | number>({
 }: Props<T>) {
   const styles = useStyles2(getStyles);
   const lastStep = steps[steps.length - 1];
-
+  console.log('active', activeStep);
   return (
     <ol className={styles.container}>
       {steps.map((step) => {

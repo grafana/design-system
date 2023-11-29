@@ -14,7 +14,13 @@ interface MultistepFormPageProps {
 export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {
   return (
     <Stack grow={1} direction={'column'}>
-      <Stepper onStepChange={() => {}} steps={steps} validationResults={validationResults} getNextUrl={getStepUrl} />
+      <Stepper
+        onStepChange={() => {}}
+        activeStep={activeStep}
+        steps={steps}
+        validationResults={validationResults}
+        getNextUrl={getStepUrl}
+      />
       <Step activeStep={activeStep} />
     </Stack>
   );
