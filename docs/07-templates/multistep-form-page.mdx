@@ -1,0 +1,40 @@
+---
+title: MultistepFormPage
+description: Template for MultistepFormPage
+keywords: ['MultistepFormPage', 'template']
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import MultistepFormPage from '@site/src/components/templates/MultistepFormPage/MultistepFormPage';
+import { DataProvider } from '@site/src/components/templates/MultistepFormPage/DataProvider';
+
+import MultistepFormPageRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/MultistepFormPage';
+import types from '!!raw-loader!@site/src/components/templates/MultistepFormPage/types';
+
+## Overview
+[//]: # 'High-level description of the template'
+
+<Page title="Feature name" subTitle="Further description of the feature and links to docs." height={700}>
+  <DataProvider>
+    <MultistepFormPage />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{MultistepFormPageRaw}</CodeBlock>
+
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+
+
+## Usage
+
+[//]: # "Template's usage guidelines"
+
+## Figma designs (internal use only)
+
+[//]: # "Links to the applicable designs in Figma"
