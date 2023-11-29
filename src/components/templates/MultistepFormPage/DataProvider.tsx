@@ -16,10 +16,21 @@ const validationResults = {
   [StepKey.Step2]: { valid: true },
   [StepKey.Step3]: { valid: true },
 };
+
+const BASE_URL = 'multistep-form-page';
+export const getStepUrl = (step: StepKey) => {
+  return `${BASE_URL}#${step}`;
+};
+
+const getActiveStep = () => {
+  const step = window.location.hash || '#step1';
+
+  return step.replace('#', '');
+};
 /**
  * A wrapper component to provide data and action props to the child components .
  *  Not part of the template.
  */
 export const DataProvider = ({ children }: DataProviderProps) => {
-  return React.cloneElement(children, { steps: formSteps, validationResults });
+  return React.cloneElement(children, { steps: formSteps, validationResults, getStepUrl, activeStep: getActiveStep() });
 };
