@@ -15,4 +15,5 @@ export const StepForm = () => {
         );
       }}
     </Form>
-}
+  );
+};
