@@ -22,7 +22,7 @@ body {
   font-size: var(--fontSize);
   line-height: var(--body-lineHeight);
   color: var(--primary-text);
-  background-color: var(--primary-main);
+  background-color: var(--background-canvas);
   height: 100%;
   width: 100%;
 }
