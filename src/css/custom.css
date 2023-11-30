@@ -4,7 +4,9 @@
  * work well for content-centric websites.
  */
 
+
 @import url('./theme.css');
+@import url('./reset.css');
 
 @font-face {
   font-family: Inter;
