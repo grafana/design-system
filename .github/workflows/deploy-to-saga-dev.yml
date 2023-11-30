@@ -5,7 +5,7 @@ on:
     inputs:
       branch:
         description: 'Which branch to use?'
-        default: 'release-templates'
+        default: 'main'
 jobs:
   deploy:
     name: Deploy docs to Developer Portal Bucket
