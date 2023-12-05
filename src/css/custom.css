@@ -6,6 +6,7 @@
 
 @import url('./theme.css');
 @import url('./reset.css');
+@import url('./normalize.css');
 @import 'rc-slider/assets/index.css';
 
 @font-face {
