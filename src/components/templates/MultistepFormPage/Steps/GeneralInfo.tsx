@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 
 export const GeneralInfo = () => {
   const { register, handleSubmit } = useFormContext();
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     window.location.hash = '#additional';
   };
   return (

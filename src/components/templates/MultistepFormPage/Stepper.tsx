@@ -2,7 +2,7 @@ import { css, cx } from '@emotion/css';
 import React from 'react';
 
 import { GrafanaTheme2 } from '@grafana/data';
-import { Link, useStyles2, Icon } from '@grafana/ui';
+import { useStyles2, Icon } from '@grafana/ui';
 
 import { ValidationResult } from './types';
 

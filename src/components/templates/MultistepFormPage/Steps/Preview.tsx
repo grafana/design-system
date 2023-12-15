@@ -1,28 +1,76 @@
 import React from 'react';
-import { Button, FieldSet, Icon, Stack, useStyles2 } from '@grafana/ui';
+import { Button, FieldSet, Icon, LinkButton, Stack, useStyles2 } from '@grafana/ui';
 import { useFormContext } from 'react-hook-form';
 import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';
+import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
+
+type SectionData = {
+  id: StepKey;
+  label: string;
+  items: Array<{ id: keyof Data; label: string; required: boolean }>;
+};
+
+const fields: SectionData[] = [
+  {
+    id: StepKey.Step1,
+    label: 'General Information',
+    items: [
+      {
+        id: 'name',
+        label: 'Name',
+        required: true,
+      },
+      { id: 'email', label: 'Email', required: false },
+      { id: 'message', label: 'Message', required: false },
+    ],
+  },
+  {
+    id: StepKey.Step2,
+    label: 'Additional Information',
+    items: [
+      {
+        id: 'radio',
+        label: 'Radio group',
+        required: false,
+      },
+      { id: 'text', label: 'Text input', required: false },
+    ],
+  },
+];
 
 export const Preview = () => {
-  const { getValues, handleSubmit } = useFormContext();
+  const { getValues, handleSubmit } = useFormContext<Data>();
   const styles = useStyles2(getStyles);
   const data = getValues();
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: Data) => {
     console.log('saving data', data);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FieldSet label={'3. Preview'}>
-        {Object.entries(data).map(([key, value]) => {
-          const missingValue = !value;
+        {fields.map((section) => {
           return (
-            <div className={styles.row} key={key}>
-              <div className={cx(styles.title, missingValue && styles.warning)}>{key}:</div>
-              <div className={cx(styles.value, value === 'none' && !missingValue ? styles.textMuted : '')}>
-                {missingValue ? <Icon name={'exclamation-triangle'} className={styles.warning} /> : value}
+            <div className={styles.section} key={section.id}>
+              <div className={styles.sectionHeader}>
+                <h5 className={styles.sectionTitle}>{section.label}</h5>
+                <LinkButton variant={'secondary'} fill={'text'} href={''} size={'sm'}>
+                  Edit
+                </LinkButton>
               </div>
+              {section.items.map(({ id, label, required }) => {
+                const value = data[id];
+                const missingValue = !value && required;
+                return (
+                  <div className={styles.row} key={id}>
+                    <div className={cx(styles.title, missingValue && styles.warning)}>{label}:</div>
+                    <div className={cx(styles.value, value === 'none' && !missingValue ? styles.textMuted : '')}>
+                      {missingValue ? <Icon name={'exclamation-triangle'} className={styles.warning} /> : value}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           );
         })}

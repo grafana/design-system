@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack } from '@grafana/ui';
 import { Stepper } from '@site/src/components/templates/MultistepFormPage/Stepper';
-import { StepKey, ValidationResult } from '@site/src/components/templates/MultistepFormPage/types';
+import { Data, StepKey, ValidationResult } from '@site/src/components/templates/MultistepFormPage/types';
 import { Step } from '@site/src/components/templates/MultistepFormPage/Steps/Step';
 
 import { useForm, FormProvider } from 'react-hook-form';
@@ -13,9 +13,16 @@ interface MultistepFormPageProps {
   activeStep: StepKey;
 }
 
-export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {
-  const methods = useForm();
+export const defaultFormData: Data = {
+  name: '',
+  email: '',
+  message: '',
+  radio: '',
+  text: '',
+};
 
+export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {
+  const methods = useForm({ defaultValues: defaultFormData, reValidateMode: 'onBlur' });
   return (
     <Stack grow={1} direction={'column'}>
       <FormProvider {...methods}>
