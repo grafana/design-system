@@ -5,6 +5,9 @@
  */
 
 @import url('./theme.css');
+@import url('./reset.css');
+@import url('./normalize.css');
+@import 'rc-slider/assets/index.css';
 
 @font-face {
   font-family: Inter;
@@ -372,7 +375,8 @@ main {
 }
 
 @media screen and (max-width: 520px) {
-  #about #content #cards, #about #content #cards-large {
+  #about #content #cards,
+  #about #content #cards-large {
     flex-direction: column;
     gap: calc(var(--spacing) * 2.5px);
 
@@ -447,17 +451,26 @@ table thead tr {
   border: none;
 }
 
-table th, table td {
+table th,
+table td {
   padding: calc(var(--spacing) * 1px);
 }
 
-button, html input[type=button], input[type=submit] {
+button,
+html input[type='button'],
+input[type='submit'] {
   cursor: pointer;
 }
 
 /* Component Status Page */
 
-.ready-to-use, .planned, .in-progress, .to-do, .not-doing, .deprecated, .n-a {
+.ready-to-use,
+.planned,
+.in-progress,
+.to-do,
+.not-doing,
+.deprecated,
+.n-a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -494,4 +507,3 @@ input[type='checkbox'] + label {
   text-decoration: none;
   color: var(--text-primary);
 }
-
