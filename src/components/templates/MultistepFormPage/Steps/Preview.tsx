@@ -1,5 +1,5 @@
 import React from 'react';
-import { FieldSet, Icon, LinkButton, useStyles2 } from '@grafana/ui';
+import { Box, FieldSet, Icon, LinkButton, Text, useStyles2 } from '@grafana/ui';
 import { useFormContext } from 'react-hook-form';
 import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';
@@ -54,13 +54,20 @@ export const Preview = () => {
       <FieldSet label={'3. Preview'}>
         {fields.map((section) => {
           return (
-            <div className={styles.section} key={section.id}>
-              <div className={styles.sectionHeader}>
-                <h5 className={styles.sectionTitle}>{section.label}</h5>
+            <Box marginBottom={3} paddingY={3} key={section.id}>
+              <Box
+                display={'flex'}
+                alignItems={'center'}
+                justifyContent={'space-between'}
+                padding={1}
+                borderColor={'weak'}
+                borderStyle={'solid'}
+              >
+                <Text element={'h6'}>{section.label}</Text>
                 <LinkButton variant={'secondary'} fill={'text'} href={''} size={'sm'}>
                   Edit
                 </LinkButton>
-              </div>
+              </Box>
               {section.items.map(({ id, label, required }) => {
                 const value = data[id];
                 const missingValue = !value && required;
@@ -73,7 +80,7 @@ export const Preview = () => {
                   </div>
                 );
               })}
-            </div>
+            </Box>
           );
         })}
       </FieldSet>
@@ -83,21 +90,6 @@ export const Preview = () => {
 
 const getStyles = (theme: GrafanaTheme2) => {
   return {
-    section: css`
-      width: 100%;
-      padding: ${theme.spacing(3, 0)};
-      margin-bottom: ${theme.spacing(3)};
-    `,
-    sectionHeader: css`
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: ${theme.spacing(1)};
-      border: 1px solid ${theme.colors.border.weak};
-    `,
-    sectionTitle: css`
-      margin: 0;
-    `,
     row: css`
       border: 1px solid ${theme.colors.border.weak};
       border-top: none;
@@ -110,6 +102,7 @@ const getStyles = (theme: GrafanaTheme2) => {
     `,
     title: css`
       width: 30%;
+      font-size: ${theme.typography.bodySmall.fontSize};
       color: ${theme.colors.text.secondary};
     `,
     textMuted: css`
@@ -117,12 +110,8 @@ const getStyles = (theme: GrafanaTheme2) => {
     `,
     value: css`
       width: 70%;
+      font-size: ${theme.typography.bodySmall.fontSize};
       word-break: break-word;
-    `,
-    dashboardLink: css`
-      color: ${theme.colors.text.primary};
-      font-size: ${theme.typography.body.fontSize};
-      margin-top: 0;
     `,
   };
 };
