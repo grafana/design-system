@@ -1,19 +1,28 @@
 import React from 'react';
-import { Field, FieldSet, Form, Input } from '@grafana/ui';
+import { Button, Field, FieldSet, Input, Stack, TextArea } from '@grafana/ui';
+import { useFormContext } from 'react-hook-form';
 
 export const GeneralInfo = () => {
-  const handleSubmit = (data: any) => {};
+  const { register, handleSubmit } = useFormContext();
+  const onSubmit = (data: any) => {
+    window.location.hash = '#additional';
+  };
   return (
-    <Form onSubmit={handleSubmit}>
-      {({ register }) => {
-        return (
-          <FieldSet label={'1. General Information'}>
-            <Field label={'Name'}>
-              <Input {...register('name')} />
-            </Field>
-          </FieldSet>
-        );
-      }}
-    </Form>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <FieldSet label={'1. General Information'}>
+        <Field label={'Name'} required>
+          <Input {...register('name')} />
+        </Field>
+        <Field label={'Email'}>
+          <Input {...register('email')} />
+        </Field>
+        <Field label={'Message'}>
+          <TextArea {...register('message')} />
+        </Field>
+      </FieldSet>
+      <Stack gap={2}>
+        <Button type="submit">Next</Button>
+      </Stack>
+    </form>
   );
 };
