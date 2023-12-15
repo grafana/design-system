@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, Field, FieldSet, Input, Stack, TextArea } from '@grafana/ui';
+import { Field, FieldSet, Input, TextArea } from '@grafana/ui';
 import { useFormContext } from 'react-hook-form';
+import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
+import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 
 export const GeneralInfo = () => {
-  const { register, handleSubmit } = useFormContext();
-  const onSubmit = () => {
-    window.location.hash = '#additional';
-  };
+  const { register } = useFormContext();
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <StepForm step={StepKey.Step1}>
       <FieldSet label={'1. General Information'}>
         <Field label={'Name'} required>
           <Input {...register('name')} />
@@ -20,9 +20,6 @@ export const GeneralInfo = () => {
           <TextArea {...register('message')} />
         </Field>
       </FieldSet>
-      <Stack gap={2}>
-        <Button type="submit">Next</Button>
-      </Stack>
-    </form>
+    </StepForm>
   );
 };

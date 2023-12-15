@@ -1,14 +1,13 @@
 import React from 'react';
-import { Button, Field, FieldSet, Input, RadioButtonGroup, Stack } from '@grafana/ui';
-import { useFormContext, Controller } from 'react-hook-form';
+import { Field, FieldSet, Input, RadioButtonGroup } from '@grafana/ui';
+import { Controller, useFormContext } from 'react-hook-form';
+import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
+import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 
 export const AdditionalInfo = () => {
-  const { register, handleSubmit, control } = useFormContext();
-  const onSubmit = (data: any) => {
-    window.location.hash = '#preview';
-  };
+  const { register, control } = useFormContext();
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <StepForm step={StepKey.Step2}>
       <FieldSet label={'2. Additional Information'}>
         <Field label="Radio group">
           <Controller
@@ -30,10 +29,6 @@ export const AdditionalInfo = () => {
           <Input {...register('text')} />
         </Field>
       </FieldSet>
-      <Stack gap={2}>
-        <Button type="submit">Next</Button>
-        <Button variant="secondary">Previous</Button>
-      </Stack>
-    </form>
+    </StepForm>
   );
 };

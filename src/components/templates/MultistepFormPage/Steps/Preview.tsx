@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, FieldSet, Icon, LinkButton, Stack, useStyles2 } from '@grafana/ui';
+import { FieldSet, Icon, LinkButton, useStyles2 } from '@grafana/ui';
 import { useFormContext } from 'react-hook-form';
 import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';
 import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
+import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
 
 type SectionData = {
   id: StepKey;
@@ -40,15 +41,16 @@ const fields: SectionData[] = [
 ];
 
 export const Preview = () => {
-  const { getValues, handleSubmit } = useFormContext<Data>();
+  const { getValues } = useFormContext<Data>();
   const styles = useStyles2(getStyles);
   const data = getValues();
+
   const onSubmit = (data: Data) => {
     console.log('saving data', data);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <StepForm step={StepKey.Step3} onDataSubmit={onSubmit}>
       <FieldSet label={'3. Preview'}>
         {fields.map((section) => {
           return (
@@ -75,11 +77,7 @@ export const Preview = () => {
           );
         })}
       </FieldSet>
-      <Stack gap={2}>
-        <Button type="submit">Save</Button>
-        <Button variant="secondary">Discard</Button>
-      </Stack>
-    </form>
+    </StepForm>
   );
 };
 
