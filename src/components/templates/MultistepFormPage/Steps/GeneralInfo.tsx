@@ -7,7 +7,7 @@ export const GeneralInfo = () => {
     <Form onSubmit={handleSubmit}>
       {({ register }) => {
         return (
-          <FieldSet label={'General Information'}>
+          <FieldSet label={'1. General Information'}>
             <Field label={'Name'}>
               <Input {...register('name')} />
             </Field>

@@ -7,7 +7,7 @@ export const Preview = () => {
     <Form onSubmit={handleSubmit}>
       {({ register }) => {
         return (
-          <FieldSet label={'Preview'}>
+          <FieldSet label={'3. Preview'}>
             <Field label={'Name'}>
               <Input {...register('name')} />
             </Field>

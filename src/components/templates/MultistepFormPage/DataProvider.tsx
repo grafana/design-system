@@ -27,6 +27,7 @@ const getActiveStep = () => {
 
   return step.replace('#', '');
 };
+
 /**
  * A wrapper component to provide data and action props to the child components .
  *  Not part of the template.
