@@ -1,13 +1,13 @@
 import React from 'react';
 import { Field, FieldSet, Form, Input } from '@grafana/ui';
 
-export const Step1 = () => {
+export const AdditionalInfo = () => {
   const handleSubmit = (data: any) => {};
   return (
     <Form onSubmit={handleSubmit}>
       {({ register }) => {
         return (
-          <FieldSet label={'Step 1'}>
+          <FieldSet label={'Additional Information'}>
             <Field label={'Name'}>
               <Input {...register('name')} />
             </Field>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 
 interface DataProviderProps {
@@ -6,9 +6,9 @@ interface DataProviderProps {
 }
 
 export const formSteps = [
-  { id: StepKey.Step1, name: 'Step 1' },
-  { id: StepKey.Step2, name: 'Step 2' },
-  { id: StepKey.Step3, name: 'Step 3' },
+  { id: StepKey.Step1, name: 'General information' },
+  { id: StepKey.Step2, name: 'Additional information' },
+  { id: StepKey.Step3, name: 'Preview' },
 ];
 
 const validationResults = {

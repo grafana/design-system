@@ -6,7 +6,7 @@ export type ValidationResult = {
 };
 
 export enum StepKey {
-  Step1 = 'step1',
-  Step2 = 'step2',
-  Step3 = 'step3',
+  Step1 = 'general',
+  Step2 = 'additional',
+  Step3 = 'preview',
 }
