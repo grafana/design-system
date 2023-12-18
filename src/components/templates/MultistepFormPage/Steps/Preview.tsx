@@ -36,6 +36,7 @@ const fields: SectionData[] = [
         required: false,
       },
       { id: 'text', label: 'Text input', required: false },
+      { id: 'slider', label: 'Slider input', required: false },
     ],
   },
 ];

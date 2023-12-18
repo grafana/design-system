@@ -17,8 +17,9 @@ export const defaultFormData: Data = {
   name: '',
   email: '',
   message: '',
-  radio: '',
+  radio: 'option1',
   text: '',
+  slider: 1,
 };
 
 export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {

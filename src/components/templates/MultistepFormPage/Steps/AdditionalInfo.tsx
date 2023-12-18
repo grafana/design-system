@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, FieldSet, Input, RadioButtonGroup } from '@grafana/ui';
+import { Field, FieldSet, Input, RadioButtonGroup, Slider } from '@grafana/ui';
 import { Controller, useFormContext } from 'react-hook-form';
 import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
 import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
@@ -20,6 +20,7 @@ export const AdditionalInfo = () => {
                 options={[
                   { label: 'Option 1', value: 'option1' },
                   { label: 'Option 2', value: 'option2' },
+                  { label: 'Option 3', value: 'option3' },
                 ]}
               />
             )}
@@ -27,6 +28,15 @@ export const AdditionalInfo = () => {
         </Field>
         <Field label={'Text input'}>
           <Input {...register('text')} />
+        </Field>
+        <Field label={'Slider'}>
+          <Controller
+            control={control}
+            name="slider"
+            render={({ field: { ref, ...field } }) => {
+              return <Slider {...field} min={1} max={3} step={1} included={false} />;
+            }}
+          />
         </Field>
       </FieldSet>
     </StepForm>

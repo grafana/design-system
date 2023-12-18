@@ -4,6 +4,7 @@ export type Data = {
   message: string;
   radio: string;
   text: string;
+  slider: number;
 };
 
 export type ValidationResult = {
