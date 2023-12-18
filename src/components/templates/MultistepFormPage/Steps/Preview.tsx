@@ -65,7 +65,12 @@ export const Preview = () => {
                 borderStyle={'solid'}
               >
                 <Text element={'h6'}>{section.label}</Text>
-                <LinkButton variant={'secondary'} fill={'text'} href={''} size={'sm'}>
+                <LinkButton
+                  variant={'secondary'}
+                  fill={'text'}
+                  href={`${window.location.pathname}#${section.id}`}
+                  size={'sm'}
+                >
                   Edit
                 </LinkButton>
               </Box>

@@ -25,7 +25,7 @@ export const defaultFormData: Data = {
 export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {
   const methods = useForm({ defaultValues: defaultFormData, reValidateMode: 'onBlur' });
   return (
-    <Stack grow={1} direction={'column'}>
+    <Stack direction={'column'}>
       <FormProvider {...methods}>
         <Stepper
           onStepChange={() => {}}
