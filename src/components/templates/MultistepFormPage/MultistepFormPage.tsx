@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stack } from '@grafana/ui';
 import { Stepper } from '@site/src/components/templates/MultistepFormPage/Stepper';
 import { Data, StepKey, ValidationResult } from '@site/src/components/templates/MultistepFormPage/types';
 import { Step } from '@site/src/components/templates/MultistepFormPage/Steps/Step';
 
 import { useForm, FormProvider } from 'react-hook-form';
+import { getValidationResults } from '@site/src/components/templates/MultistepFormPage/Steps/validation';
 
 interface MultistepFormPageProps {
   steps: Array<{ id: StepKey; name: string }>;
   validationResults: Record<StepKey, ValidationResult>;
   getStepUrl: (id?: string | number) => string;
   activeStep: StepKey;
+  setVisitedSteps: (steps: StepKey[]) => void;
+  visitedSteps: StepKey[];
 }
 
 export const defaultFormData: Data = {
@@ -22,8 +25,21 @@ export const defaultFormData: Data = {
   slider: 1,
 };
 
-export const MultistepFormPage = ({ steps, validationResults, getStepUrl, activeStep }: MultistepFormPageProps) => {
+export const MultistepFormPage = ({
+  steps,
+  getStepUrl,
+  activeStep,
+  setVisitedSteps,
+  visitedSteps,
+}: MultistepFormPageProps) => {
   const methods = useForm({ defaultValues: defaultFormData, reValidateMode: 'onBlur' });
+
+  useEffect(() => {
+    if (!visitedSteps.includes(activeStep)) {
+      setVisitedSteps([...visitedSteps, activeStep]);
+    }
+  }, [activeStep]);
+
   return (
     <Stack direction={'column'}>
       <FormProvider {...methods}>
@@ -31,8 +47,9 @@ export const MultistepFormPage = ({ steps, validationResults, getStepUrl, active
           onStepChange={() => {}}
           activeStep={activeStep}
           steps={steps}
-          validationResults={validationResults}
+          validationResults={getValidationResults(methods.getValues())}
           getNextUrl={getStepUrl}
+          visitedSteps={visitedSteps}
         />
         <Step activeStep={activeStep} />
       </FormProvider>

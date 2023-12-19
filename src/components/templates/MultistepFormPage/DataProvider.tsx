@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 
 interface DataProviderProps {
@@ -33,5 +33,13 @@ const getActiveStep = () => {
  *  Not part of the template.
  */
 export const DataProvider = ({ children }: DataProviderProps) => {
-  return React.cloneElement(children, { steps: formSteps, validationResults, getStepUrl, activeStep: getActiveStep() });
+  const [visitedSteps, setVisitedSteps] = useState<StepKey[]>([]);
+  return React.cloneElement(children, {
+    steps: formSteps,
+    validationResults,
+    getStepUrl,
+    activeStep: getActiveStep(),
+    visitedSteps,
+    setVisitedSteps,
+  });
 };

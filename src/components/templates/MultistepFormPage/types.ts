@@ -17,3 +17,9 @@ export enum StepKey {
   Step2 = 'additional',
   Step3 = 'preview',
 }
+
+export type SectionData = {
+  id: StepKey;
+  label: string;
+  items: Array<{ id: keyof Data; label: string; required: boolean }>;
+};

@@ -5,41 +5,7 @@ import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';
 import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
-
-type SectionData = {
-  id: StepKey;
-  label: string;
-  items: Array<{ id: keyof Data; label: string; required: boolean }>;
-};
-
-const fields: SectionData[] = [
-  {
-    id: StepKey.Step1,
-    label: 'General Information',
-    items: [
-      {
-        id: 'name',
-        label: 'Name',
-        required: true,
-      },
-      { id: 'email', label: 'Email', required: false },
-      { id: 'message', label: 'Message', required: false },
-    ],
-  },
-  {
-    id: StepKey.Step2,
-    label: 'Additional Information',
-    items: [
-      {
-        id: 'radio',
-        label: 'Radio group',
-        required: false,
-      },
-      { id: 'text', label: 'Text input', required: false },
-      { id: 'slider', label: 'Slider input', required: false },
-    ],
-  },
-];
+import { fields } from '@site/src/components/templates/MultistepFormPage/Steps/fields';
 
 export const Preview = () => {
   const { getValues } = useFormContext<Data>();
