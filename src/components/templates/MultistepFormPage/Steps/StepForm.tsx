@@ -9,10 +9,11 @@ import {
   isLastStep,
 } from '@site/src/components/templates/MultistepFormPage/utils/steps';
 
-interface Props extends PropsWithChildren<any> {
-  step: StepKey;
-  onDataSubmit?: (data: Data) => void;
-}
+interface Props
+  extends PropsWithChildren<{
+    step: StepKey;
+    onDataSubmit?: (data: Data) => void;
+  }> {}
 
 export const StepForm = ({ children, step, onDataSubmit }: Props) => {
   const { handleSubmit } = useFormContext<Data>();
