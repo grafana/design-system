@@ -14,10 +14,19 @@ import { DataProvider } from '@site/src/components/templates/MultistepFormPage/D
 
 import MultistepFormPageRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/MultistepFormPage';
 import types from '!!raw-loader!@site/src/components/templates/MultistepFormPage/types';
+import StepperRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Stepper';
+import StepRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/Step';
+import StepFormRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/StepForm';
+import GeneralInfoRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/GeneralInfo';
+import AdditionalInfoRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/AdditionalInfo';
+import PreviewRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/Preview';
+import fieldsRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/Steps/fields';
+import validationRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/utils/validation';
+import stepsRaw from '!!raw-loader!@site/src/components/templates/MultistepFormPage/utils/steps';
 
 ## Overview
 
-[//]: # 'High-level description of the template'
+The multistep form (wizard) pattern helps people to successfully finish complex flows, usually related to configuration or setup, by splitting them into steps. They limit cognitive load thanks to functional or semantic grouping of information and steps, allow faster error recovery and allow for session interruptions by enabling people to save their progress and return easily to where they left off.
 
 <Page title="Feature name" subTitle="Further description of the feature and links to docs." height={700}>
   <DataProvider>
@@ -28,12 +37,34 @@ import types from '!!raw-loader!@site/src/components/templates/MultistepFormPage
 ## Source code
 
 <CodeBlock language="tsx">{MultistepFormPageRaw}</CodeBlock>
-
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
+<CodeCollapse label="Stepper.tsx">{StepperRaw}</CodeCollapse>
+<CodeCollapse label="Step.tsx">{StepRaw}</CodeCollapse>
+<CodeCollapse label="StepForm.tsx">{StepFormRaw}</CodeCollapse>
+<CodeCollapse label="GeneralInfo.tsx">{GeneralInfoRaw}</CodeCollapse>
+<CodeCollapse label="AdditionalInfo.tsx">{AdditionalInfoRaw}</CodeCollapse>
+<CodeCollapse label="Preview.tsx">{PreviewRaw}</CodeCollapse>
+<CodeCollapse label="fields.ts">{fieldsRaw}</CodeCollapse>
+<CodeCollapse label="validation.ts">{validationRaw}</CodeCollapse>
+<CodeCollapse label="steps.ts">{stepsRaw}</CodeCollapse>
 
 ## Usage
 
-[//]: # "Template's usage guidelines"
+### When to use
+
+A wizard pattern should be used for interactions that:
+
+- Are complex or long.
+- Can be divided into logical steps.
+- Need to be performed in a specific sequence.
+- Have a clear beginning and end (start with `Add`, end with `Save`).
+- Are related to completing a specific action, such as creating an object, configuring settings, etc.
+
+### When not to use
+
+- For short forms.
+- For forms that cannot be logically divided into steps.
+- For product tours.
 
 ## Figma designs (internal use only)
 
