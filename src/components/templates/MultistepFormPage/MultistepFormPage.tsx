@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import { Stack } from '@grafana/ui';
 import { Stepper } from '@site/src/components/templates/MultistepFormPage/Stepper';
-import { Data, StepKey, ValidationResult } from '@site/src/components/templates/MultistepFormPage/types';
+import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 import { Step } from '@site/src/components/templates/MultistepFormPage/Steps/Step';
 
 import { useForm, FormProvider } from 'react-hook-form';
-import { getValidationResults } from '@site/src/components/templates/MultistepFormPage/Steps/validation';
+import { getValidationResults } from '@site/src/components/templates/MultistepFormPage/utils/validation';
 
 interface MultistepFormPageProps {
   steps: Array<{ id: StepKey; name: string }>;
-  validationResults: Record<StepKey, ValidationResult>;
   getStepUrl: (id?: string | number) => string;
   activeStep: StepKey;
   setVisitedSteps: (steps: StepKey[]) => void;
