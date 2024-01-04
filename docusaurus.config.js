@@ -4,7 +4,32 @@ const baseConfig = require('./docusaurus.config.base');
 const config = {
   ...baseConfig,
   url: 'https://grafana.com',
-  baseUrl: '/design-system/',
+  baseUrl: 'developers/saga/',
+
+  themeConfig: {
+    ...baseConfig.themeConfig,
+    navbar: {
+      ...baseConfig.themeConfig.navbar,
+      items: [
+        ...baseConfig.themeConfig.navbar.items,
+        {
+          href: 'https://grafana.com/developers',
+          label: 'Dev Portal Home',
+          position: 'right',
+        },
+      ],
+    },
+  },
+
+  customFields: {
+    rudderStackTracking: {
+      url: 'https://rs.grafana.com',
+      writeKey: '1sBAgwTlZ2K0zTzkM8YTWorZI00',
+      configUrl: 'https://rsc.grafana.com',
+      sdkUrl: 'https://rsdk.grafana.com',
+    },
+    canSpamUrl: 'https://grafana.com/canspam',
+  },
 };
 
 module.exports = config;

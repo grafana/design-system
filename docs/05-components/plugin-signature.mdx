@@ -1,0 +1,23 @@
+---
+title: Plugin Signature
+description: Grafana Labs Plugin Signature component
+draft: true
+---
+
+# Plugin Signature Badge <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/data-display-pluginsignaturebadge--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+The Plugin Signature Badge can be found in each information plugin card of the configuration plugins panel (Grafana menu > Configuration > Plugins). This is a security measure to make sure plugins haven't been tampered with. Upon loading, Grafana checks to see the plugin signature status.
+
+<iframe
+  src="https://developers.grafana.com/ui/latest/index.html?path=/story/data-display-pluginsignaturebadge--basic&full=1&shortcuts=false&singleStory=true"
+  width="100%"
+  height="500px"
+></iframe>
+
+## Badges
+
+1. Core: this badge indicates that the plugin has been built into Grafana.
+2. Signed: the plugin's signature was successfully verified.
+3. Invalid signature: this plugin has a invalid signature.
+4. Modified signature: this plugin has changed since it was signed. This may indicate malicious intent.
+5. Unsigned: the plugin is not signed. In this case, as upon loading Grafana checks the plugins signature, Grafana will not load or start it. Furthermore, it will write an error message to the server log.

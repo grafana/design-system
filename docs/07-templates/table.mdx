@@ -1,0 +1,40 @@
+---
+title: Table Page
+description: Patterns for displaying tabular data
+hide_table_of_contents: true
+draft: true
+---
+
+import { Page } from '@site/src/components/templates/Page/Page';
+import CodeBlock from '@theme/CodeBlock';
+import TablePage from '@site/src/components/templates/TablePage/TablePage';
+import { DataProvider } from '@site/src/components/templates/TablePage/DataProvider';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+
+import TablePageRaw from '!!raw-loader!@site/src/components/templates/TablePage/TablePage';
+import useColumns from '!!raw-loader!@site/src/components/templates/TablePage/useColumns';
+import types from '!!raw-loader!@site/src/components/templates/TablePage/types';
+
+A page with a table is a common pattern in Grafana. This template shows how to use the `Table` component to display data in a table, combined with the filtering and sorting functionality.
+
+<Page title={'Users'} subTitle={'Manage users in Grafana'} height={700}>
+  <DataProvider>
+    <TablePage />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{TablePageRaw}</CodeBlock>
+
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+<CodeCollapse label="useColumns.tsx">{useColumns}</CodeCollapse>
+
+## Usage
+
+- The page actions should be located at the top of the page, above the table.
+- If filters are present, the primary action should be located after the filters, on the right side of the page.
+
+## Figma designs
+
+- [Table with filters](https://www.figma.com/file/Jk9PWNElaPZh2oSBWOxoWm/Joseph-Breitreiter-%7C-List-View---In-Progress?type=design&node-id=534-945&mode=design&t=HqHSSHYyzLKj7kaH-0)

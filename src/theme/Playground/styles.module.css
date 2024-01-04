@@ -2,6 +2,10 @@
   margin-bottom: var(--ifm-leading);
   box-shadow: var(--ifm-global-shadow-lw);
   overflow: hidden;
+  /* Specific line height needed for Switch alignment
+  TODO: Fix in the Switch component by giving its wrapper a fixed line-height
+  */
+  line-height: 21px;
 }
 
 .playgroundContainer > *:first-child {
@@ -69,6 +73,7 @@
 
 .codeContainer {
   position: relative;
+  background-color: var(--background-secondary);
 
   &:hover {
     .copyButton {

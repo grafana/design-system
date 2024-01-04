@@ -76,7 +76,7 @@ const baseConfig = {
       navbar: {
         logo: {
           alt: 'Design System logo',
-          href: 'About/overview',
+          href: 'about/overview',
           src: '/img/logo_with_text.png',
         },
         items: [

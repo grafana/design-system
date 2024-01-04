@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v4.0.0
       # Install dependencies
       - run: npm install
       # Transform Figma Tokens JSON to something Style Dictionary can read, run Style Dictionary
