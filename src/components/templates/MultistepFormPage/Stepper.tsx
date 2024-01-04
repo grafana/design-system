@@ -1,5 +1,5 @@
 import { css, cx } from '@emotion/css';
-import React from 'react';
+import React, { MouseEvent } from 'react';
 
 import { GrafanaTheme2 } from '@grafana/data';
 import { useStyles2, Icon } from '@grafana/ui';
@@ -13,7 +13,7 @@ export interface Step<T> {
 
 export interface Props<T extends string | number> {
   activeStep?: T;
-  onStepChange: (step: T) => void;
+  onStepChange: (step: T, event: MouseEvent<HTMLAnchorElement>) => void;
   reportId?: string;
   visitedSteps?: T[];
   steps: Array<Step<T>>;
@@ -53,7 +53,7 @@ export function Stepper<T extends string | number>({
             {successField && <Icon name={'check'} size={'xl'} className={styles.successItem} />}
             {warnField && <Icon name={'exclamation-triangle'} className={styles.warnItem} />}
             <a
-              onClick={!isActive ? () => onStepChange(step.id) : undefined}
+              onClick={!isActive ? (event) => onStepChange(step.id, event) : undefined}
               href={getNextUrl(step.id)}
               className={styles.link}
             >

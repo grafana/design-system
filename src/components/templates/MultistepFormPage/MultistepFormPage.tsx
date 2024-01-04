@@ -31,7 +31,7 @@ export const MultistepFormPage = ({
   setVisitedSteps,
   visitedSteps,
 }: MultistepFormPageProps) => {
-  const methods = useForm({ defaultValues: defaultFormData, reValidateMode: 'onBlur' });
+  const methods = useForm({ defaultValues: defaultFormData, mode: 'onBlur' });
 
   useEffect(() => {
     if (!visitedSteps.includes(activeStep)) {
@@ -43,7 +43,12 @@ export const MultistepFormPage = ({
     <Stack direction={'column'}>
       <FormProvider {...methods}>
         <Stepper
-          onStepChange={() => {}}
+          // Prevent the user from moving to the next step if there are form errors
+          onStepChange={(_, event) => {
+            if (!!Object.keys(methods.formState.errors).length) {
+              event?.preventDefault();
+            }
+          }}
           activeStep={activeStep}
           steps={steps}
           validationResults={getValidationResults(methods.getValues())}
