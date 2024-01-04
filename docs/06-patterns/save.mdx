@@ -1,0 +1,140 @@
+---
+title: Save
+description: Saving within Grafana is a multi-tiered pattern that varies depending on the required amount of friction and importance of the item being saved.
+hide_title: true
+---
+
+import { Badge, InfoBox } from '@grafana/ui';
+
+# Save <Badge text='ready' color='green'></Badge>
+
+Saving within Grafana is a multi-tiered pattern that varies depending on the required amount of friction (see: [Design Principle: Tasteful Friction](/Foundations/design-principles#tasteful-friction)) and importance of the item being saved.
+
+## Tiers
+
+To ensure the appropriate save pattern is used, we’ve provided definitions and use cases for each below
+
+### Autosave
+
+This pattern has the least amount of user friction from all save patterns. The user does not have to explicitly tell the system to save, the system automatically saves the value on a change, waiting a specified amount of time to trigger the request. Autosave relies on an inline toast notification to indicate to users that the save was successful.
+
+#### Implementation
+
+Autosave fields are only to be implemented in areas that are considered low impact. With this being such a friction-free pattern, it’s important to only enable this in areas where users will do no harm. Things like changing team or display names are great candidates for this component. Because currently Grafana does not have a concept of “undo,” only uses autosave for items that a user can easily undo manually.
+
+Each autosave field is required to come with inline validation and a loading state to ensure that users are aware of the system updating their adjustments. Each field will also check for changes before saving to minimize the number of saves being pushed. Note that this is the newest save pattern for Grafana, and so adding loading and invalid states is a work in progress for some input types.
+
+#### Usage
+
+**Do**
+
+- Use autosave when the changes aren’t sensitive and don’t need added friction.
+- Use autosave when the user expects an instant response to the change they have made.
+- Ensure an inline toast appears to confirm the save has happened.
+
+**Don't**
+
+- Use autosave on a page that also uses other save patterns
+- Use autosave for an action that will affect other users (default language for orgs, dashboard changes)
+
+### Inline save
+
+The inline save pattern is leveraged inside of forms and provides users with a button to trigger the system to save and update various user inputs that have been edited or updated.
+
+#### Implementation
+
+Inline save should be used in areas that require an explicit save action for an object. In particular, this pattern is helpful for cases where entities are displayed in rows and users are editing one or more rows.
+
+#### Usage
+
+**Do**
+
+- Enable the save button after the field has been changed.
+- Show the save action at all times, even if it is disabled.
+- Show the unsaved changes warning when users navigate away from an unsaved change.
+- Show a toast message to indicate a successful save.
+
+**Don't**
+
+- Enable the save button even when there are no unsaved changes.
+- Hide the save button behind additional clicks or until something changes.
+- Show additional unneeded save buttons that don’t act on the entire page.
+
+### Apply and save
+
+‘Apply’ lets the user test the result of the changes made but does not save that value, which allows users to preview their changes/updates. An unsaved warning should be shown when the user wants to move to another page without saving.
+
+‘Save’ changes the values permanently. The success or the error while saving should be shown to the user through a toast.
+
+If a user navigates away after they have used ‘Apply’ but have not yet used ‘Save,’ an unsaved changes warning should be used.
+
+#### Implementation
+
+Apply and save should be used in areas where users might want to preview their changes before actually committing to them. This pattern should be used in areas that are medium- to medium-high impact. In Grafana, this pattern is most commonly used with dashboard editing. In order to be helpful to users, there should be a strong indication when something has been applied but is still unsaved, vs something that has already been saved.
+
+**Do**
+
+- Show the unsaved changes warning when users have applied but not yet saved.
+- Show a toast message to indicate a successful save.
+- Allow some kind of cancellation of the change so that users can back out of their applied changes before saving.
+- Ideally, disable the Apply button unless there has been a change; also disable the Save button unless there has been a change.
+
+**Don’t**
+
+- Save when the user has clicked Apply.
+
+### Page save
+
+Most often seen in forms, page save is usually indicated with a primary save button that will save all form contents when clicked. An unsaved warning should be shown when the user wants to move to another page without saving.
+
+‘Save’ changes the values permanently. The success or the error while saving should be shown to the user through a toast. If a user navigates away after they have used ‘Apply’ but have not yet used ‘Save’, an unsaved changes warning should be used.
+
+#### Implementation
+
+Page save should be used in areas that are medium impact. Most often seen in forms, page save is usually indicated with a primary save button that will save all form contents when clicked. This pattern is for saving the page, not the section of the page. If you want to save only a section of a page, consider using in-line save instead.
+
+**Do**
+
+- Enable the save button after something on the page has been changed.
+- Show the save action at all times, even if it is disabled.
+- Show the unsaved changes warning when users navigate away from an unsaved change.
+- Show a toast message to indicate a successful save.
+
+**Don’t**
+
+- Enable the save button even when there are no unsaved changes.
+- Hide the save button behind additional clicks or until something changes.
+- Show multiple save buttons per page.
+
+### Dialog save
+
+The pattern with the most friction, this pattern requires the entire focus of the user to ensure they are fully aware of the changes they are submitting. The changes made have rippling effects that make it necessary for the user to acknowledge and accept the resulting consequences of the update.
+
+#### Implementation
+
+Dialog save is most often triggered in these two ways:
+
+1. **Unsaved changes warning**: when users navigate away from unsaved work, display the unsaved change warning dialog to give users the option to save or discard their changes before continuing.
+2. **High impact changes**: when users save a critical change, display a confirmation modal that describes the impact of their changes and allows them to save or discard their changes.
+
+Problems that come up (will probably turn this into a do/don’t section):
+Often called from an unsaved warning - which doesn’t always appear when expected
+
+**Do**
+
+- Show the unsaved changes warning upon any navigation that will cause users to lose their changes.
+- Clearly describe the scale or scope of the high impact changes. For example: “This change will affect 75 users. Are you sure you want to save?”
+
+**Don’t**
+
+- Just assume the users will want to save as they navigate away. **The choice is theirs, not ours.**
+
+### Unsaved changes
+
+If a user tries to navigate away from a page that has unsaved changes, an alert or a modal must be used to warn them that their changes will be lost unless they save. This pattern happens as a consequence of an indirect user’s action, such as when a user closes a tab, uses the browser back button, or clicks some other navigation element. See Dialog save for more details.
+
+### Redirecting
+
+When creating new content like users, teams, or even larger entities such as reports or SLOs, you should redirect the user to the content they just created at the end of the creation flow. Be sure to be consistent with the redirection actions on a particular page.
+
+The exception here is in the panel editor; after saving changes, you should redirect to the dashboard so that users can see their changes in the context of the whole dashboard. Note that panel edit’s behavior is a work in progress so this pattern shouldn’t be reused at this time.

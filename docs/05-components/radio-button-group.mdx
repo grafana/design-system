@@ -1,0 +1,129 @@
+---
+title: RadioButtonGroup
+description: RadioButtonGroup is used to select a single value from multiple mutually exclusive options using a horizontal tab-like layout.
+hide_title: true
+---
+
+# RadioButtonGroup <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/forms-radiobuttongroup--radio-buttons' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+
+RadioButtonGroup is used to select a single value from multiple mutually exclusive options using a horizontal tab-like layout.
+
+<iframe
+  src="https://developers.grafana.com/ui/latest/index.html?path=/story/forms-radiobuttongroup--radio-buttons&full=1&shortcuts=false&singleStory=true"
+  width="100%"
+  height="500px"
+></iframe>
+
+## When to use
+
+Use `RadioButtonGroup` for mutually exclusive selections if there are up to four options available. This is because the `RadioButtonGroup` cannot have more than one row and should still accommodate small resolutions. For a mutually exclusive selection of more than four options, use `Select` component or the `RadioButtonList` component.
+
+Radio buttons can only exist in this type of group. If you want one single option, it's better to use `Switch` instead. To offer multiple choices within the same group or context which are not mutually exclusive, use `Checkbox` instead.
+
+## Usage
+
+### Basic radio group
+
+```tsx live
+function Basic() {
+  const [value, setValue] = useState<string>();
+  return (
+    <RadioButtonGroup
+      options={[
+        { label: 'Prometheus', value: 'prometheus' },
+        { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+        { label: 'Elastic', value: 'elastic' },
+      ]}
+      value={value}
+      onChange={setValue}
+    />
+  );
+}
+```
+
+### Disabled options
+
+You can disable some options by passing them to the `disabledOptions` prop.
+Keep in mind the `disabledOptions` are compared with options' values by the `===` operator.
+
+```tsx live
+function WithDisabledOptions() {
+  const [value, setValue] = useState('graphite');
+  return (
+    <RadioButtonGroup
+      options={[
+        { label: 'Prometheus', value: 'prometheus' },
+        { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+        { label: 'Elastic', value: 'elastic' },
+      ]}
+      value={value}
+      disabledOptions={['prometheus', 'elastic']}
+      onChange={setValue}
+    />
+  );
+}
+```
+
+The whole control can be disabled with the `disabled` prop.
+
+```tsx live
+function Disabled() {
+  const [value, setValue] = useState('prometheus');
+  return (
+    <RadioButtonGroup
+      disabled
+      options={[
+        { label: 'Prometheus', value: 'prometheus' },
+        { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+        { label: 'Elastic', value: 'elastic' },
+      ]}
+      value={value}
+      onChange={setValue}
+    />
+  );
+}
+```
+
+### Size
+
+Specify the size `sm` for a smaller, more compact control. The small variant is commonly used inline in other elements, such as headers. Avoid using `sm` in forms.
+
+```tsx live
+function WithSize() {
+  const [value, setValue] = useState('prometheus');
+  return (
+    <RadioButtonGroup
+      size="sm"
+      options={[
+        { label: 'Prometheus', value: 'prometheus' },
+        { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+        { label: 'Elastic', value: 'elastic' },
+      ]}
+      value={value}
+      onChange={setValue}
+    />
+  );
+}
+```
+
+### Width
+
+By default `RadioButtonGroup` will fit its width to its contents. Specify the `fullWidth` prop to make the control span the entire width of the container.
+
+```tsx live
+function FullWidth() {
+  const [value, setValue] = useState('prometheus');
+  return (
+    <RadioButtonGroup
+      fullWidth
+      options={[
+        { label: 'Prometheus', value: 'prometheus' },
+        { label: 'Graphite', value: 'graphite', icon: 'cloud' },
+        { label: 'Elastic', value: 'elastic' },
+      ]}
+      value={value}
+      onChange={setValue}
+    />
+  );
+}
+```

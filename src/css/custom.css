@@ -5,6 +5,9 @@
  */
 
 @import url('./theme.css');
+@import url('./reset.css');
+@import url('./normalize.css');
+@import 'rc-slider/assets/index.css';
 
 @font-face {
   font-family: Inter;
@@ -222,7 +225,7 @@ html[data-theme='dark'] {
 }
 
 .pagination-nav button {
-  width: calc(var(--spacing) * 27px);
+  min-width: calc(var(--spacing) * 27px);
 }
 
 .pagination-nav button span {
@@ -299,7 +302,10 @@ main {
 }
 
 #about #content #cards-large .card .content {
-  margin: -5px 0 0 70px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 #about #content #cards-large img {
@@ -315,6 +321,7 @@ main {
   font-size: 14px;
   line-height: 20px;
   margin: 2px 0 30px 0;
+  flex: 1;
 }
 
 #about #content #cards-large .card a {
@@ -365,6 +372,18 @@ main {
 
 .two-images-comparison div:first-of-type {
   margin-right: calc(var(--spacing) * 2.5px);
+}
+
+@media screen and (max-width: 520px) {
+  #about #content #cards,
+  #about #content #cards-large {
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2.5px);
+
+    & > .card {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -425,40 +444,66 @@ table th {
   text-align: left;
   font-weight: 500;
   border: none;
+  font-size: 14px;
 }
 
 table thead tr {
   border: none;
 }
 
+table th,
+table td {
+  padding: calc(var(--spacing) * 1px);
+}
+
+button,
+html input[type='button'],
+input[type='submit'] {
+  cursor: pointer;
+}
+
 /* Component Status Page */
 
-.ready-to-use, .planned, .in-progress, .to-do, .not-doing, .deprecated, .n-a   { 
+.ready-to-use,
+.planned,
+.in-progress,
+.to-do,
+.not-doing,
+.deprecated,
+.n-a {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   gap: calc(var(--spacing) * 1px);
 }
+
 .ready-to-use > div {
   color: var(--ifm-color-success);
 }
+
 .n-a > div {
   color: var(--ifm-color-warning);
 }
+
 .in-progress > div {
   color: var(--ifm-color-info);
 }
+
 .not-doing > div,
 .deprecated > div {
   color: var(--ifm-color-danger);
 }
+
 .planned > div {
   color: var(--ifm-color-secondary);
 }
 
-/* */
-
 input[type='checkbox'] + label {
   display: inline-block;
+}
+
+.page a {
+  text-decoration: none;
+  color: var(--text-primary);
 }
