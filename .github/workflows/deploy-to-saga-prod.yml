@@ -26,7 +26,7 @@ jobs:
         run: yarn build --config docusaurus.config.js
 
       - id: 'auth'
-        uses: 'google-github-actions/auth@v1'
+        uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
       - name: Deploy to Developer Portal Bucket
