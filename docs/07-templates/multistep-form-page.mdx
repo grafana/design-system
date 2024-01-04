@@ -6,7 +6,6 @@ hide_table_of_contents: true
 draft: true
 ---
 
-import CodeBlock from '@theme/CodeBlock';
 import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
 import MultistepFormPage from '@site/src/components/templates/MultistepFormPage/MultistepFormPage';
@@ -28,6 +27,8 @@ import stepsRaw from '!!raw-loader!@site/src/components/templates/MultistepFormP
 
 The multistep form (wizard) pattern helps people to successfully finish complex flows, usually related to configuration or setup, by splitting them into steps. They limit cognitive load thanks to functional or semantic grouping of information and steps, allow faster error recovery and allow for session interruptions by enabling people to save their progress and return easily to where they left off.
 
+**Note:** To avoid large setup and extra libraries, this template is using `window.location.hash` for step navigation . In Grafana, we use `locationService` from `@grafana/runtime` to handle the routing navigation.
+
 <Page title="Feature name" subTitle="Further description of the feature and links to docs." height={700}>
   <DataProvider>
     <MultistepFormPage />
@@ -36,7 +37,9 @@ The multistep form (wizard) pattern helps people to successfully finish complex 
 
 ## Source code
 
-<CodeBlock language="tsx">{MultistepFormPageRaw}</CodeBlock>
+<CodeCollapse label="MultistepFormPage.tsx" isOpen>
+  {MultistepFormPageRaw}
+</CodeCollapse>
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
 <CodeCollapse label="Stepper.tsx">{StepperRaw}</CodeCollapse>
 <CodeCollapse label="Step.tsx">{StepRaw}</CodeCollapse>

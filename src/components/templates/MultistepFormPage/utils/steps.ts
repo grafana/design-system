@@ -1,5 +1,5 @@
 /**
- * This template is built using window.location.hash to store the current step.
+ * This template is using window.location.hash to store the current step.
  * In Grafana, we use react-router, but for this template we don't want to add
  * the complexity of a router. Instead, we use the hash to store the current step.
  */
