@@ -17,6 +17,7 @@ interface Props
 
 export const StepForm = ({ children, step, onDataSubmit }: Props) => {
   const { handleSubmit } = useFormContext<Data>();
+
   const onSubmit = (data: Data) => {
     if (!isLastStep(step)) {
       goToNextStep(step);

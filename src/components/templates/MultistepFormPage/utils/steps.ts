@@ -19,7 +19,7 @@ export const getPreviousStep = (step: StepKey) => {
 };
 
 export const goToStep = (step: StepKey) => {
-  window.location.hash = '#' + getPreviousStep(step);
+  window.location.hash = '#' + step;
 };
 
 export const goToNextStep = (step: StepKey) => {
