@@ -1,0 +1,38 @@
+---
+title: Form Page
+description: Template for FormPage
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import FormPage from '@site/src/components/templates/FormPage/FormPage';
+
+import FormPageRaw from '!!raw-loader!@site/src/components/templates/FormPage/FormPage';
+import types from '!!raw-loader!@site/src/components/templates/FormPage/types';
+
+## Overview
+
+A page with a simple form, used to collect data from users. The `Form` component is a wrapper for [React Hook Form](https://react-hook-form.com/). The form can have an optional expandable section when the user needs to provide more information. The fields in the expandable section should be optional.
+
+<Page title={'Feature name'} subTitle={'Further description of the feature and links to docs.'} height={700}>
+  <FormPage />
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{FormPageRaw}</CodeBlock>
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+
+## Usage
+
+- Use a form page for short forms. Consider using multistep forms for complex cases with many fields.
+- Use the expandable section sparingly. It should only be used when the user needs to provide additional information. The fields in the expandable section should be optional.
+- Mark only the field as required by providing a `required` prop to the `Field` component. Do not use the `required` prop on the `Form` component.
+- Show a success or error banner after form submit using [AppEvents](https://developers.grafana.com/ui/canary/index.html?path=/docs/overlays-alert-toast--docs#dos-1).
+
+## Figma designs
+
+[//]: # 'Links to the applicable designs in Figma'

@@ -1,0 +1,39 @@
+---
+title: {{templateName}}
+description: Template for {{templateName}}
+hide_table_of_contents: true
+draft: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { Page } from '@site/src/components/templates/Page/Page';
+import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
+import {{templateName}} from '@site/src/components/templates/{{properCase templateName}}/{{properCase templateName}}';
+import { DataProvider } from '@site/src/components/templates/{{properCase templateName}}/DataProvider';
+
+import {{templateName}}Raw from '!!raw-loader!@site/src/components/templates/{{properCase templateName}}/{{properCase templateName}}';
+import types from '!!raw-loader!@site/src/components/templates/{{properCase templateName}}/types';
+
+## Overview
+[//]: # 'High-level description of the template'
+
+<Page title="Feature name" subTitle="Further description of the feature and links to docs." height={700}>
+  <DataProvider>
+    <{{templateName}} />
+  </DataProvider>
+</Page>
+
+## Source code
+
+<CodeBlock language="tsx">{{append '{'}}{{templateName}}Raw{{append '}'}}</CodeBlock>
+
+<CodeCollapse label="types.ts">{types}</CodeCollapse>
+
+
+## Usage
+
+[//]: # "Template's usage guidelines"
+
+## Figma designs (internal use only)
+
+[//]: # "Links to the applicable designs in Figma"

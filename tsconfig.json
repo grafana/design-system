@@ -1,5 +1,5 @@
 {
-  "extends": ["@grafana/tsconfig/base.json", "@tsconfig/docusaurus/tsconfig.json"],
+  "extends": ["@tsconfig/docusaurus/tsconfig.json", "@grafana/tsconfig/base.json"],
   "compilerOptions": {
     "jsx": "react",
     "baseUrl": ".",
@@ -11,7 +11,9 @@
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "preserveSymlinks": true,
     "lib": ["es2021", "dom"],
-    "types": ["@docusaurus/theme-live-codeblock"]
+    "types": ["@docusaurus/theme-live-codeblock"],
+
+
   },
   "exclude": ["node_modules", "build", ".docusaurus"]
 }
