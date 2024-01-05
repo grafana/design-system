@@ -5,7 +5,6 @@ hide_table_of_contents: true
 draft: true
 ---
 
-import CodeBlock from '@theme/CodeBlock';
 import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
 import ListPage from '@site/src/components/templates/ListPage/ListPage';
@@ -26,7 +25,9 @@ A page that displays a list of items. Each item is a link to a new page where ei
 
 ## Source code
 
-<CodeBlock language="tsx">{ListPageRaw}</CodeBlock>
+<CodeCollapse label="ListPage.tsx" isOpen>
+  {ListPageRaw}
+</CodeCollapse>
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
 
 ## Usage
@@ -35,6 +36,10 @@ A page that displays a list of items. Each item is a link to a new page where ei
 - Use the `Card` component to create a list item.
 - For showing the empty state, use the `EmptySearchResult` component.
 - If filters are present, the primary action should be located after the filters, on the right side of the page.
+
+## Visual guidelines
+
+<Image src={'/img/templates/table.png'} alt="Anatomy of the list view" />
 
 ## Figma designs
 

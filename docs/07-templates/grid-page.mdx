@@ -5,7 +5,6 @@ hide_table_of_contents: true
 draft: true
 ---
 
-import CodeBlock from '@theme/CodeBlock';
 import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
 import GridPage from '@site/src/components/templates/GridPage/GridPage';
@@ -26,8 +25,9 @@ A page with a list of card items in a grid layout. Each card is a link to a new 
 
 ## Source code
 
-<CodeBlock language="tsx">{GridPageRaw}</CodeBlock>
-
+<CodeCollapse label="GridPage.tsx" isOpen>
+  {GridPageRaw}
+</CodeCollapse>
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
 
 ## Usage
@@ -36,6 +36,10 @@ A page with a list of card items in a grid layout. Each card is a link to a new 
 - Use the `Card` component to create a grid item.
 - To make the layout responsive, use the `Grid` component with the `minColumnWidth` prop.
 - For a fixed number of columns, use the `Grid` component with the `columns` prop.
+
+## Visual guidelines
+
+<Image src={'/img/templates/table.png'} alt="Anatomy of the list view" />
 
 ## Figma designs
 
