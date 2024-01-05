@@ -19,3 +19,6 @@ steps:
     commands:
       - yarn install
       - yarn build
+---
+kind: signature
+hmac: 5cf7ae4c8af697ef624610f6bf42665632be9e7fdbf88ed1c134fcd96bf834b2

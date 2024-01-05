@@ -7,7 +7,6 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import type { Props as PlaygroundProps } from '@theme/Playground';
 import CopyButton from '@theme/CodeBlock/CopyButton';
-
 import styles from './styles.module.css';
 
 function Header({ children }: PropsWithChildren) {
@@ -71,7 +70,6 @@ export default function Playground({ children, transformCode, ...props }: Playgr
   const code = children.replace(/\n$/, '');
   return (
     <div className={styles.playgroundContainer}>
-      {/* @ts-expect-error: type incompatibility with refs */}
       <LiveProvider
         code={code}
         noInline={noInline}

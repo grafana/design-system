@@ -13,17 +13,17 @@ type StatusChildren = {
 };
 interface Status {
   id: string;
-  status: 'Done' | 'Planned' | 'In Progress' | 'To Do' | 'Not Doing' | 'Deprecated' | 'N/A';
+  status: 'Ready To Use' | 'Planned' | 'In Progress' | 'To Do' | 'Not Doing' | 'Deprecated' | 'N/A';
   icon: IconName;
   className: string;
 }
 
 const STATUSES: Status[] = [
   {
-    id: 'done',
-    status: 'Done',
+    id: 'ready-to-use',
+    status: 'Ready To Use',
     icon: 'check-circle',
-    className: 'done',
+    className: 'ready-to-use',
   },
   {
     id: 'planned',
@@ -68,12 +68,6 @@ const columns = [
     id: 'componentName',
     title: 'Component',
     header: 'Component name',
-  },
-  {
-    id: 'generalStatus',
-    title: 'General',
-    header: 'General status',
-    cell: StatusCell
   },
   {
     id: 'figmaStatus',
