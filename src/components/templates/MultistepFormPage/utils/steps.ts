@@ -19,7 +19,9 @@ export const getPreviousStep = (step: StepKey) => {
 };
 
 export const goToStep = (step: StepKey) => {
-  window.location.hash = '#' + step;
+  if (typeof window !== 'undefined') {
+    window.location.hash = '#' + step;
+  }
 };
 
 export const goToNextStep = (step: StepKey) => {
@@ -43,6 +45,9 @@ export const getStepUrl = (step: StepKey) => {
 };
 
 export const getActiveStep = () => {
-  const step = window.location.hash || '#step1';
-  return step.replace('#', '');
+  if (typeof window !== 'undefined') {
+    const step = window.location.hash || '#step1';
+    return step.replace('#', '');
+  }
+  return 'step1';
 };
