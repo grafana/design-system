@@ -4,6 +4,7 @@ import MDXComponents from '@theme-original/MDXComponents';
 import { Badge, Icon } from '@grafana/ui';
 import { StorybookLink } from '@site/src/components/StorybookLink';
 import { ComponentEmbed } from '@site/src/components/ComponentEmbed';
+import { Image } from '@site/src/components/Image';
 
 declare global {
   interface Window {
@@ -24,4 +25,5 @@ export default {
   Icon,
   StorybookLink,
   ComponentEmbed,
+  Image,
 };

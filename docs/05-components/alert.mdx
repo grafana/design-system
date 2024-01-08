@@ -1,7 +1,6 @@
 ---
 title: Alert
-description: Grafana Labs Alert component
-keywords: ['Grafana', 'Labs', 'alert', 'component']
+description: Alert is a fundamental element used for displaying important messages or notifications to users.
 ---
 
 # Alert <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/overlays-alert-inlinebanner--basic'/>
@@ -15,9 +14,11 @@ Use Alerts to inform users of updates, changes, or issues. Providing users feedb
 ## Usage
 
 ### Task-Generated
+
 Task-generated Alerts are triggered based on the behaviours of the user and provide quick, direct feedback. This type of Alert should be placed closely to the area the user is actively working in.
 
 ### System-Generated
+
 System-generated Alerts are triggered by the system, unconnected to the actions of a user. Use these Alerts to provide explanation of system status or other events that have occurred elsewhere.
 
 ## Implementation / Options
@@ -25,50 +26,59 @@ System-generated Alerts are triggered by the system, unconnected to the actions 
 ### Content
 
 #### Title
+
 Titles in Alerts are required, always. They should be concise, human-focused and jargon free so users can easily understand them.
 
 #### Description
+
 Description copy is optional and should be used sparingly. Keep the description copy short and focused on the reason for the Alert and include possible solutions or paths forward to prevent users from being blocked.
 
 #### Content guidelines (how to write)
+
 It is important to always use simple and concise language when crafting messaging for Alerts. Avoid using jargon or system errors in the content of the Alerts. Provide users with a path forward or possible solution. For more recommendations on writing, view the [UX writing guidelines](https://grafana.com/docs/writers-toolkit/write/style-guide/ux-writing/).
 
 #### Severity
+
 There are four (4) different message types Alerts can have:
-- *Info* - Provide information to users, and don’t interrupt any current actions
-- *Success* - When any action is successful, it is confirmed when a task is completed as expected
-- *Warning* - Informing users that an action is undesirable
-- *Error* - When an action doesn't happen as expected, usually something has failed and the user is expected to take action
+
+- _Info_ - Provide information to users, and don’t interrupt any current actions
+- _Success_ - When any action is successful, it is confirmed when a task is completed as expected
+- _Warning_ - Informing users that an action is undesirable
+- _Error_ - When an action doesn't happen as expected, usually something has failed and the user is expected to take action
 
 #### Calls to Action
+
 Alerts (Inline Alerts specifically) can contain calls to action (CTAs), especially if there is an action a user can take remedy or correct the reason the Alert is being shown. When providing a CTA within an Alert be sure to keep the label concise and ensure the action the user can take is clear, and try to keep the labels short (a few words at most). See Grafana's [UX Writing guidelines](https://grafana.com/docs/writers-toolkit/write/style-guide/ux-writing/).
 
 ## Types and Behaviors
+
 Grafana uses Alert in two ways: Inline, and Toast. These two different types of Alerts have different purposes and behaviours. It’s important to understand the differences to make sure you use the right one.
 
 ### Inline
+
 Inline Alerts notify users of both system and user triggered events. They appear at the top or bottom of the main content area near where the user is actively working. This maintains context and supports understanding. These messages are task-generated and provide direct, contextual feedback.
 
 ```tsx live
-<Alert title='Inline alert'>
+<Alert title="Inline alert">
   <div>Child content that includes some alert details, like maybe what actually happened.</div>
 </Alert>
 ```
 
 ### Toast
+
 Toasts are temporary window elements used to display short messages; they appear in the top-right corner of the screen and can be dismissed by clicking the `X` or it will disappear after a few seconds
 
 ```tsx live
-<Alert title='Toast' elevated>
+<Alert title="Toast" elevated>
   <div>Child content that includes some alert details, like maybe what actually happened.</div>
 </Alert>
 ```
 
 #### Behavior
+
 - Toasts display for a short period of time
 - Contain a close `X` action so users can dismiss the Alert
 - If more than one displays at the same time, the most recent Alert is always displayed at the top. Older toasts stack in order under the most recent Alert.
-
 
 ## Further Reading & Sources
 
@@ -79,4 +89,4 @@ Toasts are temporary window elements used to display short messages; they appear
 
 ## Playground
 
-<ComponentEmbed path='/story/overlays-alert-toast--basic' />
+<ComponentEmbed path="/story/overlays-alert-toast--basic" />

@@ -1,12 +1,10 @@
 ---
 title: Form Page
 description: Template for FormPage
-keywords: ['FormPage', 'template']
 hide_table_of_contents: true
 draft: false
 ---
 
-import CodeBlock from '@theme/CodeBlock';
 import { Page } from '@site/src/components/templates/Page/Page';
 import { CodeCollapse } from '@site/src/components/templates/CodeCollapse';
 import FormPage from '@site/src/components/templates/FormPage/FormPage';
@@ -24,7 +22,9 @@ A page with a simple form, used to collect data from users. The `Form` component
 
 ## Source code
 
-<CodeBlock language="tsx">{FormPageRaw}</CodeBlock>
+<CodeCollapse label="FormPage.tsx" isOpen>
+  {FormPageRaw}
+</CodeCollapse>
 <CodeCollapse label="types.ts">{types}</CodeCollapse>
 
 ## Usage
