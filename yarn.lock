@@ -2635,13 +2635,13 @@
   dependencies:
     tslib "^2.4.0"
 
-"@grafana/data@10.3.0-146651":
-  version "10.3.0-146651"
-  resolved "https://registry.yarnpkg.com/@grafana/data/-/data-10.3.0-146651.tgz#88d07dc226a5f8b7afa96379ec1782a51ad55ab9"
-  integrity sha512-mO/sjlUMhz/9AQupwsdkfXOeag9FXZ6ileiOUO00pAzEgAriT+w1hgXXxa4a+gULmvUDrEjohTBhIv4AnEWyew==
+"@grafana/data@10.3.0-151096", "@grafana/data@^10.3.0-151096":
+  version "10.3.0-151096"
+  resolved "https://registry.yarnpkg.com/@grafana/data/-/data-10.3.0-151096.tgz#4ca0378b76b0a7dd2850f0870fcf7f8b40cc9ae2"
+  integrity sha512-gJvFANeD49zNs+eUfsfIS+TquQLMUOme6H1hKN0v0Ryp+DaU0yHmywhp8wiek58rkL/ceDXftyaxGajRXQwjog==
   dependencies:
     "@braintree/sanitize-url" "6.0.2"
-    "@grafana/schema" "10.3.0-146651"
+    "@grafana/schema" "10.3.0-151096"
     "@types/d3-interpolate" "^3.0.0"
     "@types/string-hash" "1.1.1"
     d3-interpolate "3.0.1"
@@ -2666,41 +2666,10 @@
     uplot "1.6.27"
     xss "^1.0.14"
 
-"@grafana/data@^10.3.0-144170":
-  version "10.3.0-144170"
-  resolved "https://registry.yarnpkg.com/@grafana/data/-/data-10.3.0-144170.tgz#bf1657a2f5091df568173f0237c5656fd97fc005"
-  integrity sha512-6OOzsYCmpbcoJx3uacVDtnwZxYm+x/SjYryjyIP3di/AbnUZ6P7VyJjqFGctjd8+SxH95usr+3/2EIEEbtFZbw==
-  dependencies:
-    "@braintree/sanitize-url" "6.0.2"
-    "@grafana/schema" "10.3.0-144170"
-    "@types/d3-interpolate" "^3.0.0"
-    "@types/string-hash" "1.1.1"
-    d3-interpolate "3.0.1"
-    date-fns "2.30.0"
-    dompurify "^2.4.3"
-    eventemitter3 "5.0.1"
-    fast_array_intersect "1.1.0"
-    history "4.10.1"
-    lodash "4.17.21"
-    marked "5.1.1"
-    marked-mangle "1.1.0"
-    moment "2.29.4"
-    moment-timezone "0.5.43"
-    ol "7.4.0"
-    papaparse "5.4.1"
-    react-use "17.4.0"
-    regenerator-runtime "0.14.0"
-    rxjs "7.8.1"
-    string-hash "^1.1.3"
-    tinycolor2 "1.6.0"
-    tslib "2.6.0"
-    uplot "1.6.27"
-    xss "^1.0.14"
-
-"@grafana/e2e-selectors@10.3.0-146651":
-  version "10.3.0-146651"
-  resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-10.3.0-146651.tgz#99f25e4436e2e6ee24ab4ab706e405c55e907d1b"
-  integrity sha512-LqwhOpNlymjs9Hoe1MqjFBwGUfNEfnYzOZXLgJxduQjuNzWMB8wXsNETTaV6VCt2FxoROp6JZMzGQ1qO0v0GGw==
+"@grafana/e2e-selectors@10.3.0-151096":
+  version "10.3.0-151096"
+  resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-10.3.0-151096.tgz#3666aa2ceb5ebd6442d98b64c9ca9381c7f1aaaa"
+  integrity sha512-WqslUggfc0hcCw4ekb2ytgn76qBPHnbIB2Xpb+xMHFgPegqrb4tSXup/4KW5Hanwflg48nedxdY4jC4mktIkXQ==
   dependencies:
     "@grafana/tsconfig" "^1.2.0-rc1"
     tslib "2.6.0"
@@ -2725,17 +2694,10 @@
     ua-parser-js "^1.0.32"
     web-vitals "^3.1.1"
 
-"@grafana/schema@10.3.0-144170":
-  version "10.3.0-144170"
-  resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-10.3.0-144170.tgz#36b64902278c739e10a818743db69fc3966a9e3f"
-  integrity sha512-L5S7pHcVmu7S3w8LYHo/UQIYnx6ypG5aDmaGjwD1LojOApeBI9RcLQuZAsJhe4H+k3uzwSCaS+BqSysLertwFg==
-  dependencies:
-    tslib "2.6.0"
-
-"@grafana/schema@10.3.0-146651":
-  version "10.3.0-146651"
-  resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-10.3.0-146651.tgz#afed5d56feba6e27c19687d500b5ec91f2964168"
-  integrity sha512-8Znp6hKP8hrQYoIuATWbybddH8EAw7AClRFz7n7+HiBjwRbpQGhhCbxa+CWz0P49FTSAE6EaGR35ebKn5diodQ==
+"@grafana/schema@10.3.0-151096":
+  version "10.3.0-151096"
+  resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-10.3.0-151096.tgz#e51746f83412c0a7d4a0c6324f248499ca998582"
+  integrity sha512-43KGTJ1g46TiMYRacPIfA8XE+y7+GzR+uFC/cPz1U21aGJPeL9nj7NGzzDsd6u6lqtGxwDjotoUC0cRA5olB6g==
   dependencies:
     tslib "2.6.0"
 
@@ -2749,18 +2711,18 @@
   resolved "https://registry.yarnpkg.com/@grafana/tsconfig/-/tsconfig-1.3.0-rc1.tgz#ca5ffa03edb3cb59bd503a7e6b3a3e15ac528d77"
   integrity sha512-bi+qFOptejg/a2/WmCDVxQLQtobhKd3y+B6mxFBOMmzElqgr30MPnN60THTou6dGwtfw+ExX1H5FGm9DM35Qrw==
 
-"@grafana/ui@^10.3.0-146651":
-  version "10.3.0-146651"
-  resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-10.3.0-146651.tgz#6b2255da65218dbad2ce00c915d30c9a0332d373"
-  integrity sha512-UWICRfWslmaixHY15DrNwa66pUaOTLz+VbRGJYso+GncJuiyXYbA5YFDqbNYdlSDVioHZMQ5ka0tbCmTcp08ng==
+"@grafana/ui@^10.3.0-151096":
+  version "10.3.0-151096"
+  resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-10.3.0-151096.tgz#dc1b65cbfcdc45733804e9c9fee63f038b8b09be"
+  integrity sha512-6hJM3qV8WrGDdGKZrEWBZ2Zxxbnyq3S+IakUTg6PWgIrrVTphifSOkoPMjRy/bfmKFOBRc0pUjwJwF7GE0Dj6A==
   dependencies:
     "@emotion/css" "11.11.2"
     "@emotion/react" "11.11.1"
-    "@grafana/data" "10.3.0-146651"
-    "@grafana/e2e-selectors" "10.3.0-146651"
+    "@grafana/data" "10.3.0-151096"
+    "@grafana/e2e-selectors" "10.3.0-151096"
     "@grafana/faro-web-sdk" "1.2.1"
-    "@grafana/schema" "10.3.0-146651"
-    "@leeoniya/ufuzzy" "1.0.8"
+    "@grafana/schema" "10.3.0-151096"
+    "@leeoniya/ufuzzy" "1.0.13"
     "@monaco-editor/react" "4.6.0"
     "@popperjs/core" "2.11.8"
     "@react-aria/button" "3.8.0"
@@ -2773,7 +2735,6 @@
     ansicolor "1.1.100"
     calculate-size "1.1.1"
     classnames "2.3.2"
-    core-js "3.33.0"
     d3 "7.8.5"
     date-fns "2.30.0"
     hoist-non-react-statics "3.3.2"
@@ -2920,10 +2881,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@leeoniya/ufuzzy@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@leeoniya/ufuzzy/-/ufuzzy-1.0.8.tgz#6a01b561749df84ff28637051865fdde3cbfc3a9"
-  integrity sha512-HQ6aJlYpWLq1f9AiApJl0aOIXlJUtuhBOYfSfv5rt3XNYkCBveojtnL6FvOVpJ2gEJ2wqgMW8xOHkLVYAbXghg==
+"@leeoniya/ufuzzy@1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@leeoniya/ufuzzy/-/ufuzzy-1.0.13.tgz#d4812e339ee82589513f9d937f3da29044325b6d"
+  integrity sha512-w7cOuME1F8e4TOrSAGQWPczj60eIcQiU31X1RU65yiZBz1zpDWfynVJUw8d2QzhkUsEObAV0nN4RTIqxpCvJGg==
 
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
@@ -5393,11 +5354,6 @@ core-js-pure@^3.30.2:
   version "3.32.0"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.32.0.tgz#5d79f85da7a4373e9a06494ccbef995a4c639f8b"
   integrity sha512-qsev1H+dTNYpDUEURRuOXMvpdtAnNEvQWS/FMJ2Vb5AY8ZP4rAPQldkE27joykZPJTe0+IVgHZYh1P5Xu1/i1g==
-
-core-js@3.33.0:
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.0.tgz#70366dbf737134761edb017990cf5ce6c6369c40"
-  integrity sha512-HoZr92+ZjFEKar5HS6MC776gYslNOKHt75mEBKWKnPeFDpZ6nH5OeF3S6HFT1mUAUZKrzkez05VboaX8myjSuw==
 
 core-js@^2.4.0:
   version "2.6.12"
@@ -10959,6 +10915,11 @@ react-hook-form@7.5.3:
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.5.3.tgz#9a624fa14ec153b154891c5ebddae02ec5c2e40f"
   integrity sha512-5T0mfJ4kCPKljd7t3Rgp7lML4Y2+kaZIeMdN6Zo/J7gBQ+WkrDBHOftdOtz4X+7/eqHGak5yL5evNpYdA9abVA==
+
+react-hook-form@^7.49.2:
+  version "7.49.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.49.2.tgz#6fb2742e1308020f26cb1915c7012b6c07b11ade"
+  integrity sha512-TZcnSc17+LPPVpMRIDNVITY6w20deMdNi6iehTFLV1x8SqThXGwu93HjlUVU09pzFgZH7qZOvLMM7UYf2ShAHA==
 
 react-i18next@^12.0.0:
   version "12.3.1"
