@@ -3,3 +3,83 @@ title: Grid
 description: Grafana Labs Grid component
 draft: true
 ---
+
+import { Grid } from '@grafana/ui';
+
+# Grid <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/general-layout-grid--columns-number'/>
+
+## Overview
+
+The Grid component is a layout component that allows you to create a grid of columns and rows to organize content and elements. It is a wrapper around the [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) specification.
+
+### When to Use
+
+Use the Grid component when you want to create structured and organized layouts where content or elements need to be aligned in rows and columns for clarity and consistency.
+
+### When not to Use
+
+Use the **[Stack](/components/primitives/stack)** component instead for these use cases:
+
+- **Alignment:** More options for item alignment.
+- **Flex items:** Custom flex basis or configure how items stretch and wrap
+.
+## Props
+
+There are two ways to define the `Grid`, either by number of columns or by the minimum column width.
+
+_Note: There is no support for using `columns` and `minColumnWidth` props at the same time. The correct behaviour is working just with one of them not both._
+
+### Columns
+
+The `columns` prop defines the number of columns that the grid will have. The columns will be equally sized.
+The props that you can use are:
+
+- `columns`, with possible values: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+- `gap`, with possible values: ThemeSpacingTokens (0 | 0.25 | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 4 | 5 | 6 | 8 | 10)
+
+```tsx live
+<Grid columns={4} gap={2}>
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>5</span>
+  <span>6</span>
+  <span>7</span>
+  <span>8</span>
+</Grid>
+```
+
+### Minimum column width
+
+The `minColumnWidth` prop defines a minimum width that each column can have, the number of columns will be determined by the available space.
+The props that you can use are:
+
+- `minColumnWidth`, with possible values: 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 44 | 55 | 72 | 89 | 144, where the number will then be multiplied by the grid size.
+- `gap`, with possible values: ThemeSpacingTokens (0 | 0.25 | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 4 | 5 | 6 | 8 | 10)
+
+```tsx live
+<Grid minColumnWidth={13} gap={2}>
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>5</span>
+  <span>6</span>
+  <span>7</span>
+  <span>8</span>
+</Grid>
+```
+### Responsiveness
+
+All of the above props can be defined in a responsive way, meaning that different values will be set depending on the window size.
+
+To define any of them responsivelly, simply pass in an object with responsive breakpoints as keys. For instance, instead of defining direction in this way `columns={4}`
+define it like  `columns={{ xs: 1, md: 4 }}`.
+This means that from the `xs` breakpoint up, the column number is 1, while from the `md` breakpoint up, it is 4.
+
+The possible breakpoints in the theme can be found [here](https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/themes/breakpoints.ts#L28).
+
+## Playground
+
+<ComponentEmbed path="/story/general-layout-grid--columns-number" />
