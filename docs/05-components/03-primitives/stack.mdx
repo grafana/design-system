@@ -1,5 +1,66 @@
 ---
 title: Stack
 description: Grafana Labs Stack component
-draft: true
+draft: false
 ---
+
+import { Stack } from '@grafana/ui';
+
+# Stack <Badge text='ready' color='green'></Badge> <StorybookLink path='/story/general-layout-stack--basic'/>
+
+## Overview
+
+The Stack component is a simple wrapper around the flexbox layout model that allows to easily create responsive and flexible layouts. It provides a simple and intuitive way to align and distribute items within a container either horizontally or vertically.
+
+### When to Use
+
+- For creating responsive and flexible layouts that can adapt to different screen sizes and orientations.
+- When needing a simple and intuitive way to align and distribute items within a container either horizontally or vertically.
+- To easily reorder and rearrange elements without changing the HTML structure.
+- When aiming to create equal-height columns.
+- To create a grid-like structure with automatic wrapping and sizing of items based on the available space.
+
+### When not to Use
+
+- For complex multi-dimensional layouts with intricate requirements that are better suited for CSS frameworks or grid systems.
+- When precise control over spacing and positioning of elements is necessary.
+
+## Props
+
+### Display
+
+There are 5 different props related to how the content is displayed:
+
+- `direction`, with possible values: `row`, `row-reverse`, `column`, `column-reverse`
+- `wrap`, with possible values: `nowrap`, `wrap`, `wrap-reverse`
+- `alignItems`, with possible values: `stretch`, `flex-start`, `flex-end`, `center`, `baseline`, `start`, `end`, `self-start`, `self-end`
+- `justifyContent`, with possible values: `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`, `start`, `end`, `left`, `right`
+- `gap`, with possible values: ThemeSpacingTokens (0 | 0.25 | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 4 | 5 | 6 | 8 | 10)
+
+If you just need to create a Flex layout without any other styling to the box, please use the **[Stack](/components/primitives/stack)** component instead.
+
+```tsx live
+<Stack direction='row' wrap='wrap' alignItems='center' justifyContent='center' gap={5}>
+  <span>One</span>
+  <span>Two</span>
+  <span>Three</span>
+</Stack>
+```
+
+### Responsiveness
+
+All of the above props can be defined in a responsive way, meaning that different values will be set depending on the window size.
+
+To define any of them responsively, simply pass in an object with responsive breakpoints as keys. For instance, instead of defining direction in this way `direction='row'`
+define it like  `direction={{ xs: 'column', md: 'row' }}`.
+This means that from the `xs` breakpoint up, direction is set to `column`, while from the `md` breakpoint up, it is set to `row`.
+
+The possible breakpoints in the theme can be found [here](https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/themes/breakpoints.ts#L28).
+
+### Further Reading & Sources
+
+- [Storybook docs and props table](https://developers.grafana.com/ui/canary/index.html?path=/docs/general-layout-stack--docs)
+
+## Playground
+
+<ComponentEmbed path="/story/general-layout-stack--basic" />
