@@ -108,25 +108,40 @@
       }
     },
     "font-weight": {
+      "thin": {
+        "value": "Thin",
+        "type": "fontWeights",
+        "description": "100"
+      },
       "light": {
-        "value": "Light 300",
+        "value": "Light",
         "type": "fontWeights",
         "description": "300"
       },
       "regular": {
-        "value": "Regular 400",
+        "value": "Regular",
         "type": "fontWeights",
         "description": "400"
       },
       "medium": {
-        "value": "Medium 500",
+        "value": "Medium",
         "type": "fontWeights",
         "description": "500"
       },
+      "semibold": {
+        "value": "Semi Bold",
+        "type": "fontWeights",
+        "description": "600"
+      },
       "bold": {
-        "value": "Bold 700",
+        "value": "Bold",
         "type": "fontWeights",
         "description": "700"
+      },
+      "black": {
+        "value": "Black",
+        "type": "fontWeights",
+        "description": "900"
       }
     },
     "font-size": {
