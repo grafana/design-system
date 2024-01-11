@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "core",
+    "semantic",
+    "component/button",
+    "Theming/light",
+    "Theming/dark",
+    "Theming/high-contrast"
+  ]
+}
