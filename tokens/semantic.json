@@ -2,182 +2,182 @@
   "font": {
     "h1": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.3}",
-        "fontSize": "{font.font-size.8}",
-        "letterSpacing": "{font.letter-spacing.tight}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.3}",
+        "fontSize": "{font.fontSize.8}",
+        "letterSpacing": "{font.letterSpacing.tight}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H1 on the typography hierarchy."
     },
     "h2": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.2}",
-        "fontSize": "{font.font-size.7}",
-        "letterSpacing": "{font.letter-spacing.normal}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.2}",
+        "fontSize": "{font.fontSize.7}",
+        "letterSpacing": "{font.letterSpacing.normal}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H2 on the typography hierarchy."
     },
     "h3": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.2}",
-        "fontSize": "{font.font-size.6}",
-        "letterSpacing": "{font.letter-spacing.normal}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.2}",
+        "fontSize": "{font.fontSize.6}",
+        "letterSpacing": "{font.letterSpacing.normal}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H3 on the typography hierarchy."
     },
     "h4": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.1}",
-        "fontSize": "{font.font-size.4}",
-        "letterSpacing": "{font.letter-spacing.wider}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.1}",
+        "fontSize": "{font.fontSize.4}",
+        "letterSpacing": "{font.letterSpacing.wider}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H4 on the typography hierarchy."
     },
-    "h4-bold": {
+    "h4Strong": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.medium}",
-        "lineHeight": "{font.line-height.1}",
-        "fontSize": "{font.font-size.4}",
-        "letterSpacing": "{font.letter-spacing.normal}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.medium}",
+        "lineHeight": "{font.lineHeight.1}",
+        "fontSize": "{font.fontSize.4}",
+        "letterSpacing": "{font.letterSpacing.normal}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
-      "description": "H4 Bold on the typography hierarchy."
+      "description": "H4 - Strong variant on the typography hierarchy."
     },
     "h5": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.1}",
-        "fontSize": "{font.font-size.3}",
-        "letterSpacing": "{font.letter-spacing.normal}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.1}",
+        "fontSize": "{font.fontSize.3}",
+        "letterSpacing": "{font.letterSpacing.normal}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H5 on the typography hierarchy."
     },
-    "h5-bold": {
+    "h5Strong": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.medium}",
-        "lineHeight": "{font.line-height.1}",
-        "fontSize": "{font.font-size.3}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.medium}",
+        "lineHeight": "{font.lineHeight.1}",
+        "fontSize": "{font.fontSize.3}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
-      "description": "H5 Bold on the typography hierarchy."
+      "description": "H5 - Strong variant on the typography hierarchy."
     },
     "h6": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.medium}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.2}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.medium}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.2}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "H6 on the typography hierarchy."
     },
     "body": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.2}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.2}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "Body on the typography hierarchy."
     },
-    "body-bold": {
+    "bodyStrong": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.medium}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.2}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.medium}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.2}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
-      "description": "Body Bold on the typography hierarchy."
+      "description": "Body - Strong variant on the typography hierarchy."
     },
-    "body-small": {
+    "bodySmall": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.1}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.1}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "Body Small on the typography hierarchy."
     },
-    "body-small-bold": {
+    "bodySmallStrong": {
       "value": {
-        "fontFamily": "{font.font-family.primary}",
-        "fontWeight": "{font.font-weight.medium}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.1}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.primary}",
+        "fontWeight": "{font.fontWeight.medium}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.1}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
-      "description": "Body Small Bold on the typography hierarchy."
+      "description": "Body Small - Strong variant on the typography hierarchy."
     },
     "code": {
       "value": {
-        "fontFamily": "{font.font-family.monospace}",
-        "fontWeight": "{font.font-weight.regular}",
-        "lineHeight": "{font.line-height.0}",
-        "fontSize": "{font.font-size.2}",
-        "letterSpacing": "{font.letter-spacing.wide}",
-        "textDecoration": "{font.text-decoration.none}",
-        "textCase": "{font.text-transform.none}",
-        "paragraphSpacing": "{font.paragraph-spacing.normal}"
+        "fontFamily": "{font.fontFamily.monospace}",
+        "fontWeight": "{font.fontWeight.regular}",
+        "lineHeight": "{font.lineHeight.0}",
+        "fontSize": "{font.fontSize.2}",
+        "letterSpacing": "{font.letterSpacing.wide}",
+        "textDecoration": "{font.textDecoration.none}",
+        "textCase": "{font.textTransform.none}",
+        "paragraphSpacing": "{font.paragraphSpacing.normal}"
       },
       "type": "typography",
       "description": "Code on the typography hierarchy."

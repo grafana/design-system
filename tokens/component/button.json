@@ -4,7 +4,7 @@
       "value": {
         "fill": "{color.blue.600}",
         "borderRadius": "{button.border-radius}",
-        "fontWeights": "{font.font-weight.medium}"
+        "fontWeights": "{font.fontWeight.medium}"
       },
       "type": "composition"
     },
@@ -57,7 +57,7 @@
       }
     },
     "border-radius": {
-      "value": "{border.border-radius.default}",
+      "value": "{border.borderRadius.default}",
       "type": "borderRadius"
     },
     "size": {
@@ -77,7 +77,7 @@
       }
     },
     "font-weight": {
-      "value": "{font.font-weight.medium}",
+      "value": "{font.fontWeight.medium}",
       "type": "fontWeights"
     },
     "font": {
