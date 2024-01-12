@@ -3,7 +3,7 @@
     "scale": {
       "value": "8px",
       "type": "dimension",
-      "description": "Base grid unit to be used as multiplier for sizing, spacing and other scales"
+      "description": "Base grid unit to be used as multiplier for sizing, spacing and other scales."
     }
   },
   "spacing": {
