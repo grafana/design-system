@@ -1,8 +1,5 @@
 name: Create Tokens
-on:
-  push:
-    paths:
-      - 'tokens/**'
+on: workflow_dispatch
 
 jobs:
   build:
