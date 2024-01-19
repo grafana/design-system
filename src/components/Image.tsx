@@ -10,5 +10,5 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export const Image = ({ src, alt, ...rest }: ImageProps) => {
-  return <img src={useBaseUrl(src)} alt={alt} {...rest} />;
+  return <img src={useBaseUrl(src)} alt={alt} {...rest} style={{ padding: '24px 0' }} />;
 };
