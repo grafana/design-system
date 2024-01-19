@@ -1,0 +1,54 @@
+---
+title: Lists of Objects
+description: Designing screens to show lists of objects
+sidebar_position: 1
+hide_title: true
+hide_table_of_contents: true
+draft: true
+---
+
+## Overview
+
+One of the most common screens in a data-oriented product is a list of objects. This may be a list of user-created content (like dashboards), monitored entities (like Kubernetes clusters), or even arbitrary tabular data (from a SQL statement).
+
+We recommend the following structure for these types of screens.
+
+<Image src={'/img/templates/object_list_screen_anatomy.png'} alt="Object list screen visual anatomy" />
+
+1. **Header** - Contains the screen title and short helper text. In certain very specific cases (filters or selectors that apply across child tabs) it can be appropriate to place controls in the header. But in general, this is best avoided. Even if the controls make sense today, they make not make sense with future tabs.
+2. **Tabs** - Screen-level tabs should be the second level in the IA to reinforce the independence of each tab's content.
+3. **Banner** - Use this sparingly. If an exception condition causes the screen's data to be unable to render, steal the table row space to notify the user. 
+4. **Data viz** - If additional viz is required to help users work with or contextualize the data set, put it here. Even if it feels like it should be below filters in the IA. It’s more important to keep data-manipulation controls in close proximity (to each other and data). Try to keep this under 200px high. More than that and the identity/function of the screen becomes muddled (is this a dashboard?).
+5. **Search and filter** - These controls are tightly linked to the list of items, so keep them nearby. Consider starting with a small number of filters and allowing users to add more as needed.
+6. **Action buttons** - Anything that mutates the data set should appear here. If necessary, this can also include links to distant (but related) screens.
+7. **Table header** - If you’re presenting the list as a table, include a header. Even if there is no data to display, keep the header around to reinforce that this is table view and this is where data would live.
+8. **The actual data** - If the data set contains any elements, show them here. If the set is empty (or cannot be loaded due to a problem), steal this space to explain why and offer remediation advice.
+9. **Pager** - Use if applicable. Omit when there is no data to page.
+
+This structure is not obligatory, but using a consistent layout can help users locate key functions on unfamiliar screens.
+
+## Displaying data
+
+### Tables
+
+<Image src={'/img/templates/example_table.png'} alt="Example of a table" />
+
+Tables are a good choice for open-ended exploration as they impose minimal visual structure on the data. This less-opinionated view is useful when you can't predict how users will engage with the data. Use a table when a screen must support many diverse use cases or when you can't be sure of the shape, quality, or completeness of the data set.
+- [Saga table template](/template/table))
+- [Table component](https://developers.grafana.com/ui/latest/index.html?path=/docs/visualizations-table--basic)
+- [InteractiveTable component](https://developers.grafana.com/ui/latest/index.html?path=/docs/experimental-interactivetable--basic)
+
+### Lists
+
+<Image src={'/img/templates/example_list.png'} alt="Example of a list" />
+
+Lists work best when the user is working with a set of named objects which have a well-understood data structure. Lists allow you to use typography and layout to emphasize important fields and deemphasize supplemental data. Use a list when your screen is focused on a limited number of use cases and you can optimize for them.
+- [Saga list template](/template/list-page))
+
+### Tiled cards
+
+<Image src={'/img/templates/example_cards.png'} alt="Example of a tiled card grid" />
+
+Tiled cards are ideal when displaying a data set with a rich visual component, such as images or data visualizations. Effective use of [small multiples](https://en.wikipedia.org/wiki/Small_multiple) can allow users to perform complex comparisons which would be impossible using other layouts.
+- [Saga grid template](/template/grid-page))
+- [Card component](https://developers.grafana.com/ui/latest/index.html?path=/docs/general-card--basic)
