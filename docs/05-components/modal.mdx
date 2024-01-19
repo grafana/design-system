@@ -19,38 +19,37 @@ draft: true
 
 
 ## Usage
-[//]: # (Lists different options/props for the component, each with a code sample, and more specific usage guidelines. Includes Dos & Don'ts)
-In the main component has these props:
-- title: title for the modal or custom header element
-- className 
-- contentClassName: specific class for the content of the modal
-- closeOnEscape
-- closeOnBackdropClick
-- trapFocus: whether to restore focus back to the element that was focused when the focus scope mounted, after the focus scope unmounts.
-- isOpen
-- onDismiss
-- onClickBackdrop: if not set will call onDismiss if that is set
+The main component has these props:
+- `title` - title for the modal or custom header element
+- `className` 
+- `contentClassName` - specific class for the content of the modal
+- `closeOnEscape`
+- `closeOnBackdropClick`
+- `trapFocus` - whether to restore focus back to the element that was focused when the focus scope mounted, after the focus scope unmounts.
+- `isOpen`
+- `onDismiss`
+- `onClickBackdrop` - if not set will call `onDismiss` if that is set
 
-ModalTabsHeader: custom header element with tabs that has the following props.
-- icon
-- title
-- tabs
-- activeTab
-- onChangeTab
+ModalTabsHeader - custom header element with tabs that has the following props:
+- `icon`
+- `title`
+- `tabs`
+- `activeTab`
+- `onChangeTab`
 
 
 ## Types and Behaviors
 1. [Basic Modal](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--basic): the basic modal with the default header, main content, close buttons and/or action buttons.
 
-2. [Modal using Content ClassName](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--using-content-class-name): in this case the modal content has applied an specific class.
+2. [Modal using the contentClassName prop](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--using-content-class-name): in this case the modal content has applied a specific class.
 
 3. [Modal with tabs](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--with-tabs): in this ocassion, the modal has tabs, each of one with its main content and buttons.
 
 ## Accessibility 
 [Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 Please check the keyboard's behaviour when building a modal. We have noticed that when the content is overflowing, the user cannot scroll it unless:
-The modal contains interactive elements, such as buttons, on the bottom.
-The content has `tabIndex = 0`, and therefore, it can be keyboard-focusable.
+- The modal contains interactive elements, such as buttons, on the bottom.
+- The content has `tabIndex = 0`, and therefore, it can be keyboard-focusable.
 
 
 ## Links & Resources
