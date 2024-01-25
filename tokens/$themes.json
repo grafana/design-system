@@ -1,7 +1,7 @@
 [
   {
     "id": "32288a55d245a83c27d6624279b3f7943f326446",
-    "name": "Saga",
+    "name": "Saga Default",
     "$figmaStyleReferences": {
       "button.color.background.destructive.default": "S:c4c4f34920b6b26efbf1cd21c0072ac4e9e61110,",
       "button.color.background.destructive.hover": "S:a65e988ab9992e2603de3123249a4849fdb6e1f3,",
@@ -122,14 +122,14 @@
       "color.gray.1200": "S:e6d095776b9a135be3bcc0cd70069cc29789055b,",
       "color.gray.1300": "S:5e841583a29f278fac462e226d1616066536f15a,",
       "color.gray.1400": "S:ae3d8ab6ccf612c34ad06cc851a34f06b899047b,",
-      "font.h1": "S:ad537e1a932f56fa77b96fc13f6ff8191007746b,",
-      "font.h2": "S:436e4d9ef42756832bca50aadc8cd5e9dbbdd351,",
-      "font.h3": "S:928480227a1127167ea34742da4930b1284a92d2,",
-      "font.h4": "S:95ec9494c711b392f9f08cf442d75fce7335ba9d,",
-      "font.h5": "S:be7207b14d85c4921b269113eaf7df710df00a7b,",
-      "font.h6": "S:28afbd6c24fb240fae82355a2f488da7b577544f,",
-      "font.body": "S:8f0340f2c3effd0e00930666a9b1048a2bb64072,",
-      "font.code": "S:0705966cf066c1a345c4bce74f0f8ff26982c432,",
+      "font.h1": "S:39b0cc912ee9a8e365362e3402ad85caa572fdbb,",
+      "font.h2": "S:cf54c9ae81739ec327962ef27104e849396dcdc9,",
+      "font.h3": "S:f33a8c3d2c3b9dfbe1c53058a4f029ad6257c906,",
+      "font.h4": "S:fbcbc681c38e9dfbea7ec1f0c2ad14f9dcf18ec9,",
+      "font.h5": "S:8dc6a06872b2a18d34ba8578283dc6e5c74ad3e7,",
+      "font.h6": "S:15aec2d813ef556ec74a6fb3590a9918898cfd5d,",
+      "font.body": "S:a9c0b6ec25ac59059d8f8c2378baebc0260cdc5c,",
+      "font.code": "S:08fd75e2785a9bfe219be5f1e448f95ba3d65c5b,",
       "shadow.z1": "S:2c14ef5447d8e082d8132b4c2360cde08f13194b,",
       "shadow.z2": "S:27c700613befe91e4cfce12016a8d62ddd012fd8,",
       "shadow.z3": "S:b14dbf6dcdc9b2d4fb11478ef75851ff187a17c5,",
@@ -139,11 +139,11 @@
       "color.level.background.primary": "S:443b5c0410bc00a903acbfc8c827b895766c43ca,",
       "color.level.background.secondary": "S:04fd0d63edaaaa0f7b0b71bacfd8d10bc979898d,",
       "button.font.label": "S:09ef9df9c4ca6875101f5910aa54e845bc729c8c,",
-      "font.h5Strong": "S:06aae94b0c6237548b2edc113e3abb4cb71d86ba,",
-      "font.h4Strong": "S:835f2fbc01979703c757385971605a4180410632,",
-      "font.bodyStrong": "S:383d0331a7d2448b7902d7eabd39a29d9d6255fe,",
-      "font.bodySmall": "S:c2569a09a296a7f7e836dd060e2f1f3e4952e911,",
-      "font.bodySmallStrong": "S:36d0f6c2c8b41d2d494a12c99f120d553272f5d7,"
+      "font.h5Strong": "S:94aea1c16c7c505f1e195604dee5e6f7dd390536,",
+      "font.bodyStrong": "S:bb6821b803a7fd0b86abe7e6ddbd1528930645bf,",
+      "font.bodySmall": "S:75ec294ad80fc74da8eef947b657705d195eaa81,",
+      "font.bodySmallStrong": "S:6adb37fcb2aa377e324dba3bb1f33445b62c5517,",
+      "font.h4Strong": "S:836ff4a57a623eb0a6c5ce3cfdc706b3506cc4a3,"
     },
     "selectedTokenSets": {
       "core": "enabled",
@@ -309,7 +309,7 @@
   },
   {
     "id": "fbe099152beb8adb76d992721d447104f9aea052",
-    "name": "Saga Light",
+    "name": "Light",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core": "source",
@@ -318,11 +318,12 @@
     },
     "$figmaCollectionId": "VariableCollectionId:154:157",
     "$figmaModeId": "154:1",
-    "$figmaVariableReferences": {}
+    "$figmaVariableReferences": {},
+    "group": "Saga Themes"
   },
   {
     "id": "6fff78a46dacef84af2fc9fbe742b29dbef489bf",
-    "name": "Saga Dark",
+    "name": "Dark",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core": "source",
@@ -331,16 +332,7 @@
     },
     "$figmaCollectionId": "VariableCollectionId:154:158",
     "$figmaModeId": "154:2",
-    "$figmaVariableReferences": {}
-  },
-  {
-    "id": "350f2e611b56c3cba8b163e60a3930ea377fdb0b",
-    "name": "Saga High Contrast",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "core": "enabled",
-      "semantic": "enabled",
-      "Theming/high-contrast": "enabled"
-    }
+    "$figmaVariableReferences": {},
+    "group": "Saga Themes"
   }
 ]
