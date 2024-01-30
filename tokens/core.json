@@ -78,7 +78,7 @@
     "md": {
       "value": "769px",
       "type": "sizing",
-      "description": "MD breakpoint min-width value."
+      "description": "MD breakpoint min-width value. (1 more than regular ipad in portrait)"
     },
     "lg": {
       "value": "992px",
