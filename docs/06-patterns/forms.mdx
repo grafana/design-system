@@ -25,7 +25,7 @@ Main section of the form where users input and provide information. This is wher
 
 ### Action bar
 
-Typically appears at the bottom of the form or near the primary interaction area. It contains buttons or actions that users can take to complete or manipulate the form. Common actions include "Submit," "Save," "Cancel," or any other actions relevant to the form's purpose. The Action Bar is a critical element for user navigation and interaction with the form
+Typically appears at the bottom of the form or near the primary interaction area. It contains buttons or actions that users can take to complete or manipulate the form. Common actions include "Submit," "Save," "Cancel," or any other actions relevant to the form's purpose. The Action Bar is a critical element for user navigation and interaction with the form.
 
 ### Common form elements include:
 
@@ -40,7 +40,7 @@ Forms can also contain other elements such as switches, sliders, etc.
 
 ## Styling
 
-- Form elements are left aligned. This promotes readability and follow the natural reading flow in many cultures.
+- Form elements are left aligned. This promotes readability and follows the natural reading flow in many cultures.
 - Components are vertically stacked, and there is 16px of padding around each component. This spacing enhances the visual separation between components and provides a consistent and aesthetically pleasing layout.
 - The padding between the form title and the body, between the action bar and the body, and between two different sections of the form is set to 40px. This additional spacing helps create a clear visual hierarchy and prevents elements from feeling cramped.
 
@@ -56,7 +56,7 @@ A single primary button clearly communicates the main action users are expected 
 
 ### Left align primary buttons with the form container
 
-Western languages are read from left to right. Placing the primary action button on the left aligns it with the natural reading flow, making it easier for users to locate and understand the main action associated with the form. Left-aligning primary buttons contribute to better accessibility by providing a consistent and expected layout. Users with visual impairments or those using screen readers benefit from a standardized design pattern.
+Western languages are read from left to right. Placing the primary action button on the left aligns it with the natural reading flow, making it easier for users to locate and understand the main action associated with the form. Left-aligned primary buttons contribute to better accessibility by providing a consistent and expected layout. Users with visual impairments or those using screen readers benefit from a standardized design pattern.
 
 Place destructive actions such as Cancel or Discard in the top right corner and trigger a modal window to confirm the action. Placing destructive actions away from the main content and in a location where users don't typically interact for positive actions reduces the likelihood of accidental clicks. This helps prevent users from triggering irreversible actions unintentionally. Triggering a modal window for confirmation adds an extra layer of safety.
 
@@ -74,7 +74,7 @@ Arrange form elements in a logical order to aid scanning and completion. Group r
 
 ## What to include
 
-- Only ask for essential information to reduce effort and make the form-filling process more straightforward
+- Only ask for essential information to reduce effort and make the form-filling process more straightforward.
 - Use progressive disclosure to reveal information gradually as needed. Show advanced options on demand.
 - Only mark fields as required if absolutely necessary. This helps reduce friction in the form completion process. Use an asterisk (\*) to highlight mandatory fields, ensuring users can quickly identify and fill in the essential information.
 - Use smart defaults whenever possible. Suggested options should align with and serve the interests of the majority of users.
@@ -141,7 +141,7 @@ Implement the accordion pattern to reveal information gradually. Group related s
 
 ### Inline additions
 
-Hide additional fields from people who don’t need them (e.g. Reporting: Add another dashboard)
+Hide additional fields from people who don’t need them (e.g. in the Reporting form, the "Add another dashboard" button reveals an additional set of input fields on demand).
 
 - Add a "Add More" or similar button next to a section or set of fields.
 - When users click the button, dynamically generate additional fields for their input.
@@ -149,8 +149,7 @@ Hide additional fields from people who don’t need them (e.g. Reporting: Add an
 
 ### Dynamic forms (Progressive disclosure)
 
-E.g. Reporting (scheduler page)
-Employ conditional logic to show or hide specific fields based on user input or selections. This helps personalize the form, displaying only the relevant information to the user.
+Employ conditional logic to show or hide specific fields based on user input or selections. This helps personalize the form, displaying only the relevant information to the user (e.g. the Schedule page of the Reporting form).
 
 #### Implementation:
 
@@ -158,35 +157,35 @@ Employ conditional logic to show or hide specific fields based on user input or 
 - Use conditional logic to hide these fields until certain criteria are met (e.g., user selects a specific option).
 - Provide clear indications or tooltips for users to understand when and why certain fields are hidden.
 
-### Modal windows and drawers
+### Modal windows
 
-#### Modal windows
+**Use cases:**
 
-Presenting focused tasks or workflows that temporarily overlay the main content.
-Collecting input for a specific task or decision point.
+- For focused tasks or workflows that temporarily overlay the main content.
+- Collecting input for a specific task or decision point.
+- When you need to present a set of related options, configurations, or settings that are closely tied to a specific task or action.
+- For scenarios where the additional options may affect the entire user interface or application state.
+
 Considerations:
-
 Modal windows typically provide a clear focus on a single task or set of options.
 They can be effective for presenting concise information or capturing user input.
 Modal windows may interrupt the user's flow, so use them judiciously, especially for less critical actions.
-
-**Use Cases:**
-When you need to present a set of related options, configurations, or settings that are closely tied to a specific task or action.
-For scenarios where the additional options may affect the entire user interface or application state.
 
 **Considerations:**
 Modal windows can be suitable for presenting a group of options that require user input or configuration.
 Ensure that the modal content is well-organized, with clear navigation or categorization of options.
 Consider providing a summary or preview of the changes before applying them.
 
-#### Drawers (Side Panels)
+### Drawers (Side panels)
 
-**Use Cases:**
-Displaying additional options or settings without fully obscuring the main content.
-Providing a persistent space for additional controls or navigation elements.
-Enhancing the overall user experience by allowing users to access supplementary information while staying within the main context.
+**Use cases:**
+
+- Displaying additional options or settings without fully obscuring the main content.
+- Providing a persistent space for additional controls or navigation elements.
+- Enhancing the overall user experience by allowing users to access supplementary information while staying within the main context.
 
 **Considerations:**
+
 Drawers are often used for less intrusive interactions that don't require the full attention of the user.
 They can be beneficial for displaying additional options, settings, or information without disrupting the primary workflow.
 Drawers are particularly useful in responsive designs, adapting to different screen sizes.
