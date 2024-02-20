@@ -1,15 +1,61 @@
 ---
 title: Modal
 description: Grafana Labs Modal component
-draft: true
+draft: false
 ---
 
-# Modal <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Modal <Badge text='draft' color='orange'></Badge> <StorybookLink path='/docs/overlays-modal--basic'/>
 
-`Modals` are used to display content to users that needs immediate attention or is critical to their current user flow. When a modal is open, users are unable to interact with the on-page content behind the modal.
+## Overview
+`Modals` are used to display content to users that needs immediate attention or is critical to their current user flow. When a modal is open, users are unable to interact with the on-page content behind the modal and cannot return to the previous workflow until the user completes the requirement or dismisses the modal.
 
-<iframe
-  src="https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--basic&full=1&shortcuts=false&singleStory=true"
-  width="100%"
-  height="500px"
-></iframe>
+
+### When to Use
+- There is a need for an immediate response from the user. 
+- Notify the user of urgent information concerning their current work.
+- Confirm a user decision.
+
+### When not to use
+- Avoid using a modal when the task should be repeatedly done by the user.
+- Do not use modals for non-essential information that’s not related to the current workflow.
+
+
+## Usage
+The main component has these props:
+- `title` - title for the modal or custom header element
+- `className` 
+- `contentClassName` - specific class for the content of the modal
+- `closeOnEscape`
+- `closeOnBackdropClick`
+- `trapFocus` - whether to restore focus back to the element that was focused when the focus scope mounted, after the focus scope unmounts.
+- `isOpen`
+- `onDismiss`
+- `onClickBackdrop` - if not set will call `onDismiss` if that is set
+
+ModalTabsHeader - custom header element with tabs that has the following props:
+- `icon`
+- `title`
+- `tabs`
+- `activeTab`
+- `onChangeTab`
+
+
+## Types and Behaviors
+1. [Basic Modal](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--basic): the basic modal with the default header, main content, close buttons and/or action buttons.
+
+2. [Modal using the contentClassName prop](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--using-content-class-name): in this case the modal content has applied a specific class.
+
+3. [Modal with tabs](https://developers.grafana.com/ui/latest/index.html?path=/story/overlays-modal--with-tabs): in this ocassion, the modal has tabs, each of one with its main content and buttons.
+
+## Accessibility 
+[Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+Please check the keyboard's behaviour when building a modal. We have noticed that when the content is overflowing, the user cannot scroll it unless:
+- The modal contains interactive elements, such as buttons, on the bottom.
+- The content has `tabIndex = 0`, and therefore, it can be keyboard-focusable.
+
+
+## Links & Resources
+### [Storybook Library](https://developers.grafana.com/ui/latest/index.html?path=/docs/overlays-modal--basic)
+
+## Playground
+<ComponentEmbed path='/story/overlays-modal--basic&full=1&shortcuts=false&singleStory=true' />

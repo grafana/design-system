@@ -69,6 +69,7 @@
 .playgroundPreview {
   padding: 1rem;
   border: 1px solid var(--ifm-pre-background);
+  font-size: 14px;
 }
 
 .codeContainer {

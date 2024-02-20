@@ -21,7 +21,7 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize);
   line-height: var(--body-lineHeight);
-  color: var(--primary-text);
+  color: var(--text-primary);
   background-color: var(--background-canvas);
   height: 100%;
   width: 100%;
