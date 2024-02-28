@@ -67,7 +67,7 @@ function EditorWithHeader({ code }: EditorWithHeaderProps) {
 export default function Playground({ children, transformCode, ...props }: PlaygroundProps) {
   const prismTheme = usePrismTheme();
   const noInline = props.metastring?.includes('noInline') ?? false;
-  const code = children.replace(/\n$/, '');
+  const code = children?.replace(/\n$/, '') || '';
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
