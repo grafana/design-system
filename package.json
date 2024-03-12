@@ -25,7 +25,7 @@
     "plop": "^4.0.0",
     "postcss-preset-env": "^9.2.0",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "5.3.3"
   },
   "dependencies": {
     "@docusaurus/core": "^3.1.0",
