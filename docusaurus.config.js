@@ -5,7 +5,6 @@ const config = {
   ...baseConfig,
   url: 'https://grafana.com',
   baseUrl: 'developers/saga/',
-  trailingSlash: true,
 
   themeConfig: {
     ...baseConfig.themeConfig,
