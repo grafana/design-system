@@ -6,8 +6,6 @@
 import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 import { formSteps } from '@site/src/components/templates/MultistepFormPage/DataProvider';
 
-const BASE_URL = 'multistep-form-page';
-
 export const getNextStep = (step: StepKey) => {
   const index = formSteps.findIndex((s) => s.id === step);
   return formSteps[index + 1]?.id;
@@ -41,7 +39,7 @@ export const isFirstStep = (step: StepKey) => {
 };
 
 export const getStepUrl = (step: StepKey) => {
-  return `${BASE_URL}#${step}`;
+  return `#${step}`;
 };
 
 export const getActiveStep = () => {
