@@ -30,6 +30,12 @@ export const ComponentsStatusInfo = [
     sagaStatus: 'ready-to-use',
   },
   {
+    componentName: 'EmptyState',
+    figmaStatus: 'to-do',
+    storybookStatus: 'in-progress',
+    sagaStatus: 'ready-to-use',
+  },
+  {
     componentName: 'Field',
     figmaStatus: 'ready-to-use',
     storybookStatus: 'ready-to-use',
