@@ -12,7 +12,7 @@ The EmptyState component consists of a message and optionally an image, button, 
 
 Use an empty state to communicate to the user that there is no data to display and provide instructions for what to do next.
 Example use cases:
-- When a user has not created any particular resource yet
+- When a user has not created a particular resource yet
 - When a filter or search query returns no results
 - When a user completes all actions, such as clearing their inbox or notifications
 
@@ -22,7 +22,7 @@ There are different variants to handle the most common empty state use cases. Th
 
 ### `variant="call-to-action"`
 
-Use when there is no data to display, and you want to encourage the user to take an action. Either to complete some initial configuration, or to create an item.
+Use when there is no data to display and you want to encourage the user to take an action. Usually either to complete some initial configuration, or to create an item.
 
 ```tsx
 import { EmptyState, LinkButton, TextLink } from '@grafana/ui';
@@ -68,12 +68,12 @@ import { EmptyState } from '@grafana/ui';
 <EmptyState variant="not-found" />
 ```
 
-### Advanced usage
+### Customization
 
 For all variants you can:
 
-- override the message
-- override or hide the image
+- provide a custom message
+- provide a custom image or hide the image entirely
 - provide a button (e.g. to provide a call to action or clear the search query)
 - provide additional information via React children
 
@@ -95,4 +95,4 @@ import { Button, EmptyState, TextLink } from '@grafana/ui';
 
 ## Playground
 
-<ComponentEmbed path="/story/general-emptystate--basic" />
+<ComponentEmbed height={500} path="/story/general-emptystate--basic" />
