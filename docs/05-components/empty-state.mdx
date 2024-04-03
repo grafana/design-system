@@ -25,8 +25,6 @@ There are different variants to handle the most common empty state use cases. Th
 Use when there is no data to display and you want to encourage the user to take an action. Usually either to complete some initial configuration, or to create an item.
 
 ```tsx
-import { EmptyState, LinkButton, TextLink } from '@grafana/ui';
-
 <EmptyState
   variant="call-to-action"
   message="You haven't created any playlists yet"
@@ -40,20 +38,18 @@ import { EmptyState, LinkButton, TextLink } from '@grafana/ui';
   <TextLink external href="<externalDocsLink>">
     Learn more.
   </TextLink>
-</EmptyState>;
+</EmptyState>
 ```
 
 For scenarios where there is no single button that can be clicked to create the item, you can omit the `button` prop. Instead, provide additional information to help the user understand how to create the specific resource.
 
 ```tsx
-import { EmptyState, TextLink } from '@grafana/ui';
-
 <EmptyState variant="call-to-action" message="You haven't created any library panels yet">
   Create a library panel from any existing dashboard panel through the panel context menu.{' '}
   <TextLink external href="<externalDocsLink>">
     Learn more.
   </TextLink>
-</EmptyState>;
+</EmptyState>
 ```
 
 ### `variant="not-found"`
@@ -62,9 +58,7 @@ Use in place of content when a search query or filter returns no results.
 
 There are sensible defaults for the image and message, so in most cases you can use it without any additional props.
 
-```tsx
-import { EmptyState } from '@grafana/ui';
-
+```tsx live
 <EmptyState variant="not-found" />
 ```
 
@@ -78,8 +72,6 @@ For all variants you can:
 - provide additional information via React children
 
 ```tsx
-import { Button, EmptyState, TextLink } from '@grafana/ui';
-
 <EmptyState
   button={<Button variant="secondary" onClick={clearSearchQuery} />}
   image={<AnyReactNode />}
