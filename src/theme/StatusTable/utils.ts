@@ -32,7 +32,7 @@ export const ComponentsStatusInfo = [
   {
     componentName: 'EmptyState',
     figmaStatus: 'to-do',
-    storybookStatus: 'in-progress',
+    storybookStatus: 'ready-to-use',
     sagaStatus: 'ready-to-use',
   },
   {
