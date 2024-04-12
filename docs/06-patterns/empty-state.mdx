@@ -1,10 +1,9 @@
 ---
 title: Empty State
 description: Use an empty state to communicate to the user that there is no data to display, or that a search query returned no results.
-draft: true
 ---
 
-# Empty State <Badge text='draft' color='orange'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/general-emptystate--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
+# Empty State <Badge text='ready' color='green'></Badge> <a href='https://developers.grafana.com/ui/latest/index.html?path=/story/general-emptystate--basic' target='_blank' className='header-links'>Storybook <Icon name="external-link-alt"/> </a>
 
 An empty state consists of a message and optionally an image, button, and additional information.
 
@@ -16,7 +15,7 @@ Example use cases:
 - When a filter or search query returns no results
 - When a user completes all actions, such as clearing their inbox or notifications
 
-There is an `EmptyState` component with different variants to handle the most common empty state use cases. These variants provide a specific default message and image.
+There is an `EmptyState` component with different variants to handle the most common empty state use cases. These variants provide a sensible default image.
 
 ## Usage
 
@@ -60,19 +59,18 @@ import { EmptyState, TextLink } from '@grafana/ui';
 
 Use in place of content when a search query or filter returns no results.
 
-There are sensible defaults for the image and message, so in most cases you can use it without any additional props.
+There are sensible defaults for the image, so in most cases all you need to provide is a message.
 
 ```tsx
 import { EmptyState } from '@grafana/ui';
 
-<EmptyState variant="not-found" />
+<EmptyState variant="not-found" message="No playlists found" />
 ```
 
 ### Customization
 
 For all variants you can:
 
-- provide a custom message
 - provide a custom image or hide the image entirely
 - provide a button (e.g. to provide a call to action or clear the search query)
 - provide additional information via React children
