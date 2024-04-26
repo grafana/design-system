@@ -1,6 +1,6 @@
 import React from 'react';
 import { translate } from '@docusaurus/Translate';
-import { Button, Icon } from '@grafana/ui';
+import { Button } from '@grafana/ui';
 import Link from '@docusaurus/Link';
 import type { Props } from '@theme/DocPaginator';
 
@@ -18,17 +18,21 @@ export default function DocPaginator(props: Props) {
     >
       {previous && (
         <Link to={previous.permalink}>
-          <Button size="lg" fill="outline" variant="secondary">
-            <Icon size="lg" name={'arrow-left'} />
+          <Button icon={'arrow-left'} size={'lg'} fill="outline" variant="secondary">
             {previous.title}
           </Button>
         </Link>
       )}
       {next && next.title !== 'Contributing' && (
-        <Link to={next.permalink} style={{ textAlign: 'right' }}>
-          <Button size="lg" fill="outline" variant="secondary" style={{ justifyContent: 'flex-end' }}>
+        <Link to={next.permalink}>
+          <Button
+            icon={'arrow-right'}
+            size={'lg'}
+            fill="outline"
+            variant="secondary"
+            style={{ flexDirection: 'row-reverse' }}
+          >
             {next.title}
-            <Icon size="lg" name={'arrow-right'} />
           </Button>
         </Link>
       )}

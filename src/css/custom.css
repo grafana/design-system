@@ -220,6 +220,12 @@ html[data-theme='dark'] {
   padding-left: calc(var(--spacing) * 3px);
 }
 
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .pagination-nav a:hover {
   text-decoration: none;
 }
