@@ -244,6 +244,10 @@ main {
 #about #content {
   padding: calc(var(--spacing) * 4px);
   font-size: 15px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 #about #content h1 {
