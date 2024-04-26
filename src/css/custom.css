@@ -360,6 +360,13 @@ main {
   padding: calc(var(--spacing) * 2.5px) 0;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem var(--ifm-spacing-horizontal);
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+
 }
 
 #footer p,
