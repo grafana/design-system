@@ -220,18 +220,41 @@ html[data-theme='dark'] {
   padding-left: calc(var(--spacing) * 3px);
 }
 
-.pagination-nav a:hover {
-  text-decoration: none;
+.theme-doc-footer {
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
-.pagination-nav button {
-  min-width: calc(var(--spacing) * 27px);
-}
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 2rem;
 
-.pagination-nav button span {
-  text-align: center;
-  width: 100%;
-  display: block !important;
+  a:hover {
+    text-decoration: none;
+  }
+
+  button span {
+    text-align: center;
+    width: 100%;
+    display: block !important;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    a {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+
+    }
+  }
 }
 
 main {
@@ -244,6 +267,10 @@ main {
 #about #content {
   padding: calc(var(--spacing) * 4px);
   font-size: 15px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 #about #content h1 {
@@ -356,6 +383,13 @@ main {
   padding: calc(var(--spacing) * 2.5px) 0;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem var(--ifm-spacing-horizontal);
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+
 }
 
 #footer p,
@@ -416,6 +450,7 @@ main {
 }
 
 /* Revert Docusaurus' custom styles */
+
 table {
   display: table;
   border-collapse: collapse;
