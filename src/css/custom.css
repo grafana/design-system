@@ -220,24 +220,41 @@ html[data-theme='dark'] {
   padding-left: calc(var(--spacing) * 3px);
 }
 
+.theme-doc-footer {
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
 .pagination-nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+  padding: 0 2rem;
 
-.pagination-nav a:hover {
-  text-decoration: none;
-}
+  a:hover {
+    text-decoration: none;
+  }
 
-.pagination-nav button {
-  min-width: calc(var(--spacing) * 27px);
-}
+  button span {
+    text-align: center;
+    width: 100%;
+    display: block !important;
+  }
 
-.pagination-nav button span {
-  text-align: center;
-  width: 100%;
-  display: block !important;
+  @media (max-width: 768px) {
+    padding: 0;
+    a {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+
+    }
+  }
 }
 
 main {
@@ -433,6 +450,7 @@ main {
 }
 
 /* Revert Docusaurus' custom styles */
+
 table {
   display: table;
   border-collapse: collapse;
