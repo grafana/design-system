@@ -45,6 +45,14 @@ will be rendered as (simplified)
 
 As long as the form element has a unique `id` attribute specified, it will be automatically accessible when rendered.
 
+#### `aria-live` guidelines
+
+`aria-live` should be used sparingly, as it may result in an overflow of announcements for screen reader users. The main responsibility for handling `aria-live` should be with the consumers, where the correct tools should be provided by grafaba/ui.
+
+- Grafana/ui components should not contain `aria-live="assertive"` or `role="alert"`
+- `aria-live` and `role` props may be exposed where appropriate in grafana/ui components 
+- Only use `aria-live="assertive"` or `role="alert"` to provide critical feedback to a direct user action (e.g. user typing in search and there are no further results from the query)
+
 ### Writing tests with accessibility in mind
 
 We use [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) (RTL) for writing unit tests.
