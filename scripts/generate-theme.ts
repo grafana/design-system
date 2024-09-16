@@ -2,7 +2,7 @@ import { createTheme } from '@grafana/data';
 import { join } from 'node:path';
 import { writeFile } from 'node:fs/promises';
 
-const { spacing, colors: _colors, typography: _typography, shape } = createTheme({ colors: { mode: 'dark' } });
+const { spacing, colors: _colors, typography: _typography, shape } = createTheme({ colors: { mode: 'light' } });
 
 const { emphasize, getContrastText, gradients, ...colors } = _colors;
 const { pxToRem, ...typography } = _typography;

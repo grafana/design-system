@@ -63,7 +63,7 @@
   --ifm-avatar-intro-margin: 0.5rem;
 }
 
-html[data-theme='dark'] {
+html[data-theme='light'] {
   --ifm-color-primary: var(--text-primary);
   --ifm-color-secondary: var(--text-secondary);
   --ifm-color-success: var(--success-main);
@@ -88,7 +88,7 @@ html[data-theme='dark'] {
   border: 1px solid var(--border-weak);
 }
 
-[data-theme='dark'] .footer.footer--dark {
+[data-theme='light'] .footer.footer--light {
   --ifm-footer-background-color: rgba(0, 0, 0, 0.45);
 }
 

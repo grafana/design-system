@@ -68,7 +68,7 @@ const baseConfig = {
       //   isCloseable: true,
       // },
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: 'light',
         disableSwitch: true,
       },
       prism: {

@@ -44,7 +44,8 @@
     "react-popper": "2.3.0",
     "react-popper-tooltip": "4.4.2",
     "react-redux": "7.2.6",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "storybook": "^8.3.0"
   },
   "engines": {
     "node": ">= 18"
