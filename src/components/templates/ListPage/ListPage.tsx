@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, EmptySearchResult, FilterInput, Icon, LinkButton, Stack } from '@grafana/ui';
+import { Card, EmptySearchResult, FilterInput, Icon, LinkButton, Stack } from '@elastiflow/epic-ui';
 import { Data } from '@site/src/components/templates/GridPage/types';
 
 interface ListPageProps {

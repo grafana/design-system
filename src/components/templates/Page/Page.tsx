@@ -1,8 +1,9 @@
 import React, { PropsWithChildren } from 'react';
 
-import { CustomScrollbar } from '@grafana/ui';
+import { CustomScrollbar } from '@elastiflow/epic-ui';
 import styles from './styles.module.css';
 import { PageHeader } from './PageHeader';
+
 
 interface PageProps extends PropsWithChildren {
   title: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Badge, Icon, Grid } from '@grafana/ui';
+import { Card, Badge, Icon, Grid } from '@elastiflow/epic-ui';
 import { Data } from '@site/src/components/templates/GridPage/types';
 
 interface CardListPageProps {

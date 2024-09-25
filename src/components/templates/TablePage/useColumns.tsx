@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-import { CellProps, Column, ConfirmModal, Icon, IconButton, Tooltip } from '@grafana/ui';
+import { CellProps, Column, ConfirmModal, Icon, IconButton, Tooltip } from '@elastiflow/epic-ui';
 import { User, Org } from '@site/src/components/templates/TablePage/types';
 
 type Cell<T extends keyof User = keyof User> = CellProps<User, User[T]>;

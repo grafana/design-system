@@ -1,4 +1,4 @@
-import { IconName } from '@grafana/ui';
+import { IconName } from '@elastiflow/epic-ui';
 
 export type Item = {
   name: string;

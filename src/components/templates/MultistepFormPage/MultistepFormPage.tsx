@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Stack } from '@grafana/ui';
+import { Stack } from '@elastiflow/epic-ui';
 import { Stepper } from '@site/src/components/templates/MultistepFormPage/Stepper';
 import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 import { Step } from '@site/src/components/templates/MultistepFormPage/Steps/Step';

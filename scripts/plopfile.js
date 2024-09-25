@@ -3,7 +3,7 @@ module.exports = function (plop) {
   plop.setHelper('append', (str) => str);
 
   plop.setGenerator('documentation', {
-    description: 'Generate a @grafana/ui component documentation',
+    description: 'Generate a @elastiflow/epic-ui component documentation',
     prompts: [
       {
         type: 'list',

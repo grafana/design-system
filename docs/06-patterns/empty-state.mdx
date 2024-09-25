@@ -25,7 +25,7 @@ There is an `EmptyState` component with different variants to handle the most co
 Use when there is no data to display and you want to encourage the user to take an action. Usually either to complete some initial configuration, or to create an item.
 
 ```tsx
-import { EmptyState, LinkButton, TextLink } from '@grafana/ui';
+import { EmptyState, LinkButton, TextLink } from '@elastiflow/epic-ui';
 
 <EmptyState
   variant="call-to-action"
@@ -46,7 +46,7 @@ import { EmptyState, LinkButton, TextLink } from '@grafana/ui';
 For scenarios where there is no single button that can be clicked to create the item, you can omit the `button` prop. Instead, provide additional information to help the user understand how to create the specific resource.
 
 ```tsx
-import { EmptyState, TextLink } from '@grafana/ui';
+import { EmptyState, TextLink } from '@elastiflow/epic-ui';
 
 <EmptyState variant="call-to-action" message="You haven't created any library panels yet">
   Create a library panel from any existing dashboard panel through the panel context menu.{' '}
@@ -63,7 +63,7 @@ Use in place of content when a search query or filter returns no results.
 There are sensible defaults for the image, so in most cases all you need to provide is a message.
 
 ```tsx
-import { EmptyState } from '@grafana/ui';
+import { EmptyState } from '@elastiflow/epic-ui';
 
 <EmptyState variant="not-found" message="No playlists found" />
 ```
@@ -73,7 +73,7 @@ import { EmptyState } from '@grafana/ui';
 For when a user has completed all tasks on a page, such as reading all their notifications.
 
 ```tsx
-import { EmptyState } from '@grafana/ui';
+import { EmptyState } from '@elastiflow/epic-ui';
 
 <EmptyState variant="completed" message="You're all caught up" />;
 ```
@@ -87,7 +87,7 @@ For all variants you can:
 - provide additional information via React children
 
 ```tsx
-import { Button, EmptyState, TextLink } from '@grafana/ui';
+import { Button, EmptyState, TextLink } from '@elastiflow/epic-ui';
 
 <EmptyState
   button={<Button variant="secondary" onClick={clearSearchQuery} />}

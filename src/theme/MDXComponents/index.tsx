@@ -1,7 +1,7 @@
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
 
-import { Badge, Icon } from '@grafana/ui';
+import { Badge, Icon } from '@elastiflow/epic-ui';
 import { StorybookLink } from '@site/src/components/StorybookLink';
 import { ComponentEmbed } from '@site/src/components/ComponentEmbed';
 import { Image } from '@site/src/components/Image';

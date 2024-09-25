@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@grafana/ui';
+import { Stack, FilterInput, InteractiveTable, LinkButton, RadioButtonGroup } from '@elastiflow/epic-ui';
 import useColumns from '@site/src/components/templates/TablePage/useColumns';
 import { Filter, User } from '@site/src/components/templates/TablePage/types';
 

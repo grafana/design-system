@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Stack } from '@grafana/ui';
+import { Stack } from '@elastiflow/epic-ui';
 import styles from './styles.module.css';
 
 export interface Props {

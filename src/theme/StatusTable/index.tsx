@@ -1,4 +1,4 @@
-import { CellProps, Icon, IconName, InteractiveTable } from '@grafana/ui';
+import { CellProps, Icon, IconName, InteractiveTable } from '@elastiflow/epic-ui';
 import React, { useMemo } from 'react';
 
 interface StatusTableProps {
@@ -91,6 +91,7 @@ const columns = [
 
 export const StatusTable = ({ componentsData }: StatusTableProps) => {
   const rowsData = useMemo(() => componentsData, [componentsData]);
+  // @ts-ignore
   return <InteractiveTable getRowId={(row: StatusChildren) => row.componentName} columns={columns} data={rowsData} />;
 };
 

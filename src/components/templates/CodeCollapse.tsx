@@ -1,4 +1,4 @@
-import { Collapse } from '@grafana/ui';
+import { Collapse } from '@elastiflow/epic-ui';
 import React, { PropsWithChildren, useState } from 'react';
 import CodeBlock from '@theme/CodeBlock';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, FieldSet, Input, RadioButtonGroup, Slider } from '@grafana/ui';
+import { Field, FieldSet, Input, RadioButtonGroup, Slider } from '@elastiflow/epic-ui';
 import { Controller, useFormContext } from 'react-hook-form';
 import { StepForm } from '@site/src/components/templates/MultistepFormPage/Steps/StepForm';
 import { StepKey } from '@site/src/components/templates/MultistepFormPage/types';

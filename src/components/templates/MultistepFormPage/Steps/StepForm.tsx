@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Button, Stack } from '@grafana/ui';
+import { Button, Stack } from '@elastiflow/epic-ui';
 import { Data, StepKey } from '@site/src/components/templates/MultistepFormPage/types';
 import { useFormContext } from 'react-hook-form';
 import {

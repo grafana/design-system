@@ -1,6 +1,6 @@
 import React from 'react';
 import { translate } from '@docusaurus/Translate';
-import { Button } from '@grafana/ui';
+import { Button } from '@elastiflow/epic-ui';
 import Link from '@docusaurus/Link';
 import type { Props } from '@theme/DocPaginator';
 

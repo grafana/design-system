@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, FieldSet, Icon, LinkButton, Text, useStyles2 } from '@grafana/ui';
+import { Box, FieldSet, Icon, LinkButton, Text, useStyles2 } from '@elastiflow/epic-ui';
 import { useFormContext } from 'react-hook-form';
 import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';

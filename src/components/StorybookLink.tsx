@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '@grafana/ui';
+import { Icon } from '@elastiflow/epic-ui';
 
 interface StorybookLinkProps {
   path: string;

@@ -12,7 +12,7 @@ import {
   Stack,
   Switch,
   TextArea,
-} from '@grafana/ui';
+} from '@elastiflow/epic-ui';
 import { Data } from '@site/src/components/templates/FormPage/types';
 
 interface FormPageProps {}

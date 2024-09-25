@@ -2,7 +2,7 @@ import { css, cx } from '@emotion/css';
 import React, { MouseEvent } from 'react';
 
 import { GrafanaTheme2 } from '@grafana/data';
-import { useStyles2, Icon } from '@grafana/ui';
+import { useStyles2, Icon } from '@elastiflow/epic-ui';
 
 import { ValidationResult } from './types';
 
