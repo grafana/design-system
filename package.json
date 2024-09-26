@@ -15,7 +15,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "generate": "plop --plopfile scripts/plopfile.js",
-    "theme": "npx -y tsx ./scripts/generate-theme.ts"
+    "theme": "npx -y tsx ./scripts/generate-theme.ts",
+    "artifactregistry-login": "npx google-artifactregistry-auth --repo-config=./.npmrc --credential-config=./.npmrc"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.1.0",
@@ -34,10 +35,12 @@
     "@docusaurus/preset-classic": "^3.5.2",
     "@docusaurus/theme-common": "^3.5.2",
     "@docusaurus/theme-live-codeblock": "^3.5.2",
-    "@elastiflow/epic-ui": "^0.0.3",
+    "@elastiflow/epic-ui": "^0.0.5",
+    "@emotion/css": "^11.13.0",
     "@emotion/react": "^11.10.6",
     "@grafana/data": "^10.3.0-151096",
     "raw-loader": "^4.0.2",
+    "rc-slider": "^11.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "4.4.5",
