@@ -39,4 +39,4 @@ jobs:
      
       - name: 'Deploy to Developer Portal Bucket'
         run: |
-          gsutil -m rsync -r -d -c -n ./build/ gs://staging-developer-portal/saga
+          gsutil -m rsync -r -d -c ./build/ gs://staging-developer-portal/saga
