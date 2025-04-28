@@ -7,9 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed for git-auto-commit-action
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
@@ -21,7 +25,7 @@ jobs:
       # Transform Figma Tokens JSON to something Style Dictionary can read, run Style Dictionary
       - run: npm run build:tokens
       # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403
         with:
           branch: hackathon_tokens
           commit_message: Update Tokens
