@@ -1,0 +1,35 @@
+name: Build
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --immutable --prefer-offline
+
+      - name: Build documentation website
+        run: yarn build --config docusaurus.config.dev.js
