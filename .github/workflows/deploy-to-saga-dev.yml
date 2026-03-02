@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Setup node
-        uses: actions/setup-node@89d709d423dc495668cd762a18dd4a070611be3f
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
