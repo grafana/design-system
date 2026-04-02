@@ -1,3 +1,7 @@
+# 🚨 Archived: Saga 🚨
+
+Saga has been archived. You can find all documentation about our components on our [storybook](https://developers.grafana.com/ui/latest/index.html).
+
 # Saga; The Grafana Labs Design System
 
 Saga is Grafana Labs’ open source design system. It establishes the shared, visual language for all products within the Grafana Labs umbrella of products, driving user experience and interaction consistency throughout the UI.
